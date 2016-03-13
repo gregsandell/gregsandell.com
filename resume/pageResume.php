@@ -3,7 +3,7 @@
 	$g_section = "resume";
 	$linksTitle = "Download Resume";
 	$mainCopy = "";
-	$inlinePhp = "/innerPageResume.php";
+	$inlinePhp = $_cpath . "/resume/innerPageResume.php";
 	$g_sidebarKey = "pageResume";
 	$g_slideshowKey = "";
 

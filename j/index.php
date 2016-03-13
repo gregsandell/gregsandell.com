@@ -38,7 +38,7 @@
     </p>
     <a href="./pageSitemap.php" data-role="button" data-inline="true" data-icon="arrow-r" data-transition="slide" data-direction="forward">More</a> 
     <br/>
-    Switch to the <a href="http://gregsandell.com/d">Non-Mobile</a> (desktop) version of the site.
+    Switch to the <a href="/home/pageHome.php">Non-Mobile</a> (desktop) version of the site.
   </div><!-- /content -->
 </div><!-- /page -->
 

@@ -1,6 +1,6 @@
 <?php
 	if (!isset($g_resume)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/objResume.php");
+		include_once($_SERVER['DOCUMENT_ROOT'] . "/resume/objResume.php");
 		$resMan = new ResumeManager();
 		$g_resume = $resMan->res;
 	}

@@ -1,11 +1,12 @@
 <?php
-$_http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $_http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+	$_cpath = $_SERVER['DOCUMENT_ROOT'];
+
 if (strpos($_http_user_agent, "obile") !== false) { ?>
 	  <html><head>
-    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.gregsandell.com/j">
+    <meta HTTP-EQUIV="REFRESH" content="0; url={$_cpath}/j">
 	  </head><body></body></html>  <?php
 } else { 
-    $_cpath = $_SERVER['DOCUMENT_ROOT'];
     include($_cpath . "/home/pageHome.php");
 }
 ?>

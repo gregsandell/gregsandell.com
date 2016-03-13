@@ -3,7 +3,7 @@ ini_set('display_errors',1);
 error_reporting(E_ALL|E_STRICT);
 
   $_cpath = $_SERVER['DOCUMENT_ROOT'];
-  include($_cpath . "/objResume.php");
+  include($_cpath . "/resume/objResume.php");
   include($_cpath . "/objSkills.php");
   include_once($_cpath . "/objGlobals.php");
   $resumeManager = new ResumeManager();

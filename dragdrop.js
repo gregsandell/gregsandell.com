@@ -1,0 +1,1 @@
+// Empty file so scriptaculous won't complain when it tries to load

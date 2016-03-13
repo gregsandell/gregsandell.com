@@ -14,7 +14,7 @@
 		die("File 'innerClientDescription.php' was expecting content in variable '\$g_key', and found none.");
 	}
 	if (!isset($g_resume)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/objResume.php");
+		include_once($_SERVER['DOCUMENT_ROOT'] . "/resume/objResume.php");
 		$resMan = new ResumeManager();
 		$g_resume = $resMan->res;
 	}

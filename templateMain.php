@@ -9,35 +9,36 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Greg Sandell</title>
-	<LINK REL="SHORTCUT ICON" HREF="http://www.gregsandell.com/image/favicon.ico" />
+	<LINK REL="SHORTCUT ICON" HREF="/image/favicon.ico" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<script type="text/javascript" src="{$_cpath}/modalbox/modalbox.js"></script>
+	<script type="text/javascript" src="/prototype.js"></script>
+	<script type="text/javascript" src="/scriptaculous.js"></script>
+	<script type="text/javascript" src="/modalbox/modalbox.js"></script>
 	<style type="text/css">
 	    <?php include("{$_cpath}/cssFunride.php") ?>
 	    <?php include("{$_cpath}/cssPortfolio.php") ?>
 	</style>
-        <link rel="stylesheet" href="{$_cpath}/modalbox/modalbox.css" type="text/css" />
-	<base href="http://www.gregsandell.com" />
+        <link rel="stylesheet" href="/modalbox/modalbox.css" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1><a href="http://www.gregsandell.com">Greg Sandell</a></h1>
+			<h1><a href="/">Greg Sandell</a></h1>
 			<h2>Front End Web Developer</h2>
 		</div>
 		<!-- end div#logo -->
 		<div id="menu">
 			<ul>
-				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="{$_cpath}/noMobileHome.php">Home</a></li>
-				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="{$_cpath}/pageResume.php">Resume</a></li>
-				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="{$_cpath}/templatePortfolio.php">Portfolio</a></li>
-				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="{$_cpath}/pageCode.php">Code</a></li>
-				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="{$_cpath}/pageTalks.php">Talks</a></li>
-				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="{$_cpath}/pageBlogs.php">Blog</a></li>
+				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/home/pageHome.php">Home</a></li>
+				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
+				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="/templatePortfolio.php">Portfolio</a></li>
+				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="/pageCode.php">Code</a></li>
+				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="/pageTalks.php">Talks</a></li>
+				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/pageBlogs.php">Blog</a></li>
 			</ul>
 		</div>
 		<!-- end div#menu -->
@@ -59,13 +60,13 @@
 					print($mainCopy2);
 				}
 				if (isset($inlinePhp2) && !empty($inlinePhp2) && $inlinePhp2 != "") {
-					include($_cpath . $inlinePhp2);
+					include($inlinePhp2);
 				} ?>
 			</div>
 		</div>
 		<!-- end div#content -->
 		<div id="sidebar">
-			<?php	include($_cpath . "/templateSidebar.php"); ?>
+			<?php	include("{$_cpath}/templateSidebar.php"); ?>
 		</div>
 		<!-- end div#sidebar -->
 		<div style="clear: both; height: 1px"></div>

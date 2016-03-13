@@ -45,7 +45,7 @@ if (sizeof($g_sidebarObj->linksArray) > 0) { ?>
 				<a href="<?php print($linkObj->url) ?>">
 					<?php print($linkObj->text) ?> <?php
 					if ($linkObj->remote) { ?>
-						<img src='image/wikipediaExternalPageGold.png' border='0' alt="External Page" /> <?php
+						<img src='/image/wikipediaExternalPageGold.png' border='0' alt="External Page" /> <?php
 					} ?>
 				</a>
 			</li>  <?php
@@ -60,7 +60,7 @@ if (sizeof($g_sidebarObj->blogsArray) > 0) { ?>
 		foreach ($g_sidebarObj->blogsArray as $blogObj) {  ?>
 			<li>
 				<h3><?php print($blogObj->date) ?></h3>
-				<p><a href="<?php print($blogObj->url) ?>"><?php print($blogObj->text) ?>&nbsp;<img src="image/wikipediaExternalPageGold.png" border="0" alt="External Page" /></a></p>
+				<p><a href="<?php print($blogObj->url) ?>"><?php print($blogObj->text) ?>&nbsp;<img src="/image/wikipediaExternalPageGold.png" border="0" alt="External Page" /></a></p>
 			</li> <?php
 		}  ?>
 		</ul>
@@ -71,9 +71,9 @@ if ($g_slideshowKey != "") {
 	$slideshow = $g_slideshowMan->get($g_slideshowKey);
 	print("<h2>" . $slideshow->title . "</h2><br/>");  ?>
 	<div id="rotatingLogosDiv" style="text-align: center">
-		<img src="image/logos/spacer.gif" alt="" name="slide" border="0" style="filter:blendTrans(duration=2)" width="<?php print($slideshow->width) ?>" height="<?php print($slideshow->height) ?>"/>
+		<img src="/image/logos/spacer.gif" alt="" name="slide" border="0" style="filter:blendTrans(duration=2)" width="<?php print($slideshow->width) ?>" height="<?php print($slideshow->height) ?>"/>
 						</div>
-	<script type="text/javascript" src="numbersWithoutReplacement.js"></script>
+	<script type="text/javascript" src="/numbersWithoutReplacement.js"></script>
 	<script type="text/javascript">
 		//specify interval between slide (in mili seconds)
 		var slidespeed = <?php print($slideshow->dur) ?>;
@@ -95,7 +95,7 @@ if ($g_slideshowKey != "") {
 			$count = 0;
 			foreach ($slideshow->imgsArray as $file) {  ?>
 				imageholder[<?php print($count) ?>] = new Image();
-				imageholder[<?php print($count) ?>].src = "image/<?php print($slideshow->imgsSubdir) ?>/<?php print($file) ?>";  
+				imageholder[<?php print($count) ?>].src = "/image/<?php print($slideshow->imgsSubdir) ?>/<?php print($file) ?>";
 				<?php
 				$count += 1;  
 			} ?>

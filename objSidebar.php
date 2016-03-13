@@ -101,7 +101,7 @@ class SidebarPageManager {
 	function load() {
 		$g_onTheCodeLinkObj = new LinkObj2("onthecode", "On The Code (blog)", "http://www.18thstreet.net/blog/onTheCode/", true);
 		$g_blogspotLinkObj = new LinkObj2("elevatorMusic", "Elevator Music (blog)", "http://gregsandell.blogspot.com", true);
-		$g_resumeLinkObj = new LinkObj2("resume", "Resume", "pageResume.php", false);
+		$g_resumeLinkObj = new LinkObj2("resume", "Resume", "/resume/pageResume.php", false);
 		$g_sharcLinkObj = new LinkObj2("sharc", "SHARC Timbre Project", "http://www.timbre.ws/sharc/", true);
         $g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 
 										"http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html",

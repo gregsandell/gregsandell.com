@@ -84,7 +84,7 @@
 		<div id="menu">
 			<ul>
 				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="noMobileHome.php">Home</a></li>
-				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="pageResume.php">Resume</a></li>
+				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
 				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="templatePortfolio.php">Portfolio</a></li> 
 				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="pageCode.php">Code</a></li>
 				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="pageTalks.php">Talks</a></li>

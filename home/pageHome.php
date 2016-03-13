@@ -3,7 +3,7 @@
 	$g_section = "home";
 	$linksTitle = "Other Site Links";
 	$mainCopy = "";
-	$inlinePhp = "/home/innerPageHome.php";
+	$inlinePhp = $_cpath . "/home/innerPageHome.php";
 	$g_sidebarKey = "pageHome";
 	$g_slideshowKey = "logos";
 include_once($_cpath . "/templateMain.php");

@@ -6,7 +6,7 @@ $_cpath = $_SERVER['DOCUMENT_ROOT'];
 class TheWire {
 	var $dictionaryArray;
 	function ResumeObj() {
-		$this->dicionaryArray = array();
+		$this->dictionaryArray = array();
 	}
 	function addTerm($phraseAlphabetical, $phrase, $meaning, $example, $translation) {
 		$key = $phraseAlphabetical;

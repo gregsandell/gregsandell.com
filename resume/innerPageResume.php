@@ -1,6 +1,6 @@
 <?php
   $_cpath = $_SERVER['DOCUMENT_ROOT'];
-  include($_cpath . "/objResume.php");
+  include($_cpath . "/resume/objResume.php");
   $resumeManager = new ResumeManager();
   $resume = $resumeManager->res;
 ?>
