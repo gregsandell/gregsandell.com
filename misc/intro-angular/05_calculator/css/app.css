@@ -1,0 +1,17 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.title {
+    font-size: 16px;
+}
+
+div.val div {
+    background-color: lightgray;
+}
+input {
+    width: 25px;
+    margin-right: 3px;
+}

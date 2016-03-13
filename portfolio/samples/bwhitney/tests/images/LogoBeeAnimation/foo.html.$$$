@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<TITLE>test animation</TITLE>
+</HEAD>
+<script language="javascript">
+var layerObj, styleObj, maxbees = 21, currentbee = 'bee21';
+var nowleft = 124, nowtop = 17, loop = true, speed = 75;
+var isNS = (navigator.appName == "Netscape");
+var isDHTML = (parseInt(navigator.appVersion) > 3);
+var count, active = false;
+  layerObj = (isNS) ? 'document' : 'document.all';
+  styleObj = (isNS) ? '' : '.style';
+function showObject(bname){
+  eval(layerObj + '["' + bname + '"]' + styleObj + '.visibility = "visible"');
+}
+        
+// showObject()
+// This function makes an HTML element hidden.
+function hideObject(bname){
+  eval(layerObj + '["' + bname + '"]' + styleObj + '.visibility = "hidden"');
+}
+function hidebee() {
+	for (i=2; i <= 21; i++) {
+		hideObject('bee' + i);
+	}
+	showObject('bee1')
+//document[currentbee].top = nowtop;
+//document[currentbee].left = nowleft;
+//showObject(currentbee)
+
+}
+function toleft() {
+	--document[currentbee].left;
+}
+function toright() {
+	++document[currentbee].left;
+}
+function toup() {
+	--document[currentbee].top;
+}
+function todown() {
+	++document[currentbee].top;
+}
+function showcoords() {
+	alert('left = ' + document[currentbee].left + ', top = ' + document[currentbee].top);
+}
+function onebeecycle() {
+	loop = false;
+	beePlay();
+}
+function beePlay() {
+	count = 1;
+	if (!active) {
+			active = true;
+			beeIterate();
+	}
+		else 		
+			active = false;
+}
+function beeIterate() {
+	if (count == 12) { 
+			count = 13; lastcount = 11; 
+	}
+		else
+			lastcount = (count == 1) ? maxbees : (count - 1);
+	if (!loop && count > maxbees) 
+			active = false;
+		else
+			hideObject('bee' + lastcount);
+	if (loop && count > maxbees) count = 1;
+	if (active) {
+			showObject('bee' + count);
+			count += 1;
+			setTimeout("beeIterate()",speed)
+	}
+}			
+	
+</script>
+<BODY BGCOLOR="#FFFFFF">
+<div id="message" style="position:absolute; left: 10; top:200">
+<a href="javascript:beePlay()" >
+Click here to animate or stop</a><br>
+<a href="javascript:toleft()">Move to left</a><br>
+<a href="javascript:toright()">Move to right</a><br>
+<a href="javascript:toup()">Move up</a><br>
+<a href="javascript:todown()">Move down</a><br>
+<a href="javascript:showcoords()">Show vals</a>
+</div>
+<div id="mainbackground" style="position:absolute; left:0 top:0 width:627">
+<IMG NAME="somenamehere" SRC="../oldstuff/Nobuts.jpg" 
+      WIDTH=627 HEIGHT=436 BORDER=0>
+</DIV>
+<DIV ID="bee1" STYLE="position:absolute; left:93; top:15; width:89; visibility:show;">
+<a href="javascript:onebeecycle()">
+<img src="go_a1.jpg" width=89 height=89 border=0>
+</a>
+</DIV>
+<DIV ID="bee2" STYLE="position:absolute; left:89; top:14; width:89; visibility:hide;">
+<img src="go_a2.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee3" STYLE="position:absolute; left:90; top:14; width:89; visibility:hide;">
+<img src="go_a3.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee4" STYLE="position:absolute; left:88; top:27; width:89; visibility:hide;">
+<img src="go_a4.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee5" STYLE="position:absolute; left:90; top:16; width:89; visibility:hide;">
+<img src="go_a5.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee6" STYLE="position:absolute; left:86; top:36; width:89; visibility:hide;">
+<img src="go_a6.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee7" STYLE="position:absolute; left:77; top:39; width:89; visibility:hide;">
+<img src="go_a7.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee8" STYLE="position:absolute; left:71; top:40; width:89; visibility:hide;">
+<img src="go_a8.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee9" STYLE="position:absolute; left:61; top:49; width:89; visibility:hide;">
+<img src="go_a9.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee10" STYLE="position:absolute; left:44; top:74; width:89; visibility:hide;">
+<img src="go_a10.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee11" STYLE="position:absolute; left:48; top:82; width:89; visibility:hide;">
+<img src="go_a11.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee12" STYLE="position:absolute; left:61; top:49; width:89; visibility:hide;">
+<img src="go_a9.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee13" STYLE="position:absolute; left:96; top:102; width:89; visibility:hide;">
+<img src="go_a13.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee14" STYLE="position:absolute; left:130; top:93; width:89; visibility:hide;">
+<img src="go_a14.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee15" STYLE="position:absolute; left:165; top:83; width:89; visibility:hide;">
+<img src="go_a15.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee16" STYLE="position:absolute; left:193; top:65; width:89; visibility:hide;">
+<img src="go_a16.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee17" STYLE="position:absolute; left:199; top:52; width:89; visibility:hide;">
+<img src="go_a17.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee18" STYLE="position:absolute; left:182; top:39; width:89; visibility:hide;">
+<img src="go_a18.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee19" STYLE="position:absolute; left:167; top:30; width:89; visibility:hide;">
+<img src="go_a19.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee20" STYLE="position:absolute; left:156; top:27; width:89; visibility:hide;">
+<img src="go_a20.jpg" width=89 height=89 border=0>
+</DIV>
+<DIV ID="bee21" STYLE="position:absolute; left:137; top:24; width:89; visibility:hide;">
+<img src="go_a21.jpg" width=89 height=89 border=0>
+</DIV>
+
+</BODY>
+</HTML>
+

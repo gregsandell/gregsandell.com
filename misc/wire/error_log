@@ -1,0 +1,40 @@
+[Sun Sep 19 08:31:41 2010] [error] [client 220.181.94.226] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Sun Sep 19 08:35:38 2010] [error] [client 150.70.66.179] File does not exist: /home/gregsandell/gregsandell.com/html/favicon.ico
+[Sun Sep 19 09:42:29 2010] [error] [client 187.12.191.234] PHP Warning:  ./cache/00ff8c6419d82ca41f64dcdf838d675e.spc is not writeable in /home/gregsandell/gregsandell.com/html/i/simplepie.inc on line 1773, referer: http://www.gregsandell.com/i/blogTech.php?type=_technical
+[Sun Sep 19 09:42:34 2010] [error] [client 62.30.222.9] PHP Warning:  ./cache/00ff8c6419d82ca41f64dcdf838d675e.spc is not writeable in /home/gregsandell/gregsandell.com/html/i/simplepie.inc on line 1773, referer: http://www.gregsandell.com/i/blogTech.php?type=_technical
+[Sun Sep 19 13:41:15 2010] [error] [client 220.181.94.226] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Sun Sep 19 16:20:25 2010] [error] [client 173.224.112.96] script '/home/gregsandell/gregsandell.com/html/pageClient_spectrum.php' not found or unable to stat
+[Sun Sep 19 19:03:18 2010] [error] [client 67.195.112.171] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Sun Sep 19 21:41:13 2010] [error] [client 95.108.246.252] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Sun Sep 19 21:54:05 2010] [error] [client 92.243.84.187] File does not exist: /home/gregsandell/gregsandell.com/html/plugins, referer: http://www.gregsandell.com/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/tinybrowser.php?type=file&folder=
+[Mon Sep 20 01:49:48 2010] [error] [client 220.181.94.226] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 03:00:39 2010] [error] [client 202.160.179.17] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 03:07:19 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 03:07:20 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/nonexistent
+[Mon Sep 20 03:07:22 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/dragdrop.js, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:07:22 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/slider.js, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:07:22 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/controls.js, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:07:22 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/sound.js, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:07:24 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/image/spacer.gif, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:07:25 2010] [error] [client 82.147.11.62] File does not exist: /home/gregsandell/gregsandell.com/html/apple-touch-icon.png, referer: http://www.gregsandell.com/
+[Mon Sep 20 03:42:12 2010] [error] [client 220.181.94.226] PHP Warning:  ./cache/00ff8c6419d82ca41f64dcdf838d675e.spc is not writeable in /home/gregsandell/gregsandell.com/html/i/simplepie.inc on line 1773
+[Mon Sep 20 03:43:35 2010] [error] [client 220.181.94.226] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 04:19:36 2010] [error] [client 117.199.135.184] PHP Warning:  ./cache/00ff8c6419d82ca41f64dcdf838d675e.spc is not writeable in /home/gregsandell/gregsandell.com/html/i/simplepie.inc on line 1773, referer: http://www.google.co.in/imgres?imgurl=http://img.skitch.com/20090317-exu1cu1t1hm3tqy1634csxaj96.jpg&imgrefurl=http://www.gregsandell.com/i/blogTech.php%3Ftype%3D_technical&usg=__qA8hLhL3cfi3gFhaH766cmPstxI=&h=327&w=394&sz=17&hl=en&start=391&zoom=1&tbnid=TvAvuKTR-Bk8gM:&tbnh=135&tbnw=189&prev=/images%3Fq%3DCommercial%2BApplications%2Bof%2BHadoop%26hl%3Den%26sa%3DG%26biw%3D1024%26bih%3D578%26gbv%3D2%26tbs%3Disch:10%2C11970&itbs=1&iact=hc&vpx=140&vpy=283&dur=3444&hovh=204&hovw=246&tx=151&ty=151&ei=ERmXTJLvL4iGvgORvbibBA&oei=rhiXTKm2I4m9cf3VnKQF&esq=29&page=27&ndsp=15&ved=1t:429,r:5,s:391&biw=1024&bih=578
+[Mon Sep 20 04:29:06 2010] [error] [client 207.46.13.97] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 06:14:08 2010] [error] [client 67.195.112.117] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 06:44:57 2010] [error] [client 124.115.6.11] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 08:03:21 2010] [error] [client 67.195.112.171] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 08:11:00 2010] [error] [client 65.52.53.243] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 10:16:27 2010] [error] [client 202.45.7.162] File does not exist: /home/gregsandell/gregsandell.com/html/favicon.ico
+[Mon Sep 20 10:35:10 2010] [error] [client 71.167.234.121] File does not exist: /home/gregsandell/gregsandell.com/html/index.001.png, referer: http://webcache.googleusercontent.com/search?q=cache:K2Mo0g2kDiEJ:www.gregsandell.com/greg-sandell-resume.doc+Java+J2ee+SQL+HTML+REST+%2B+NY+%2B+Resume&cd=127&hl=en&ct=clnk&gl=us
+[Mon Sep 20 10:35:10 2010] [error] [client 71.167.234.121] File does not exist: /home/gregsandell/gregsandell.com/html/index.002.png, referer: http://webcache.googleusercontent.com/search?q=cache:K2Mo0g2kDiEJ:www.gregsandell.com/greg-sandell-resume.doc+Java+J2ee+SQL+HTML+REST+%2B+NY+%2B+Resume&cd=127&hl=en&ct=clnk&gl=us
+[Mon Sep 20 11:01:44 2010] [error] [client 71.167.234.121] File does not exist: /home/gregsandell/gregsandell.com/html/index.001.png, referer: http://webcache.googleusercontent.com/search?q=cache:K2Mo0g2kDiEJ:www.gregsandell.com/greg-sandell-resume.doc+Java+J2ee+SQL+Spring+HTML+REST+%2B+NY+%2B+Resume&cd=50&hl=en&ct=clnk&gl=us
+[Mon Sep 20 11:01:44 2010] [error] [client 71.167.234.121] File does not exist: /home/gregsandell/gregsandell.com/html/index.002.png, referer: http://webcache.googleusercontent.com/search?q=cache:K2Mo0g2kDiEJ:www.gregsandell.com/greg-sandell-resume.doc+Java+J2ee+SQL+Spring+HTML+REST+%2B+NY+%2B+Resume&cd=50&hl=en&ct=clnk&gl=us
+[Mon Sep 20 11:38:43 2010] [error] [client 220.181.94.226] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 11:59:52 2010] [error] [client 207.46.199.178] File does not exist: /home/gregsandell/gregsandell.com/html/robots.txt
+[Mon Sep 20 12:14:58 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138
+[Mon Sep 20 12:16:18 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138
+[Mon Sep 20 12:17:36 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138
+[Mon Sep 20 12:17:38 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138
+[Mon Sep 20 12:17:40 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138
+[Mon Sep 20 12:17:50 2010] [error] [client 157.199.21.48] PHP Parse error:  syntax error, unexpected '"' in /home/gregsandell/gregsandell.com/html/wire/index.php on line 138

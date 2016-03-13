@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Complete the Vision</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+ 
+    <style type="text/css">
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Lato Light'), local('Lato-Light'), url(font/lato-light.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Lato Regular'), local('Lato-Regular'), url(font/lato-regular.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Lato Bold'), local('Lato-Bold'), url(font/lato-bold.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 900;
+        src: local('Lato Black'), local('Lato-Black'), url(font/lato-black.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Lato';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Lato Italic'), local('Lato-Italic'), url(font/lato-italic.woff) format('woff');
+      }
+      .clearboth {
+        clear: both;
+      }
+      *, *:before, *:after {
+        -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      body {
+        font-family: Lato;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: .8125em;
+        line-height: 1.2em;
+        padding-top: 1.4em;
+        text-align:justify;
+      }
+      .container {
+        height: auto;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-left: 15px;
+        width: 1012px;
+      }
+
+      .osm-logo {
+        float: left;
+        height: 100px;
+        width: 33.333333%;
+      }
+      .title {
+        color: #010d7a;
+        float: left;
+        font-style: italic;
+        font-family: "Times New Roman";
+        font-size: 4em;
+        height: 100px;
+        width: 66.6666666%;
+      }
+      .parish-center {
+      }
+      .church {
+        padding-left: 9px;
+      }
+      .school {
+        padding-left: 9px;
+        padding-right: 10px;
+      }
+      .church-image {
+        float: left;
+        margin-top: 15px;
+        margin-bottom: 28px;
+        width: 33.333333%;
+      }
+      .church-image div {
+          text-align: center;
+      }
+      .block-center {
+        text-align: center;
+      }
+      .thermometer {
+        text-align: center;
+      }
+      .ten-year-anniversary {
+        text-align: center;
+      }
+      .four-squares{
+        text-align: center;
+      }
+
+      .block {
+        font-size: 1.2em;
+        margin-bottom: 1.3em;
+        padding-right: 2em;
+        width: 100%;
+      }
+
+      .block-right {
+        padding-right: 20px;
+      }
+
+      .give-central {
+        margin-bottom: 17px;
+      }
+      .col1 {
+        float: left;
+        width: 50%;
+      }
+      .col2 {
+        float: right;
+        width: 50%;
+      }
+
+      h3 {
+      }
+      .video iframe {
+        height: 281px;
+        width: 100%;
+        padding-right: 10px;
+      }
+      .big-link {
+        text-align: center;
+      }
+      .big-link a {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      .quick-links {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      @media screen and (max-width: 911px) {
+        .title {
+          font-size: 3em;
+        }
+      .container {
+        width: 100%;
+      }
+      }
+      @media screen and (max-width: 693px) {
+        .title {
+          font-size: 2em;
+        }
+      }
+      
+      /* iPhone 5 in landscape */
+      @media screen and (max-width: 568px) {
+        .container {
+          width: 568px;
+        }
+        .col1 {
+          float: left;
+          width: 100%;
+        }
+        .col2 {
+          float: left;
+          width: 100%;
+        }
+        .block {
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+        .title {
+          font-size: 3.5em;
+          width: 100%;
+        }
+      }
+
+      /* iPhone 4 in landscape */
+      @media screen and (max-width: 480px) {
+        .container {
+          width: 480px;
+        }
+        .col1 {
+          float: left;
+          width: 100%;
+        }
+        .col2 {
+          float: left;
+          width: 100%;
+        }
+        .church-image {
+          margin-bottom: 0px;
+          margin-top: 7px;
+          width: 100%;
+        }
+        .block {
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+        .title {
+          font-size: 2.5em;
+          width: 100%;
+        }
+      }
+
+      /* iPhone 4/5 portrait */
+      @media screen and (max-width: 320px) {
+        .container {
+          width: 320px;
+        }
+        .osm-logo {
+          width: 100%;
+        }
+        .title {
+          font-size: 2.5em;
+          width: 100%;
+        }
+        .col1 {
+          float: left;
+          width: 100%;
+        }
+        .col2 {
+          float: left;
+          width: 100%;
+        }
+        .container {
+          width: 320px;
+        }
+        .block {
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+        .big-link a {
+          font-size: 1em;
+          font-weight: bold;
+        }
+        .quick-links {
+          font-size: 1em;
+          font-weight: bold;
+        }
+        .four-squares{
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="osm-logo"><img src="img/OSM_logo_153x94.png"></div>
+      <div class="title">Complete the Vision</div>
+      <div class="church-image parish-center">
+        <img src="img/parishDrawing_308x180.png">
+        <div>Parish Center 2015</div>
+      </div>
+      <div class="church-image church">
+        <img src="img/church_307x180.png">
+        <div>Church 2002</div>
+      </div>
+      <div class="church-image school">
+        <img src="img/osmSchool_307x180.png">
+        <div>School 2011</div>
+      </div>
+      <div class="clearboth"></div>
+      <div class="col1">
+        <div class="block">
+          <h3>What will the OSM Parish Center be?</h3>
+          <p>The planned 17,000 square foot Parish Center will house some Parish offices closer to the front Michigan Avenue entrance, have multiple meeting/classroom spaces, and a gymnasium/social hall with a retractable performance stage. The project is estimated to cost $3.6 million. This cost includes demolition, construction, and facility equipment. If important milestones and fundraising deadlines are met, we hope to open the doors to the Parish Center in Fall 2015.</p>
+        </div>
+        <div class="block">
+          <div class="big-link">
+            <a target="_BLANK" href="http://osmschool.com/wp-content/uploads/2013/09/Untitled-11.pdf">Click Here to see Architectural Plans</a>
+          </div>
+        </div>
+        <div class="block">
+          <h3>Why is an OSM Parish Center so important?</h3>
+          <p>Strategically, we have a window of opportunity to move forward so that our entire Old St. Mary’s community can benefit from a new Parish Center as soon as possible. We have support from school and parish leaders as well as collaborative relationships with Archdiocese personnel.</p>
+          <p>The current campus of Old St. Mary’s does not offer a gathering and social space large enough for our community’s needs. Old St. Mary’s Parish has grown by five time its size since 2002. Our school enrollment has increased from 18 students to over 350. The school needs appropriate space for its athletics and performing arts programs. Currently, school children have gym and practice sports off- campus at other church and school facilities.</p>
+        </div>
+        <div class="block">
+            <div class="block-center">
+                <img src="img/thermometer.jpeg">
+            </div>
+        </div>
+        <div class="block">
+          <div class="quick-links block-center">
+             Quick Links:
+             <br><a target="_BLANK" href="http://oldstmarys.com/">Old St Mary's Church</a>
+             <br><a target="_BLANK" href="http://osmschool.com/">Old St Mary's School</a>
+         </div>
+        </div>
+        <div class="block">
+          <div class="block-center"><img src="img/tenYearAnniversary-233x233.png"></div>
+        </div>
+      </div>
+      <div class="col2">
+        <div class="video">
+          <iframe src="//player.vimeo.com/video/84968376?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <p style="padding-top: 5px"><a target="_BLANK" href="http://vimeo.com/84968376">OSM Parish Center Video</a> from <a target="_BLANK" href="http://vimeo.com/user10189948">OSM TV</a> on <a target="_BLANK" href="https://vimeo.com">Vimeo</a>.</p>
+          <br>
+        </div>
+        <div class="block block-right give-central">
+          <h3>How can I help Complete the Vision?</h3>
+          <p>There are multiple ways to support OSM’s Parish Center. We ask everyone for their prayers and moral support. We also, of course, need your financial support. You can make a one-time donation or make donations over time with installment payments via:</p>
+        </div>
+        <div class="block block-right give-central">
+          <div class="big-link">
+            <a target="_BLANK" href="https://www.givecentral.org/new/core.php?do=event_signup_link&key=GC-522f558f58345">GiveCentral.org</a>
+          </div>
+        </div>
+        <div class="block block-right">
+          <p style="padding-top: 14px">Don’t forget that you may be able to double, or even triple, the amount of your gift to the Old St. Mary’s Phase III Project through corporate matching gift programs. To find out if your company matches charitable gifts, please contact your Human Resource or Community Relations Department.</p>
+          <p>Old St Mary’s is truly a wonderful and vibrant place. The Parish Center will enable us to even more fully meet the needs of our parish, school, and community. We will need your help, dedication, and support in order to complete our final phase of our campus.</p>
+        </div>
+        <div class="block block-right">
+          <div class="block-center"><img src="img/fourSquares_379x380.png"></div>
+        </div>
+
+
+    </div>
+
+  </body>
+</html>
+

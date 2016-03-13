@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="calculator">
+    <head>
+        <meta charset="utf-8">
+        <title>Cellphone Store Financial Calculator</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="lib/angular/angular.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+      
+        <style>
+      
+      
+        </style>
+    </head>
+    <body  ng-controller="calcCtrl">
+        <div class="container-fluid">
+            <calc item="hoursOfStore"               type="input" unit="hours"></calc>
+            <calc item="numberOfEmployees"          type="input" unit="employees"></calc>
+            <calc item="processingTimePerPhone"     type="input" unit="minutes"></calc>
+            <calc item="grossSalePerPhone"          type="input" unit="dollars"></calc>
+            <calc item="costPerPhone"               type="input" unit="dollars"></calc>
+            <calc item="hourlyWagePerEmployee"      type="input" unit="dollars"></calc>
+            <calc item="dailyStoreLease"            type="input" unit="dollars"></calc>
+
+            <calc item="phonesSoldPerPersonPerHour" type="calc"  unit="phones"></calc>
+            <calc item="phonesSoldPerDay"           type="calc"  unit="phones"></calc>
+            <calc item="totalGrossPerDay"           type="calc"  unit="dollars"></calc>
+            <calc item="operatingCostPerDay"        type="calc"  unit="dollars"></calc>
+            <calc item="netProfit"                  type="calc"  unit="dollars"></calc>
+
+        </div>
+    </body>
+</html>

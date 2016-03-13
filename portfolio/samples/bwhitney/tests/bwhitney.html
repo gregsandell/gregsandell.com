@@ -1,0 +1,2556 @@
+<HTML>
+<HEAD>
+<TITLE>Whitney Studios...Where Ideas Flow Like Honey</TITLE>
+<script language="Javascript">
+/****************************************************************************
+*
+*     Website for artist Bill Whitney
+*
+*     Copyright 1998, Spellbinders, Inc.
+*
+*     All programming by Greg Sandell (sandell@sparky.parmly.luc.edu)
+*       with the exception of the "GifAnim" functions which are Copyright 
+*       1998 Dan Steinman (further info below).
+*       
+*****************************************************************************/       
+var currentbee = 'havePatienceDiv';
+var doPositioning = false    // For turning some debugging buttons on
+var debugPolling = false    // For reports on # of calls to polling routines
+var pollingFrequency = 250  // Number in msec, how often pollComplete() gets called
+var coreInterval = 12000    // Frequency of bee cycles    
+var terror = 5000           // Random perturbation of above
+var totalgraphics = 123     // Expected number of preloaded, registered images
+var subheadSpeed = 75
+var animBeeAnimSpeed = 200
+var subheadHold = 1500
+
+var time1, time2, lapsedtime, lasttime, lapseString
+lasttime = 0
+time1 = new Date()
+time1 = Date.parse(time1.toGMTString())
+var siteEnabled = false
+/*
+	Here is some browser dependent stuff
+*/
+var ns4 = (document.layers)? true:false
+var ie4 = (document.all)? true:false
+var isNS = (navigator.appName == "Netscape");
+var isDHTML = (parseInt(navigator.appVersion) > 3);
+var  layerObj = (isNS) ? 'document' : 'document.all';
+var  styleObj = (isNS) ? '' : '.style';
+
+/*********************************************************
+	Things that run once the website is all loaded
+**********************************************************/
+/* "aDARnotyetcalled" needed because two places can potentially call
+    allDoneAndReady(), and we don't want it called more than once */ 
+var aDARnotyetcalled = true  
+// allDoneAndReady():  Puts the website in ready-to-go state.  Should be called by
+//   pollComplete(), but if the image registry method fails, it will be called by
+//   the onLoad method of the <BODY>
+//
+function allDoneAndReady(whocalled) {
+//  if (whocalled == 1)
+//      alert('allDoneAndReady called by pollComplete()')
+//    else
+//      alert('allDoneAndReady called from BODY')
+  if (aDARnotyetcalled) {
+    if (debugPolling) {
+      alert('done, ' + pollCompleteCounts + ' calls to pollComplete(), ' +
+        pollGraphicsCounts + ' calls to pollGraphics()')
+      alert('done, ' + progresscount + ' calls to progress(), timeupdates = ' + timerupdates)
+    }
+    aDARnotyetcalled = false
+    if (doPositioning) showObject('buttons')    
+    everyImageComplete = true;  /* shuts off some setTimeout() calls */
+    forceDisplayAll()
+    showObject('bee1')
+    time2 = new Date()
+    lapsedtime = (Date.parse(time2.toGMTString()) - time1)/1000  
+    if (lapsedtime < 60.0) {
+        lapsedtime = Math.floor(lapsedtime*10.0)/10.0
+        lapseString = 'Your download time was ' + lapsedtime + " seconds"
+    }
+      else  {
+        lapsedtime = Math.floor((lapsedtime/60)*10.0)/10.0
+        lapseString = 'Your download time was ' + lapsedtime + " minutes"
+      }
+    hideStatusbar()
+    showObject('status2head')
+//    if (ie4) {
+//      if (!status3head ) alert("ie4 thinks that status3head doesn't exist")
+//      status3head.innerHTML =  os
+//    }
+//    hideStatusGraphics()
+//  if (document.enterDiv == null) alert('is null')
+    showObject('enterDiv')
+    setTimeout('randomBeeCycles()',3000)
+  /*  This is buggy...it fails intermittently.  And when it fails, it 
+      causes the remainder of the function to cease operating.  So 
+      put his last!!  */ 
+    var os = '<span id=yourDownload>' + lapseString + '</span>'
+// os = 'oh wow man'
+    if (ns4) {
+      var d = eval(layerObj + '.status3head.document')
+      d.write(os)
+      d.close()
+    }
+//    if (ie4) { 
+//      var com = 'status3head.innerHTML = ' + "'" + os + "'"
+//      alert(com)
+//      eval(com)
+//        eval('status3head.innerHTML = "<span id=yourDownload>' + lapseString + '</span>"')
+//alert(status3head.innerHTML)
+//    }
+    showObject('status3head')
+  }
+}
+//
+// startSite():  called as a consequence of the user pressing an "Enter" button
+//
+function startSite() {
+  hideStatusGraphics()
+  hideObject('enterDiv')
+siteEnabled = true
+  HomeBeeOnClick()
+//  bwHomeSlideshow()
+  
+}  
+/*********************************************************
+	For debugging
+**********************************************************/
+//  GLOBALS
+var BGshowing = true;              // For toggling background (debugging)
+
+
+// FUNCTIONS
+function toleft() {
+	--document[currentbee].left;
+}
+function toright() {
+	++document[currentbee].left;
+}
+function toup() {
+	--document[currentbee].top;
+}
+function todown() {
+	++document[currentbee].top;
+}
+function showcoords() {
+	alert('left = ' + document[currentbee].left + ', top = ' + document[currentbee].top);
+}
+function toggleBackground() {
+  if (BGshowing) {
+		hideObject('bgImage')
+		BGshowing = false;
+  }
+	else {
+		showObject('bgImage')
+		BGshowing = true;
+  }
+}
+
+
+
+/*********************************************************
+	Code for hiding/displaying/changing layers
+**********************************************************/
+/*  Concerning showObject() and hideObject()...are those "if
+    statements really desirable?  Hmm, need to study.     */
+
+function showObject(bname){
+ if (eval(layerObj + '["' + bname + '"]')) 
+  eval(layerObj + '["' + bname + '"]' + styleObj + '.visibility = "visible"');
+}
+        
+function hideObject(bname){
+  if (eval(layerObj + '["' + bname + '"]')) 
+     eval(layerObj + '["' + bname + '"]' + styleObj + '.visibility = "hidden"');
+}
+function moveObject(bname,left, top){
+  eval(layerObj + '["' + bname + '"]' + styleObj + '.top = top');
+  eval(layerObj + '["' + bname + '"]' + styleObj + '.left = left');
+}
+function changeImage(layer,imgName,imgObj,fn) {
+
+  if (ns4 && layer!=null) 
+     eval('document.'+layer+'.document.images["'+imgName+'"].src = '+imgObj+'.src');
+    else document.images[imgName].src = eval(imgObj+".src");
+  eval(fn)
+}
+
+/*********************************************************
+	Code for monitoring the loading of graphics
+**********************************************************/
+// GLOBALS
+var firstred = true;                 // Just so showObject('redbar') gets called only once
+                                     //   graphics in website.  Should equal preloadimagecount
+                                     //   when site is loaded.
+var redbarwidth = 376;               // width of image redbar.gif
+var redbarwidth = 334;               // width of image redbar.gif
+var barincr =                        // Amount in pixels by which redbar grows on each new graphic
+  Math.floor(redbarwidth/totalgraphics);		
+var myImages = new Array(150)        // Associative array of registered images, indexed by
+                                     //   the graphic's name
+var myImagesNums = new Array(150)    // Same content as myImages[] but in a numerically-
+                                     //   indexed array
+var preloadimagecount = 0            // Current count of registered images that have loaded
+
+//FUNCTIONS
+
+//
+// preload():  loads images into Image objects, registers them
+//
+function preload(imgObj,imgSrc) {
+  eval(imgObj + ' = new Image()')
+  eval(imgObj + '.src = "'+imgSrc+'"')
+  registerImg(imgObj,null)
+}
+
+//
+// registerImg():  adds an image name to be monitored into the numerically-indexed
+//    array myImagesNums[].  The function is called in one of two ways:
+//
+//    1. The item being registered is a <DIV> with an embedded <IMG> tag.  In that
+//       case divName gets set to the DIV's ID, and imgSomething gets set to the
+//       name field of the <IMG>.  (Note, the <IMG> *has* to have a name)
+//    2. The item being registered is a preloaded image made with the Image() 
+//       constructor.  No DIV exists, so divName must be set to null.  The arg
+//       imgSomething is set to an arbitrarily selected name.  The Image object
+//       does not have a set "name" field (it is read only, so you can't set one)
+//       so you select a name as you wish.
+//
+//    I have adopted the general policy (not strictly enforced :-) of making the
+//    the imgSomething label to be the same as either the DIV ID (case 1 above) or
+//    or the Image object name (case 2 above) with an "i" appended at the end. 
+//
+function registerImg(imgSomething,divName) {
+  if (divName != null)
+      myImagesNums[preloadimagecount] = new imgRec(imgSomething,divName)
+    else
+      myImagesNums[preloadimagecount] = new imgRec(imgSomething,null)
+  ++preloadimagecount
+}  
+
+//
+// imgRec():  creates an object for registering an image.  Called only by registerImg().
+//   Also enters the image in the associative array myImages[]
+//
+var imgRecCom
+function imgRec(imgSomething,divName) {
+  this.imgName = imgSomething
+  this.divName == null
+  if (divName != null) {
+    this.divName = divName
+    imgRecCom = layerObj + '.' + divName + '.document.images["' + 
+                    imgSomething + '"]'
+    this.imgObj = eval(imgRecCom)
+  }
+  if (divName == null) {
+    this.imgObj = eval(imgSomething)
+  }
+  eval('myImages["' + imgSomething + '"] = this')
+  imgRecCom = null
+//  return(this)
+}
+
+//
+// vomitDOM():  debugging tool.  Writes out all the image and <div> info to a new page.
+//
+var everyImageComplete = false   // gets set to true when all registered images are loaded
+                                 // Is crucial to turning off some background processes
+                                 // (recurring setTimeout() calls)
+var numImagesComplete            // Holds current number of registered images that have loaded
+
+//
+// progress():  updates the appearance of the status bar.  Called only by function
+//     pollComplete()
+//
+var progresscount = 0        // For counting the number of calls to progressCount()
+var timerupdates = 0
+var pollCompleteCounts = 0   // For counting the number of calls to pollComplete()
+var pollGraphicsCounts = 0   // For counting the number of calls to pollGraphics()
+var barincr
+var pincr
+function progress() {
+//  barincr = Math.ceil(redbarwidth/preloadimagecount);		
+  barincr = redbarwidth/preloadimagecount;		
+  if (statusbarLoaded()) {
+//    pincr = ((numImagesComplete * barincr) > 0) ? numImagesComplete * barincr : barincr;
+    pincr = Math.floor((numImagesComplete * barincr) + 0.5);
+//    eval(layerObj + '["redbar"]' + styleObj + '.clip.right = ' + pincr)
+    moveObject('statusBeeDiv',(pincr + 215), 162)
+
+    if (firstred) { 
+      showStatusbar()
+//      showObject('redbar')
+      firstred = false;
+    }
+  }
+  ++progresscount
+  barincr = null
+  pincr = null
+}
+
+//
+// pollComplete():  Takes census and count of images that have loaded.  Calls 
+//    allDoneAndReady() when count is complete.
+//
+var pc_alldone, pc_nic
+function pollComplete() {
+  if (debugPolling)
+    alert('just arrived in pollComplete')
+  if (everyImageComplete)  {
+//    alert('terminating pollComplete() calls because everyImageComplete is true')
+    return
+  }
+  pc_alldone = true
+  pc_nic = 0
+  for (var i = 0; i < preloadimagecount; i++) {
+    if (!myImagesNums[i].imgObj.complete)
+        pc_alldone = false
+      else {
+        ++pc_nic
+      }
+  }
+/*  if (pc_alldone)  
+      alert('in pollcomplete() and all done!')
+    else
+      alert('not alldone in pollcomplete()') */
+  ++pollCompleteCounts
+  numImagesComplete = pc_nic 
+  pc_nic = null
+  if (pc_alldone) {
+    if (debugPolling)
+      alert('alldone became true when pollCompleteCounts reached ' + pollCompleteCounts)
+    everyImageComplete = true
+    pc_alldone = null
+    allDoneAndReady(1)
+  }
+    else {
+      progress() 
+      pc_alldone = null
+      setTimeout("pollComplete()",pollingFrequency)
+    }
+}
+//
+// pollGraphics():  Looks for particular sets of graphics and displays them once
+//   they have completely loaded.  Is called repeatedly.  Gets called early on in 
+//   the <BODY>.  Note that we ensure that all flowers and bees cannot be made to
+//   appear until after the background can also appear.
+//
+//  Inefficiency:  keeps 
+//   reissuing the command to display a graphic on every loop, even when that graphic
+//   is already showing.  Wasteful?  Doesn't
+//   seem to pose a problem. 
+//
+var firstredbarshow = false  // needed because pollGraphics() may turn the bar back on
+                             // after we have turned it off!
+function pollGraphics() {
+  var i
+  if (bgComplete()) bgShow()
+// hmm things went wrong when i did this...don't know why.  I think it's because 
+// there is an error...the start bee has been erroneously set to bee2??
+//  if (isComplete('bee1i') && bgComplete()) showObject('bee1')
+  for (i = 1; i <= 3; i++)
+    if (flowerdone(i) && bgComplete())  showFlower(i); 
+  for (i = 1; i <= 9; i++)
+    if (displayBeeDone(i) && bgComplete()) showDisplayBee(i)
+  if (!firstredbarshow && statusbarLoadDone()) {
+    showStatusbar()  
+    firstredbarshow = true
+  }
+  ++pollGraphicsCounts
+  if (!everyImageComplete)
+    setTimeout("pollGraphics()",pollingFrequency)
+  i = null
+}
+
+function statusbarLoadDone() {
+//  return(isComplete('redbari') && isComplete('greybari'))
+  return(isComplete('statusBeei') && isComplete('flowerpoti'))
+}
+function showStatusbar() {
+//  showObject('greybar')
+//  showObject('redbar')
+  hideObject('status1head')
+  showObject('havePatienceDiv')
+  showObject('downloadTimeDiv')
+  moveObject('skepDiv',215,177)
+  showObject('skepDiv')
+  showObject('statusBeeDiv')
+  showObject('flowerpotDiv')
+}
+function statusbarLoaded() {
+//  return(eval(layerObj + '["redbar"]') && 
+//    eval(layerObj + '["greybar"]'))
+  return(
+    eval(layerObj + '["statusBeeDiv"]')
+     && eval(layerObj + '["flowerpotDiv"]'))
+}
+//
+// hideStatusGraphics():  hides the status bar graphics.  Called only by
+//   allDoneAndReady()
+//
+function hideStatusGraphics() {
+  hideStatusbar()
+  hideObject('status2head')
+  hideObject('status3head')
+  hideObject('downloadTimeDiv')
+  hideObject('welcomeDiv')
+}
+function hideStatusbar() {
+//  hideObject('redbar')
+//  hideObject('greybar')
+  hideObject('statusBeeDiv')
+  hideObject('flowerpotDiv')
+  hideObject('skepDiv') 
+  moveObject('skepDiv',130,176)
+  hideObject('downloadTimeDiv')
+  hideObject('havePatienceDiv')
+}
+// isComplete():  Returns true if the .complete field of an image in myImages[]
+//   has become true.
+// 
+function isComplete(myImgName) {
+
+  // This first check is very important, becuase pollGraphics() will be calling
+  //   isComplete() on various graphics long before they have even been registered
+
+  if (eval('myImages["' + myImgName + '"]') == null) return(false)
+
+  return(eval('myImages["' + myImgName + '"].imgObj.complete'))
+}  
+//
+// bgComplete():  returns true if background image is complete and ready to display
+//
+function bgComplete() { 
+  return(isComplete('bgImagei')) 
+}   
+
+function bgShow() { showObject('bgImage') }                // Show the background
+
+//
+// forceDisplayAll():  used to override pollGraphics() if the image registering system
+//   didn't do it's job right.
+//
+function forceDisplayAll() {
+  var i
+   showObject('bgImage')
+  for (i = 1; i <= 3; i++)
+    showFlower(i)  
+  for (i = 1; i <= 9; i++)
+    showDisplayBee(i)
+//  showObject('bee1');   // hmm things went wrong when i did this...don't know why
+  i = null
+}
+
+var flowerTextMappings = new Array(0,2,1,3)             // see below
+
+//
+// showFlower():  displays flowers 1-3 and their associated text
+//
+function showFlower(num) {
+  showObject('animFlower' + num)
+  /* Oy vey!  The text item numbering is  not logically mapped to the flower numbering! */
+  showObject('textdiv' + flowerTextMappings[num])
+}
+
+//
+// flowerdone():  returns true if all the graphics associated with a flower have
+//   completely loaded.  Called only by pollGraphics()
+//
+function flowerdone(num) {   
+  var low, high, img1, img2, i, isdone
+  if (num == 1) {
+    low = 0 ; high = 7;
+    img1 = 'numImg1'; img2 = 'numImg2'
+  }
+  if (num == 2) {
+    low = 8 ; high = 12;
+    img1 = 'numImg3'; img2 = 'numImg4'
+  }
+  if (num == 3) {
+    low = 11 ; high = 16;
+    img1 = 'numImg5'; img2 = 'numImg6'
+  }
+  isdone = true
+  for (i = low; i <= high; i++)
+    if (!isComplete('num' + i)) isdone = false
+  if (!isComplete(img1) || !isComplete(img2)) isdone = false
+  /* whoops, discovered this line was left out...it's absense was causing errors saying
+     "testdiv1 has no properties"  */
+  if (!isComplete('textdiv' + flowerTextMappings[num])) isdone = false
+  low = null; high = null; img1 = null; img2 = null; i = null;
+  return(isdone)
+}
+
+var beestates = new Array("off","in","on")    // Just a helper for displayBeeDone()
+
+var largeBeeTextMappings = new Array(0,0,0,0,0,0,0,6,5,4)             // see below
+
+// 
+// displayBeeDone(): returns true if all the graphics associated with a display bee have
+//   completely loaded.  Called only by pollGraphics()
+//
+function displayBeeDone(num) {
+  var isdone = true
+  var i
+  for (i = 0; i < 3; i++)
+    if (!isComplete('predb' + beestates[i] + num)) isdone = false
+  if (!isComplete('dbImg' + num)) isdone = false
+  /* Oy vey!  The text item numbering is  not logically mapped to the bee numbering! */
+  if (num >= 7)
+    if (!isComplete('textdiv' + largeBeeTextMappings[num])) isdone = false
+  i = null
+  return(isdone)    
+}
+
+
+//
+// showDisplayBee:  displays a display bee
+//
+function showDisplayBee(num) {
+//  flyBeetoPosition(num)   /* this will be cool when written! */
+  showObject('dbdiv' + num)
+  if (num >= 7)
+    showObject('textdiv' + largeBeeTextMappings[num])
+}
+
+
+
+/**********************************************************************************
+
+	This next long section covers the code for animating flowers.
+
+        For the functions GifAnim(), GifAnimPlay(), GifAnimRun(), 
+        GifAnimStop() and GifAnimGoToFrame(), the following disclaimer
+        applies:
+              "GifAnim Object
+              Copyright 1998 Dan Steinman
+              Available at the Dynamic Duo (http://www.dansteinman.com/dynduo/)
+              April 9, 1998.
+              In order to use this code you must keep this disclaimer"
+
+***********************************************************************************/
+/*  Synopsis of the GifAnim approach
+
+  1. For a series of pics num1, num2, num3, etc, do the following:
+     num1 = new Image()
+     num1.src = "foo.jpg"  (and so on for num2, num3)
+ 
+     (you could choose any other prefix, like "wow", but the series of
+      Images should be named analogously, i.e. wow1, wow2, wow3, etc.)
+  2. Create a layer containing an image...
+     <div id="mydiv" ...etc...>
+        <img name="myImgName" src="bar.jpg" ...etc...>
+     </div>
+       (bar.jpg will probably correspond to one of the images created in step 1)
+  3. Now create a GifAnim object.  Here's a synopsis of the call (first
+     three args only:
+
+     myGifAnimObj = new GifAnim(divname, image_name_residing_in_div, 
+                           picseries_prefix,  ...etc...)
+
+     ...in terms of the current example:
+     myImgNameGifAnim = new GifAnim('mydiv','myImgName','num', ...etc...)
+
+
+  4. GifAnim will put the num1, num2, etc. Images in an array called
+     frame[]
+  5. When it comes times to swap an image, for example to put num2 in the 
+     div object, the call is...
+
+     changeImage('mydiv','myImgName','num2')
+
+     For an animation this will probably be:
+
+     changeImage('mydiv','myImgName',frame[i])
+
+     i.e. iterating through values of i.
+  6. What changeImage() does is this:
+
+     document.mydiv.document.images['myImgName'].src = num2.src (ns4)
+       ...or...
+     document.images['myImgName'].src = num2.src (ie4)
+*/
+// GifAnim Object
+  // Copyright 1998 Dan Steinman
+  // Available at the Dynamic Duo (http://www.dansteinman.com/dynduo/)
+  // April 9, 1998.
+  // In order to use this code you must keep this disclaimer
+
+function GifAnim(layer,imgName,imgSeries,start,end,speed,startFrame) { 
+  var i
+  this.layer = layer
+  this.imgName = imgName
+  this.frame = new Array()
+  for (i=start; i<=end; i++) this.frame[i] = imgSeries+i
+  this.end = end
+  this.start = start
+  this.speed = speed
+  this.active = false
+  this.count = (startFrame)? startFrame : start
+  this.obj = imgName + "GifAnim"
+  eval(this.obj + "=this")
+  this.play = GifAnimPlay
+  this.run = GifAnimRun
+  this.revplay = GifAnimRevPlay
+  this.stop = GifAnimStop
+  this.goToFrame = GifAnimGoToFrame
+  i = null
+}
+function GifAnimPlay(loop,reset,fn) {
+  if (!this.active) {
+    this.active = true
+    if (!loop) loop = false
+    if (!reset) reset = false
+    if (!fn) fn = null
+    this.count = this.start
+    this.run(loop,reset,fn,1)
+  }
+}
+function GifAnimRun(loop,reset,fn,incr) {
+  if (this.active && this.count >= this.start && this.count <= this.end) {
+      changeImage(this.layer,this.imgName,this.frame[this.count])
+      this.count += incr
+      setTimeout(this.obj + ".run(" + loop + "," + reset + ",\"" + fn + "\"," + incr + ")",this.speed)
+  }
+     else {
+       if (loop && this.active) {
+           this.count = this.start
+           this.run(loop,reset,fn,incr)
+       }
+         else {
+                                              
+           this.active = false
+           if (reset) this.goToFrame(this.start)
+           eval(fn)
+         }
+     }
+}
+
+function GifAnimStop() {
+  this.active = false
+}
+  function GifAnimGoToFrame(index) {
+          this.count = index
+          changeImage(this.layer,this.imgName,this.frame[this.count])
+  }
+//  function GifAnimGoToFrame2(index,left,top,height,width) {
+//    eval(layerObj + '["' + this.layer + '"]' + styleObj + '.left = ' + left)
+//    eval(layerObj + '["' + this.layer + '"]' + styleObj + '.top = ' + top)
+
+/* The following are my extensions - Greg Sandell */
+  function GifAnimExtend(flowerObj, glowObj) {
+          flowerObj.glowObj = glowObj
+          flowerObj.openFlower = openFlower
+          flowerObj.closeFlower = closeFlower
+          flowerObj.opened = flwropen
+          flowerObj.closed = flwrclosed
+          flowerObj.glowing = false
+          glowObj.makeitGlow = makeitGlow
+          glowObj.stopGlow = stopGlow
+  }
+function flwropen() {
+// +1 because the counter increments one more before loop stops
+    return(this.count == (this.end + 1))   
+}
+function flwrclosed() {
+// -1 because the counter decrements one more before loop stops
+  return(this.count == (this.start - 1))
+}
+
+  function GifAnimRevPlay(loop,reset,fn) {
+          if (!this.active) {
+                  this.active = true
+                  if (!loop) loop = false
+                  if (!reset) reset = false
+                  if (!fn) fn = null
+                  this.count = this.end
+                  this.run(loop,reset,fn,-1)
+          }
+  }
+
+
+
+function fconv(fnum) {      // Helper func for flowerAction()
+  return(fnum + (fnum-1))
+}
+
+var currentlyGlowing = 0;   // Which flower, if any, is currently in a glowing state
+
+//
+//  CloseOtherFlowers():  Used when opening a particular flower (fnum = 1,2, or 3).
+//  it goes and closes the other flowers, if they are open
+//
+var cof_fObj
+var cof_open
+var cof_glowing
+function CloseOtherFlowers(fnum) {
+  var i
+  for (i = 1; i <= 3; i++) 
+    if (i != fnum) {
+      cof_fObj = 'numImg' + fconv(i) + 'GifAnim'
+      cof_open = eval(cof_fObj + '.opened()') ||  eval(cof_fObj + '.active')
+      cof_glowing = eval(cof_fObj + '.glowObj.glowing')
+      if (cof_open && !cof_glowing) {
+        eval(cof_fObj + '.closeFlower()')
+      }
+    }
+  i = null; cof_fObj = null; cof_open = null; cof_glowing = null
+}
+
+//
+// flowerAction():  sends open, close, or glow commands to the flowers.  Called only
+//   by the event handlers for the flower <DIV>'s.
+//
+var fa_fObj
+function flowerAction(fnum,action) {
+/* action codes: 1 = open, 2 = close, 3 = glow */
+  if (fnum < 1 || fnum > 3) return
+  fa_fObj = 'numImg' + fconv(fnum) + 'GifAnim'
+  IamGlowing = eval(fa_fObj + '.glowObj.glowing')
+  if (action == 1)                         // Mouse over
+    if (!IamGlowing)      {                 // Not in glowing state
+      eval(fa_fObj + '.openFlower()')         // then open it
+//      CloseOtherFlowers(fnum)
+    }
+  if (action == 2)                         // Mouse out
+    if (!IamGlowing)                       // Not in glowing state
+          eval(fa_fObj + '.closeFlower()')    // then close it
+  if (action == 3) {                       // Mouse click
+    if (!siteEnabled) return
+    if (IamGlowing) {                      // If in glowing state
+      return                               // already glowing, do nothing
+      /* earlier I thought what should happen here is that we should close the
+         the flower and return the intro text.  Nah...   */
+//      eval(fa_fObj + '.glowObj.stopGlow()')   // then close it
+//      currentlyGlowing = 0;                // Noone is glowing
+//      SetInsideTreeHTML('bwHome')      
+//      return
+    }
+    if (currentlyGlowing)                // Some flower is glowing, stop it
+      stopCurrentlyGlowingFlower()
+    if (eval(fa_fObj + '.closed()')) {  // What?? Wasn't opened yet??
+      eval(fa_fObj + '.openFlower()')
+    }
+    eval(fa_fObj + '.glowObj.makeitGlow()')   // Set this flower glowing
+    currentlyGlowing = fnum                // Let the world know who is glowing
+    CloseOtherFlowers(fnum)
+    TurnOffLargedb()               // Turn off any active large bees
+  }
+  fa_fObj = null
+}
+function TurnOffLargedb() {
+  if (lastlargedbin == null) return      // No large display bee is lit
+  // The reason we can't just call dbLargeChangeImage() is that that function is
+  // set to ignore commands to turn the currently active large bee off, which is
+  // is exactly what we need to do here
+  changeImage('dbdiv' + lastlargedbin,'dbImg' + lastlargedbin,'predboff' + lastlargedbin,null)
+//  Special case:  there is one large bee (no. 9, the animation art bee) which has an
+//  animation.  We must stop it.
+  if (lastlargedbin == 9) {
+    animBeeAnim.stop()
+  }
+  labelChangeImage(largeBeeTextMappings[lastlargedbin],'off',null)
+  lastlargedbin = null
+}
+var scgf_Obj
+function stopCurrentlyGlowingFlower() {
+  if (currentlyGlowing == 0) return
+  scgf_Obj = 'numImg' +               // Find the object for the glowing item
+    fconv(currentlyGlowing) + 
+      'GifAnim'
+  eval(scgf_Obj + '.glowObj.stopGlow()')  // Stop it
+  if (eval(scgf_Obj + '.opened'))         // If it had been opened (why wouldn't it be??)
+    eval(scgf_Obj + '.closeFlower()')     // close it
+  labelChangeImage(flowerTextMappings[currentlyGlowing],'off',null)
+  currentlyGlowing = 0                 // Announce that noone is glowing now (if that's
+                                       // not the case, change currentlyGlowing elsewhere) 
+  scgf_Obj = null
+}
+function openFlower() {
+	this.play();
+}
+function closeFlower() {
+    this.revplay(); 
+    this.glowObj.stopGlow()
+    this.glowing = false
+}
+function makeitGlow() {
+    showObject(this.layer);  
+    this.play(true);
+    this.glowing = true;
+}
+function stopGlow() {
+	hideObject(this.layer)  
+	this.play(false)
+        this.glowing = false
+}
+
+//
+// initFlowers():  create the objects for flowers and glow objects.  This can
+//   be called as soon as the <DIV>'s for the flowers are created...their graphics
+//   don't have to be loaded yet.
+//
+function initFlowers() {
+	window.focus();   // Probably should move to alldone...()
+        numImg1GifAnim = new GifAnim('animFlower1','numImg1','num',0,3,100,null)
+        numImg2GifAnim = new GifAnim('animGlow1','numImg2','num',4,7,250,null)
+	GifAnimExtend(numImg1GifAnim,numImg2GifAnim)
+        numImg3GifAnim = new GifAnim('animFlower2','numImg3','num',8,10,100,null)
+        numImg4GifAnim = new GifAnim('animGlow2','numImg4','num',11,12,300,null)
+	GifAnimExtend(numImg3GifAnim,numImg4GifAnim)
+        numImg5GifAnim = new GifAnim('animFlower3','numImg5','num',13,14,100,null)
+        numImg6GifAnim = new GifAnim('animGlow3','numImg6','num',15,16,300,null)
+	GifAnimExtend(numImg5GifAnim,numImg6GifAnim)
+     subheadAnim = new GifAnim('subheadDiv','subheadi','subh',
+       1,6,subheadSpeed,null)
+     animBeeAnim = new GifAnim('dbdiv9','dbImg9','buzz',
+       1,2,animBeeAnimSpeed,null)
+}
+function runSubheadAnim() {
+  OKtoAnimateBee = false
+  showObject('subheadDiv')
+  subheadAnim.play()
+  setTimeout('subheadAnim.revplay(false,false,"hideObject(' + "'subheadDiv')" +
+    '"); OKtoAnimateBee = true;',
+     subheadHold)
+}
+function ThreeDflowerOnClick() {
+  if (!siteEnabled) return  
+  killbwHome()
+  flowerAction(1,3);
+  labelChangeImage(2,'in');
+  setArtType('ThreeD');
+  var ran = randOneToSix()
+  flickerBees('on','off',ran,'beeOnClick(' + ran +')');   
+  ran = null
+}
+function CartoonFlowerOnClick() {
+  if (!siteEnabled) return  
+  killbwHome()
+  flowerAction(2,3);
+  labelChangeImage(1,'in');
+  setArtType('Cartoon');
+  var ran = randOneToSix()
+  flickerBees('on','off',ran,'beeOnClick(' + ran +')');   
+  ran = null
+}
+function IllustrationFlowerOnClick() {
+  if (!siteEnabled) return  
+  killbwHome()
+  flowerAction(3,3);
+  labelChangeImage(3,'in');
+  setArtType('Illustration');
+  var ran = randOneToSix()
+  flickerBees('on','off',ran,'beeOnClick(' + ran +')');   
+  ran = null
+}
+function randOneToSix() {
+  return(Math.floor(((Math.random() * 6) + 1)))
+}  
+
+/*********************************************************
+	Stuff related to the bee animation
+**********************************************************/
+// GLOBALS
+var maxbees = 21               // Number of images in the animation
+var bees = new Array(maxbees); // Array to hold names of Images
+for (i = 0; i < maxbees; i++) {
+	bees[i] = 'bee' + (i+1);
+}
+var numiters;                  // Number of times bee has animated
+var loop                       // Boolean:  should the bee loop?
+var speed = 75;                // Length in msec for each frame of animation
+var beeAnimCount               // Current frame number in animation
+var BeeIsActive = false;       // Is bee currently animating?
+
+// FUNCTIONS
+function onebeecycle() {
+  if (!BeeIsActive && OKtoAnimateBee) { /* something else may have triggered an animation...so don't run */
+    loop = false;
+    beePlay();
+  }
+}
+function loopbeecycle() {
+	loop = true;
+	beePlay(true);
+}
+
+//
+// randomBeeCycles():  starts a one-cycle animation every coreInterval msecs, with
+//   a random error factor of +/- terror msec
+//
+var OKtoAnimateBee = true
+var terror = 5000
+function randomBeeCycles() {
+  onebeecycle()
+  setTimeout("randomBeeCycles()",
+     coreInterval + Math.floor(((Math.random() * 2) -1) * terror))
+}
+
+function beePlay() {
+	beeAnimCount = 1;  /* first graphic already showing, so we start with 2nd */
+	numiters = 0;
+	if (!BeeIsActive) {
+			BeeIsActive = true;
+			beeIterate();
+	}
+                // This is defunct, but in case you want them to be able turn on & off the
+                // bee animation by a onClick="beePlay()", this would do it.
+		else
+			BeeIsActive = false;
+}
+
+function beeIterate() {
+	/* beeAnimCount will never be zero, don't worry */
+	hideObject(bees[(beeAnimCount-1) % maxbees]);
+	if (!loop && numiters) {
+		showObject(bees[0])
+                BeeIsActive = false
+                setTimeout('runSubheadAnim()',300)
+	}	
+	if (BeeIsActive) {	
+			var inum = beeAnimCount % maxbees;
+			showObject(bees[inum]);
+			beeAnimCount += 1;
+			if (inum == 0) ++numiters;
+                        inum = null
+			setTimeout("beeIterate()",speed)
+	}
+}			
+
+/*
+	Code for monitoring the loading of graphics
+*/	
+// GLOBALS
+var introCount = 0
+var SlideshowGo
+//
+// bwHomeSlideshow():  neutralizes all flowers and bees, and returns website to beginning
+// state with introduction.
+//
+function bwHomeSlideshow() {
+  SlideshowGo = true
+  hideSpokesBee()
+  showObject('bwHomeDiv1')
+  if (lastArtworkDiv != null) {
+    hideObject(lastArtworkDiv)
+    lastArtworkDiv == null  
+    currentArtType = null
+  }
+  // Next line is cryptic.  labelChangeImage(), which will be called by 
+  // stopCurrentlyGlowingFlower() and TurnOffLargedb(), is set to change a label's state 
+  // only if label number is different than the last selected label's number.  But this is
+  // exactly what will be the case here.  Whew!  But this takes care of it
+//  lasttextin = null      
+  stopCurrentlyGlowingFlower()
+  if (lastdbin != null) {
+    changeImage('dbdiv' + lastdbin, 'dbImg' + lastdbin,'predboff' + lastdbin,null)
+    hideObject('arrow' + lastdbin + 'div')
+  }
+  TurnOffLargedb()
+  showObject('bwHomeDiv1')
+  lastbwHomeDiv = 1
+  showIntroButtons()
+}
+
+function showIntroButtons() {
+  for (i = 1; i <= 5; i++)
+    showObject('introButtonsDiv' + i)
+  moveBeeSkep(1)
+  showObject('skepDiv')
+}
+function hideIntroButtons() {
+  for (i = 1; i <= 5; i++)
+    hideObject('introButtonsDiv' + i)
+  hideObject('skepDiv')
+}
+function killbwHome() {
+  hideObject('bwHomeDiv' + lastbwHomeDiv)
+  hideIntroButtons()
+  SlideshowGo = false
+}
+  
+
+
+/*********************************************************
+	Stuff related to the 6 Display bees
+**********************************************************/
+// GLOBALS
+var lasttextin = null;    // Previous lit text image to turn off when turning on a new one
+var lastdbin = null;  // Previous lit display bee to turn off when turning on a new one
+var lastlargedbin = null;  // Previous lit large display bee to turn off when turning on a new one
+var bcount = 0;           // Counter for flickerBees()
+var flickerRate = 50      // Length in msec for each bee flicker
+
+//
+// beeOnClick()
+//
+function beeOnClick(num) {
+  if (!siteEnabled) return
+  hideSpokesBee()
+  dbChangeImage(num,'in');
+  if (num != 7 && num != 8) {
+    changeArtworkImage(num)
+    SetSpokesBeeHTML(num)   // What Bill apparently wants...
+  }
+} 
+function selectbee(num) {
+  if (!siteEnabled || SlideshowGo) return
+  hideSpokesBee()
+  if (lastArtworkDiv != null) 
+    hideObject(lastArtworkDiv)
+  flickerBees('on','off',num,'beeOnClick(' + num +')');
+}
+//
+// dbChangeImage():  Changes the state of a display bee
+//
+function dbChangeImage(num,state,fn) {
+  if (num < 1 || num > 6)  return
+
+// If we aren't viewing any art now, and they click on a display bee, put up help
+  if ((state == 'in') && (currentArtType==null) && (num <= 6)) {
+    showDisplayBeeHint()
+    return
+  }
+  if (state == 'off') hideDisplayBeeHint()
+
+//   If this is one of the larger display bees (7,8, and 9) close any flowers
+  if ((state == 'in') && (num > 6) && currentlyGlowing) stopCurrentlyGlowingFlower()
+
+// If the mouse passes over this bee while the bee is in lit-up state, we want it to do
+// nothing.
+  if ((lastdbin == num) && ((state == 'on') || (state == 'off')))
+      void(0)
+    else  {
+      changeImage('dbdiv' + num,'dbImg' + num,'predb' + state + num,fn)
+    }
+
+  if (state == 'in') {           // If user has clicked on this bee
+    if (lastdbin == num)        // Already lit up!  Do nothing!
+      return
+    if (lastdbin != null) {
+      hideObject('arrow' + lastdbin + 'div')
+    }
+    showObject('arrow' + num + 'div')
+    turnOffLastdb()
+    lastdbin = num           // Number of currently lit bee
+  }
+}
+function turnOffLastdb() {
+  if (lastdbin != null) {
+    changeImage('dbdiv' + lastdbin, 'dbImg' + lastdbin,'predboff' + lastdbin,null)
+    lastdbin = null
+  }
+}
+//
+// dbChangeImage3():  used just for flickering the display bees 
+//
+function dbChangeImage3(num,state,fn) {
+  changeImage('dbdiv' + num,'dbImg' + num,'predb' + state + num,fn)
+}
+
+// LEFT OFF FIXING VAR VARIABLES HERE
+
+
+//
+// flickerBees(): Cycles a state change (e.g. 'on' to 'in', 'on' to 'off', etc.)
+//   for the six display bees
+// 
+var bfseq, fcount
+function flickerBees(state1,state2,goalnum,fn) {
+  if (!siteEnabled) return
+  if (bcount == 0) {
+    bfseq = new Array();   // Sequence of bees that are flickered
+    var inum = (lastdbin == null) ? 1 : lastdbin
+    done = false
+    var i = 0
+    var forward = true
+    while (!done) {
+      bfseq[i++] = inum 
+      if (inum == 6) forward = false
+      if (inum == 1) forward = true
+      done = (i > 10) && (inum == goalnum)
+      inum += forward ? 1 : -1
+    }
+    fcount = i
+//    var os = ""
+//    for (i = 0; i < fcount; i++)
+//      os = os + ' ' + bfseq[i]
+//    alert(os)
+    bcount = 1
+  }
+    
+    
+  if (bcount == 0 && lastdbin != null) {
+    dbChangeImage3(lastdbin,'off')
+    hideObject('arrow' + lastdbin + 'div')
+  }
+  if (bcount > 0) {
+    hideObject('arrow' + bfseq[bcount-1] + 'div')
+    dbChangeImage3(bfseq[bcount-1],state2)
+    if (bcount == fcount) {
+      bcount = 0   
+      eval(fn)
+      return
+    }
+  }
+  dbChangeImage3(bfseq[bcount],state1);
+  showObject('arrow' + bfseq[bcount] + 'div')
+  ++bcount;
+  setTimeout('flickerBees("' + state1 + '","' + state2 + '",' + 
+    goalnum + ',"' + fn + '")', flickerRate)
+}
+
+/*********************************************************
+	Stuff related to the 3 larger bees
+**********************************************************/
+// GLOBALS
+
+//
+// labelChangeImage(): handles changing of text identifying the flowers and larger bees 
+//
+var lbtemp
+function labelChangeImage(num,state,fn) {  
+  if (lasttextin != num) changeImage('textdiv' + num,'textImg' + num,'pretext' + state + num,fn)
+  if (state == 'in') {
+    if (lasttextin)
+      changeImage('textdiv' + lasttextin,'textImg' + lasttextin,'pretextoff' + lasttextin,null)
+    lasttextin = num
+  }
+}
+function AnimationBeeOnClick() {
+  if (!siteEnabled) return
+  killbwHome()
+  hideSpokesBee()
+  dbLargeChangeImage(9,'in')
+  animBeeAnim.play(true)
+  labelChangeImage(4,'in')
+  hideObject(lastArtworkDiv)
+  setArtType('Animation')
+  // Next line is cryptic.  dbChangeImage() is set to change a bee's state only if
+  // that bee number is different than the last selected bee's number.  But this is
+  // what will happen if the user switches to the next arttype after having just
+  // looked at item one in the last arttype.  Whew!  But this takes care of it
+  lastdbin = null    
+  var ran = randOneToSix()
+  flickerBees('on','off',ran,'beeOnClick(' + ran +')');   
+}
+function HomeBeeOnClick() {
+  if (!siteEnabled) return
+  if (SlideshowGo) return
+  bwHomeSlideshow()
+  hideSpokesBee()
+  dbLargeChangeImage(7,'in')
+  labelChangeImage(6,'in')
+  hideObject(lastArtworkDiv)
+  setArtType(null)
+  // Next line is cryptic.  dbChangeImage() is set to change a bee's state only if
+  // that bee number is different than the last selected bee's number.  But this is
+  // what will happen if the user switches to the next arttype after having just
+  // looked at item one in the last arttype.  Whew!  But this takes care of it
+  lastdbin = null      
+}
+function OfficeBeeOnClick() {
+  if (!siteEnabled) return
+  killbwHome()
+  hideSpokesBee()
+  dbLargeChangeImage(8,'in')
+  labelChangeImage(5,'in')
+  hideObject(lastArtworkDiv)
+  setArtType(null)
+  // Next line is cryptic.  dbChangeImage() is set to change a bee's state only if
+  // that bee number is different than the last selected bee's number.  But this is
+  // what will happen if the user switches to the next arttype after having just
+  // looked at item one in the last arttype.  Whew!  But this takes care of it
+  lastdbin = null      
+  flickerBees('on','off',1,'beeOnClick(1)')
+}
+function dbLargeChangeImage(num,state,fn) {
+  if (num < 7 || num > 9) return
+
+//   Close any flowers
+  if ((state == 'in')  && currentlyGlowing) stopCurrentlyGlowingFlower()
+
+// If the large bee is in currently-lit state, then it should stay lit until a different bee
+// is clicked on, and it should change state due to a mouseOver or MouseOut.  We will
+// know that this is true if lastdbin == num.  So only respond if they are NOT equal.
+  if (lastlargedbin != num) {
+//    alert('changeImage('+layer+','+imgName+','+imgObj+','+fn+')')
+    changeImage('dbdiv' + num,'dbImg' + num,'predb' + state + num,fn)
+  }
+  if (state == 'in') {           // If user has clicked on this bee
+    if (lastlargedbin) {          // If a previous bee is lit
+      TurnOffLargedb()
+    }  
+    lastlargedbin = num           // Number of currently lit bee
+  }
+}
+
+/*********************************************************
+	Stuff related to display of art samples
+**********************************************************/
+function SetInsideTreeHTML(htmlFile) {  
+  if (lastArtworkDiv != null) hideObject(lastArtworkDiv)
+  // Next line is cryptic.  labelChangeImage(), which will be called by 
+  // stopCurrentlyGlowingFlower() and TurnOffLargedb(), is set to change a label's state 
+  // only if label number is different than the last selected label's number.  But this is
+  // exactly what will be the case here.  Whew!  But this takes care of it
+  lasttextin = null      
+
+  stopCurrentlyGlowingFlower()
+  if (lastdbin != null)
+    changeImage('dbdiv' + lastdbin, 'dbImg' + lastdbin,'predboff' + lastdbin,null)
+//  if (lastlargedbin != null)
+//    changeImage('dbdiv' + lastlargedbin, 'dbImg' + lastlargedbin,'predboff' + lastlargedbin,null)
+  TurnOffLargedb()
+//  hideObject('SpokesBeeTextDiv')  /* don't need now since spokesbee is a mousein event */
+  if (ns4) {  // unsolved
+    eval(layerObj + '.TextInsideTreeDiv.load("' + htmlFile + '.html",300)')
+//      document.TextInstideTreeDiv.document.write(methodetxt)
+//      document.TextInstideTreeDiv.document.close()
+  }
+  if (ie4)
+    TextInsideTreeDiv.innerHTML = methodetxt
+  showObject('TextInsideTreeDiv')
+// alert(htmlFile + " A pause needs to be inserted here\n\n(This is a bug which will ironed out)")
+// alert("done")
+}
+
+var methodetxt = '<htm' + 'l><BOD' + 'Y bgcolor="yellow" text="#000000"><tabl' +
+ 'e cellpadding=10 width=205><tr><td><fon' + 't face=Arial><cente' + 'r><h3>Methode ' + 
+  'Electronics - High tech fiber optic developers</h3></cente' + 'r><font size=-1>' +
+  'This comparison of copper wiring and fiber optic cable was created in ' +
+  '<b>Strata Studio Pro</b> and enhanced in <b>Photoshop</b>. It was printed as the ' +
+  "cover illustration for <b>Methode</b>'s Electronics Products brochure.</fon" +
+  't></td></tr></table></bod' + 'y></htm' + 'l>'
+
+
+
+
+function hideSpokesBee() {
+  hideObject(lastspokesDiv)
+  OKtoAnimateBee = true
+}
+
+var spokesHTML
+var lastspokesHTML = null
+var spokesDiv
+var lastspokesDiv = null
+var afirst = true
+function SetSpokesBeeHTML(num) {
+  if (currentArtType == null) return
+  spokesDiv = currentArtType + 'Explain' + num
+  if (lastspokesDiv != null) hideSpokesBee()
+  lastspokesDiv = spokesDiv
+  showObject(spokesDiv)
+  OKtoAnimateBee = false
+return
+  if (currentArtType == null) return
+  spokesHTML = currentArtType + 'Explain' + num + '.html'
+//  showObject('artExplainDiv')
+//  return
+  if (spokesHTML != lastspokesHTML)  { // unsolved
+      document.SpokesBeeTextDiv.load(spokesHTML,209)
+//      document.SpokesBeeTextDiv.document.write(methodetxt)
+//      document.SpokesBeeTextDiv.document.close()
+      afirst = false
+  }
+  lastspokesHTML = spokesHTML
+  showObject('SpokesBeeTextDiv')
+  OKtoAnimateBee = false
+}
+function showDisplayBeeHint() {
+// HACK!  This is the only way to prevent hints from coming up when they click on one
+// of the large display bees
+  if (lastlargedbin != null) return
+  if (ns4)  // unsolved
+      document.beeHintDiv.load("displayBeeHints.html",209)
+  showObject('beeHintDiv')
+}
+function hideDisplayBeeHint() {
+  hideObject('beeHintDiv')
+}
+ThreeDsources = new Array(6)
+Illustrationsources = new Array(6)
+Cartoonsources = new Array(6)
+Animationsources = new Array(6)
+for (var i = 1; i <= 6; i++) {
+  ThreeDsources[i-1] = "notPreloaded/art/3d/3d" + i + ".jpg"
+  Illustrationsources[i-1] = "notPreloaded/art/illustration/illpic" + i + ".jpg"
+  Cartoonsources[i-1] = "notPreloaded/art/cartoon/carpic" + i + ".jpg"
+  Animationsources[i-1] = "notPreloaded/art/animation/anqt" + i + ".mov"
+}
+
+var lastArtworkDiv = null 
+var currentArtType = null
+function setArtType(artType) {
+  currentArtType = artType
+}
+var cai_vis, cai_divname, cai_src, cai_d, cai_os, fooi
+function changeArtworkImage(num) {
+// alert('in changeArtworkImage()')
+  cai_vis = eval(layerObj + '.TextInsideTreeDiv.visibility')
+  if (cai_vis == 'show') {
+    hideObject('TextInsideTreeDiv')  
+  }
+  if (currentArtType == null) return
+  cai_divname = currentArtType + 'div' + num
+  cai_src = eval(currentArtType + 'sources[' + (num-1) + ']')
+  cai_d = eval(layerObj + '.' + cai_divname + '.document')
+  if (currentArtType != 'Animation') {
+    if (ns4)
+      cai_d.images["emptynow"].src = cai_src
+    if (ie4) {
+      var com= cai_divname + '.innerHTML = "<img src=' + "'" + cai_src + "'></img>" + '"'
+//      alert(com)
+      eval(com)
+    }
+  }
+
+  if (currentArtType == 'Animation') {
+    cai_os = ""
+//    cai_os = '<html><head></head><body>'
+//    cai_os = cai_os + '<a href="javascript:void(0)" onMouseOver="SetSpokesBeeHTML(1)" onMouseOut="hideSpokesBee()">'
+    cai_os = cai_os + '<embed src="' + cai_src + '"  width=160 height=140 controller="true" border=5 '
+    cai_os = cai_os + 'pluginspage="http://www.apple.com/quicktime/download/"'
+    cai_os = cai_os + '></embed>'
+//    cai_os = cai_os + '</a>'
+//    cai_os = cai_os + '</body></html>'
+    if (ns4)  {
+      cai_d.write(cai_os)
+      cai_d.close() 
+    }
+    if (ie4) {
+      com = cai_divname + '.innerHTML = ' + "'" + cai_os + "'"
+//      alert(com)
+      eval(com)
+    }
+  } 
+  if (lastArtworkDiv != null) hideObject(lastArtworkDiv)
+  lastArtworkDiv = cai_divname
+  showObject(cai_divname)
+// pause needed?
+//  alert("Wait until the picture is completely loaded, then press Okay\n\n(This is only a temporary necessity until a bug gets ironed out)")
+}
+ 
+   
+/*********************************************************
+	Stuff related to preloading images
+**********************************************************/
+function doPreloads() {
+  preloadFlowers()
+  preloadDisplayBees()
+  preloadLargerBees() 
+  preloadTextLabels() 
+  preloadSubheadAnimation()
+}
+function preloadFlowers() {
+  var i, j
+  for (i=0, j=1;i<=3;i++,j++) {
+	preload('num' + i,'images/flowers/3d/flw3D' + j + '.jpg');
+  }
+
+  for (i=4, j=5;i<=6;i++,j++) {
+	preload('num' + i,'images/flowers/3d/flwC3D' + j + '.jpg');
+  }
+// The seventh image is the same as image 6, so the animation will
+// cyclist 5-6-7-6-5-6-7 etc.
+  preload('num7','images/flowers/3d/flwC3D6.jpg','flower7');
+  for (i=8, j=9;i<=10;i++,j++) {
+	preload('num' + i,'images/flowers/cartoon/carr' + j + '.jpg');
+  }
+  for (i=11, j=12;i<=12;i++,j++) {
+	preload('num' + i,'images/flowers/cartoon/cars' + j + '.jpg');
+  }
+  for (i=13, j=14;i<=14;i++,j++) {
+	preload('num' + i,'images/flowers/illustration/ili' + j + '.jpg');
+  }
+  for (i=15, j=16;i<=16;i++,j++) {
+	preload('num' + i,'images/flowers/illustration/ils' + j + '.jpg');
+  }
+}
+function preloadSubheadAnimation() {
+  for (var i = 1; i <= 6; i++)  {
+    preload('subh' + i,'images/subheadAnimation/subh' + i + '.jpg')
+  }
+}
+function preloadDisplayBees() {
+  var i
+  for (i = 1; i <= 6; i++) {
+	preload('predboff' + i,'images/displayBees/dboff' + i + '.jpg')
+	preload('predbin' + i,'images/displayBees/dbin' + i + '.jpg')
+	preload('predbon' + i,'images/displayBees/dbon' + i + '.jpg')
+//	preload('predbvisited' + i,'images/displayBees/dbvisited' + i + '.jpg')
+  }
+}
+function preloadLargerBees() {
+  var i
+  for (i = 7; i <= 7; i++) {
+	preload('predboff' + i,'images/largeBees/home/dboff' + i + '.jpg')
+	preload('predbin' + i,'images/largeBees/home/dbin' + i + '.jpg')
+	preload('predbon' + i,'images/largeBees/home/dbon' + i + '.jpg')
+  }
+  for (i = 8; i <= 8; i++) {
+	preload('predboff' + i,'images/largeBees/TheOffice/dboff' + i + '.jpg')
+	preload('predbin' + i,'images/largeBees/TheOffice/dbin' + i + '.jpg')
+	preload('predbon' + i,'images/largeBees/TheOffice/dbon' + i + '.jpg')
+  }
+  for (i = 9; i <= 9; i++) {
+	preload('predboff' + i,'images/largeBees/animation/dboff' + i + '.jpg')
+	preload('predbin' + i,'images/largeBees/animation/dbin' + i + '.jpg')
+	preload('predbon' + i,'images/largeBees/animation/dbon' + i + '.jpg')
+  }
+  for (i = 1; i <=2 ; i++)
+    preload('buzz' + i,'images/largeBees/animation/buzz' + i + '.jpg')
+}
+function preloadTextLabels() {
+  var i
+  for (i = 1; i <= 6; i++) {
+    preload('pretexton' + i, 'images/type/texton' + i + '.jpg')
+    preload('pretextoff' + i, 'images/type/textoff' + i + '.jpg')
+    preload('pretextin' + i, 'images/type/textin' + i + '.jpg')
+  }
+}
+</script>
+
+<style type="text/css">
+#pWelcome {
+  margin-top: 5;
+  text-indent: 15;
+}
+#welcomeStyleNS4 {
+  color: #FFFFFF;
+  font-family:  Verdana, "Comic Sans MS", Arial;
+  font-size: 14px;
+}
+#welcomeStyleIE4 {
+  color: #FFFFFF;
+  font-family:  Verdana, "Comic Sans MS", Arial;
+  font-size: 13px;
+}
+#bioText {
+  color: #FFFFFF;
+  font-family:  "Comic Sans MS", Verdana, Arial;
+  font-size: 14px;
+}
+#ComicBlue {
+  color: #0065E5;
+  font:  16px Comic Sans MS;
+}
+#yourDownload {
+  color: #FFFFFF;
+  font-size:  14px;
+  font-family: Verdana, "Comic Sans MS", Arial;
+  font-style: italic;
+}
+#bioTitle {
+  top-margin: 5;
+  text-align: center;
+  color:  #FFFFFF;
+  font-size:  20px;
+  font-family: "Comic Sans MS", Verdana, Arial;
+}
+#pCredit {
+  text-align: center;
+  top-margin: 0;
+}
+#creditPerson { 
+  top-margin: 0;
+  color: yellow;
+  font-size:  16px;
+  font-family: "Comic Sans MS", Verdana, Arial;
+  text-decoration: none;
+}
+#creditTitle { 
+  top-margin: 0;
+  color: #FFFFFF;
+  font-size:  14px;
+  font-family: "Comic Sans MS", Verdana, Arial;
+}
+#creditHeadline {
+  text-align: center;
+  color: #FFFFFF;
+  font-size:  20px;
+  font-family: "Comic Sans MS", Verdana, Arial;
+}
+#enterButton {
+  font-size:  32px;
+  font-family: "Comic Sans MS", Verdana, Arial;
+}
+#artDescribe {
+  color: #111111;
+  background-color: #ffe128;
+  border-width: 5;
+  margin: 0;
+  border-style: none;
+  padding: 10;
+  width: 220
+}
+  
+#artTitle {
+  font-size: 20px;
+  font-family: Verdana, "Comic Sans MS", Arial;
+}
+#artContent {
+  font-size: 14px;
+  font-family: Verdana, "Comic Sans MS", Arial;
+}
+#welcomeBanner {
+  color: yellow;
+  font-family: "Times New Roman", Garamond;
+  font-size: 26px;
+  text-align: center;
+}
+#allDone {
+  color: red;
+  font-size: 24px;
+  font-family:  "Comic Sans MS", Arial;
+  text-align: center;
+}
+#preloadNS4 {
+  font-family:  "Comic Sans MS", Arial;
+  font-size: 14px;
+  color: #0065e5;
+  text-align: left;
+  text-indent: 15;
+  top-margin: 5;
+}
+#preloadIE4 {
+  font-family:  "Comic Sans MS", Arial;
+  font-size: 13px;
+  color: #0065e5;
+  text-align: left;
+  text-indent: 15;
+  top-margin: 5;
+}
+#bartext {
+  font-size: 20px;
+  font-family:  "Times New Roman";
+  color: red;
+  text-align: left;
+}
+#downloadStats1 {
+  color: white;
+  text-align: center;
+  font-family: "Times New Roman";
+}
+#downloadStats2 {
+  font-weight: bold;
+  text-decoration:  underline;
+  font-size: 18px;
+}
+#downloadStats3 {
+  font-size: 14px;
+}
+</style>
+</head>
+
+<!-- *****************************************************************************
+     
+     At last!  Here is the BODY of the page.
+
+********************************************************************************* -->
+<BODY BGCOLOR="#000000" link="#0065e5" alink="#FF0000" vlink="yellow" text="#FFFFFF" onLoad="setTimeout('allDoneAndReady(2)',1500)">
+
+<!--  
+     First of all, load the background image.  This needs to be done first because we want
+     everything else to sit on top of this.  
+-->
+<div id="bgImage" style="position:absolute; left:8; top:8; width:627; visibility:hidden;">
+<img src="images/misc/backblnd.jpg"  name='bgImagei'
+      WIDTH=657 HEIGHT=463 BORDER=0>
+</DIV>
+<script>registerImg('bgImagei','bgImage')</script>
+<div id="enterDiv" STYLE="position:absolute; left:329; top:230; width:100; visibility:hidden;">
+<form><span id=enterButton><input type="button" value="Enter" 
+  onClick="startSite()"></span></form>
+</div>
+<div id="ttimer" style="position:absolute; right:00; top:0; width:30; visibility:show;">
+</div>
+<!--  
+     Start keeping track of what graphics have been loaded.
+-->
+<script>pollGraphics()</script>
+
+
+<!--  
+     Load graphics and text related to the status bar.  This should be the first thing that
+     gets loaded, so the user will see it as soon as possible.
+-->
+<center>
+<div id="welcomeDiv" STYLE="position:absolute; left:217; top:90; width:376; visibility:show;">
+<span id=welcomeBanner>
+Welcome to the website for<br>artist Bill Whitney!<br></span>
+</div></center>
+<div id="status1head" STYLE="position:absolute; left:258; top:169; width: 289; visibility:show;">
+<span id=bartext>Pre-loading interface...please wait</span>
+</div>
+<center><div id="status2head" STYLE="position:absolute; left:180; top:155; width: 450; visibility:hidden;">
+<span id=allDone><img src="images/misc/Ideatype.gif">
+<br>All done!  Ready to enter the site.</span></center>
+</div>
+
+<div id="status3head" STYLE="position:absolute; left:265; top:301; width:250; visibility:hidden;">
+</div>
+<!--
+<div id="greybar" STYLE="position:absolute; left:215; top:170; width:376; visibility:hidden;">
+<IMG src="images/misc/greybar.gif"  name="greybari" width=376 height=28 border=0></div>
+-->
+<script>/* registerImg('greybari','greybar') */</script>
+<!--
+<div id="redbar" STYLE="position:absolute; left:215; top:170; width:376; visibility:hidden;">
+<IMG src="images/misc/redbar.gif" name="redbari" width=376 height=28 border=0></div>
+-->
+<script>/* registerImg('redbari','redbar') */</script>
+
+<div id="flowerpotDiv" STYLE="position:absolute; left:546; top:160; width:45; visibility:hidden;">
+<img name="flowerpoti" src="images/misc/flower.gif" width=45 height=45 border=0></div>
+<script>registerImg('flowerpoti','flowerpotDiv')</script>
+<!--  "skepDiv" gets its location modified so it makes no sense to give it left and top values now --> 
+<div id="skepDiv" STYLE="position:absolute; left:0; top:0; width:15; visibility:hidden;">
+<img name="skepi" src="images/misc/skep.gif" width=15 height=15 border=0></div>
+<script>registerImg('skepi','skepDiv')</script>
+<div id="statusBeeDiv" STYLE="position:absolute; left:225; top:162; width:23; visibility:hidden;">
+<img name="statusBeei" src="images/misc/Stat_Bee.gif" width=23 height=30 border=0></div>
+<script>registerImg('statusBeei','statusBeeDiv')</script>
+<script>
+/*  eval(layerObj + '["redbar"]' + styleObj + '.clip.right = 0') */
+</script>
+<center>
+<div id="downloadTimeDiv" STYLE="position:absolute; left:338; top:212; width:312; visibility:hidden;"
+>
+  <span id=downloadStats1>
+    <span id=downloadStats2>Estimated Download Times</span>
+    <span id=downloadStats3>
+    <table cellspacing=0 cellborder=10 cellpadding=0
+><tr><th>Connection</th><th>Time</th></tr>
+<tr><td>   14.4</td><td> 3.3 minutes</td></tr>
+<tr><td>   28.8</td><td> 1.7 minutes</td></tr>
+<tr><td>   33.6</td><td> 1.4 minutes</td></tr>
+<tr><td>     56</td><td>51.4 seconds</td></tr>
+<tr><td>ISDN/2b</td><td>25.7 seconds</td></tr>
+<tr><td>     T1</td><td> 2.0 seconds</td></tr>                                 
+</table>
+</span></span>
+</div>        
+</center>                                           
+<div id="havePatienceDiv" STYLE="position:absolute; left:160; top:209; width:200; visibility:hidden;"
+>
+<script>
+if (ns4)
+    document.write("<span id=preloadNS4>")
+  else
+    document.write("<span id=preloadIE4>")
+</script>
+We're pre-loading the entire interface in advance to maximize your 
+enjoyment.  When the bee gets to the pollen, you're ready to go.</span>
+<script>
+if (ns4)
+    document.write("<span id=preloadNS4>")
+  else
+    document.write("<span id=preloadIE4>")
+</script>
+Have a cup of coffee, hold the sugar, add a dollop of honey.
+</span>
+</div> 
+<script>doPreloads()</script>
+
+<!--  ***********************************************************
+      Layer for debugging
+***************************************************************** -->
+<div id="buttons" style="position:absolute; left: 150; top:100; visibility:hidden;">
+  <a href="javascript:onebeecycle()">One cycle animation, or stop</a><br>
+  <a href="javascript:loopbeecycle()">Loop cycle animation, or stop</a><br>
+  <a href="javascript:toggleBackground()">Hide/show the background image</a><br>
+ <a href="javascript:toleft()">Move to left</a><br>
+  <a href="javascript:toright()">Move to right</a><br>
+  <a href="javascript:toup()">Move up</a><br>
+  <a href="javascript:todown()">Move down</a><br>
+  <a href="javascript:showcoords()">Show vals</a><br>  
+ <a href="javascript:vomitDOM()">Vomit DOM</a><br>
+ <a href="javascript:incrarrow()">Increment arrow count</a>
+</div>
+
+<!--  ***********************************************************
+
+      Layers/Images for the animating bee
+
+***************************************************************** -->
+<DIV ID="bee1" STYLE="position:absolute; left:93; top:15; width:89; visibility:hidden;">
+<a href="javascript:onebeecycle()">
+<IMG src="images/LogoBeeAnimation/go_a1.jpg" name='bee1i' width=89 height=89 border=0></a>
+</DIV>
+<script>registerImg('bee1i','bee1')</script>
+
+<DIV ID="bee2" STYLE="position:absolute; left:89; top:14; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a2.jpg" name='bee2i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee2i','bee2')</script>
+
+<DIV ID="bee3" STYLE="position:absolute; left:90; top:14; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a3.jpg" name='bee3i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee3i','bee3')</script>
+
+<DIV ID="bee4" STYLE="position:absolute; left:88; top:27; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a4.jpg" name='bee4i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee4i','bee4')</script>
+
+<DIV ID="bee5" STYLE="position:absolute; left:90; top:16; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a5.jpg" name='bee5i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee5i','bee5')</script>
+
+<DIV ID="bee6" STYLE="position:absolute; left:86; top:36; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a6.jpg" name='bee6i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee6i','bee6')</script>
+
+<DIV ID="bee7" STYLE="position:absolute; left:77; top:39; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a7.jpg" name='bee7i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee7i','bee7')</script>
+
+<DIV ID="bee8" STYLE="position:absolute; left:71; top:40; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a8.jpg" name='bee8i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee8i','bee8')</script>
+
+<DIV ID="bee9" STYLE="position:absolute; left:61; top:49; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a9.jpg" name='bee9i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee9i','bee9')</script>
+
+<DIV ID="bee10" STYLE="position:absolute; left:44; top:74; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a10.jpg" name='bee10i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee10i','bee10')</script>
+
+<DIV ID="bee11" STYLE="position:absolute; left:48; top:82; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a11.jpg" name='bee11i'  width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee11i','bee11')</script>
+
+<DIV ID="bee12" STYLE="position:absolute; left:67; top:90; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a12.jpg" name='bee12i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee12i','bee12')</script>
+
+<DIV ID="bee13" STYLE="position:absolute; left:96; top:102; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a13.jpg" name='bee13i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee13i','bee13')</script>
+
+<DIV ID="bee14" STYLE="position:absolute; left:130; top:93; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a14.jpg" name='bee14i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee14i','bee14')</script>
+
+<DIV ID="bee15" STYLE="position:absolute; left:165; top:83; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a15.jpg" name='bee15i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee15i','bee15')</script>
+
+<DIV ID="bee16" STYLE="position:absolute; left:193; top:65; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a16.jpg" name='bee16i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee16i','bee16')</script>
+
+<DIV ID="bee17" STYLE="position:absolute; left:199; top:52; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a17.jpg" name='bee17i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee17i','bee17')</script>
+
+<DIV ID="bee18" STYLE="position:absolute; left:182; top:39; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a18.jpg" name='bee18i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee18i','bee18')</script>
+
+<DIV ID="bee19" STYLE="position:absolute; left:167; top:30; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a19.jpg" name='bee19i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee19i','bee19')</script>
+
+<DIV ID="bee20" STYLE="position:absolute; left:156; top:27; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a20.jpg" name='bee20i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee20i','bee20')</script>
+
+<DIV ID="bee21" STYLE="position:absolute; left:137; top:24; width:89; visibility:hidden;">
+<img src="images/LogoBeeAnimation/go_a21.jpg" name='bee21i' width=89 height=89 border=0>
+</DIV>
+<script>registerImg('bee21i','bee21')</script>
+
+  
+<!--  ***********************************************************
+
+      Layers/Images/Links for the six display bees 
+
+***************************************************************** -->
+<DIV ID="dbdiv1" STYLE="position:absolute; top:16; left:301; width:47; visibility:hidden;">
+<a href="javascript:selectbee(1)" 
+	onMouseOver="dbChangeImage(1,'on')"
+	onMouseOut="dbChangeImage(1,'off')"
+>
+<img name="dbImg1" src="images/displayBees/dboff1.jpg" width=47 height=44 border=0></a></DIV>
+<script>registerImg('dbImg1','dbdiv1')</script>
+
+<DIV ID="dbdiv2" STYLE="position:absolute; top:19; left:353; width:52; visibility:hidden;">
+<a href="javascript:selectbee(2)" 
+	onMouseOver="dbChangeImage(2,'on')"
+	onMouseOut="dbChangeImage(2,'off')"
+>
+<img name="dbImg2" src="images/displayBees/dboff2.jpg" width=52 height=39 border=0></a></DIV>
+<script>registerImg('dbImg2','dbdiv2')</script>
+
+<DIV ID="dbdiv3" STYLE="position:absolute; top:17; left:410; width:53; visibility:hidden;">
+<a href="javascript:selectbee(3)" 
+	onMouseOver="dbChangeImage(3,'on')"
+	onMouseOut="dbChangeImage(3,'off')"
+>
+<img name="dbImg3" src="images/displayBees/dboff3.jpg" width=53 height=37 border=0></a></DIV>
+<script>registerImg('dbImg3','dbdiv3')</script>
+
+<DIV ID="dbdiv4" STYLE="position:absolute; top:23; left:473; width:48; visibility:hidden;">
+<a href="javascript:selectbee(4)" 
+	onMouseOver="dbChangeImage(4,'on')"
+	onMouseOut="dbChangeImage(4,'off')"
+>
+<img name="dbImg4" src="images/displayBees/dboff4.jpg" width=48 height=36 border=0></a></DIV>
+<script>registerImg('dbImg4','dbdiv4')</script>
+
+<DIV ID="dbdiv5" STYLE="position:absolute; top:41; left:533; width:41; visibility:hidden;">
+<a href="javascript:selectbee(5)" 
+	onMouseOver="dbChangeImage(5,'on')"
+	onMouseOut="dbChangeImage(5,'off')"
+>
+<img name="dbImg5" src="images/displayBees/dboff5.jpg" width=41 height=43 border=0"></a></DIV>
+<script>registerImg('dbImg5','dbdiv5')</script>
+
+<DIV ID="dbdiv6" STYLE="position:absolute; top:84; left:577; width:39; visibility:hidden;">
+<a href="javascript:selectbee(6)" 
+	onMouseOver="dbChangeImage(6,'on')"
+	onMouseOut="dbChangeImage(6,'off')"
+>
+<img name="dbImg6" src="images/displayBees/dboff6.jpg" width=39 height=49 border=0"></a></DIV>
+<script>registerImg('dbImg6','dbdiv6')</script>
+
+<!--  ***********************************************************
+
+      Layers/Images/Links for arrows pointing to display bees 
+
+***************************************************************** -->
+<DIV ID="arrow1div" STYLE="position:absolute; top:64; left:328; width:23; visibility:hidden;">
+<img name="arrow1i" src="images/Arrows/arrow_1.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow1i','arrow1div')</script>
+
+<DIV ID="arrow2div" STYLE="position:absolute; top:60; left:374; width:63; visibility:hidden;">
+<img name="arrow2i" src="images/Arrows/arrow_2.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow2i','arrow2div')</script>
+
+<DIV ID="arrow3div" STYLE="position:absolute; top:57; left:423; width:23; visibility:hidden;">
+<img name="arrow3i" src="images/Arrows/arrow_3.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow3i','arrow3div')</script>
+
+<DIV ID="arrow4div" STYLE="position:absolute; top:61; left:475; width:23; visibility:hidden;">
+<img name="arrow4i" src="images/Arrows/arrow_4.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow4i','arrow4div')</script>
+
+<DIV ID="arrow5div" STYLE="position:absolute; top:75; left:521; width:23; visibility:hidden;">
+<img name="arrow5i" src="images/Arrows/arrow_5.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow5i','arrow5div')</script>
+
+<DIV ID="arrow6div" STYLE="position:absolute; top:110; left:554; width:23; visibility:hidden;">
+<img name="arrow6i" src="images/Arrows/arrow_6.jpg" width=23 height=21 border=0></a></DIV>
+<script>registerImg('arrow6i','arrow6div')</script>
+
+
+
+<!--  ***********************************************************
+
+      Layers/Images/Links for the three larger bees 
+
+***************************************************************** -->
+
+<!-- 
+       The "Home" bee
+-->
+<DIV ID="dbdiv7" STYLE="position:absolute; top:347; left:30; width:77; visibility:hidden;">
+<a href="javascript:HomeBeeOnClick()" 
+	onMouseOver="dbLargeChangeImage(7,'on'); labelChangeImage(6,'on')"
+	onMouseOut="dbLargeChangeImage(7,'off'); labelChangeImage(6,'off')"
+>
+<img name="dbImg7" src="images/largeBees/home/dboff7.jpg" width=77 height=46 border=0></a></DIV>
+<script>registerImg('dbImg7','dbdiv7')</script>
+
+<!-- 
+       The "Office" bee
+-->
+<DIV ID="dbdiv8" STYLE="position:absolute; top:372; left:527; width:77; visibility:hidden;">
+<a href="javascript:OfficeBeeOnClick()" 
+	onMouseOver="dbLargeChangeImage(8,'on'); labelChangeImage(5,'on')"
+	onMouseOut="dbLargeChangeImage(8,'off'); labelChangeImage(5,'off')"
+>
+<img name="dbImg8" src="images/largeBees/TheOffice/dboff8.jpg" width=64 height=61 border=0></a></DIV>
+<script>registerImg('dbImg8','dbdiv8')</script>
+
+<!-- 
+       The "Animation" bee
+-->
+<DIV ID="dbdiv9" STYLE="position:absolute; top:367; left:346; width:83; visibility:hidden;">
+<a href="javascript:AnimationBeeOnClick()" 
+	onMouseOver="dbLargeChangeImage(9,'on'); labelChangeImage(4,'on')"
+	onMouseOut="dbLargeChangeImage(9,'off'); labelChangeImage(4,'off')"
+>
+<img name="dbImg9" src="images/largeBees/animation/dboff9.jpg" width=83 height=67 border=0></a></DIV>
+<script>registerImg('dbImg9','dbdiv9')</script>
+
+
+<!--  ***********************************************************
+
+      Layers/Images for the Flowers and Glows 
+
+***************************************************************** -->
+
+<!-- 
+       The "3D" Flower and its glow
+-->
+<DIV ID="animFlower1" 
+   style="position:absolute; left:104; top:300; width:114; visibility: hidden;">  
+  <a href='javascript:ThreeDflowerOnClick()'
+     onMouseOver="flowerAction(1,1);  labelChangeImage(2,'on')"
+      onMouseOut="flowerAction(1,2);  labelChangeImage(2,'off')">
+   <IMG NAME="numImg1" SRC="images/flowers/3d/flw3D1.jpg" 
+      WIDTH=114 HEIGHT=90 BORDER=0>
+</a>
+</DIV>
+<script>registerImg('numImg1','animFlower1')</script>
+
+<div id="animGlow1" style="position:absolute; left:132; top:323; width:59; visibility:hidden">
+<IMG NAME="numImg2" SRC="images/flowers/3d/flwC3D5.jpg" 
+      WIDTH=59 HEIGHT=53 BORDER=0>
+</div>
+<script>registerImg('numImg2','animGlow1')</script>
+
+<!-- 
+       The "Cartoon" Flower and its glow
+-->
+<div id="animFlower2" style="position:absolute; left:37; top:228; width:82;visibility: hidden;"> 
+<a href='javascript:CartoonFlowerOnClick()'
+onMouseOver="flowerAction(2,1);  labelChangeImage(1,'on')"
+onMouseOut="flowerAction(2,2);  labelChangeImage(1,'off')"
+>
+<IMG NAME="numImg3" SRC="images/flowers/cartoon/carr9.jpg" 
+      WIDTH=82 HEIGHT=76 BORDER=0>
+</a>
+</div>
+<script>registerImg('numImg3','animFlower2')</script>
+
+<div id="animGlow2" style="position:absolute; left:50; top:247; width:49; visibility: hidden;">
+<IMG NAME="numImg4" SRC="images/flowers/cartoon/cars12.jpg" 
+      WIDTH=49 HEIGHT=44 BORDER=0>
+</a>
+</div>
+<script>registerImg('numImg4','animGlow2')</script>
+
+<!-- 
+       The "Illustration" Flower and its glow
+-->
+<div id="animFlower3" style="position:absolute; left:230; top:346; width:83; visibility: hidden;"> 
+<a href='javascript:IllustrationFlowerOnClick()'
+onMouseOver="flowerAction(3,1);  labelChangeImage(3,'on')"
+onMouseOut="flowerAction(3,2);  labelChangeImage(3,'off')"
+>
+<IMG NAME="numImg5" SRC="images/flowers/illustration/ili14.jpg" 
+      WIDTH=83 HEIGHT=80 BORDER=0>
+</a>
+</div>
+<script>registerImg('numImg5','animFlower3')</script>
+
+<div id="animGlow3" style="position:absolute; left:259; top:385; width:26; visibility: hidden;">
+<IMG NAME="numImg6" SRC="images/flowers/illustration/ils16.jpg" 
+      WIDTH=26 HEIGHT=23 BORDER=0>
+</div>
+<script>registerImg('numImg6','animGlow3')</script>
+
+<script>
+  /* Ready to make animation objects for the flowers  */
+  initFlowers()
+</script>
+
+<!--  There's a reason for putting this right here...so that it will
+      appear over the flowers
+-->
+<div id="beeHintDiv" STYLE="position:absolute; left:14; top:96; width:250; visibility:hidden;">
+</div>
+<!--  ***********************************************************
+
+      Layer/Image for the animated subhead ("illustration animation
+      art") 
+
+***************************************************************** -->
+<DIV ID="subheadDiv" 
+   style="position:absolute; left:19; top:100; width:126; visibility:hidden;">  
+   <IMG NAME="subheadi" SRC="images/subheadAnimation/subh6.jpg" 
+      WIDTH=126 HEIGHT=46 BORDER=0>
+</DIV>
+<script>registerImg('subheadi','subheadDiv')</script>
+<!--  ***********************************************************
+
+      Layers/Images for the button labels 
+
+      The mapping of label numbers to flower or large-bee numbers is chaotic...
+       
+      Subject       Img Divname     Text Divname    Location
+      =======       ===========     ============    ========
+      cartoon       animFlower2     textdiv1        left flower
+      3d            animFlower1     textdiv2        middle flower
+      Illustration  animFlower3     textdiv3        right flower
+      animation     dbdiv9          textdiv4        middle bee
+      The Office    dbdiv8          textdiv5        right bee
+      email         dbdiv7          textdiv6        left bee
+      
+
+***************************************************************** -->
+<!-- The CARTOON labels -->
+<div id="textdiv1" STYLE="position:absolute; left:20; top:306; width:81; visibility:hidden;">
+<IMG NAME="textImg1" SRC="images/type/textoff1.jpg" 
+      WIDTH=81 HEIGHT=22 BORDER=0></div>
+<script>registerImg('textImg1','textdiv1')</script>
+<!-- The 3D labels -->
+<div id="textdiv2" STYLE="position:absolute; left:122; top:389; width:65; visibility:hidden;">
+<IMG NAME="textImg2" SRC="images/type/textoff2.jpg" 
+      WIDTH=65 HEIGHT=21 BORDER=0></div>
+<script>registerImg('textImg2','textdiv2')</script>
+<!-- The ILLUSTRATION labels -->
+<div id="textdiv3" STYLE="position:absolute; left:230; top:428; width:125; visibility:hidden;">
+<IMG NAME="textImg3" SRC="images/type/textoff3.jpg" 
+      WIDTH=125 HEIGHT=16 BORDER=0></div>
+<script>registerImg('textImg3','textdiv3')</script>
+<!-- The ANIMATION labels -->
+<div id="textdiv4" STYLE="position:absolute; left:420; top:429; width:94; visibility:hidden;">
+<IMG NAME="textImg4" SRC="images/type/textoff4.jpg" 
+      WIDTH=94 HEIGHT=15 BORDER=0></div>
+<script>registerImg('textImg4','textdiv4')</script>
+<!-- The OFFICE labels -->
+<div id="textdiv5" STYLE="position:absolute; left:544; top:426; width:61; visibility:hidden;">
+<IMG NAME="textImg5" SRC="images/type/textoff5.jpg" 
+      WIDTH=61 HEIGHT=19 BORDER=0></div>
+<script>registerImg('textImg5','textdiv5')</script>
+<!-- The HOME labels -->
+<div id="textdiv6" STYLE="position:absolute; left:37; top:397; width:59; visibility:hidden;">
+<IMG NAME="textImg6" SRC="images/type/textoff6.jpg" 
+      WIDTH=59 HEIGHT=25 BORDER=0></div>
+<script>registerImg('textImg6','textdiv6')</script>
+
+
+
+
+<!--  That was the last of the registered images. We can now start polling graphics -->
+<script>pollComplete()</script>
+
+<!--  ***********************************************************
+
+      Layers for the 3d Art 
+
+***************************************************************** -->
+<div id="ThreeDdiv1" STYLE="position:absolute; left:327; top:85; width:185; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(1)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=185 height=266 border=0>
+</a>
+</div>
+<div id="ThreeDdiv2" STYLE="position:absolute; left:242; top:124; width:331; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(2)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=331 height=217 border=0></a></div>
+<div id="ThreeDdiv3" STYLE="position:absolute; left:247; top:128; width:327; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(3)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" src="images/misc/Stat_Bee.gif" width=327 height=217 border=0></a></div>
+<div id="ThreeDdiv4" STYLE="position:absolute; left:232; top:130; width:348; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(4)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=348 height=218 border=0></a></div>
+<div id="ThreeDdiv5" STYLE="position:absolute; left:231; top:134; width:339; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(5)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=339 height=188 border=0></a></div>
+<div id="ThreeDdiv6" STYLE="position:absolute; left:263; top:124; width:295; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(6)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=295 height=218 border=0></a></div>
+
+<!--  ***********************************************************
+
+      Layers for the Illustration Art 
+
+***************************************************************** -->
+<div id="Illustrationdiv1" STYLE="position:absolute; left:236; top:108; width:337; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(1)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=337 height=230 border=0></a></div>
+<div id="Illustrationdiv2" STYLE="position:absolute; left:308; top:91; width:331; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(2)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=232 height=264 border=0></a></div>
+<div id="Illustrationdiv3" STYLE="position:absolute; left:243; top:85; width:305; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(3)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=305 height=255 border=0></a></div>
+<div id="Illustrationdiv4" STYLE="position:absolute; left:311; top:85; width:85; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(4)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=131 height=268 border=0></a></div>
+<div id="Illustrationdiv5" STYLE="position:absolute; left:311; top:85; width:339; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(5)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=159 height=268 border=0></a></div>
+<div id="Illustrationdiv6" STYLE="position:absolute; left:236; top:162; width:350; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(6)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=350 height=138 border=0></a></div>
+
+<!--  ***********************************************************
+
+      Layers for the Cartoon Art 
+
+***************************************************************** -->
+<div id="Cartoondiv1" STYLE="position:absolute; left:241; top:97; width:185; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(1)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=306 height=249 border=0></a></div>
+<div id="Cartoondiv2" STYLE="position:absolute; left:254; top:81; width:339; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(2)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=298 height=265 border=0></a></div>
+<div id="Cartoondiv3" STYLE="position:absolute; left:241; top:96; width:327; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(3)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=313 height=250 border=0></a></div>
+<div id="Cartoondiv4" STYLE="position:absolute; left:238; top:120; width:85; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(4)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" width=334 height=222 border=0></a></div>
+<div id="Cartoondiv5" STYLE="position:absolute; left:236; top:106; width:331; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(5)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" src="images/misc/onepixel.gif" width=334 height=239 border=0></a></div>
+<div id="Cartoondiv6" STYLE="position:absolute; left:298; top:87; width:295; visibility:hidden;">
+<a href="javascript:void(0)"
+  onMouseOver="SetSpokesBeeHTML(2)"
+  onMouseOut="hideSpokesBee()">
+<img name="emptynow" src="notPreloaded/art/cartoon/carpic6.jpg" width=228 height=262 border=0></a></div>
+
+<!--  ***********************************************************
+
+      Layers for the Animation Art 
+
+***************************************************************** -->
+<div id="Animationdiv1" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<div id="Animationdiv2" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<div id="Animationdiv3" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<div id="Animationdiv4" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<div id="Animationdiv5" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<div id="Animationdiv6" STYLE="position:absolute; border:0; left:294; top:156; width:160; visibility:hidden;">
+</div>
+<script> 
+/* var artTypes = new Array("Cartoon","Illustration","ThreeD","Animation");
+function findArtIndices() {
+  var l = document.images.length;
+  alert("There are " + l + " images")
+  var os = '';
+  for (var i = 0; i < l; i++) {
+    if (document.images[i].name == 'emptynow') {
+      os = os + "\nimages[' + i + '].src = ' + document.images[i].src"
+    }
+  }
+  alert(os)
+}
+findArtIndices() */
+</script>
+
+
+<!--  ***********************************************************
+
+      Layers for the Explanatory text 
+
+***************************************************************** -->
+<div id="TextInsideTreeDiv" STYLE="position:absolute; left:230; top:87; width:295; visibility:hidden;"></div>
+<div id="SpokesBeeTextDiv" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+</div>
+
+<script>
+var lastbwHomeDiv = 1
+var skepYlocs = new Array(181,206, 231, 256,276);
+function moveBeeSkep(num) {
+  moveObject('skepDiv',130, skepYlocs[num-1])
+}
+function changebwHomeDiv(num) {
+  if (lastbwHomeDiv != null)
+    hideObject('bwHomeDiv' + lastbwHomeDiv)
+  showObject('bwHomeDiv' + num)
+  lastbwHomeDiv = num
+  moveBeeSkep(num)
+}
+</script>
+
+
+<div id="bwHomeDiv1" STYLE="position:absolute; left:245; top:75; width:295; bgcolor:red; visibility:hidden;">
+<center><img src="images/misc/Ideatype.gif"></center>
+<img src="images/misc/biopic2.jpg" align=right border=0>
+<script>
+if (ns4) 
+    document.write("<span id=welcomeStyleNS4>")
+  else
+    document.write("<span id=welcomeStyleIE4>")
+    
+</script>
+
+
+<p id=pWelcome>Hi, I'm Bill Whitney.  Thanks for having the patience to wait for my 
+artwork!  Anytime you're ready, just start clicking around and having 
+fun.
+<p id=pWelcome>Why all the bees, you ask?  Because they're the real workers behind 
+my artwork.  Mind you, it isn't easy telling 60,000 angry bees 
+that you want to steal all their hard-earned honey!  But
+that's just the stings and arrows of outrageous fortune.
+<p id=pWelcome>By the way, I'm a beekeeper in my spare time.  
+As if you had to ask!  
+</span>
+</div>
+<div id="bwHomeDiv2" STYLE="position:absolute; left:245; top:75; width:295; bgcolor:red; visibility:hidden;">
+<center><img src="images/misc/Ideatype.gif"></center>
+<!-- <span id=bioTitle>Bill Whitney's biography</span>  -->
+<i>(This section under construction at the moment.  Please come again and look later!  - Bill)</i>
+<!--
+<span id=bioText>
+With 15 Years as a successful independent Illustrator and Animator, Bill
+Whitney has had the opportunity to work with many great publishers,
+advertisers and law firms. This is a list of a few successful projects
+and wonderful clients.
+<form><select size=1>
+<option>Publications International: a series of books titled "How Things Work"
+<option>Rand McNally: CD ROM animation's and illustrations
+<option>Elm Street Publishing: Several college text books
+</select>
+</form>
+<form><select size=1>
+<option>Quaker Oats: Life cereal boxes
+<option>Kellege: posters for school lunch programs
+<option>Jim Beam: poster for the Euro market
+<option>Kraft: Package illustrations
+<option>Kebbler: in store display art
+<option>City of Chicago: parking brochure.
+<option>Motorola: many product illustrations
+<option>Pitney Bowes: brochure art
+<option>McGraw Hill:  cartoon character development
+<option>American Bar Association: posters, brochure art
+<option>American Medical Association: poster, brochure art
+<option>American Dental Association: posters, brochure art
+<option>Lettuce Entertain You: frequent dinners brochure
+<option>Peter built Truck: poster
+<option>Red Barren Pizza: May art projects
+<option>Edwardos Pizza: 3-D Art
+<option>Ginos Pizza: Cartoon art for Newspaper ads.
+<option>Champs Pizza: many art projects
+<option>Chicago Heights Steel: Animations
+<option>Abbot University: animations
+</select>
+</form>
+<ul>
+<li>Life cereal box designs
+<li>Illustrations in the series of books <b>How 
+Things Work</b>.
+<li>Lead designer and animator for material presented to 
+numerous jury trials
+</ul></span>
+-->
+
+</div>
+<div id="bwHomeDiv3" STYLE="position:absolute; left:245; top:75; width:295; bgcolor:red; visibility:hidden;">
+<center><img src="images/misc/Ideatype.gif">
+<span id=bioText>
+Whitney Studios
+<br>Animation Illustration Art
+<br>755 Darling St.
+<br>Wheaton, IL  60187
+<br><br>Phone:  630-752-0370
+<br>Phone:  312-527-2455 (if dialing from Chicago)
+<br>Fax:  630-752-0323
+<br>email:  bill@bwhitney.com
+</span></center>
+</div>
+<div id="bwHomeDiv4" STYLE="position:absolute; left:245; top:75; width:295; bgcolor:red; visibility:hidden;">
+<center><img src="images/misc/Ideatype.gif"></center>
+<font face="Comic Sans MS" size=2 text="#000000">
+&nbsp;</font>
+</div>
+
+
+<div id="bwHomeDiv5" STYLE="position:absolute; left:275; top:75; width:295; bgcolor:red; visibility:hidden;">
+<br id=pCredit>
+<span id=creditHeadline>
+Website by
+<br id=pCredit><img src="images/misc/sblogo.jpg">
+<br id=pCredit>www.spellbinders.com
+</span>
+<br id=pCredit><span id=creditPerson>Bill Whitney</span>  
+<br id=pCredit><span id=creditTitle>Artist, chief designer and Beekeeper</span>
+<br id=pCredit><span id=creditPerson>Greg Sandell</span>
+<br id=pCredit><span id=creditTitle>Programming and design</span>
+<br id=pCredit><span id=creditPerson>Wendy White and Janice Hendricks</span>
+<br id=pCredit><span id=creditTitle>Production and design</span>
+<br id=pCredit>&nbsp;
+</div>
+<div id="introButtonsDiv1" STYLE="position:absolute; left:150; top:176; width:100; visibility:hidden;">
+<span id=ComicBlue><a href="javascript:changebwHomeDiv(1)">Welcome</a></span>
+</div>
+<div id="introButtonsDiv2" STYLE="position:absolute; left:150; top:201; width:100; visibility:hidden;">
+<span id=ComicBlue><a href="javascript:changebwHomeDiv(2)">Biography</a></span>
+</div>
+<div id="introButtonsDiv3" STYLE="position:absolute; left:150; top:226; width:100; visibility:hidden;">
+<span id=ComicBlue><a href="javascript:changebwHomeDiv(3)">Contact Me</a></span>
+</div>
+<div id="introButtonsDiv4" STYLE="position:absolute; left:150; top:251; width:100; visibility:hidden;">
+<span id=ComicBlue><a href="mailto:bill@bwhitney.com" onClick="changebwHomeDiv(4)">Email</a></span>
+</div>
+<div id="introButtonsDiv5" STYLE="position:absolute; left:150; top:276; width:100; visibility:hidden;">
+<span id=ComicBlue><a href="javascript:changebwHomeDiv(5)">Credits</a></span>
+</div>
+</div>
+
+<div id="ThreeDExplain1" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Jim Beam - liquor company</span>
+<br><br><span id=artContent>Created for the <b>Jim Beam</b> Euro Market.  The final piece is 22" by 30" printed on a tin sign 
+and
+displayed in stores through out Europe that sell <b>Jim Beam</b> 
+products.
+</span></span>
+</div>
+<div id="ThreeDExplain2" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>LJ Lafferty - Financial planning institution</span>
+<br><br><span id=artContent>This special image ( the Iscosahedren, a 20 sided  equilateral
+triangle
+polygon) appears
+through out the <b>LJ Lafferty</b> company brochure in various 
+states of
+evolution. This object evolves into a clean shiny stainless steal
+polygon. The assignment was to mirror <b>LJ Lafferty's</b> task of 
+assembling
+complex financial data and making it appear clean and simple.
+</span></span>
+</div>
+<div id="ThreeDExplain3" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>GIFA - European Food Industry trade</span>
+<br><br><span id=artContent>This art was
+printed on GIFA's magazine cover and distributed to food equipment
+manufacturers throughout Europe.
+</span></span>
+</div>
+<div id="ThreeDExplain4" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Motorola - Cellular phone technology company</span>
+<br><br><span id=artContent>A 3-D city was created for <b>Motorola</b> to display their new cellular phone
+capabilities. The city model was printed for a mailing brochure.
+</span></span>
+</div>
+<div id="ThreeDExplain5" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Edwardo's Pizza - Restaurant</span>
+<br><br><span id=artContent>A special plaque was created for <b>Edwardo's</b> award winning 
+Pizza. This art
+accompanied an all-new remake of <b>Edwardo's</b> company graphics 
+and was
+first printed on their new menus. 
+</span></span>
+</div>
+<div id="ThreeDExplain6" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Motorola - Cellular phone technology company</span>
+<br><br><span id=artContent>This is one of several 3-D objects created for a <b>Motorola</b> 
+company brochure to 
+help display
+their new GSI capabilities.
+</span></span>
+</div>
+
+<div id="CartoonExplain1" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Better Baked Pizza - Institutional food company</span>
+<br><br><span id=artContent>This art was
+printed in a <b>Better Baked Pizza</b> brochure and sent to school luncheon 
+programs
+throughout the USA.  
+
+</span></span>
+</div>
+<div id="CartoonExplain2" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>General Mills - Food Company</span>
+<br><br><span id=artContent>One out of 20 illustrations that were developed for
+<b>Life Cereal</b> box designs; this picture found itself in 
+front of
+children's faces throughout the USA!
+</span></span>
+</div>
+<div id="CartoonExplain3" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>NB - Bank</span>
+<br><br><span id=artContent>This art was
+printed in a company announcement mailer.
+</span></span>
+</div>
+<div id="CartoonExplain4" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>ADA - American Dental Association</span>
+<br><br><span id=artContent>From a brochure on Halitosis (bad breath), distributed to
+dental clinics throughout the USA.
+</span></span>
+</div>
+<div id="CartoonExplain5" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Better Baked Pizza - Institutional food company</span>
+<br><br><span id=artContent>This art was
+printed in a <b>Better Baked Pizza</b> brochure and sent to school luncheon 
+programs
+throughout the USA.  
+
+</span></span>
+</div>
+<div id="CartoonExplain6" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>American Dental Association</span>
+<br><br><span id=artContent>From a brochure on the dangers and problems of chewing tobacco,
+distributed to dental clinics throughout the USA.
+</span></span>
+</div>
+<div id="IllustrationExplain1" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Methode Electronics - High tech fiber optic developers</span>
+<br><br><span id=artContent>This comparison of copper wiring and fiber optic cable was printed 
+as the cover
+illustration for <b>Methode</b>'s Electronics Products brochure.
+</span></span>
+</div>
+<div id="IllustrationExplain2" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Dornach Medical Supplies - medical equipment manufacturer</span>
+<br><br><span id=artContent>These Medical equipment illustrations were rendered from CAD drawings.
+</span></span>
+</div>
+<div id="IllustrationExplain3" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Kellogg - Food Company</span>
+<br><br><span id=artContent>Detail of a 44" x 68" poster for a <b>Kellogg</b> campaign to educate school
+children on the benefits of eating grains.   
+
+</span></span>
+</div>
+<div id="IllustrationExplain4" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Kellogg - Food Company</span>
+<br><br><span id=artContent>Detail of a 44" x 68" poster for a <b>Kellogg</b> campaign to educate school
+children on the benefits of eating grains.
+</span></span>
+</div>
+<div id="IllustrationExplain5" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Lettuce Entertain You - Restaurant</span>
+<br><br><span id=artContent>Detail of <b>Frequent Dinners</b> brochure cover.
+</span></span>
+</div>
+<div id="IllustrationExplain6" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Red Baron Pizza - institutional food company</span>
+<br><br><span id=artContent>Detail from one of 32  wall panels developed for
+<b>Red Baron Pizza</b> school lunch giveaway program. School lunch programs
+participating with <b>Red Baron</b> lunch program received a cafeteria painting
+kit.
+</span></span>
+</div>
+<div id="AnimationExplain1" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Rand McNally - Global map company</span>
+<br><br><span id=artContent>Fifteen-second splash screen animation for Rand's <b>New Millennium World Atlas</b> CD-ROM.
+
+</span></span>
+</div>
+<div id="AnimationExplain2" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Abbott University - Corporate University</span>
+<br><br><span id=artContent>Splash screen animation for <b>Abbott University</b> training Video. 
+
+</span></span>
+</div>
+<div id="AnimationExplain3" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Stadheim and Greer - Patent Attornies</span>
+<br><br><span id=artContent>Part of a 10 1/2 minute animation  of the  makings and workings of computer chips
+and  their transisters. This animation illustrates for the judge and
+jury how <b>Tosiba</b> infringes a patent while producing their computer chip.
+
+</span></span>
+</div>
+<div id="AnimationExplain4" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Jones Day Law offices of - Law  firm</span>
+<br><br><span id=artContent>From an eight minute animation used in a court case between
+<b>Chicago Heights Steel</b> vs <b>Rapid Engineering</b>.
+</span></span>
+</div>
+<div id="AnimationExplain5" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Jones Day Law offices of - Law  firm</span>
+<br><br><span id=artContent>From an eight minute animation used in a court case between
+<b>Chicago Heights Steel</b> vs <b>Rapid Engineering</b>.
+</span></span>
+</div>
+<div id="AnimationExplain6" STYLE="position:absolute; left:14; top:96; width:250; height: 100; visibility:hidden;">
+<span id=artDescribe>
+<span id=artTitle>Jones Day Law offices of - Law  firm</span>
+<br><br><span id=artContent>From an eight minute animation used in a court case between
+<b>Chicago Heights Steel</b> vs <b>Rapid Engineering</b>.
+</span></span>
+</div>
+<script>
+  if (debugPolling) 
+    alert('end of script, preloadimagecount = ' + preloadimagecount)
+  if (totalgraphics != preloadimagecount)
+    alert("Update totalgraphics variable?  It's " + totalgraphics + ' but preloadimagecount is '
+        + preloadimagecount)
+</script>
+
+</BODY>
+</HTML>
+

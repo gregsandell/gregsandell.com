@@ -1,0 +1,303 @@
+{
+    
+    "name": "Greg Sandell",
+
+    "address":[
+        "3632 S Prairie Avenue", "Chicago IL 60653", "773.548.5547",
+        "greg.sandell &lt;at&gt; gmail.com", "More detail: http://www.gregsandell.com"
+    ],
+
+    "imageJava": 
+        "greg-sandell-resume_files/image002.jpg",
+    "imageSCWCD": 
+        "greg-sandell-resume_files/image004.jpg",
+
+    "qualifications":[
+        "I am a twelve-year senior developer of Java enterprise web applications with particular depth in Core Java, J2EE/JEE, UI, Javascript, jQuery, Databases, Maven, Configuration Management, Unix, Agile and Open Source. I have worked for Reuters, Chicago Tribune, UBS, Amex, Lockheed-Martin in vertical markets including media, travel, finance, defense, healthcare, eCommerce and education.  I hold a PhD degree and am highly effective at communications, writing and presentations."
+    ],
+
+    "objective": 
+        "Work in a software delivery role to provide robust enterprise web applications emphasizing development of SaaS web services and RIA interfaces. Seeking positions in downtown Chicago or nearby with minimal travel.",
+    
+    "training":[
+        {
+            "item": "No Fluff, Just Stuff Conference, Itasca, IL", 
+            "date": "Nov 06, &amp; Nov 07"
+        },
+        {
+            "item": "Autonomy Search Engine Developer Training (1 week, San Francisco)", 
+            "date": "Aug 06"
+        },
+        {
+            "item": "Sun Certified Web Component Developer for J2EE 1.4  (SCWCD)", 
+            "date": "March 05"
+        },
+        {
+            "item": "Sun Certified Programmer for the Java 2 Platform 1.4  (SCJP)", 
+            "date": "April 04"
+        }
+    ],
+
+    "education":[
+        "PhD in Music Theory, Northwestern University - Evanston, IL",
+        "MA in Music Theory, Eastman School of Music - Rochester, NY",
+        "Bachelor of Music, Piano Performance, California State University - Los Angeles, CA"
+    ],
+
+    "positions":[
+        {
+            "company": "Truven Health Analytics", 
+            "location": "Chicago, IL", 
+            "dates": "Apr 2010 - present",
+            "basis": "Converted to FT/Perm after contract", 
+            "title": "Sr. Software Developer",
+            "description":[
+                {"item": "Formerly Thomson-Reuters Healthcare.  Sold in June 2012 for $1.25 bil."},
+                {"item": "Create rich, intuitive, high-touch Ajax user interfaces and reusable widgets for CareDiscovery, a  Business Intelligence tool for the Healthcare Industry."},
+                {"item": "Create servlet- and portal-based enterprise web applications for IBM Websphere Portal 5, Tomcat 6 & Glassfish in mixed JEE 6 and J2EE 1.4 environment."},
+                {"item": "Practice Agile principles including scrum, 3-week iterations, TDD, Continuous Integration"},
+                {"item": "Develop SaaS components in Java and Ajax communicating over a JSON-based service bus"},
+                {"item": "Write User Interfaces and Ajax in Javascript & jQuery, promoting reusable patterns, functional programming, and closures"},
+                {"item": "Develop jQuery plugins for reusable UI widgets"},
+                {"item": "Integrate Cognos reports into application using Cognos Javascript API and iFrames"},
+                {"item": "Author PL/SQL queries in Toad that work against a 4 TB Oracle OLAP (Data Warehouse) database, for deployment in Web Services"},
+                {"item": "Collaborate with the ETL/ Informatica team to determine the necessary data models and UI designs to support Cognos reports."},
+                {"item": "Develop Maven plugins and perl scripts to streamline build process"},
+                {"item": "Work within HIPAA regulations to secure applications and databases using RSA,  TAM, and Oracle Proxy Authentication."},
+                {"item": "Break down business requirements into tightly defined software module specifications/estimates &amp; document them on Wiki."},
+                {"item": "Write functional prototypes of web interfaces using JSON to simulate Server layer"},
+                {"item": "Develop portal applications for IBM Websphere Portal Server and deploy with WPS Admin"},
+                {"item": "Helped transition team from waterfall to agile approach by introducing Maven2, Artifactory Repository Server, Hudson Continuous Integration, Mercurial source control and TDD practices."},
+                {"item": "Other technologies not mentioned above: Eclipse, CVS, Rally, JSP, JSTL, Ant, Firebug, Spring MVC/IOC/JDBC, GWT, Struts 1.2, Tiles"}
+            ]
+        },
+        {
+            "company": "iCrossing", 
+            "location": "Chicago, IL", 
+            "dates": "Oct 08 - Mar 2010",
+            "basis": "W2/Direct Placement",
+            "title": "Sr. Software Engineer",
+            "description":[
+                {"item": "Developed proprietary online application 'Merchantize' used by iCrossing clients.  The application provides a unified interface for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber)."},
+                {"item": "Utilized Struts2/Webwork to build Business Intelligence tools for reporting, analysis and dashboards against an in-house Data Warehouse on Mysql 5.1 containing click and purchase information from clients' E-commerce sites."},
+                {"item": "Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes."},
+                {"item": "Programmed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.  Large product datasets would be sent from clients by ftp, be transformed to a unified data format, and sent out to Google, Yahoo, MSN, etc., through each Search Engine's proprietary API."},
+                {"item": "Collaborated with account managers to address the reporting needs for clients Sears, The Gap, Hilton, Lands End, LEGO, Williams Sonoma.  Custom reports were created on the Merchantize UI or in Excel using Apache POI."},
+                {"item": "Provided expertise for resolving UTF-8, Latin1 and WinLatin1 character conversion problems in feeds."},
+                {"item": "On regular rotation for bi-weekly release of product across 10 different Linux servers."},
+                {"item": "Created JUnit tests for Test Driven Development."},
+                {"item": "Collaborated using a Scrum based agile methodology, using tools Bamboo (continuous integration), Crucible (code reviews), Fisheye and Greenhopper."}
+            ]
+        },
+        {
+            "company": "Tribune Interactive", 
+            "location": "Chicago, IL", 
+            "dates": "Feb 08 - Oct 08",
+            "basis": "W2/Direct Placement",
+            "title": "Sr. Internet Software Developer",
+            "description":[
+                {"item": "Supported central web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye"},
+                {"item": "Developed code in Java 1.5  on J2EE platform including Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet) and TopLink 9.0. Development tools included Intellij 6.0, svn, Borland Starteam, Toad, SQuirrel SQL Client, Cruise Control, Enterprise Architect 7"},
+                {"item": "Created scheduled jobs for sweeping expired database content"},
+                {"item": "Worked with SEO Manager to optimize sites for favorable Google positioning, created daily, weekly and 30-day sitemaps"},
+                {"item": "Supported web services for user registration and Mobile feeds"},
+                {"item": "Created JMeter test plans and reporting tools to compare performance before and after software changes"},
+                {"item": "Wrote Product Development specs, deployment and QA test plans"},
+                {"item": "Actively deployed apps in server farm environments with separate environments for dev, qa, design, test and prod"}
+            ]
+        },
+        {
+            "company": "UBS Investment Bank, Equities", 
+            "location": "Chicago, IL", 
+            "dates": "Mar 07 - Feb 08",
+            "basis": "W2 through Harmer Associates",
+            "title": "Developer/Analyst",
+            "description":[
+                {"item": "Developer for web tier of Pinpoint, UBS's Level-2 Direct Market Access Electonic Trading platform.  25-member team spread across Chicago, Stamford and London offices"},     
+                {"item": "Develop code in Java 1.5, JSP, JSTL, SQL and Ajax on platform including Tomcat, MS SQL Server, Oracle.  Development tools include Intellij, Maven 2, svn, Fiddler, Firebug, Jira and Confluence."},     
+                {"item": "Develop reports on daily trading activity using dynamic creation of (1) PDFs with iText, (2) plots with jFreeChart and (3) MS Office docs with Poi."},
+                {"item": "Maintain and enhance admin pages for job scheduling, web service monitoring, exchanges, destinations and permissions. Use Prototype and Scriptaculous javascript libraries to provide high-touch Ajax functionality. Develop specifications for stored procedures (SQL Server) and write DAOs to interface them with Java code."},
+                {"item": "Maintain Maven-2 based build environment and provide expertise to other teams using Maven.  Also write custom Maven plug-ins in java (mojos) to customize build cycle (e.g. added javascript crunching)."},
+                {"item": "Jira installation/maintenance including custom Jira plugin programming in java."}
+            ]
+        },
+        {
+            "company": "Lockheed Martin/US Air Force", 
+            "location": "Chicago, IL", 
+            "dates": "Jul 06 - Jan 07",
+            "basis": "W2 through Roundarch, Inc",
+            "title": "Sr. Consultant Developer",
+            "description":[
+                {"item": "Java Developer on projects for Lockheed's GCSS contract (Global Combat Support Systems) with the US Air Force, supporting Data Services and the Air Force Portal."},     
+                {"item": "Supported various 3rd party components, including Broadvision portal and content management, Tivoli Webseals, and Autonomy Search Engine for all enhancements and bug fixes for AF Portal"},     
+                {"item": "System designer and lead web developer for Self Service Data Access Request project, a front-end tool for accessing a variety of Air Force Data Warehouses.   Wrote code in Java, JSF, Struts, jFreeChart, SQL, CSS &amp; Ajax for platform including Tomcat, Websphere, Oracle, mysql, Powercenter and Informatica.  Used Intellij, Eclipse, Oracle client, Mantis and CVS development tools."},
+                {"item": "Led major Autonomy version upgrade (v.4 to v.5), implementing spellchecking and integrating content deletion across Broadvision and Autonomy."},
+{"item":"Prepared technical docs for step-by-step guidance of installs and upgrades performed by staff at remote server locations."}
+            ]
+        },
+        {
+            "company": "American Express Global Travel Technologies", 
+            "location": "Phoenix, AZ", 
+            "dates": "Jan 06 - Jul 06",
+            "basis": "corp-to-corp through 18th Street Consulting",
+            "title": "Sr. Java Developer",
+            "description":[
+                {"item": "Developer for the Travelbahn software group, handling programming for web-based apps for Corporate Travel management.  Systems supported:  Traveler Profile, Pre-Trip Authorization and Web ID Client tool."},     
+                {"item": "Performed System Analysis and planning for a migration of all web application from in-house MVC framework to Struts.  Prepared business &amp; tech docs for enhancements &amp; releases."},     
+                {"item": "Wrote code in Java, JSP, JSTL, Stored Procedures and Ajax for platform including Tomcat, Oracle, TopLink, Amadeus, Apollo, Galileo, Sabre, and Worldspan."},     
+                {"item": "Telecommuted from home and coordinated with team through VPN/chat/conference calls."}
+            ]
+        },
+        {
+            "company": "ABN AMRO", 
+            "location": "Chicago", 
+            "dates": "May 05 - Jan 06",
+            "basis": "W2 through IT vendor Spry Solutions",
+            "title": "Sr. Java Developer",
+            "description":[
+                {"item": "Java developer for MaxTrad, a web-based software suite with single point access to initiating import letters of credit, purchase order management, supply chain management, and preparation of export documents.  See www.maxtrad.com."},     
+                {"item": "Developed presentation-layer for the Import Letter of Credit workflow, including multi-tabbed forms with over 50 dynamically-generated input fields.  Wrote code in Java, JSP, JSTL, Struts and Ajax on platform including EJB, Websphere, Oracle and SQL Server.  Development tools included WSAD, CVS and Harvest."},     
+                {"item": "Worked onsite at client ABN-AMRO (NYSE:ABN, $670 bil total assets)."}
+            ]
+        },
+        {
+            "company": "IES Abroad", 
+            "location": "Chicago", 
+            "dates": "July 03  - May 05",
+            "basis": "W2/direct hire",
+            "title": "Web Software Engineer",
+            "description":[
+                {"item": "Architected company website (www.IESAbroad.org) replacing an older and increasingly brittle ASP/IIS system.  Developed XML-based content management system and a flexible, extensible page templating system around 40 different study abroad programs in 26 centers in 19 countries"},     
+                {"item": "Wrote code in Java, JSP, Struts, Tiles, XML, XSL and Ajax on platforms involving Tomcat, Apache, Oracle, mysql and Empower.  Development tools included Intellij, CVS, svn, jira, bugzilla"},     
+                {"item": "Developed Online Application and Catalog Request, two high-volume, multi-step webapps critical for company revenue."},     
+                {"item": "Managed technical requirements using Bugzilla and Jira to coordinate between technical and marketing teams."},     
+                {"item": "Developed company's web branding Style Guide in collaboration with Design &amp; Marketing"},     
+                {"item": "Managed builds and promotions to preview and production web servers using svn, bash and scp"}
+            ]
+        },
+        {
+            "company": "UBS Warburg", 
+            "location": "Chicago", 
+            "dates": "Feb - Mar 03",
+            "basis": "W2 through IT vendor Adecco",
+            "title": "Java Developer",
+            "description":[
+                {"item": "Developed Get It!, a web-based software procurement workflow application now in wide use across the organization.  Wrote code in Java, JSP &amp; Ajax on a Tomcat, Oracle 9i and Documentum platform.  Development tools included NetBeans, Clearcase"}
+            ]
+        },
+        {
+            "company": "Expand Beyond Corp.", 
+            "location": "Chicago", 
+            "dates": "Jun 02 - Jan 03",
+            "basis": "W2/direct hire",
+            "title": "Web Developer",
+            "description":[
+                {"item": "Worked on flagship software product PocketDBA with 7-member Agile-based Java team.  Practiced test-based coding, pair-programming, daily stand-ups, and bi-weekly releases."},     
+                {"item": "Responsible for web-based tools for configuring product and provisioning licenses, and company website.  Coded in Java, JSP, PHP, Stored Procedures, DTS Packages and Ajax on platform including Tomcat, Apache, Oracle, SQL Server and mysql.  Development tools included Intellij, NetBeans, Bugzilla and Clearcase."},     
+                {"item": "Created pre-launch Quality Control plans by developing use cases and acceptance tests, working with QA manager."}
+            ]
+        },
+        {
+            "company": "Quebecor World", 
+            "location": "Itasca, IL", 
+            "dates": "Dec 01 - Jun 02",
+            "basis": "W2, recruiter placement",
+            "title": "Web Developer",
+            "description":[
+                {"item": "Wrote and supported web-based Human Resources self-service applications (employee 401k self-management, personal data)"},     
+                {"item": "Wrote code in PHP, Lawson client-server and Ajax on platform including Apache, Lawson and Oracle.  Development tools included CVS, PVCS, Visual Source Safe."},     
+                {"item": "Developed an RSA Encryption layer for integration between Lawson ERP and outsourced web layer for management of Putnam 401k financials."},     
+                {"item": "40,000-employee print industry giant with $1.6 bil revenues.  NYSE:IQW."}
+            ]
+        },
+        {
+            "company": "Maytag Corp", 
+            "location": "Chicago", 
+            "dates": "Aug 00 - Aug 01",
+            "basis": "W2 through Giant Step",
+            "title": "Sr. Web Application Engineer",
+            "description":[
+                {"item": "Team lead (13 developers) for major design and technology overhaul of Maytag Corp's website and online product catalogue."},
+                {"item": "Architected and developed the approaches for authentication, membership architecture, session management, cookie-management, URL-rewriting, auto-signin and sticky routing on Broadvision platform."}
+            ]
+        },
+        {
+            "company": "Giant Step Productions LLC", 
+            "location": "Chicago", 
+            "dates": "Apr 99 - Aug 00",
+            "basis": "W2/direct hire",
+            "title": "Sr. Web Application Engineer",
+            "description":[
+                {"item": "Leo Burnett/Publicis-owned full-service web integration company (200-employees), now under name Arc Worldwide"},     
+                {"item": "Consulted for Allstate.com to transition their dynamically-generated agent homepages (20,000 agents) from MS-Access backend to DB2 and manage content with ePrise system."},
+                {"item": "Developed numerous lead-generation and sweepstakes sites for clients Purina, Oldsmobile, Procter & Gamble, Vidal Sassoon, written in ASP, Javascript and Stored Procedures on IIS and MS SQL Server platform.  Development tools included Visual Studio, Source Safe and in-house bug tracking tool"},     
+                {"item": "Coordinated with teams encompassing the full spectrum of web business (Design, Hosting, QA, User Experience, etc.).  Developed coding standards and a month-long mentoring process for new employees."}
+            ]
+        },
+        {
+            "company": "Edwin Watts Golf Stores", 
+            "location": "Chicago", 
+            "dates": "Sep 98 - Apr 99",
+            "basis": "W2 through Taproot Interactive Studio",
+            "title": "Lead Programmer",
+            "description":[
+                {"item": "Developed ASP-based E-commerce website for golf retailer Edwin Watts (www.EdwinWatts.com) and supported Perl-based E-commerce sites for Successories and Pace Communications.  One site produced $268k in sales in first three months."},
+                {"item": "Designed MS-Access database to store products, customer data and purchases and ASP/IIS programming for online catalog, shopping cart, product features and third-party online payment software."}
+            ]
+        },
+        {
+            "company": "Bill Whitney Studios", 
+            "location": "Chicago", 
+            "dates": "Sep 97",
+            "basis": "W2 through Spellbinders",
+            "title": "Programmer",
+            "description":[
+                {"item": "Created online portfiolio for digital artist Bill Whitney"},     
+                {"item": "Written in DHTML and Javascript"}
+            ]
+        },
+        {
+            "company": "Loyola University, Parmly Hearing Institute", 
+            "location": "Chicago", 
+            "dates": "Apr 95 - Sep 98",
+            "basis": "W2, direct hire",
+            "title": "Research Associate",
+            "description":[
+                {"item": "C, Java, X-11 Motif programming for experiments in hearing research"}
+            ]
+        },
+        {
+            "company": "Sussex University, Experimental Psychology", 
+            "location": "Brighton, England", 
+            "dates": "Apr 93 - Apr 95",
+            "basis": "W2, direct hire",
+            "title": "Research Associate",
+            "description":[
+                {"item": "C, X-11 Motif, and Macintosh programming for experiments in hearing research"}
+            ]
+        },
+        {
+            "company": "University of California, Center for New Music &amp; Audio Technologies", 
+            "location": "Berkeley, CA", 
+            "dates": "Jan 92 - Apr 93",
+            "basis": "Prize-funded",
+            "title": "Research Fellow",
+            "description":[
+                {"item": "Position funded by winning Hunt Fellowship from the Acoustical Society of America"},     
+                {"item": "Research & Development of music synthesizer technology."},     
+                {"item": "C programming on Sparc and NeXT computers."}
+            ]
+        },
+        {
+            "company": "Northwestern University, Institute for Learning Sciences", 
+            "location": "Evanston, IL", 
+            "dates": "Sep 89 - Dec 91",
+            "basis": "W2, Direct Hire",
+            "title": "Programmer",
+            "description":[
+                {"item": "LISP, X-11 and Macintosh Think-C programming for multimedia educational apps."},
+                {"item": "Wrote Digital Signal Processing code for interactive voice recording and analysis for client Ameritech."}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>Paths</TITLE>
+<SCRIPT LANGUAGE = "Javascript">
+
+
+function startGrab(e) {
+  win.blur();
+  win.document.a.b.value  = "";
+  mouseDown = true;
+  counter = 0;
+}
+
+function endGrab(e){
+  win.focus();
+  mouseDown = false;
+}
+
+function grabPoints(e){
+  nowx = (isNS) ? e.layerX : event.x;
+  nowy = (isNS) ? e.layerY : event.y;
+    if (mouseDown){
+        if ((nowx != oldx) ||(nowy != oldy)){
+          win.document.a.b.value += nowx + "," + nowy + ", ";
+        }
+    }
+  oldx = nowx;
+  oldy = nowy;        
+}
+
+var isNS = (navigator.appName == "Netscape");
+var nowx = 0, nowy = 0, oldx = 0, oldy = 0;
+var mouseDown = false;
+
+    if (isNS) { 
+      window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN|Event.MOUSEMOVE);
+      window.onmousemove = grabPoints;
+      window.onmousedown = startGrab;
+      window.onmouseup = endGrab;
+    }
+    else {
+      document.onmousemove = grabPoints;
+      document.onmousedown = startGrab;
+      document.onmouseup = endGrab;
+    }
+
+win = window.open("pathtarget.html", "win", "height=220,width=400");
+win.blur();
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR = "#FFFFFF" background="images/oldstuff/nobuts.jpg">
+If you click and drag your mouse on this page, your coordinates will be captured and
+placed into the form in the newly spawned window. You can then paste those coordinates
+into your animated object's path variable. If you wish, you can even paste your
+page's HTML into this document to achieve greater accuracy. (This tool works in both
+IE 4 and Navigator 4.)
+</BODY>
+</HTML>
+
