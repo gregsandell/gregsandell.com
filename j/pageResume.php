@@ -15,7 +15,7 @@
     <h1>Resume - Greg Sandell</h1>
   </div>
   <div data-role="content"> 
-    <?php include("/resume/innerPageResume.php"); ?>
+    <?php include("../resume/innerPageResume.php"); ?>
   </div>
   <?php include("inclFooter.php"); ?>
 </div> 
