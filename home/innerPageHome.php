@@ -1,17 +1,17 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
-	$wikiImg = "<img src='image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
+	$wikiImg = "<img src='{$_cpath}/image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
 
 ?>
-<script type="text/javascript" src="jQueryPortlets/jquery.js"></script>
-<script type="text/javascript" src="jQueryPortlets/interface.js"></script>
-<script type="text/javascript" src="jQueryPortlets/config.js"></script>
+<script type="text/javascript" src="{$_cpath}/jQueryPortlets/jquery.js"></script>
+<script type="text/javascript" src="{$_cpath}/jQueryPortlets/interface.js"></script>
+<script type="text/javascript" src="{$_cpath}/jQueryPortlets/config.js"></script>
 <style type="text/css" media="all">
-@import 'jQueryPortlets/portlets.css';
+@import '{$_cpath}/jQueryPortlets/portlets.css';
 </style>
 <h1>Frontend/Mobile Web Developer</h1>
 <p style='text-align: justify; float: left; padding-right: 0px'>
-	&nbsp;<img alt="Photo of Greg Sandell" style='float: right; padding-left: 5px' src='image/gregHeadshot-50.jpg' />
+	&nbsp;<img alt="Photo of Greg Sandell" style='float: right; padding-left: 5px' src='{$_cpath}/image/gregHeadshot-50.jpg' />
 	I am a 14-year Front End Developer of web applications with particular depth in Mobile Web, Javascript, AngularJS, Single Page Web Applications, jQuery, Ajax/JSON, web services, HTML5, CSS3, Responsive Design, Unix, Agile and Open Source. I have worked for Reuters, Chicago Tribune, UBS, Amex, Lockheed-Martin, and Sears in vertical markets including media, travel, finance, defense, healthcare, retail, eCommerce and education.  I hold a PhD degree and am highly effective at communications, writing and presentations.  
 </p>
 <h2>Switch to the <a href="http://gregsandell.com/j">Mobile version</a> of the site, written in jQuery Mobile!</h2>
@@ -34,7 +34,7 @@
 					<ul>
 					<li>&#187;&nbsp;<a href="greg-sandell-resume.doc">MS-Word Format&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="greg-sandell-resume.pdf">Adobe PDF Format&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="pageResume.php">...More...</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageResume.php">...More...</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,7 +48,7 @@
 					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1995-12-01_perceptual_JAES.pdf">Timbre &amp; Principle Components Analysis&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1996-06-01_auditory_MP.pdf">Auditory Displays&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf">Macro Timbre&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="pagePublications.php">...More...</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pagePublications.php">...More...</a></li>
 					</ul>
 				</div>
 			</div>
@@ -61,11 +61,11 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="pageClient_ubs.php">UBS Investment Bank</a></li>
-					<li>&#187;&nbsp;<a href="pageClient_usaf.php">Lockheed/US Air Force</a></li>
-					<li>&#187;&nbsp;<a href="pageClient_amex.php">AMEX Travel Technologies</a></li>
-					<li>&#187;&nbsp;<a href="pageClient_abnAmro.php">ABN-AMRO</a></li>
-					<li>&#187;&nbsp;<a href="templatePortfolio.php">...More...</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_ubs.php">UBS Investment Bank</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_usaf.php">Lockheed/US Air Force</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_amex.php">AMEX Travel Technologies</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_abnAmro.php">ABN-AMRO</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/templatePortfolio.php">...More...</a></li>
 					</ul>
 				</div>
 			</div>
@@ -80,7 +80,7 @@
 <li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html">Hacking a Linksys NSLU2<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html">S-Corps for Computer Contractors&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html">Getting Started with Maven 2&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="pageBlogs.php" >...More...</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/pageBlogs.php" >...More...</a></li>
 					</ul>
 				</div>
 			</div>

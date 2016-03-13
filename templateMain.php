@@ -14,13 +14,12 @@
 	<meta name="description" content="" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<script type="text/javascript" src="prototype.js"></script>
-	<script type="text/javascript" src="modalbox/modalbox.js"></script>
+	<script type="text/javascript" src="{$_cpath}/modalbox/modalbox.js"></script>
 	<style type="text/css">
-	    <?php include($_cpath . "/cssFunride.php") ?>
-	    <?php include($_cpath . "/cssPortfolio.php") ?>
+	    <?php include("{$_cpath}/cssFunride.php") ?>
+	    <?php include("{$_cpath}/cssPortfolio.php") ?>
 	</style>
-        <link rel="stylesheet" href="modalbox/modalbox.css" type="text/css" />
+        <link rel="stylesheet" href="{$_cpath}/modalbox/modalbox.css" type="text/css" />
 	<base href="http://www.gregsandell.com" />
 </head>
 <body>
@@ -33,12 +32,12 @@
 		<!-- end div#logo -->
 		<div id="menu">
 			<ul>
-				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="noMobileHome.php">Home</a></li>
-				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="pageResume.php">Resume</a></li>
-				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="templatePortfolio.php">Portfolio</a></li> 
-				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="pageCode.php">Code</a></li>
-				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="pageTalks.php">Talks</a></li>
-				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="pageBlogs.php">Blog</a></li>
+				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="{$_cpath}/noMobileHome.php">Home</a></li>
+				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="{$_cpath}/pageResume.php">Resume</a></li>
+				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="{$_cpath}/templatePortfolio.php">Portfolio</a></li>
+				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="{$_cpath}/pageCode.php">Code</a></li>
+				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="{$_cpath}/pageTalks.php">Talks</a></li>
+				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="{$_cpath}/pageBlogs.php">Blog</a></li>
 			</ul>
 		</div>
 		<!-- end div#menu -->
@@ -54,7 +53,7 @@
 					print($mainCopy);
 				}
 				if (isset($inlinePhp) && !empty($inlinePhp) && $inlinePhp != "") {
-					include($_cpath . $inlinePhp);
+					include($inlinePhp);
 				} 
 				if (isset($mainCopy2) && !empty($mainCopy2) && $mainCopy2 != "") {
 					print($mainCopy2);
