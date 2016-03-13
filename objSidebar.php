@@ -117,9 +117,9 @@ class SidebarPageManager {
 		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', 'http://www.gregsandell.com/portfolio/publications/1995-12-01_perceptual_JAES.pdf', true);
 		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'http://www.gregsandell.com/portfolio/publications/1996-06-01_auditory_MP.pdf', true);
 		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'http://www.gregsandell.com/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf', true);
-		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", "greg-sandell-resume.doc", true);
-		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", "greg-sandell-resume.pdf", true);
-		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", "https://www.linkedin.com/e/fpf/3094039/fprf/", true);
+		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", "/resume/gregsandell-resume.doc", true);
+		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", "/resume/gregsandell-resume.pdf", true);
+		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", "http://www.linkedin.com/in/gregsandell", true);
 		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", "http://www.maxtrad.com", true);
 		$g_samplesPageObj = new LinkObj2("samples", "Main Samples Page", "templatePortfolio.php", false);
 		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", "http://www.gregsandell.com/portfolio/samples/bwhitney", true);
