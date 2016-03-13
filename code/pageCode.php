@@ -2,7 +2,7 @@
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 	$g_section = "code";
 	$linksTitle = "Other Site Links";
-	$inlinePhp = "/innerPageCode.php";
+	$inlinePhp = $_cpath . "/code/innerPageCode.php";
 	
 	$mainCopy = "";
 include($_cpath . "/objSidebar.php");

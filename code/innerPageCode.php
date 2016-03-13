@@ -50,7 +50,7 @@
         <a href="https://github.com/gregsandell/objResume">Some PHP object oriented data structure code&nbsp;<img src="/image/wikipediaExternalPage.png" alt="External Page" border="0"></a>
     </dt>
     <dd>
-        This some object oriented PHP code that I use on the site you are now viewing.  It stores the data used on my <a href="http://gregsandell.com/resume/pageResume.php">Resume</a> page.
+        This some object oriented PHP code that I use on the site you are now viewing.  It stores the data used on my <a href="/resume/pageResume.php">Resume</a> page.
     </dd>
 
 <br>
