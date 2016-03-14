@@ -114,7 +114,7 @@
 
 								</tr>
 							</table>
-							<a href="pageClient_<?php print($key) ?>.php">
+							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
 								<img src="portfolio/<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
 							</a>
 						</div>
@@ -131,7 +131,7 @@
 					<h2>Clients</h2>
 					<ul>  <?php
 					foreach ($g_portfolio->clients as $client) {   ?>
-						<li><a href="pageClient_<?php print($client->url) ?>.php"  onMouseOver="featureMe('<?php print($client->key) ?>')" ><?php print($client->linkText) ?></a></li>  <?php
+						<li><a href="/portfolio/pages/pageClient_<?php print($client->url) ?>.php"  onMouseOver="featureMe('<?php print($client->key) ?>')" ><?php print($client->linkText) ?></a></li>  <?php
 					}  ?>
 					</ul>
 				</li>

@@ -23,7 +23,7 @@
     This file must be located on your server. 
 -->
 
-<script type="text/javascript" src="highslide/highslide.js"></script>
+<script type="text/javascript" src="/highslide/highslide.js"></script>
 
 
 
@@ -44,7 +44,7 @@
 		}
 	);
 	
-    hs.graphicsDir = 'highslide/graphics/';
+    hs.graphicsDir = '/highslide/graphics/';
     hs.outlineType = 'rounded-white';
 </script>
 
@@ -55,7 +55,7 @@
 -->
 
 <style type="text/css">
-@import 'innerClientGallery.css';
+@import '/innerClientGallery.css';
 </style>
 
 <div>

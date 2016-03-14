@@ -71,60 +71,60 @@ class Portfolio {
 			"sears/images/homepage_500x468.png", "500", "468",
 			"", "", "", "", "",
 			$this->globals->Key->spectrum, $this->globals->Key->path);
-		$client->addThumbdoc("1", "portfolio/sears/images/homepage.png", "portfolio/sears/images/homepageThumb.png",
+		$client->addThumbdoc("1", "/portfolio/sears/images/homepage.png", "portfolio/sears/images/homepageThumb.png",
 				"Sears: mobile web home page.");
-		$client->addThumbdoc("2", "portfolio/sears/images/rewards.png", "portfolio/sears/images/rewardsThumb.png",
+		$client->addThumbdoc("2", "/portfolio/sears/images/rewards.png", "portfolio/sears/images/rewardsThumb.png",
 				"Sears:  Rewards page.");
-		$client->addThumbdoc("3", "portfolio/sears/images/loadUp.png", "portfolio/sears/images/loadUpThumb.png",
+		$client->addThumbdoc("3", "/portfolio/sears/images/loadUp.png", "portfolio/sears/images/loadUpThumb.png",
 				"Sears:  Currently linked cards.");
-		$client->addThumbdoc("4", "portfolio/sears/images/enteringCard.png", "portfolio/sears/images/enteringCardThumb.png",
+		$client->addThumbdoc("4", "/portfolio/sears/images/enteringCard.png", "portfolio/sears/images/enteringCardThumb.png",
 				"Sears:  entering a new card to be linked.");
-		$client->addThumbdoc("5", "portfolio/sears/images/cardAdded.png", "portfolio/sears/images/cardAddedThumb.png",
+		$client->addThumbdoc("5", "/portfolio/sears/images/cardAdded.png", "/portfolio/sears/images/cardAddedThumb.png",
 				"Sears:  card successfully linked.");
 		$client = $this->addClient($this->globals->Key->path, "American Association of Critical Care Nurses", "path", "AACN", 
 			"", "", "", "",
 			"path/images/dysrhythmiaMonitoring_500x468.png", "500", "468",
 			"", "", "", "", "",
 			$this->globals->Key->sears, $this->globals->Key->tr);
-		$client->addThumbdoc("1", "portfolio/path/images/login.png", "portfolio/path/images/loginThumb.png",
+		$client->addThumbdoc("1", "/portfolio/path/images/login.png", "/portfolio/path/images/loginThumb.png",
 				"American Association of Critical Care Nurses (AACN): Login screen.");
-		$client->addThumbdoc("2", "portfolio/path/images/mainMenu.png", "portfolio/path/images/mainMenuThumb.png",
+		$client->addThumbdoc("2", "/portfolio/path/images/mainMenu.png", "/portfolio/path/images/mainMenuThumb.png",
 				"American Association of Critical Care Nurses (AACN): Main Menu.");
-		$client->addThumbdoc("3", "portfolio/path/images/dysrhythmiaMonitoring.png", "portfolio/path/images/dysrhythmiaMonitoring_thumb.png",
+		$client->addThumbdoc("3", "/portfolio/path/images/dysrhythmiaMonitoring.png", "/portfolio/path/images/dysrhythmiaMonitoring_thumb.png",
 				"American Association of Critical Care Nurses (AACN): Dysrhthmia Monitoring.");
-		$client->addThumbdoc("4", "portfolio/path/images/dysrhytmias.png", "portfolio/path/images/dysrhytmiasThumb.png",
+		$client->addThumbdoc("4", "/portfolio/path/images/dysrhytmias.png", "/portfolio/path/images/dysrhytmiasThumb.png",
 				"American Association of Critical Care Nurses (AACN): Dysrhthmias.");
-		$client->addThumbdoc("5", "portfolio/path/images/atrialTachycardia.png", "portfolio/path/images/atrialTachycardiaThumb.png",
+		$client->addThumbdoc("5", "/portfolio/path/images/atrialTachycardia.png", "/portfolio/path/images/atrialTachycardiaThumb.png",
 				"American Association of Critical Care Nurses (AACN): Atrial Tachycardia.");
 		$client = $this->addClient($this->globals->Key->tr, "Truven Health Analytics", "tr", "Truven", 
 			"", "", "", "",
 			"tr/images/homepage_500x428.png", "500", "428",
 			"", "", "", "", "",
 			$this->globals->Key->path, $this->globals->Key->ubs);
-		$client->addThumbdoc("1", "portfolio/tr/images/homepage.png", "portfolio/tr/images/homepage_thumb.png",
+		$client->addThumbdoc("1", "/portfolio/tr/images/homepage.png", "/portfolio/tr/images/homepage_thumb.png",
 				"HIE Advantage Analytics: Population Health Dashboard.");
-		$client->addThumbdoc("2", "portfolio/tr/images/diabetesSummary.png", "portfolio/tr/images/diabetesSummaryThumb.png",
+		$client->addThumbdoc("2", "/portfolio/tr/images/diabetesSummary.png", "/portfolio/tr/images/diabetesSummaryThumb.png",
 				"HIE Advantage Analytics: Diabetes Summary.");
-		$client->addThumbdoc("3", "portfolio/tr/images/populations.png", "portfolio/tr/images/populationsThumb.png",
+		$client->addThumbdoc("3", "/portfolio/tr/images/populations.png", "/portfolio/tr/images/populationsThumb.png",
 				"HIE Advantage Analytics: Populations.");
-		$client->addThumbdoc("4", "portfolio/tr/images/populationSummary.png", "portfolio/tr/images/populationSummaryThumb.png",
+		$client->addThumbdoc("4", "/portfolio/tr/images/populationSummary.png", "/portfolio/tr/images/populationSummaryThumb.png",
 				"HIE Advantage Analytics: Population Wizard.");
-		$client->addThumbdoc("5", "portfolio/tr/images/dischargeTimeframe.png", "portfolio/tr/images/dischargeTimeframeThumb.png",
+		$client->addThumbdoc("5", "/portfolio/tr/images/dischargeTimeframe.png", "/portfolio/tr/images/dischargeTimeframeThumb.png",
 				"HIE Advantage Analytics: Discharge Timeframe.");
 		$client = $this->addClient($this->globals->Key->ubs, "UBS Investment Bank/Equities", "ubs", "UBS", 
 			"", "", "", "",
 			"ubs/images/ubsHome500x406.gif", "500", "406",
 			"", "", "", "", "",
 			$this->globals->Key->path, $this->globals->Key->usaf);
-		$client->addThumbdoc("1", "portfolio/ubs/images/liquiditySnapshot.gif", "portfolio/ubs/images/liquiditySnapshotThumb.gif",
+		$client->addThumbdoc("1", "/portfolio/ubs/images/liquiditySnapshot.gif", "/portfolio/ubs/images/liquiditySnapshotThumb.gif",
 				"A daily report in PDF format, assembled using iText and jFreeChart, and emailed nightly.");
-		$client->addThumbdoc("2", "portfolio/ubs/images/monitron.gif", "portfolio/ubs/images/monitronThumb.gif",
+		$client->addThumbdoc("2", "/portfolio/ubs/images/monitron.gif", "/portfolio/ubs/images/monitronThumb.gif",
 				"Monitron, a control panel for standalone Java applications running externally from Pinpoint Web.");
-		$client->addThumbdoc("3", "portfolio/ubs/images/manageGuiPluginPermissions.gif", "portfolio/ubs/images/manageGuiPluginPermissionsThumb.gif",
+		$client->addThumbdoc("3", "/portfolio/ubs/images/manageGuiPluginPermissions.gif", "/portfolio/ubs/images/manageGuiPluginPermissionsThumb.gif",
 				"GUI plugin permissions:  a dashboard for managing Pinpoint features and functionality.");
-		$client->addThumbdoc("4", "portfolio/ubs/images/activityQuery.gif", "portfolio/ubs/images/activityQueryThumb.gif",
+		$client->addThumbdoc("4", "/portfolio/ubs/images/activityQuery.gif", "/portfolio/ubs/images/activityQueryThumb.gif",
 				"Activity Query:  a report tool on the audit trail of all user-initiated activities in Pinpoint.");
-		$client->addThumbdoc("5", "portfolio/ubs/images/QuattroIoi.gif", "portfolio/ubs/images/QuattroIoiThumb.gif",
+		$client->addThumbdoc("5", "/portfolio/ubs/images/QuattroIoi.gif", "/portfolio/ubs/images/QuattroIoiThumb.gif",
 				"Quattro Tool: reports on Indications of Interest (trading activity).");
 		$client = $this->addClient($this->globals->Key->usaf, "US Air Force/Lockheed Martin", "usaf", "US Air Force", 
 			"Air Force Portal and Data Services",
@@ -147,15 +147,15 @@ class Portfolio {
 		$client->addDocument($this, $client, "ssdarScreens", true, "USAF SS-DAR Screens", "slideshow", $this->SCREENS, 
 			"ssdarScreens", 
 			"The US Air Force's Self-Service Data Access Request (SSDAR) tool was designed to schedule retrieval of data from Informatica-based Data Warehouses.  This slideshow of VISIO doc pages from the team's Information Architecture design shows the application's screens and pageflow.");
-		$client->addThumbdoc("1", "portfolio/usaf/images/AFPortal01of04.gif", "portfolio/usaf/images/AFPortal01of04Thumb.gif",
+		$client->addThumbdoc("1", "/portfolio/usaf/images/AFPortal01of04.gif", "/portfolio/usaf/images/AFPortal01of04Thumb.gif",
 				"The Air Force Portal Login Page");
-		$client->addThumbdoc("2", "portfolio/usaf/images/AFPortal02of04.gif", "portfolio/usaf/images/AFPortal02of04Thumb.gif",
+		$client->addThumbdoc("2", "/portfolio/usaf/images/AFPortal02of04.gif", "/portfolio/usaf/images/AFPortal02of04Thumb.gif",
 				"The Air Force Portal Home Page");
-		$client->addThumbdoc("3", "portfolio/usaf/images/AFPortal03of04.gif", "portfolio/usaf/images/AFPortal03of04Thumb.gif",
+		$client->addThumbdoc("3", "/portfolio/usaf/images/AFPortal03of04.gif", "/portfolio/usaf/images/AFPortal03of04Thumb.gif",
 				"A search results screen from the Air Force Portal");
-		$client->addThumbdoc("4", "portfolio/usaf/images/SSDARsiteMap.gif", "portfolio/usaf/images/SSDARsiteMapThumb.gif",
+		$client->addThumbdoc("4", "/portfolio/usaf/images/SSDARsiteMap.gif", "/portfolio/usaf/images/SSDARsiteMapThumb.gif",
 						"Site map showing navigation hierarchy of the Self Service Data Access Request (SSDAR) web application.");
-		$client->addThumbdoc("5", "portfolio/usaf/images/usafAutonomyInstall.gif", "portfolio/usaf/images/usafAutonomyInstallThumb.gif",
+		$client->addThumbdoc("5", "/portfolio/usaf/images/usafAutonomyInstall.gif", "/portfolio/usaf/images/usafAutonomyInstallThumb.gif",
 						"Instructions (excerpt) for upgrading the Autonomy Search Engine server software from version 4 to version 5.");
 		$client = $this->addClient($this->globals->Key->abn, "ABN-AMRO", $this->globals->Key->abn,  "ABN-AMRO",
 			"Workflow Application for International Letters of Credit (ABN-AMRO)",
@@ -169,11 +169,11 @@ class Portfolio {
 			"abnAmroImport", "Shows a slideshow of screen shots for Import Letter of Credit application.  The screens show typical forms of this EJB-based webapp, with up to 50 dynamically-generated fields spread over five tabs.");
 		$client->addDocument($this, $client, "abnAmroAdmin", false, "Admin Tool", "slideshow", $this->SCREENS, 
 			"abnAmroAdminbnAmroImport", "Slideshow of screen shots for the site's web-based Admin Tool");
-		$client->addThumbdoc("1", "portfolio/abnAmro/images/abnAmroImport03of11.gif", "portfolio/abnAmro/images/abnAmroImport03of11Thumb.gif",
+		$client->addThumbdoc("1", "/portfolio/abnAmro/images/abnAmroImport03of11.gif", "/portfolio/abnAmro/images/abnAmroImport03of11Thumb.gif",
 				"The ABN-AMRO/MaxTrad International Letters of Credit workflow app:  the make letter screen");
-		$client->addThumbdoc("2", "portfolio/abnAmro/images/abnAmroImport04of11.gif", "portfolio/abnAmro/images/abnAmroImport04of11Thumb.gif",
+		$client->addThumbdoc("2", "/portfolio/abnAmro/images/abnAmroImport04of11.gif", "/portfolio/abnAmro/images/abnAmroImport04of11Thumb.gif",
 				"The ABN-AMRO/MaxTrad International Letters of Credit workflow app:  the errors tab");
-		$client->addThumbdoc("3", "portfolio/abnAmro/images/abnAmroImport05of11.gif", "portfolio/abnAmro/images/abnAmroImport05of11Thumb.gif",
+		$client->addThumbdoc("3", "/portfolio/abnAmro/images/abnAmroImport05of11.gif", "/portfolio/abnAmro/images/abnAmroImport05of11Thumb.gif",
 				"The ABN-AMRO/MaxTrad International Letters of Credit workflow app:  a tab showing errors");
 		$client = $this->addClient($this->globals->Key->ies, "IES Abroad", "ies", "IES Abroad",
 			"Company website for IES Abroad (Institute for the International Education of Students)",
@@ -210,13 +210,13 @@ class Portfolio {
 			"iesNetworkConfig", "This shows the details of the computing infrastructure at IES Abroad.");
 		$client->addDocument($this, $client, "onlineApp", false, "Online Application Flow", "pdf", $this->FLOW, 
 			"ies/docs/v02_onlineApp.pdf", "The IES Abroad Online Application is used by students to apply to IES programs.  This is a 8-page form that follows a 'wizard' pattern of sequential steps.  This scan of a VISIO doc is a flowchart showing the relationship between pages, Struts Actions and Struts form beans over this 8-page process.");
-		$client->addThumbdoc("1", "portfolio/ies/images/iesHomepage500x373.gif", "portfolio/ies/images/IESthumb.jpg",
+		$client->addThumbdoc("1", "/portfolio/ies/images/iesHomepage500x373.gif", "/portfolio/ies/images/IESthumb.jpg",
 				"The IES Abroad Homepage");
-		$client->addThumbdoc("2", "portfolio/ies/images/IESonlineApp.gif", "portfolio/ies/images/IESonlineAppthumb.gif",
+		$client->addThumbdoc("2", "/portfolio/ies/images/IESonlineApp.gif", "/portfolio/ies/images/IESonlineAppthumb.gif",
 				"The IES Abroad Online Application, a 7-step Wizard application");
-		$client->addThumbdoc("3", "portfolio/ies/images/launchHistory.gif", "portfolio/ies/images/launchHistoryThumb.gif",
+		$client->addThumbdoc("3", "/portfolio/ies/images/launchHistory.gif", "/portfolio/ies/images/launchHistoryThumb.gif",
 				"The release history for the IES Abroad company website.  Individual numbers show Jira tasks.");
-		$client->addThumbdoc("4", "portfolio/ies/images/sculptorArchitecture.gif", "portfolio/ies/images/sculptorArchitectureThumb.gif",
+		$client->addThumbdoc("4", "/portfolio/ies/images/sculptorArchitecture.gif", "/portfolio/ies/images/sculptorArchitectureThumb.gif",
 				"Architecture of the company website and its content management system");
 		$this->addClient($this->globals->Key->xb, "Expand Beyond", "xb", "Expand Beyond", 
 			"Company website redesign for Expand Beyond, maker of wireless handheld applications",
@@ -232,13 +232,13 @@ class Portfolio {
 			"maytag/images/maytagHome500x376.gif", "500", "376",
 			"maytag/images/maytagThumb.jpg", "130", "100", "http://www.Maytag.com", "Live Site",
 			$this->globals->Key->xb, $this->globals->Key->watts);
-		$client->addThumbdoc("1", "portfolio/maytag/images/maytagHome500x376.gif", "portfolio/maytag/images/maytagHomeThumb.gif",
+		$client->addThumbdoc("1", "/portfolio/maytag/images/maytagHome500x376.gif", "/portfolio/maytag/images/maytagHomeThumb.gif",
             "Company Home Page");
-		$client->addThumbdoc("2", "portfolio/maytag/images/maytagMyApplicances.gif", "portfolio/maytag/images/maytagMyApplicancesThumb.gif",
+		$client->addThumbdoc("2", "/portfolio/maytag/images/maytagMyApplicances.gif", "/portfolio/maytag/images/maytagMyApplicancesThumb.gif",
             "'My Appliances':  a list of Maytag appliances owned by the customer");
-		$client->addThumbdoc("3", "portfolio/maytag/images/myMaytagSignIn.gif", "portfolio/maytag/images/myMaytagSignInThumb.gif",
+		$client->addThumbdoc("3", "/portfolio/maytag/images/myMaytagSignIn.gif", "/portfolio/maytag/images/myMaytagSignInThumb.gif",
             "Sign-in Page for the Site");
-		$client->addThumbdoc("4", "portfolio/maytag/images/registerProduct.gif", "portfolio/maytag/images/registerProductThumb.gif",
+		$client->addThumbdoc("4", "/portfolio/maytag/images/registerProduct.gif", "/portfolio/maytag/images/registerProductThumb.gif",
             "Register a Product: add an appliance to your My Appliances page");
 		$client->addDocument($this, $client, "maytagStyleGuide", false, "Style Guide", "slideshow", $this->STYLEGUIDE, 
 			"maytagStyleGuide", "Here are design specs for seve<?php print($client->linkText) ?>ral sections of the site.  Documents by the design team at Giant Step.");
@@ -267,15 +267,15 @@ class Portfolio {
 			"watts/images/wattsHomepage500x475.gif", "500", "475",
 			"watts/images/wattsThumb.jpg", "130", "131", "http://www.EdwinWatts.com", "Live Site",
 			$this->globals->Key->maytag, $this->globals->Key->billwhitney);
-		$client->addThumbdoc("1", "portfolio/watts/images/wattsHomePage.gif", "portfolio/watts/images/wattsHomepage500x475.gif",
+		$client->addThumbdoc("1", "/portfolio/watts/images/wattsHomePage.gif", "/portfolio/watts/images/wattsHomepage500x475.gif",
 				"Homepage for the Edwin Watts Golf e-commerce site");
-		$client->addThumbdoc("2", "portfolio/watts/images/wattsProductPage.gif", "portfolio/watts/images/wattsProductPageThumb.gif",
+		$client->addThumbdoc("2", "/portfolio/watts/images/wattsProductPage.gif", "/portfolio/watts/images/wattsProductPageThumb.gif",
 				"Product Page for the Edwin Watts Golf e-commerce site");
-		$client->addThumbdoc("3", "portfolio/watts/images/wattsShoppingCart.gif", "portfolio/watts/images/wattsShoppingCartThumb.gif",
+		$client->addThumbdoc("3", "/portfolio/watts/images/wattsShoppingCart.gif", "/portfolio/watts/images/wattsShoppingCartThumb.gif",
 				"Shopping Cart for the Edwin Watts Golf e-commerce site");
-		$client->addThumbdoc("4", "portfolio/watts/images/wattsCheckout1.gif", "portfolio/watts/images/wattsCheckout1Thumb.gif",
+		$client->addThumbdoc("4", "/portfolio/watts/images/wattsCheckout1.gif", "/portfolio/watts/images/wattsCheckout1Thumb.gif",
 				"Cart Checkout part 1 for the Edwin Watts Golf e-commerce site");
-		$client->addThumbdoc("5", "portfolio/watts/images/wattsCheckout2.gif", "portfolio/watts/images/wattsCheckout2Thumb.gif",
+		$client->addThumbdoc("5", "/portfolio/watts/images/wattsCheckout2.gif", "/portfolio/watts/images/wattsCheckout2Thumb.gif",
 				"Cart Checkout part 2 for the Edwin Watts Golf e-commerce site");
 		$client->addDocument($this, $client, "wattsProjectOverview", false, "Project Overview", "pdf", $this->BUSINESS, 
 			"watts/docs/wattsProjectOverview.pdf", "An overview of the business and technical goals of the site");
@@ -313,7 +313,7 @@ class Portfolio {
 			"spectrum/images/spectrumHome500x294.gif", "500", "294",
 			"spectrum/images/spectrumThumb.jpg", "130", "82", "http://www.gregsandell.com/portfolio/samples/javahearing/spectrum.html", "Archived Live Site",
 			$this->globals->Key->billwhitney, $this->globals->Key->usaf);
-		$client->addThumbdoc("1", "portfolio/spectrum/images/spectrumHome500x294.gif", "portfolio/spectrum/images/spectrumHomeThumb.gif",
+		$client->addThumbdoc("1", "/portfolio/spectrum/images/spectrumHome500x294.gif", "/portfolio/spectrum/images/spectrumHomeThumb.gif",
 				"Spectrum and Waveform analysis Java applet");
 
 	}
