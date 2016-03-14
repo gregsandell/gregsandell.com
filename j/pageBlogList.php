@@ -1,5 +1,5 @@
 <?php
-  require_once('../i/simplepie.inc');
+  require_once('../lib/simplepie/1.1.3/simplepie.inc');  // jQuery mobile quirk:  an absolute path does not work
   $blogType = $_GET['type'];
 
   // CHANGE THE FEED ADDRESS BELOW - THAT'S IT!
@@ -13,7 +13,7 @@
 <html> 
   <head> 
   <title>Greg Sandell</title> 
-  <link rel="stylesheet" type="text/css" href="blog.css" />
+  <link rel="stylesheet" type="text/css" href="../css/blog.css" />
 	<?php  include("inclHead.php");  ?>
 </head>
 

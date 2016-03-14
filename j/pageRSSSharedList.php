@@ -1,5 +1,5 @@
 <?php
-  require_once('../i/simplepie.inc');
+  require_once('../lib/simplepie/1.1.3/simplepie.inc');
   $rssUrl = "http://www.google.com/reader/shared/04430893089087584672";
   $rssUrl = "http://www.google.com/reader/public/atom/user%2F04430893089087584672%2Fstate%2Fcom.google%2Fbroadcast";
   $total_articles = 25;
@@ -8,7 +8,7 @@
 <html> 
   <head> 
   <title>Greg Sandell</title> 
-  <link rel="stylesheet" type="text/css" href="blog.css" />
+  <link rel="stylesheet" type="text/css" href="../css/blog.css" />
 	<?php  include("inclHead.php");  ?>
 </head>
 

@@ -1,5 +1,5 @@
 <?php
-  require_once('../i/simplepie.inc');
+  require_once('../lib/simplepie/1.1.3/simplepie.inc');
   $blogType = $_GET['type'];
   // CHANGE THE FEED ADDRESS BELOW - THAT'S IT!
   $gregBlogId = "5850363418317194275";
@@ -23,7 +23,7 @@
 <html> 
   <head> 
   <title>Greg Sandell</title> 
-  <link rel="stylesheet" type="text/css" href="../i/blog.css" />
+  <link rel="stylesheet" type="text/css" href="../css/blog.css" />
 	<?php  include("inclHead.php");  ?>
 </head>
 	<body> <?php

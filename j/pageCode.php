@@ -4,7 +4,7 @@
 <html> 
   <head> 
   <title>Greg Sandell</title> 
-  <link rel="stylesheet" type="text/css" href="blog.css" />
+  <link rel="stylesheet" type="text/css" href="../css/blog.css" />
 	<?php  include("inclHead.php");  ?>
 </head>
 
