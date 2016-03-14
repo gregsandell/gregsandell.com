@@ -14,14 +14,14 @@
 	<meta name="description" content="" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<script type="text/javascript" src="/prototype.js"></script>
-	<script type="text/javascript" src="/scriptaculous.js"></script>
-	<script type="text/javascript" src="/modalbox/modalbox.js"></script>
+	<script type="text/javascript" src="/lib/prototype/1.5.1/prototype.js"></script>
+	<script type="text/javascript" src="/lib/scriptaculous/1.7.1/scriptaculous.js"></script>
+	<script type="text/javascript" src="/lib/modalbox/1.5.4/modalbox.js"></script>
 	<style type="text/css">
 	    <?php include("{$_cpath}/cssFunride.php") ?>
 	    <?php include("{$_cpath}/cssPortfolio.php") ?>
 	</style>
-        <link rel="stylesheet" href="/modalbox/modalbox.css" type="text/css" />
+        <link rel="stylesheet" href="/lib/modalbox/1.5.4/modalbox.css" type="text/css" />
 </head>
 <body>
 <div id="wrapper">

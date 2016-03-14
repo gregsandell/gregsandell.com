@@ -45,30 +45,24 @@
 															"<?php print($g_globals->Key->billwhitney) ?>",
 															"<?php print($g_globals->Key->spectrum) ?>");
 			function hideObj(elementName) {
-				console.log("hideObj('" + elementName + "')");
 				document.getElementById(elementName).style.visibility = 'hidden'
 			}
 			function showObj(elementName) {
-				console.log("showObj('" + elementName + "')");
 				document.getElementById(elementName).style.visibility = 'visible'
 			}
 			function featureMe(proj) {
-				//console.log("featureMe('" + proj + "')");
 				id = proj + "Portfolio";
 				for (i = 0; i < g_projectNames.length; i++) {
 					if (proj == g_projectNames[i]) {
-                        //console.log("showing " + id);
 							eval("showObj('" + id + "')");
 					}
 						else {
 							id2 = g_projectNames[i] + "Portfolio";
-                            //console.log("hiding " + id2);
 							eval("hideObj('" + id2 + "')");
 						}
 				}
 			}
 			function unFeatureMe(proj) {
-				//alert("unFeatureMe('" + proj + "')");
 				eval("hideObj('" + proj + "Portfolio')");
 			}
 		</script>
