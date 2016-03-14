@@ -137,9 +137,11 @@ a:hover {
 #logo h1 {
 	margin: 0;
 	padding: 0px 0px 5px 0px;
-	font: italic 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style: italic !important;
+	font-size: 36px !important;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
 }
-h1.logoH1 {
+h1 a {
 	margin: 0;
 	padding: 0px 0px 5px 0px;
 	font: italic 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
