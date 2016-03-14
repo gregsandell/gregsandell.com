@@ -11,7 +11,7 @@
 ?>
 <html>
 	<head>
-		<title>Greg Sandell's Portfolio - Bill Whitney Artist Site</title>
+		<title>Greg Sandell's Portfolio - Spectrum Analysis Applet</title>
 		</script>
 		<style type="text/css">
 			LI {
@@ -82,20 +82,19 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; Bill Whitney Artist Site</td></tr>
+			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; Spectrum Analysis Applet</td></tr>
 			<tr >
-				<td colspan="2" class="portfolioTitle" colspan="3">Bill Whitney Artist Site</td>
+				<td colspan="2" class="portfolioTitle" colspan="3">Spectrum Analysis Applet</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=whitney" TARGET=_BLANK><img src="images/whitneyHome500x343.gif" width="500" height="343" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK><img src="/portfolio/resources/spectrum/images/spectrumHome500x294.gif" width="500" height="294" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
-								<li><b>What:</b> Personal Page for Digital Media artist Bill Whitney</li>
-								<li><b>My Role:</b> In-house web developer with Spellbinders.</li>
-								<li><b>Status:</b> Site no longer up.  </li>
-								<li><b>Technologies:</b> DHTML, Javascript, W3C DOM</li>
-								<li><b>Timeframe:</b> Began &#38; launched in 1997</li>
-								<li><a href="../portfolioPopup.php?site=whitney" TARGET=_BLANK>Visit site</a> (archived)</li>
+								<li><b>What:</b> Interactive Demonstration of Musical Acoustics</li>
+								<li><b>My Role:</b> Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute</li>
+								<li><b>Technologies:</b> Java 1.1 Applet</li>
+								<li><b>Timeframe:</b> Began &#38; launched in 1996</li>
+								<li><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
 							</ul>
 				</td>
 			</tr>

@@ -11,7 +11,7 @@
 ?>
 <html>
 	<head>
-		<title>Greg Sandell's Portfolio - Expand Beyond Company Site</title>
+		<title>Greg Sandell's Portfolio - Bill Whitney Artist Site</title>
 		</script>
 		<style type="text/css">
 			LI {
@@ -82,20 +82,20 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; Expand Beyond Company Site</td></tr>
+			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; Bill Whitney Artist Site</td></tr>
 			<tr >
-				<td colspan="2" class="portfolioTitle" colspan="3">Expand Beyond Company Site</td>
+				<td colspan="2" class="portfolioTitle" colspan="3">Bill Whitney Artist Site</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=xb" TARGET=_BLANK><img src="images/xbHome500x617.gif" width="500" height="617" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=whitney" TARGET=_BLANK><img src="/portfolio/resources/whitney/images/whitneyHome500x343.gif" width="500" height="343" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
-								<li><b>What:</b> Company website redesign for Expand Beyond, maker of wireless handheld applications</li>
-								<li><b>My Role:</b> In-house web developer.</li>
-								<li><b>Status:</b> Site is still live.  </li>
-								<li><b>Technologies:</b> PHP, mysql, Apache, MS-SQL Server</li>
-								<li><b>Timeframe:</b> Began &#38; launched in 2002</li>
-								<li><a href="http://www.gregsandell.com/portfolio/portfolioPopup.php?site=xb" TARGET=_BLANK>Visit live site</a></li>
+								<li><b>What:</b> Personal Page for Digital Media artist Bill Whitney</li>
+								<li><b>My Role:</b> In-house web developer with Spellbinders.</li>
+								<li><b>Status:</b> Site no longer up.  </li>
+								<li><b>Technologies:</b> DHTML, Javascript, W3C DOM</li>
+								<li><b>Timeframe:</b> Began &#38; launched in 1997</li>
+								<li><a href="../portfolioPopup.php?site=whitney" TARGET=_BLANK>Visit site</a> (archived)</li>
 							</ul>
 				</td>
 			</tr>

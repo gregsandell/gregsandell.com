@@ -115,7 +115,7 @@
 								</tr>
 							</table>
 							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
-								<img src="portfolio/<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
+								<img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
 							</a>
 						</div>
 						<?php

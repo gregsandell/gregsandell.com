@@ -10,11 +10,12 @@
 	$imageBorder = "0";
 		session_name("18thStreet");
 	session_start();
+	$_SESSION["authenticated"] = true;   // bypass the defunct login process
 
 ?>
 <html>
 	<head>
-		<title>Greg Sandell's Portfolio - IES Abroad Company Site</title>
+		<title>Greg Sandell's Portfolio - Edwin Watts Golf Store</title>
 		<style type="text/css">
 			LI {
 				<?php print($cssBasic) ?>
@@ -89,12 +90,12 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; Edwin Watts Golf Stores E-Commerce Site</td></tr>
+			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; Edwin Watts Golf Stores E-Commerce Site</td></tr>
 			<tr >
 				<td colspan="2" class="portfolioTitle" colspan="3">Edwin Watts Golf Stores E-Commerce Site</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=watts" TARGET=_BLANK ><img src="images/wattsHomepage500x475.gif" width="500" height="475" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=watts" TARGET=_BLANK ><img src="/portfolio/resources/watts/images/wattsHomepage500x475.gif" width="500" height="475" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
 								<li><b>What:</b> E-commerce site for Edwin Watts golf shops</li>

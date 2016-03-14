@@ -14,6 +14,7 @@
 	$g_portfolio = new Portfolio();
 	$g_portfolio->loadData();
 	$client = $g_portfolio->getClient('ies');
+	$_SESSION["authenticated"] = true;   // bypass the defunct login process
 
 ?>
 <html>
@@ -98,12 +99,12 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-					<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; <?php print($client->linkText) ?></td></tr>
+					<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; <?php print($client->linkText) ?></td></tr>
 			<tr >
 				<td colspan="2" class="portfolioTitle" colspan="3"><?php print($client->linkText) ?></td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="../<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="/portfolio/resources/<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 
 				<td>
 							<ul>

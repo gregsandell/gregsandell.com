@@ -11,7 +11,7 @@
 ?>
 <html>
 	<head>
-		<title>Greg Sandell's Portfolio - Spectrum Analysis Applet</title>
+		<title>Greg Sandell's Portfolio - Expand Beyond Company Site</title>
 		</script>
 		<style type="text/css">
 			LI {
@@ -82,19 +82,20 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; Spectrum Analysis Applet</td></tr>
+			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; Expand Beyond Company Site</td></tr>
 			<tr >
-				<td colspan="2" class="portfolioTitle" colspan="3">Spectrum Analysis Applet</td>
+				<td colspan="2" class="portfolioTitle" colspan="3">Expand Beyond Company Site</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK><img src="images/spectrumHome500x294.gif" width="500" height="294" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=xb" TARGET=_BLANK><img src="/portfolio/resources/xb/images/xbHome500x617.gif" width="500" height="617" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
-								<li><b>What:</b> Interactive Demonstration of Musical Acoustics</li>
-								<li><b>My Role:</b> Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute</li>
-								<li><b>Technologies:</b> Java 1.1 Applet</li>
-								<li><b>Timeframe:</b> Began &#38; launched in 1996</li>
-								<li><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
+								<li><b>What:</b> Company website redesign for Expand Beyond, maker of wireless handheld applications</li>
+								<li><b>My Role:</b> In-house web developer.</li>
+								<li><b>Status:</b> Site is still live.  </li>
+								<li><b>Technologies:</b> PHP, mysql, Apache, MS-SQL Server</li>
+								<li><b>Timeframe:</b> Began &#38; launched in 2002</li>
+								<li><a href="http://www.gregsandell.com/portfolio/portfolioPopup.php?site=xb" TARGET=_BLANK>Visit live site</a></li>
 							</ul>
 				</td>
 			</tr>

@@ -10,6 +10,7 @@
 	$imageBorder = "0";
 	session_name("18thStreet");
 	session_start();
+	$_SESSION["authenticated"] = true;   // bypass the defunct login process
 	
 
 ?>
@@ -91,13 +92,13 @@
 	</head>
 	<body>
 		<table width="800" border="<?php print($tableBorder) ?>" cellspacing="0" cellpadding="0">
-			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="../index.php">Home</a> &gt; <a class="bread" href="../index.php">Portfolio</a> &gt; Maytag Home Solutions</td></tr>
+			<tr><td class="bread" colspan="2">You are here: <a class="bread" href="/index.php">Home</a> &gt; <a class="bread" href="index.php">Old Portfolio</a> &gt; Maytag Home Solutions</td></tr>
 
 			<tr >
 				<td colspan="2" class="portfolioTitle" colspan="3">Maytag Home Solutions</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=maytag" TARGET=_BLANK ><img src="images/maytagHome500x376.gif" width="500" height="376" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=maytag" TARGET=_BLANK ><img src="/portfolio/resources/maytag/images/maytagHome500x376.gif" width="500" height="376" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 
 				<td>
 							<ul>
