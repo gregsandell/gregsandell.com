@@ -1,6 +1,7 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
-	$section = "samples";
+	$g_section = "samples";
+	$g_slideshowKey = "logos";
 	$mainCopy = "";
 	$linksTitle = "Clients";
 	include("portfolio/portfolioData.php");

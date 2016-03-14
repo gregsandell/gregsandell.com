@@ -1,11 +1,12 @@
 <?php
+	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 	if (!isset($g_resume)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/resume/objResume.php");
+		include_once($_cpath . "/resume/objResume.php");
 		$resMan = new ResumeManager();
 		$g_resume = $resMan->res;
 	}
 	if (!isset($g_globals)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/objGlobals.php");
+		include_once($_cpath . "/objGlobals.php");
 		$g_globals = new GlobalsObj();
 	}
 	$g_slideshowKey = "projects";
@@ -19,8 +20,8 @@
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";
 	}
-	$inlinePhp = "/innerClientGallery.php";
-	$inlinePhp2 = "/innerClientDescription.php";
+	$inlinePhp = $_cpath . "/innerClientGallery.php";
+	$inlinePhp2 = $_cpath . "/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Java Developer on projects for Lockheed's GCSS contract (Global Combat Support Systems) with the US Air Force, supporting Data Services and the Air Force Portal.";
 
