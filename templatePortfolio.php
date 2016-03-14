@@ -88,7 +88,7 @@
 				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="templatePortfolio.php">Portfolio</a></li> 
 				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="/code/pageCode.php">Code</a></li>
 				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="/talks/pageTalks.php">Talks</a></li>
-				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="pageBlogs.php">Blog</a></li>
+				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/blog/pageBlogs.php">Blog</a></li>
 			</ul>
 		</div>
 		<!-- end div#menu -->

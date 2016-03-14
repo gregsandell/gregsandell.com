@@ -12,7 +12,7 @@
 <div data-role="page" id="code" data-theme="a">
   <div data-role="header">
     <a href="pageLinks.php" data-icon="back" >Back</a>
-    <h1>Blogs - Greg Sandell</h1>
+    <h1>Talks - Greg Sandell</h1>
   </div>
   <div data-role="content"> 
     <h1>Talks</h1>

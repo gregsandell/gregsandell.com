@@ -8,7 +8,7 @@
               <div>
 							<table>
 							<tr>
-							<td><a href='http://gregsandell.blogspot.com'><img src='image/blogspotIcon.jpg' border='0'/></a></td>
+							<td><a href='http://gregsandell.blogspot.com'><img src='/image/blogspotIcon.jpg' border='0'/></a></td>
 							<td style='padding-left: 10px; ' valign='top'><p>My blog 'Elevator Music': Postings about technology, software development, music, Chicago, politics, and interesting stuff on the web.</p>
 							<p><a href='http://gregsandell.blogspot.com'>Go to blog</a> (or view in <a href='http://gregsandell.blogspot.com' target='_BLANK'>separate window</a>).</p>
 							</td>
