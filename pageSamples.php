@@ -4,7 +4,7 @@
 	$g_slideshowKey = "logos";
 	$mainCopy = "";
 	$linksTitle = "Clients";
-	include("portfolio/portfolioData.php");
+	include("/portfolio/portfolioData.php");
 	$g_portfolio = new Portfolio();
 	$g_portfolio->loadData();
 	$g_sidebarKey = "pageSamples";
