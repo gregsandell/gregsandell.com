@@ -278,25 +278,25 @@ class Portfolio {
 		$client->addThumbdoc("5", "/portfolio/resources/watts/images/wattsCheckout2.gif", "/portfolio/resources/watts/images/wattsCheckout2Thumb.gif",
 				"Cart Checkout part 2 for the Edwin Watts Golf e-commerce site");
 		$client->addDocument($this, $client, "wattsProjectOverview", false, "Project Overview", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsProjectOverview.pdf", "An overview of the business and technical goals of the site");
+			"/portfolio/resources/watts/docs/wattsProjectOverview.pdf", "An overview of the business and technical goals of the site");
 		$client->addDocument($this, $client, "wattsDevelopmentTimeline", false, "Development Timeline", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsDevelopmentTimeline.pdf", "A timeline of the full-life-cycle development process.");
+			"/portfolio/resources/watts/docs/wattsDevelopmentTimeline.pdf", "A timeline of the full-life-cycle development process.");
 		$client->addDocument($this, $client, "wattsSitemap", false, "Site Map", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsSitemap.pdf", "Original site map of the Edwin Watts site.");
+			"/portfolio/resources/watts/docs/wattsSitemap.pdf", "Original site map of the Edwin Watts site.");
 		$client->addDocument($this, $client, "wattsDatabaseDesign", true, "E-commerce Database Design", "pdf", $this->ARCHITECTURE, 
-			"watts/docs/wattsDatabaseDesign.pdf", "Shows the database design for the E-commerce site developed for Edwin Watts Golf Shops, including the site's content, the shopping cart, the line item orders and customer profiles.");
+			"/portfolio/resources/watts/docs/wattsDatabaseDesign.pdf", "Shows the database design for the E-commerce site developed for Edwin Watts Golf Shops, including the site's content, the shopping cart, the line item orders and customer profiles.");
 		$client->addDocument($this, $client, "wattsProductPageFlow", false, "Product Page Flow", "pdf", $this->FLOW, 
-			"watts/docs/wattsProductPageFlow.pdf", "This document is a scan of VISIO flows showing the process of assembling a product page.");
+			"/portfolio/resources/watts/docs/wattsProductPageFlow.pdf", "This document is a scan of VISIO flows showing the process of assembling a product page.");
 		$client->addDocument($this, $client, "wattsCustomerInfo", false, "Customer Information Flow", "pdf", $this->FLOW, 
-			"watts/docs/wattsCustomerInfo.pdf", "This document is a scan of VISIO flows showing the process of collecting customer information.");
+			"/portfolio/resources/watts/docs/wattsCustomerInfo.pdf", "This document is a scan of VISIO flows showing the process of collecting customer information.");
 		$client->addDocument($this, $client, "wattsShoppingCartFlow", false, "Shopping Cart Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsShoppingCartFlow.pdf", 
+			"/portfolio/resources/watts/docs/wattsShoppingCartFlow.pdf",
 			"This document is a scan of VISIO flows showing shopping cart processing.");
 		$client->addDocument($this, $client, "wattsCheckout", false, "Checkout Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsCheckout.pdf", 
+			"/portfolio/resources/watts/docs/wattsCheckout.pdf",
 			"This document is a scan of VISIO flows showing the checkout and payment process.");
 		$client->addDocument($this, $client, "wattsShippingFlow", false, "Shipping Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsShippingFlow.pdf", 
+			"/portfolio/resources/watts/docs/wattsShippingFlow.pdf",
 			"This document is a scan of VISIO flows showing the process of collecting user's shipping information.");
 		$this->addClient($this->globals->Key->billwhitney, "Bill Whitney", "billwhitney", "Bill Whitney",
 			"Online portfolio for digital media artist Bill Whitney",
@@ -304,14 +304,14 @@ class Portfolio {
 			"DHTML, Javascript, W3C DOM",
 			"Began &#38; launched in 1997",
 			"/portfolio/resources/whitney/images/whitneyHome500x343.gif", "500", "343",
-			"/portfolio/resources/whitney/images/whitneyThumb.jpg", "130", "98", "http://www.gregsandell.com/portfolio/samples/bwhitney", "Archived Live Site",
+			"/portfolio/resources/whitney/images/whitneyThumb.jpg", "130", "98", "/portfolio/samples/bwhitney", "Archived Live Site",
 			$this->globals->Key->watts, $this->globals->Key->spectrum);
 		$client = $this->addClient($this->globals->Key->spectrum, "Loyola University", "spectrum", "Loyola University", 
 			"Interactive demonstration of Musical Acoustics",
 			"Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute",
 			"Java 1.1 Applet", "Began &#38; launched in 1996",
 			"/portfolio/resources/spectrum/images/spectrumHome500x294.gif", "500", "294",
-			"/portfolio/resources/spectrum/images/spectrumThumb.jpg", "130", "82", "http://www.gregsandell.com/portfolio/samples/javahearing/spectrum.html", "Archived Live Site",
+			"/portfolio/resources/spectrum/images/spectrumThumb.jpg", "130", "82", "/portfolio/samples/javahearing/spectrum.html", "Archived Live Site",
 			$this->globals->Key->billwhitney, $this->globals->Key->usaf);
 		$client->addThumbdoc("1", "/portfolio/resources/spectrum/images/spectrumHome500x294.gif", "/portfolio/resources/spectrum/images/spectrumHomeThumb.gif",
 				"Spectrum and Waveform analysis Java applet");
@@ -404,13 +404,13 @@ class Document {
 	function getUrl() {
 		$result = "";
 		if ($this->type == 'pdf') {
-			$result = "portfolioPopup.php?pdf=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?pdf=" . $this->url;
 		}
 		if ($this->type == 'doc') {
-			$result = "portfolioPopup.php?doc=" . $this->url;
+			$result = "/portfolioportfolioPopup.php?doc=" . $this->url;
 		}
 		if ($this->type == 'slideshow') {
-			$result = "portfolioPopup.php?slideshow=" . $this->url;
+			$result = "/portfolioportfolioPopup.php?slideshow=" . $this->url;
 		}
 		return($result);
 	}

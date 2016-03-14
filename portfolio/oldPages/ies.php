@@ -104,7 +104,7 @@
 				<td colspan="2" class="portfolioTitle" colspan="3"><?php print($client->linkText) ?></td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="/portfolio/resources/<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 
 				<td>
 							<ul>
@@ -113,7 +113,7 @@
 								<li><b>Status:</b> I am still on this project</li>
 								<li><b>Technologies:</b> <?php print($client->technologies) ?></li>
 								<li><b>Timeframe:</b> <?php print($client->timeframe) ?></li>
-								<li><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit live site</a> (popup window)</li>
+								<li><a href="/portfolio/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit live site</a> (popup window)</li>
 							</ul>
 				</td>
 			</tr>
@@ -131,22 +131,22 @@
 				}  ?>
 			<!--
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?slideshow=iesStyleGuide" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?slideshow=iesStyleGuide" TARGET=_BLANK>Style Guide</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesStyleGuide" TARGET=_BLANK><img src="/portfolio/slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesStyleGuide" TARGET=_BLANK>Style Guide</a></td>
 				<td><p>This is the 40-page styleguide, developed by the entire team, which identifies the site's decoration schemes, layouts and graphic assets.</p>
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m02_jiraLevels.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m02_jiraLevels.pdf" TARGET=_BLANK>Bug Urgency Levels</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m02_jiraLevels.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m02_jiraLevels.pdf" TARGET=_BLANK>Bug Urgency Levels</a></td>
 				<td><p>Requests for content additions, enchancements and fixes come from all levels of the company, and there are often more than 
 				we can squeeze into a given release.  Users who entered requests into our Request Tracking Software (called Jira) chose from the levels 
 				of urgency given in this document.</p>
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m03_syllabiUpdates.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m03_syllabiUpdates.pdf" TARGET=_BLANK>Syllabi Updates</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m03_syllabiUpdates.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m03_syllabiUpdates.pdf" TARGET=_BLANK>Syllabi Updates</a></td>
 				<td>
 					<p>
 						Each IES program has a list of courses that students can enroll in during their study abroad stay.  (For example, see the
@@ -156,8 +156,8 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m08_simpleContentUpdates.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m08_simpleContentUpdates.pdf" TARGET=_BLANK>Content Updates</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m08_simpleContentUpdates.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m08_simpleContentUpdates.pdf" TARGET=_BLANK>Content Updates</a></td>
 				<td>
 					<p>
 						This document describes the process for updating content on a normal page of the site, prior to the introduction of our content management tool,
@@ -166,8 +166,8 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m04_sculptorProposal.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m04_sculptorProposal.pdf" TARGET=_BLANK>CMS Tool Proposal</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m04_sculptorProposal.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m04_sculptorProposal.pdf" TARGET=_BLANK>CMS Tool Proposal</a></td>
 				<td>
 					<p>
 						This is the proposal describing Sculptor, our Content Management System tool.	
@@ -175,8 +175,8 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/v04_whydahSculptor.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/v04_whydahSculptor.pdf" TARGET=_BLANK>Website and CMS Interoperability</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/v04_whydahSculptor.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/v04_whydahSculptor.pdf" TARGET=_BLANK>Website and CMS Interoperability</a></td>
 				<td>
 					<p>
 						This document is a scan of a VISIO file showing how the website internals are exposed as an API for the Content Management System
@@ -185,8 +185,8 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m05_strutsForms.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m05_strutsForms.pdf" TARGET=_BLANK>Struts &#45; Best Practices</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m05_strutsForms.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m05_strutsForms.pdf" TARGET=_BLANK>Struts &#45; Best Practices</a></td>
 				<td>
 					<p>
 						These are the notes for a presentation to the IT team on "Best Practices" for Struts programming, learned over the course of the 
@@ -195,14 +195,14 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?slideshow=iesJira" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?slideshow=iesJira" TARGET=_BLANK>Jira (Incident Tracking Tool)</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesJira" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesJira" TARGET=_BLANK>Jira (Incident Tracking Tool)</a></td>
 				<td><p>We used a web-based workflow app called Jira for bug and feature tracking, and for scheduling tasks into releases.  This slideshow shows a few sample screens.</p>
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m06_whydahBuild.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/m06_whydahBuild.pdf" TARGET=_BLANK>Website Build Process</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m06_whydahBuild.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/m06_whydahBuild.pdf" TARGET=_BLANK>Website Build Process</a></td>
 				<td>
 					<p>
 						This document describes to developers how to assemble and build the website.	
@@ -210,15 +210,15 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/launchHistory.vsd" TARGET=_BLANK><img src="../visioIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/launchHistory.vsd" TARGET=_BLANK>Release History</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/launchHistory.vsd" TARGET=_BLANK><img src="../visioIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/launchHistory.vsd" TARGET=_BLANK>Release History</a></td>
 				<td>
 					<p>
 						This VISIO file shows the history of website releases from 9/22/2004 to 4/22/05.  (Your browser needs to be MSIE or you need to have VISIO installed on your machine to be able to view this file.)
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/p03_whydahReleases.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="26" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/p03_whydahReleases.pdf" TARGET=_BLANK>Release History (alt)</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/p03_whydahReleases.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="26" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/p03_whydahReleases.pdf" TARGET=_BLANK>Release History (alt)</a></td>
 				<td>
 					<p>
 						This is a scan of the above VISIO file, for users without VISIO.
@@ -226,14 +226,14 @@
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?slideshow=iesNetworkConfig" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?slideshow=iesNetworkConfig" TARGET=_BLANK>Network Configuration</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesNetworkConfig" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?slideshow=iesNetworkConfig" TARGET=_BLANK>Network Configuration</a></td>
 				<td><p>This shows the details of the computing infrastructure at IES Abroad.</p>
 				</td>
 			</tr>
 			<tr class="docDescription">
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/v02_onlineApp.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
-				<td><a href="../portfolioPopup.php?pdf=ies/docs/v02_onlineApp.pdf" TARGET=_BLANK>Online Application Flow</a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/v02_onlineApp.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?pdf=ies/docs/v02_onlineApp.pdf" TARGET=_BLANK>Online Application Flow</a></td>
 				<td>
 					<p>
 						The IES Abroad Online Application is used by students to apply to IES programs.  This is a 8-page form that follows a 

@@ -1,7 +1,7 @@
 <?php
 	$basicWidth = 882;   // or 882
 	$contentWidth = 560;   // or 560
-	$imgVersion = "";
+	$imgVersion = "";   // TO DO Get rid of this variable, and the images not being used
 	$colorLightCharcoal = "#333333";
 	$colorMediumCharcoal = "#323B51";
 	$colorBrightRust = "#AA2808";
@@ -54,7 +54,7 @@ DT {
 }
 
 body {
-	background: <?php print($colorMainBodyBg) ?> url(/image/funride/img01.gif);
+	background: <?php print($colorMainBodyBg) ?> url(/lib/funride/img/img01.gif);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: <?php print($colorTabs) ?>;
@@ -123,7 +123,7 @@ a:hover {
 	width: <?php print($basicWidth) ?>px; 
 	height: 96px;
 	margin: 0 auto;
-	background: url(/image/funride/img05<?php print($imgVersion) ?>.gif) no-repeat left bottom;
+	background: url(/lib/funride/img/img05<?php print($imgVersion) ?>.gif) no-repeat left bottom;
 }
 
 /* Logo */
@@ -188,8 +188,8 @@ h1 a {
 	height: 20px;
 	margin: 0;
 	padding: 10px 0 0 0;
-	/* background: url(/image/funride/img02.gif); */
-	background: url(/image/funride/img02_slim.gif);
+	/* background: url(/lib/funride/img/img02.gif); */
+	background: url(/lib/funride/img/img02_slim.gif);
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 11px;
@@ -199,7 +199,7 @@ h1 a {
 
 #menu a:hover, #menu .active a {
 	/* background-image: url(image/funride/img03.gif); */
-	background-image: url(/image/funride/img03_slim.gif);
+	background-image: url(/lib/funride/img/img03_slim.gif);
 	color: <?php print($colorBrightRust) ?>;
 }
 
@@ -208,7 +208,7 @@ h1 a {
 #page {
 	width: <?php print($basicWidth) ?>px; 
 	margin: 0 auto;
-	background: <?php print($colorMainBodyBg) ?> url(/image/funride/img04<?php print($imgVersion) ?>.gif) repeat-y;
+	background: <?php print($colorMainBodyBg) ?> url(/lib/funride/img/img04<?php print($imgVersion) ?>.gif) repeat-y;
 }
 
 /* Content */
@@ -342,7 +342,7 @@ h1 a {
 	height: 50px;
 	margin: 0 auto;
 	padding: 40px 0 0 0;
-	background: url(/image/funride/img06<?php print($imgVersion) ?>.gif) no-repeat;
+	background: url(/lib/funride/img/img06<?php print($imgVersion) ?>.gif) no-repeat;
 	color: <?php print($colorTextFooter) ?>;
 }
 

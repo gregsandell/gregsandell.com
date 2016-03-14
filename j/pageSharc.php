@@ -73,7 +73,7 @@
     </dl>
     <h2>More Information</h2>
     <ul data-role="listview" data-inset="true">
-      <li><a href="http://www.gregsandell.com/portfolio/publications/1991-10-01_library_ICMC.pdf" rel="external">Technical Whitepaper</a></li>
+      <li><a href="/portfolio/publications/1991-10-01_library_ICMC.pdf" rel="external">Technical Whitepaper</a></li>
       <li><a href="./pageBlog.php#http://gregsandell.blogspot.com/2007/10/sharc-timbre-dataset-v-20-xml-format.html" 
         data-ajax="false" data-transition="slide" data-direction="forward">Blog Article</a></li>
       <li><a href="http://www.timbre.ws/sharc" rel="external">Official SHARC website</a></li>

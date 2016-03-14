@@ -115,14 +115,14 @@
 <?php 
 			if ($_SESSION["authenticated"] == "true") {  ?>
 					<tr class="docDescription">
-						<td><a href="../portfolioPopup.php?slideshow=abnAmroImport" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
-						<td><a href="../portfolioPopup.php?slideshow=abnAmroImport" TARGET=_BLANK>Import Letter of Credit</a></td>
+						<td><a href="/portfolio/portfolioPopup.php?slideshow=abnAmroImport" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+						<td><a href="/portfolio/portfolioPopup.php?slideshow=abnAmroImport" TARGET=_BLANK>Import Letter of Credit</a></td>
 						<td><p>Slideshow of screen shots for Import Letter of Credit application</p>
 						</td>
 					</tr>
 					<tr class="docDescription">
-						<td><a href="../portfolioPopup.php?slideshow=abnAmroAdmin" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
-						<td><a href="../portfolioPopup.php?slideshow=abnAmroAdmin" TARGET=_BLANK>Admin Tool</a></td>
+						<td><a href="/portfolio/portfolioPopup.php?slideshow=abnAmroAdmin" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+						<td><a href="/portfolio/portfolioPopup.php?slideshow=abnAmroAdmin" TARGET=_BLANK>Admin Tool</a></td>
 						<td><p>Slideshow of screen shots for the site's web-based Admin Tool</p>
 						</td>
 					</tr>

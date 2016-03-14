@@ -26,8 +26,8 @@
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		<style type="text/css">
-			<?php include($_cpath . "/cssFunride.php") ?>
-			<?php include($_cpath . "/cssPortfolio.php") ?>
+			<?php include($_cpath . "/lib/funride/cssFunride.php") ?>
+			<?php include($_cpath . "/css/cssPortfolio.php") ?>
 		</style>
 		<base url="<?php print($_cpath) ?>" />
 		<script type="text/javascript">
@@ -71,7 +71,7 @@
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
-			<h1 class="logoH1"><a href="http://www.gregsandell.com">Greg Sandell</a></h1>
+			<h1 class="logoH1"><a href="/">Greg Sandell</a></h1>
 			<h2>Samples and Portfolio</h2>
 		</div>
 		<!-- end div#logo -->

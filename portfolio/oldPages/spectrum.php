@@ -87,14 +87,14 @@
 				<td colspan="2" class="portfolioTitle" colspan="3">Spectrum Analysis Applet</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK><img src="/portfolio/resources/spectrum/images/spectrumHome500x294.gif" width="500" height="294" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?site=spectrum" TARGET=_BLANK><img src="/portfolio/resources/spectrum/images/spectrumHome500x294.gif" width="500" height="294" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
 								<li><b>What:</b> Interactive Demonstration of Musical Acoustics</li>
 								<li><b>My Role:</b> Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute</li>
 								<li><b>Technologies:</b> Java 1.1 Applet</li>
 								<li><b>Timeframe:</b> Began &#38; launched in 1996</li>
-								<li><a href="../portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
+								<li><a href="/portfolio/portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
 							</ul>
 				</td>
 			</tr>

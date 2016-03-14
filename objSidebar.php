@@ -106,23 +106,23 @@ class SidebarPageManager {
         $g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 
 										"http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html",
 				"2009.05.15");
-		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", "pagePublications.php", false);
+		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", "/portfolio/pages/pagePublications.php", false);
 		$g_mavenBlogObj = new BlogObj2("maven", "Maven 2 Tutorial", 
 										"http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html",
 				"2007.07.13");
 		$g_scorpBlogObj = new BlogObj2("scorp", "S-Corps for Software Contracters", 
 				"http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html",
 															"2006.10.22");
-		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'SHARC Timbre Database', 'http://www.gregsandell.com/portfolio/publications/1991-10-01_library_ICMC.pdf', true);
-		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', 'http://www.gregsandell.com/portfolio/publications/1995-12-01_perceptual_JAES.pdf', true);
-		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'http://www.gregsandell.com/portfolio/publications/1996-06-01_auditory_MP.pdf', true);
-		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'http://www.gregsandell.com/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf', true);
+		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'SHARC Timbre Database', '/portfolio/publications/1991-10-01_library_ICMC.pdf', true);
+		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf', true);
+		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', '/portfolio/publications/1996-06-01_auditory_MP.pdf', true);
+		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf', true);
 		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", "/resume/gregsandell-resume.doc", true);
 		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", "/resume/gregsandell-resume.pdf", true);
 		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", "http://www.linkedin.com/in/gregsandell", true);
 		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", "http://www.maxtrad.com", true);
 		$g_samplesPageObj = new LinkObj2("samples", "Main Samples Page", "/templatePortfolio.php", false);
-		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", "http://www.gregsandell.com/portfolio/samples/bwhitney", true);
+		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", "/portfolio/samples/bwhitney", true);
 		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", "http://www.iesabroad.org", true);
 		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", "http://www.maytag.com", true);
 		$g_usafLinkObj = new LinkObj2("usafLive", "Live Air Force Portal", "http://www.my.af.mil", true);

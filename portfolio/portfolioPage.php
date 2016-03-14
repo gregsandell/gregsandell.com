@@ -61,7 +61,7 @@
 								<li><b>Technologies:</b> <?php print($client->technologies) ?></li>
 								<li><b>Timeframe:</b> <?php print($client->timeframe) ?></li>  <?php
 								if ($client->hostedState != 'none') { ?>
-									<li><a href="portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit <?php print($client->hostedState) ?> site</a> (popup window)</li>  <?php
+									<li><a href="/portfolio/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit <?php print($client->hostedState) ?> site</a> (popup window)</li>  <?php
 								} ?>
 							</ul>
 				</td>

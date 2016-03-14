@@ -89,7 +89,7 @@
 									<li><?php print($client->description) ?></li>
 									<li><a href="portfolioPage.php?key=<?php print($key) ?>">Read more about this project</a></li> <?php
 									if ($client->hostedState != 'none') { ?>
-										<li><a href="portfolioPopup.php?site=<?php print($key) ?>" TARGET=_BLANK >Visit <?php print($client->hostedState) ?> site</a></li>  <?php
+										<li><a href="/portfolio/portfolioPopup.php?site=<?php print($key) ?>" TARGET=_BLANK >Visit <?php print($client->hostedState) ?> site</a></li>  <?php
 									}  ?>
 								</ul>
 							</div> <?php

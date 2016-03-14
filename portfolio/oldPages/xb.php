@@ -87,7 +87,7 @@
 				<td colspan="2" class="portfolioTitle" colspan="3">Expand Beyond Company Site</td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=xb" TARGET=_BLANK><img src="/portfolio/resources/xb/images/xbHome500x617.gif" width="500" height="617" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="/portfolio/portfolioPopup.php?site=xb" TARGET=_BLANK><img src="/portfolio/resources/xb/images/xbHome500x617.gif" width="500" height="617" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 				<td>
 							<ul>
 								<li><b>What:</b> Company website redesign for Expand Beyond, maker of wireless handheld applications</li>
@@ -95,7 +95,7 @@
 								<li><b>Status:</b> Site is still live.  </li>
 								<li><b>Technologies:</b> PHP, mysql, Apache, MS-SQL Server</li>
 								<li><b>Timeframe:</b> Began &#38; launched in 2002</li>
-								<li><a href="http://www.gregsandell.com/portfolio/portfolioPopup.php?site=xb" TARGET=_BLANK>Visit live site</a></li>
+								<li><a href="/portfolio/portfolioPopup.php?site=xb" TARGET=_BLANK>Visit live site</a></li>
 							</ul>
 				</td>
 			</tr>

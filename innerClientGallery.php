@@ -23,7 +23,7 @@
     This file must be located on your server. 
 -->
 
-<script type="text/javascript" src="/highslide/highslide.js"></script>
+<script type="text/javascript" src="/lib/highslide/3.2.0/highslide.js"></script>
 
 
 
@@ -44,7 +44,7 @@
 		}
 	);
 	
-    hs.graphicsDir = '/highslide/graphics/';
+    hs.graphicsDir = '/lib/highslide/3.2.0/graphics/';
     hs.outlineType = 'rounded-white';
 </script>
 

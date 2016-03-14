@@ -3,11 +3,11 @@
 	$wikiImg = "<img src='/image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
 
 ?>
-<script type="text/javascript" src="/jQueryPortlets/jquery.js"></script>
-<script type="text/javascript" src="/jQueryPortlets/interface.js"></script>
-<script type="text/javascript" src="/jQueryPortlets/config.js"></script>
+<script type="text/javascript" src="/lib/jQueryPortlets/jquery.js"></script>
+<script type="text/javascript" src="/lib/jQueryPortlets/interface.js"></script>
+<script type="text/javascript" src="/lib/jQueryPortlets/config.js"></script>
 <style type="text/css" media="all">
-@import '/jQueryPortlets/portlets.css';
+@import '/lib/jQueryPortlets/portlets.css';
 </style>
 <h1>Frontend/Mobile Web Developer</h1>
 <p style='text-align: justify; float: left; padding-right: 0px'>
@@ -44,11 +44,11 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1991-10-01_library_ICMC.pdf">SHARC Timbre Database&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1995-12-01_perceptual_JAES.pdf">Timbre &amp; Principle Components Analysis&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1996-06-01_auditory_MP.pdf">Auditory Displays&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf">Macro Timbre&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="/pagePublications.php">...More...</a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/publications/1991-10-01_library_ICMC.pdf">SHARC Timbre Database&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/publications/1995-12-01_perceptual_JAES.pdf">Timbre &amp; Principle Components Analysis&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/publications/1996-06-01_auditory_MP.pdf">Auditory Displays&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf">Macro Timbre&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/pages/pagePublications.php">...More...</a></li>
 					</ul>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="http://www.gregsandell.com/portfolio/publications/1991-10-01_library_ICMC.pdf">Conference Presentation&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/publications/1991-10-01_library_ICMC.pdf">Conference Presentation&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://www.timbre.ws/sharc/">SHARC Homepage&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="http://www.timbre.ws/sharc/service/">Web Services&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="#" onclick="alert('Under construction...sorry!')">...More...</a></li>

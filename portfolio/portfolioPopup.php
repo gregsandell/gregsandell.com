@@ -11,7 +11,7 @@
 			exit("You have attempted to reach an item in Greg Sandell's private portfolio without logging in.  To request access, please email <a href='mailto:greg.sandell@gmail.com'>Greg Sandell</a>. </br/><br/>Click <a href='http://www.gregsandell.com'>here</a> to go to Greg Sandell's website.");
 		}
 	}
-	$url = "http://www.gregsandell.com"; /* Just in case nothing matches */
+	$url = "/"; /* Just in case nothing matches */
 	$color = "white";  // default background color
 	if ($site != "") {
 		$key = "site '" . $site . "'";
@@ -30,21 +30,21 @@
 			$url = "http://www.xb.com";
 			break;
 		case "whitney":
-			$url = "http://www.gregsandell.com/portfolio/samples/bwhitney";
+			$url = "/portfolio/samples/bwhitney";
 			break;
 		case "spectrum":
-			$url = "http://www.gregsandell.com/portfolio/samples/javahearing/spectrum.html";
+			$url = "/portfolio/samples/javahearing/spectrum.html";
 			break;
 		case "abnamro":
 			$url = "http://www.maxtrad.com";
 			break;
 	}
 	if ($pdf != "") {
-		$url = "http://www.gregsandell.com/portfolio/" . $pdf;
+		$url = $pdf;
 		$key = "pdf '" . $pdf . "'";
 	}
 	if ($doc != "") {
-		$url = "http://www.gregsandell.com/portfolio/" . $doc;
+		$url = $doc;
 		$key = "document '" . $doc . "'";
 	}
 	if ($slideshow != "") {
@@ -52,39 +52,39 @@
 	}
 	switch ($slideshow) {
 		case "iesStyleGuide":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=40&fm=gif&dr=/portfolio/ies/images/styleGuide/iesStyleGuide";
+			$url = "/portfolio/slideshow.php?sn=1&ms=40&fm=gif&dr=/portfolio/resources/ies/images/styleGuide/iesStyleGuide";
 			$color = "black";
 			break;
 		case "maytagStyleGuide":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=23&fm=gif&dr=/portfolio/maytag/images/maytagStyleGuide/maytagStyleGuide";
+			$url = "/portfolio/slideshow.php?sn=1&ms=23&fm=gif&dr=/portfolio/resources/maytag/images/maytagStyleGuide/maytagStyleGuide";
 			$color = "black";
 			break;
 		case "iesJira":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=5&fm=jpg&dr=/portfolio/ies/images/jira/jira";
+			$url = "/portfolio/slideshow.php?sn=1&ms=5&fm=jpg&dr=/portfolio/resources/ies/images/jira/jira";
 			$color = "black";
 			break;
 		case "iesNetworkConfig":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=4&fm=gif&dr=/portfolio/ies/images/networkConfig/networkConfig";
+			$url = "/portfolio/slideshow.php?sn=1&ms=4&fm=gif&dr=/portfolio/resources/ies/images/networkConfig/networkConfig";
 			$color = "black";
 			break;
 		case "abnAmroAdmin":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=7&fm=gif&dr=/portfolio/abnAmro/images/abnAmroAdmin/abnAmroAdmin";
+			$url = "/portfolio/slideshow.php?sn=1&ms=7&fm=gif&dr=/portfolio/resources/abnAmro/images/abnAmroAdmin/abnAmroAdmin";
 			$color = "black";
 			break;
 		case "abnAmroImport":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=11&fm=gif&dr=/portfolio/abnAmro/images/abnAmroImport/abnAmroImport";
+			$url = "/portfolio/slideshow.php?sn=1&ms=11&fm=gif&dr=/portfolio/resources/abnAmro/images/abnAmroImport/abnAmroImport";
 			$color = "black";
 			break;
 		case "amexMyProfile":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=74&fm=png&dr=/portfolio/amex/images/mypSlideshow/myp";
+			$url = "/portfolio/slideshow.php?sn=1&ms=74&fm=png&dr=/portfolio/resources/amex/images/mypSlideshow/myp";
 			$color = "black";
 			break;
 		case "usafScreens":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=4&fm=gif&dr=/portfolio/usaf/images/AFportal/AFPortal";
+			$url = "/portfolio/slideshow.php?sn=1&ms=4&fm=gif&dr=/portfolio/resources/usaf/images/AFportal/AFPortal";
 			$color = "black";
 			break;
 		case "ssdarScreens":
-			$url = "http://www.gregsandell.com/portfolio/slideshow.php?sn=1&ms=23&fm=gif&dr=/portfolio/usaf/images/SSDARscreens/SSDAR";
+			$url = "/portfolio/slideshow.php?sn=1&ms=23&fm=gif&dr=/portfolio/resources/usaf/images/SSDARscreens/SSDAR";
 			$color = "black";
 			break;
 	}

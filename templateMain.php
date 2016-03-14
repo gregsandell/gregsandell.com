@@ -18,8 +18,8 @@
 	<script type="text/javascript" src="/lib/scriptaculous/1.7.1/scriptaculous.js"></script>
 	<script type="text/javascript" src="/lib/modalbox/1.5.4/modalbox.js"></script>
 	<style type="text/css">
-	    <?php include("{$_cpath}/cssFunride.php") ?>
-	    <?php include("{$_cpath}/cssPortfolio.php") ?>
+	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
+	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
 	</style>
         <link rel="stylesheet" href="/lib/modalbox/1.5.4/modalbox.css" type="text/css" />
 </head>

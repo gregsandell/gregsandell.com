@@ -24,7 +24,7 @@
 	  ?>
     <div data-role="page" id="<?php print($item->get_link()) ?>" data-theme="a">
       <div data-role="header">
-        <a href="http://gregsandell.com/j/pageRSSSharedList.php" data-ajax="false" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+        <a href="/j/pageRSSSharedList.php" data-ajax="false" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
         <h1>RSS Shared Items</h1>
       </div>
       <div data-role="content"> 

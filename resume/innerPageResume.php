@@ -71,7 +71,7 @@
       <table id="resHeaderTbl" border="0" width="560" cellspacing="0" callpadding="0">
         <tr>
           <td class="certificationImg">
-            <img src="http://gregsandell.com/<?php print($resume->imageJava) ?>" />
+            <img src="<?php print($resume->imageJava) ?>" />
           </td>
           <td id="nameAddress"> 
             <?php print($resume->nname) ?>
@@ -82,7 +82,7 @@
             </ul>
           </td>
           <td class="certificationImg">
-            <img style="valign: top" src="http://gregsandell.com/<?php print($resume->imageSCWCD) ?>" />
+            <img style="valign: top" src="<?php print($resume->imageSCWCD) ?>" />
           </td>
         </tr>
       </table>

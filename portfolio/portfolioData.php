@@ -77,101 +77,101 @@ class Portfolio {
 			"In-house lead developer and Architect, working with Marketing Group and digital artist",
 			"Java Servlets, Struts, Tomcat, Apache, Oracle, mysql, JSP, JSP tags, Tiles, DHTML, CSS, XML, XSL",
 			"Work began August 2003; site launched September 2004",
-			"ies/images/iesHomepage500x373.gif", "500", "373",
-			"ies/images/IESthumb.jpg", "130", "103", "live");
+			"/portfolio/resources/ies/images/iesHomepage500x373.gif", "500", "373",
+			"/portfolio/resources/ies/images/IESthumb.jpg", "130", "103", "live");
 		$client->addDocument($this, $client, "programsOrganization", false, "Programs Organization", "pdf", $this->BUSINESS, 
-			"ies/docs/m10_programsOrganization.pdf", 
+			"/portfolio/resources/ies/docs/m10_programsOrganization.pdf",
 			"The heart of www.IESAbroad.org is the section describing the different Study Abroad programs hosted by IES.  There are 49 <b>programs</b> across 26 centers in 19 different countries, for a total of 638 pages.  This document describes how programs are organized on the site.");
 		$client->addDocument($this, $client, "iesStyleGuide", true, "IES Style Guide", "slideshow", $this->STYLEGUIDE, 
 			"iesStyleGuide", "Shows a slideshow of the 40-page styleguide, which identifies the decoration schemes, layouts and graphic assets for the IES Abroad Company Website.");
 		$client->addDocument($this, $client, "jiraLevels", false, "Bug Urgency Levels", "pdf", $this->BUSINESS, 
-			"ies/docs/m02_jiraLevels.pdf", "Requests for content additions, enchancements and fixes come from all levels of the company, and there are often more than we can squeeze into a given release.  Users who entered requests into our Request Tracking Software (called Jira) chose from the levels of urgency given in this document.");
+			"/portfolio/resources/ies/docs/m02_jiraLevels.pdf", "Requests for content additions, enchancements and fixes come from all levels of the company, and there are often more than we can squeeze into a given release.  Users who entered requests into our Request Tracking Software (called Jira) chose from the levels of urgency given in this document.");
 		$client->addDocument($this, $client, "syllabiUpdates", false, "Syllabi Updates", "pdf", $this->BUSINESS, 
-			"ies/docs/m03_syllabiUpdates.pdf", "Each IES program has a list of courses that students can enroll in during their study abroad stay.  This data changes frequently, and the system for maintaining it is described in this document.");
+			"/portfolio/resources/ies/docs/m03_syllabiUpdates.pdf", "Each IES program has a list of courses that students can enroll in during their study abroad stay.  This data changes frequently, and the system for maintaining it is described in this document.");
 		$client->addDocument($this, $client, "simpleContentUpdates", false, "Content Updates", "pdf", $this->BUSINESS, 
-			"ies/docs/m08_simpleContentUpdates.pdf", "This document describes the process for updating content on a normal page of the site, prior to the introduction of the content management tool, Sculptor.");
+			"/portfolio/resources/ies/docs/m08_simpleContentUpdates.pdf", "This document describes the process for updating content on a normal page of the site, prior to the introduction of the content management tool, Sculptor.");
 		$client->addDocument($this, $client, "sculptorProposal", false, "CMS Tool Proposal", "pdf", $this->BUSINESS, 
-			"ies/docs/m04_sculptorProposal.pdf", "This is the proposal describing Sculptor, the Content Management System tool.");
+			"/portfolio/resources/ies/docs/m04_sculptorProposal.pdf", "This is the proposal describing Sculptor, the Content Management System tool.");
 		$client->addDocument($this, $client, "whydahSculptor", true, "IES Website and CMS Interoperability", "pdf", $this->ARCHITECTURE, 
-			"ies/docs/v04_whydahSculptor.pdf", "Shows how the Content Management tool for the IES Abroad company website was integrated into the site's XML, templating, and visual design framework.");
+			"/portfolio/resources/ies/docs/v04_whydahSculptor.pdf", "Shows how the Content Management tool for the IES Abroad company website was integrated into the site's XML, templating, and visual design framework.");
 		$client->addDocument($this, $client, "strutsForms", false, "Struts &#45; Best Practices", "pdf", $this->KNOWLEDGE, 
-			"ies/docs/m05_strutsForms.pdf", "These are the notes for a presentation to the IT team on 'Best Practices' for Struts programming, learned over the course of the IES Website project.");
+			"/portfolio/resources/ies/docs/m05_strutsForms.pdf", "These are the notes for a presentation to the IT team on 'Best Practices' for Struts programming, learned over the course of the IES Website project.");
 		$client->addDocument($this, $client, "iesJira", false, "Jira (Incident Tracking Tool)", "slideshow", $this->BUSINESS, 
 			"iesJira", "We used a web-based workflow app called Jira for bug and feature tracking, and for scheduling tasks into releases.  This slideshow shows a few sample screens.");
 		$client->addDocument($this, $client, "whydahBuild", false, "Website Build Process", "pdf", $this->BUSINESS, 
-			"ies/docs/m06_whydahBuild.pdf", "This document describes to developers how to assemble and build the website.");
+			"/portfolio/resources/ies/docs/m06_whydahBuild.pdf", "This document describes to developers how to assemble and build the website.");
 		$client->addDocument($this, $client, "whydahReleases", false, "Release History", "pdf", $this->BUSINESS, 
-			"ies/docs/p03_whydahReleases.pdf", "This document shows the history of website releases from 9/22/2004 to 4/22/05.");
+			"/portfolio/resources/ies/docs/p03_whydahReleases.pdf", "This document shows the history of website releases from 9/22/2004 to 4/22/05.");
 		$client->addDocument($this, $client, "iesNetworkConfig", false, "Network Configuration", "pdf", $this->ARCHITECTURE, 
 			"iesNetworkConfig", "This shows the details of the computing infrastructure at IES Abroad.");
 		$client->addDocument($this, $client, "onlineApp", false, "Online Application Flow", "pdf", $this->FLOW, 
-			"ies/docs/v02_onlineApp.pdf", "The IES Abroad Online Application is used by students to apply to IES programs.  This is a 8-page form that follows a 'wizard' pattern of sequential steps.  This scan of a VISIO doc is a flowchart showing the relationship between pages, Struts Actions and Struts form beans over this 8-page process.");
+			"/portfolio/resources/ies/docs/v02_onlineApp.pdf", "The IES Abroad Online Application is used by students to apply to IES programs.  This is a 8-page form that follows a 'wizard' pattern of sequential steps.  This scan of a VISIO doc is a flowchart showing the relationship between pages, Struts Actions and Struts form beans over this 8-page process.");
 		$client = $this->addClient("maytag", "Maytag Corp.", "maytag", "Maytag Corp.",
 			"Complete site redesign of Maytag Corp. Public Website using Broadvision)",
 			"Team lead and developer for several sections of the site, as employee of Giant Step. Managed 3 other developers.",
 			"Broadvision, Javascript Server Pages",
 			"Began and launched in 2000",
-			"maytag/images/maytagHome500x376.gif", "500", "376",
-			"maytag/images/maytagThumb.jpg", "130", "100", "live");
+			"/portfolio/resources/maytag/images/maytagHome500x376.gif", "500", "376",
+			"/portfolio/resources/maytag/images/maytagThumb.jpg", "130", "100", "live");
 		$client->addDocument($this, $client, "maytagStyleGuide", false, "Style Guide", "slideshow", $this->STYLEGUIDE, 
 			"maytagStyleGuide", "Here are design specs for seve<?php print($client->linkText) ?>ral sections of the site.  Documents by the design team at Giant Step.");
 		$client->addDocument($this, $client, "memoVisitorManagement", true, "Maytag.com Visitor Management", "pdf", $this->ARCHITECTURE, 
-			"maytag/docs/memoVisitorManagement.pdf", "Shows the design for Visitor Management for the Broadvision-based site Maytag.com.  By using cookies, querystring-based session management and the Broadvision database, we were able to track users from temporary visitors to full members.  This helped manage visibility of permissioned areas and targeted viewing.");
+			"/portfolio/resources/maytag/docs/memoVisitorManagement.pdf", "Shows the design for Visitor Management for the Broadvision-based site Maytag.com.  By using cookies, querystring-based session management and the Broadvision database, we were able to track users from temporary visitors to full members.  This helped manage visibility of permissioned areas and targeted viewing.");
 		$client->addDocument($this, $client, "cookiesFlow", false, "Cookie Management", "pdf", $this->FLOW, 
-			"maytag/docs/cookiesFlow.pdf", "The site was written so user sessions could be maintained even when users had their browsers set to refuse cookies.  It began each user visit with a two-step cookie diagnostic; if cookies were disabled, it tracked session using the querystring.  This document is a scan of a VISIO doc showing the flow of the cookie diagnostic code.");
+			"/portfolio/resources/maytag/docs/cookiesFlow.pdf", "The site was written so user sessions could be maintained even when users had their browsers set to refuse cookies.  It began each user visit with a two-step cookie diagnostic; if cookies were disabled, it tracked session using the querystring.  This document is a scan of a VISIO doc showing the flow of the cookie diagnostic code.");
 		$client->addDocument($this, $client, "memoVisitorAuthentication", false, "Visitor Authentication", "pdf", $this->FLOW, 
-			"maytag/docs/memoVisitorAuthentication.pdf", "Users who chose to take advantage of the membership features were assigned user names (their email address) and passwords.  This document shows the process of identifying a user.");
+			"/portfolio/resources/maytag/docs/memoVisitorAuthentication.pdf", "Users who chose to take advantage of the membership features were assigned user names (their email address) and passwords.  This document shows the process of identifying a user.");
 		$client->addDocument($this, $client, "myMaytagFlows", false, "'My Maytag' Flow Diagrams", "pdf", $this->FLOW, 
-			"maytag/docs/myMaytagFlows.pdf", "The section of the site where users maintain a list of their appliances is called 'My Maytag'.  This document is a scan of VISIO flows showing how this section was written");
+			"/portfolio/resources/maytag/docs/myMaytagFlows.pdf", "The section of the site where users maintain a list of their appliances is called 'My Maytag'.  This document is a scan of VISIO flows showing how this section was written");
 		$client->addDocument($this, $client, "registerProductFlows", false, "'Register a Product' Flow Diagrams", "pdf", $this->FLOW, 
-			"maytag/docs/registerProductFlow<?php print($client->description) ?><?php print($client->description) ?>s.pdf", "The ability to register a Maytag product online is one of the most important business functions of Maytag.com.  This document is a scan of VISIO flows showing how the product registration process was coded.");
+			"/portfolio/resources/maytag/docs/registerProductFlow<?php print($client->description) ?><?php print($client->description) ?>s.pdf", "The ability to register a Maytag product online is one of the most important business functions of Maytag.com.  This document is a scan of VISIO flows showing how the product registration process was coded.");
 		$client->addDocument($this, $client, "maytagBuilds", false, "Website Release History", "pdf", $this->BUSINESS, 
-			"maytag/docs/maytagBuilds.pdf", "This document shows the history of website version releases from Oct 2000 to Jan 2001.");
+			"/portfolio/resources/maytag/docs/maytagBuilds.pdf", "This document shows the history of website version releases from Oct 2000 to Jan 2001.");
 		$client->addDocument($this, $client, "processUserFlow", false, "User Session Tracking", "pdf", $this->FLOW, 
-			"maytag/docs/processUserFlow.pdf", "Each page on the site runs code to check the authentication state of the user.  If the requested page is a members-only page, a redirect to a login page occurs.  This document is a scan of VISIO flows showing how this process was coded.");
+			"/portfolio/resources/maytag/docs/processUserFlow.pdf", "Each page on the site runs code to check the authentication state of the user.  If the requested page is a members-only page, a redirect to a login page occurs.  This document is a scan of VISIO flows showing how this process was coded.");
 		$client->addDocument($this, $client, "signinFlow", false, "Authentication Flows", "pdf", $this->FLOW, 
-			"maytag/docs/signinFlow.pdf", "This document is a scan of VISIO flows showing the process of logging in with a username and password.");
+			"/portfolio/resources/maytag/docs/signinFlow.pdf", "This document is a scan of VISIO flows showing the process of logging in with a username and password.");
 		$client->addDocument($this, $client, "giantStepWshDoc", false, "Windows Script Host", "pdf", $this->KNOWLEDGE, 
-			"maytag/docs/giantStepWshDoc.pdf", "This document is an introduction to WSH (Windows Script Host) presented to the Application Engineering Team.");
+			"/portfolio/resources/maytag/docs/giantStepWshDoc.pdf", "This document is an introduction to WSH (Windows Script Host) presented to the Application Engineering Team.");
 		$client = $this->addClient("watts", "Edwin Watts Golf Stores", "watts", "Edwin Watts",
 			"E-commerce site for Edwin Watts golf shops",
 			"Architect and developer for entire site as employee of Taproot Interactive Studio.  Managed 1 other developer",
 			"ASP, IIS, MS_Access", "Began 1998, launched in 1999",
-			"watts/images/wattsHomepage500x475.gif", "500", "475",
-			"watts/images/wattsThumb.jpg", "130", "131", "live");
+			"/portfolio/resources/watts/images/wattsHomepage500x475.gif", "500", "475",
+			"/portfolio/resources/watts/images/wattsThumb.jpg", "130", "131", "live");
 		$client->addDocument($this, $client, "wattsProjectOverview", false, "Project Overview", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsProjectOverview.pdf", "An overview of the business and technical goals of the site");
+			"/portfolio/resources/watts/docs/wattsProjectOverview.pdf", "An overview of the business and technical goals of the site");
 		$client->addDocument($this, $client, "wattsDevelopmentTimeline", false, "Development Timeline", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsDevelopmentTimeline.pdf", "A timeline of the full-life-cycle development process.");
+			"/portfolio/resources/watts/docs/wattsDevelopmentTimeline.pdf", "A timeline of the full-life-cycle development process.");
 		$client->addDocument($this, $client, "wattsSitemap", false, "Site Map", "pdf", $this->BUSINESS, 
-			"watts/docs/wattsSitemap.pdf", "Original site map of the Edwin Watts site.");
+			"/portfolio/resources/watts/docs/wattsSitemap.pdf", "Original site map of the Edwin Watts site.");
 		$client->addDocument($this, $client, "wattsDatabaseDesign", true, "E-commerce Database Design", "pdf", $this->ARCHITECTURE, 
-			"watts/docs/wattsDatabaseDesign.pdf", "Shows the database design for the E-commerce site developed for Edwin Watts Golf Shops, including the site's content, the shopping cart, the line item orders and customer profiles.");
+			"/portfolio/resources/watts/docs/wattsDatabaseDesign.pdf", "Shows the database design for the E-commerce site developed for Edwin Watts Golf Shops, including the site's content, the shopping cart, the line item orders and customer profiles.");
 		$client->addDocument($this, $client, "wattsProductPageFlow", false, "Product Page Flow", "pdf", $this->FLOW, 
-			"watts/docs/wattsProductPageFlow.pdf", "This document is a scan of VISIO flows showing the process of assembling a product page.");
+			"/portfolio/resources/watts/docs/wattsProductPageFlow.pdf", "This document is a scan of VISIO flows showing the process of assembling a product page.");
 		$client->addDocument($this, $client, "wattsCustomerInfo", false, "Customer Information Flow", "pdf", $this->FLOW, 
-			"watts/docs/wattsCustomerInfo.pdf", "This document is a scan of VISIO flows showing the process of collecting customer information.");
+			"/portfolio/resources/watts/docs/wattsCustomerInfo.pdf", "This document is a scan of VISIO flows showing the process of collecting customer information.");
 		$client->addDocument($this, $client, "wattsShoppingCartFlow", false, "Shopping Cart Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsShoppingCartFlow.pdf", 
+			"/portfolio/resources/watts/docs/wattsShoppingCartFlow.pdf",
 			"This document is a scan of VISIO flows showing shopping cart processing.");
 		$client->addDocument($this, $client, "wattsCheckout", false, "Checkout Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsCheckout.pdf", 
+			"/portfolio/resources/watts/docs/wattsCheckout.pdf",
 			"This document is a scan of VISIO flows showing the checkout and payment process.");
 		$client->addDocument($this, $client, "wattsShippingFlow", false, "Shipping Flows", "pdf", $this->FLOW, 
-			"watts/docs/wattsShippingFlow.pdf", 
+			"/portfolio/resources/watts/docs/wattsShippingFlow.pdf",
 			"This document is a scan of VISIO flows showing the process of collecting user's shipping information.");
 		$this->addClient("xb", "Expand Beyond", "xb", "Expand Beyond", 
 			"Company website redesign for Expand Beyond, maker of wireless handheld applications",
 			"In-house web developer", "PHP, mysql, Apache, MS-SQL Server", "Began &#38; launched in 2002",
-			"xb/images/xbHome500x356.gif", "500", "356",
-			"xb/images/xbThumb.jpg", "130", "98", "live");
+			"/portfolio/resources/xb/images/xbHome500x356.gif", "500", "356",
+			"/portfolio/resources/xb/images/xbThumb.jpg", "130", "98", "live");
 		$this->addClient("whitney", "Bill Whitney", "whitney", "Bill Whitney",
 			"Online portfolio for digital media artist Bill Whitney",
 			"In-house web developer with Spellbinders",
 			"DHTML, Javascript, W3C DOM",
 			"Began &#38; launched in 1997",
-			"whitney/images/whitneyHome500x343.gif", "500", "343",
-			"whitney/images/whitneyThumb.jpg", "130", "98", "archived");
+			"/portfolio/resources/whitney/images/whitneyHome500x343.gif", "500", "343",
+			"/portfolio/resources/whitney/images/whitneyThumb.jpg", "130", "98", "archived");
 		$this->addClient("spectrum", "Loyola University", "spectrum", "Loyola University", 
 			"Interactive demonstration of Musical Acoustics",
 			"Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute",
@@ -288,13 +288,13 @@ class Document {
 	function getUrl() {
 		$result = "";
 		if ($this->type == 'pdf') {
-			$result = "portfolioPopup.php?pdf=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?pdf=" . $this->url;
 		}
 		if ($this->type == 'doc') {
-			$result = "portfolioPopup.php?doc=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?doc=" . $this->url;
 		}
 		if ($this->type == 'slideshow') {
-			$result = "portfolioPopup.php?slideshow=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?slideshow=" . $this->url;
 		}
 		return($result);
 	}

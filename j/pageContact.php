@@ -59,15 +59,15 @@ error_reporting(E_ALL|E_STRICT);
         and <a href="http://www.php.net" rel="external">PHP</a> running on <a href="http://httpd.apache.org" rel="external">Apache HTTPD</a>.  All the programming is by me, of course.
       </p>
       <p>
-        I have a common API between this site and the <a href="http://gregsandell.com/d" data-ajax="false">desktop (non-Mobile) version</a> of the site.  For example, the <a href="http://gregsandell.com/pageResume.php" data-ajax="false">Resume section</a> of the desktop site and the <a href="pageEmployerList.php">Clients</a> and <a href="pageSkillsList.php">Technology</a> sections of the Mobile site draw from a single PHP data structure.
+        I have a common API between this site and the <a href="/d" data-ajax="false">desktop (non-Mobile) version</a> of the site.  For example, the <a href="http://gregsandell.com/pageResume.php" data-ajax="false">Resume section</a> of the desktop site and the <a href="pageEmployerList.php">Clients</a> and <a href="pageSkillsList.php">Technology</a> sections of the Mobile site draw from a single PHP data structure.
       </p>
       <p>Public APIs used include <a href="http://simplepie.org" rel="external">SimplePie</a> for RSS feed parsing.</p>
       <p>
-        <a href="http://jquerymobile.com" rel="external"><img src="images/jqueryMobile.jpg" border="0"></a>
-        <a href="http://simplepie.org" rel="external"><img src="images/logo_simplepie_horizontal.png" border="0"></a>
-        <a href="http://www.php.net" rel="external"><img src="images/php.gif" border="0"></a>
-        <a href="http://httpd.apache.org" rel="external"><img src="images/apache.png" border="0"></a>
-        <a href="http://docs.google.com" rel="external"><img src="images/googleDocs.jpeg" border="0"></a>
+        <a href="http://jquerymobile.com" rel="external"><img src="/images/jqueryMobile.jpg" border="0"></a>
+        <a href="http://simplepie.org" rel="external"><img src="/images/logo_simplepie_horizontal.png" border="0"></a>
+        <a href="http://www.php.net" rel="external"><img src="/images/php.gif" border="0"></a>
+        <a href="http://httpd.apache.org" rel="external"><img src="/images/apache.png" border="0"></a>
+        <a href="http://docs.google.com" rel="external"><img src="/images/googleDocs.jpeg" border="0"></a>
       </p>
     </div>
   </div>
