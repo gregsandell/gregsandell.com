@@ -184,35 +184,48 @@ class Portfolio {
 			"Websphere, Tomcat, JSP, Toplink", "January to July 07",
 			"amex/images/amexHome500x396.png", "500", "396",
 			"amex/images/amexThumb138x109.gif", "138", "109", "none");
-		$client->addDocument($this, $client, "amexMyProfile", true, "AMEX 'My Profile'", "slideshow", 
+
+		/*  These docs are missing but maybe they could be restored?
+		$client->addDocument($this, $client, "amexMyProfile", true, "AMEX 'My Profile'", "slideshow",
 			$this->SCREENS, "amexMyProfile", 
 			"Shows a slideshow of screenshots from one of the 'Travelbahn' suite of web applications supporting corporate travel booking");
-		$client->addDocument($this, $client, "amexItin", true, "AMEX Itinerary Remarks", "doc", 
+
+		$client->addDocument($this, $client, "amexItin", true, "AMEX Itinerary Remarks", "doc",
 			$this->BUSINESS, "amex/docs/PTA_EMEA_BSDR.doc", 
 			"Word document showing the technical specification of alterations to functionality of the Travelbahn 'Itinerary Remarks' web application, using the company's standard BSDR format (Business System Design Re-Engineering).");
+
 		$client->addDocument($this, $client, "amexItinUseCases", false, "Use Cases", "pdf", 
 			$this->BUSINESS, "amex/docs/ItinRemarksUseCases.pdf", 
 			"Testing instructions for new functionality for Travelbahn 'Itinerary Remarks' web app");
+		*/
 		$client = $this->addClient("usaf", "US Air Force/Lockheed Martin", "usaf", "US Air Force", 
 			"Air Force Portal and Data Services",
 			"Senior Consultant Developer",
 			"Websphere, Tomcat, JSP, JSTL, Broadvision, Autonomy, Tivoli, Akamai", "July 06 to Jan 07",
 			"usaf/images/asafHome500x290.jpg", "500", "290",
 			"usaf/images/asafThumb130x75.jpg", "130", "75", "none");
+
+		/* Missing now but could be restored....
 		$client->addDocument($this, $client, "autonomyUpgrade", true, "USAF Autonomy Upgrade", "pdf", 
 			$this->BUSINESS, "usaf/docs/PRN1523_AFP6.1.019_Autonomy_5.x_Upgrade.pdf", 
 			"PDF of the Production Release Notes for defining the sequence of steps to upgrade the Autonomy Search engine upgrade from version 4 to 5 for the USAF Web Portal.  Instructions had to be in excruciating detail because of especially limited visibility of the data center to the development team.");
 		$client->addDocument($this, $client, "autonomySpellcheck", false, "Autonomy Spellcheck", "pdf", 
 			$this->BUSINESS, "usaf/docs/PRN1782_AFP6.1.028_SearchSpellChecker.pdf", 
 			"Production Release Notes for adding spell checking to the Autonomy Search.");
+		*/
+
 		$client->addDocument($this, $client, "usafScreens", true, "Air Force Portal", "slideshow", $this->SCREENS, 
 			"usafScreens", "Shows a slideshow of screen shots from the US Air Force Portal that supports a user base of 80,000.  Greg Sandell supported the integration of the Autonomy Search engine into all facets of the site's content.");
+
+		/* Files missing but could be restored
 		$client->addDocument($this, $client, "ssdarArchitecture", true, "USAF SS-DAR Architecture", "doc", $this->ARCHITECTURE, 
 			"usaf/docs/SSDARSoftwareArchitecture.doc", 
 			"The US Air Force's Self-Service Data Access Request (SSDAR) tool was designed to schedule retrieval of data from Informatica-based Data Warehouses.  This UML-flavored Software Architecture document encompassed the contributions of the web tier, information architect and data architect teams.  Consists of Use Cases, Data Designs and Activity Diagrams.");
 		$client->addDocument($this, $client, "ssdarScreens", true, "USAF SS-DAR Screens", "slideshow", $this->SCREENS, 
 			"ssdarScreens", 
 			"The US Air Force's Self-Service Data Access Request (SSDAR) tool was designed to schedule retrieval of data from Informatica-based Data Warehouses.  This slideshow of VISIO doc pages from the team's Information Architecture design shows the application's screens and pageflow.");
+		*/
+
 	}
 }
 class Client {

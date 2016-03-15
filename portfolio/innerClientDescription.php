@@ -2,7 +2,7 @@
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 
 	if (!isset($g_portfolio)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/objPortfolio.php");
+		include_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/objPortfolio.php");
 		if (!isset($g_globals)) {
 			include_once($_SERVER['DOCUMENT_ROOT'] . "/objGlobals.php");
 			$g_globals = new GlobalsObj();

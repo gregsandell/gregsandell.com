@@ -65,7 +65,7 @@
 					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_usaf.php">Lockheed/US Air Force</a></li>
 					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_amex.php">AMEX Travel Technologies</a></li>
 					<li>&#187;&nbsp;<a href="{$_cpath}/pageClient_abnAmro.php">ABN-AMRO</a></li>
-					<li>&#187;&nbsp;<a href="{$_cpath}/templatePortfolio.php">...More...</a></li>
+					<li>&#187;&nbsp;<a href="{$_cpath}/portfolio/templatePortfolio.php">...More...</a></li>
 					</ul>
 				</div>
 			</div>

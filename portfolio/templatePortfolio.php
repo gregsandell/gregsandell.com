@@ -5,7 +5,7 @@
 	$numIcons = 8;
 	$mainViewRowspan = $numIcons;
 	$g_section = "samples";
-	include_once($_cpath . "/objPortfolio.php");
+	include_once($_cpath . "/portfolio/objPortfolio.php");
 	include_once($_cpath . "/objGlobals.php");
 	$g_globals = new GlobalsObj();
 	$g_portfolio = new Portfolio($g_globals);
@@ -77,9 +77,9 @@
 		<!-- end div#logo -->
 		<div id="menu">
 			<ul>
-				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="noMobileHome.php">Home</a></li>
+				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/noMobileHome.php">Home</a></li>
 				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
-				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="templatePortfolio.php">Portfolio</a></li> 
+				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="/portfolio/templatePortfolio.php">Portfolio</a></li>
 				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="/code/pageCode.php">Code</a></li>
 				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="/talks/pageTalks.php">Talks</a></li>
 				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/blog/pageBlogs.php">Blog</a></li>

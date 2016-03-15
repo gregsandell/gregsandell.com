@@ -121,7 +121,7 @@ class SidebarPageManager {
 		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", "/resume/gregsandell-resume.pdf", true);
 		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", "http://www.linkedin.com/in/gregsandell", true);
 		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", "http://www.maxtrad.com", true);
-		$g_samplesPageObj = new LinkObj2("samples", "Main Samples Page", "/templatePortfolio.php", false);
+		$g_samplesPageObj = new LinkObj2("samples", "Main Samples Page", "/portfolio/templatePortfolio.php", false);
 		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", "/portfolio/samples/bwhitney", true);
 		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", "http://www.iesabroad.org", true);
 		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", "http://www.maytag.com", true);

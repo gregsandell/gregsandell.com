@@ -1,7 +1,7 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 	if (!isset($g_portfolio)) {
-		include_once($_SERVER['DOCUMENT_ROOT'] . "/objPortfolio.php");
+		include_once($_SERVER['DOCUMENT_ROOT'] . "/portfolio/objPortfolio.php");
 		if (!isset($g_globals)) {
 			include_once($_SERVER['DOCUMENT_ROOT'] . "/objGlobals.php");
 			$g_globals = new GlobalsObj();
@@ -18,23 +18,11 @@
 	$thumbdocs = $g_client->thumbdocs;
 	
 ?>
-<!-- 
-    1 ) Reference to the file containing the javascript. 
-    This file must be located on your server. 
--->
 
 <script type="text/javascript" src="/lib/highslide/3.2.0/highslide.js"></script>
 
-
-
-<!-- 
-    2) Optionally override the settings defined at the top
-    of the highslide.js file. The parameter hs.graphicsDir is important!
--->
-
 <script type="text/javascript">
 
-	// remove the registerOverlay call to disable the controlbar
 	hs.registerOverlay(
     	{
     		thumbnailId: null,
@@ -48,19 +36,9 @@
     hs.outlineType = 'rounded-white';
 </script>
 
-
-<!-- 
-    3) These CSS-styles are necessary for the script to work. You may also put
-    them in an external CSS-file. See the webpage for documentation.
--->
-
 <link rel="stylesheet" href="/portfolio/innerClientGallery.css" type="text/css" />
 
 <div>
-<!-- 
-    4) This is how you mark up the thumbnail image with an anchor tag around it.
-    The anchor's href attribute defines the URL of the full-size image.
--->
 
 <p class="headerLike">Samples</p> 
 <?php
@@ -76,10 +54,7 @@
 		</div> <?php
 	}    ?>
 <p class="smallComment">(Click on a thumbnail for more detail)</p>
-<!-- 
-	6 (optional). This is the markup for the controlbar. The conrolbar is tied to the expander
-	in the script tag at the top of the file.
--->
+
 <div id="controlbar" class="highslide-overlay controlbar">
 	<a href="#" class="previous" onclick="return hs.previous(this)" title="Previous (left arrow key)"></a>
 	<a href="#" class="next" onclick="return hs.next(this)" title="Next (right arrow key)"></a>

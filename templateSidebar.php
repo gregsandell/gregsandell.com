@@ -7,13 +7,13 @@
 		die("In file 'templateSidebar.php', the global var '\$g_slideshowKey' was not set by the including file.  At the very least it must be set to a blank string.");
 	}
 	if (!isset($g_slideshowMan)) {
-		include_once($_cpath . "/objSlideshow.php");
+		include_once($_cpath . "/portfolio/objSlideshow.php");
 		$g_slideshowMan = new SlideshowManager();
 		$g_slideshowMan->lazyLoad();
 	}
 
 	if (!isset($g_portfolio)) {
-		include_once($_cpath . "/objPortfolio.php");
+		include_once($_cpath . "/portfolio/objPortfolio.php");
 		if (!isset($g_globals)) {
 			include_once($_cpath . "/objGlobals.php");
 			$g_globals = new GlobalsObj();
