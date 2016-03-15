@@ -241,7 +241,7 @@ class Portfolio {
 		$client->addThumbdoc("4", "/portfolio/resources/maytag/images/registerProduct.gif", "/portfolio/resources/maytag/images/registerProductThumb.gif",
             "Register a Product: add an appliance to your My Appliances page");
 		$client->addDocument($this, $client, "maytagStyleGuide", false, "Style Guide", "slideshow", $this->STYLEGUIDE, 
-			"maytagStyleGuide", "Here are design specs for seve<?php print($client->linkText) ?>ral sections of the site.  Documents by the design team at Giant Step.");
+			"maytagStyleGuide", "Here are design specs for several sections of the site.  Documents by the design team at Giant Step.");
 		$client->addDocument($this, $client, "memoVisitorManagement", true, "Maytag.com Visitor Management", "pdf", $this->ARCHITECTURE, 
 			"/portfolio/resources/maytag/docs/memoVisitorManagement.pdf", "Shows the design for Visitor Management for the Broadvision-based site Maytag.com.  By using cookies, querystring-based session management and the Broadvision database, we were able to track users from temporary visitors to full members.  This helped manage visibility of permissioned areas and targeted viewing.");
 		$client->addDocument($this, $client, "cookiesFlow", false, "Cookie Management", "pdf", $this->FLOW, 
@@ -251,7 +251,7 @@ class Portfolio {
 		$client->addDocument($this, $client, "myMaytagFlows", false, "'My Maytag' Flow Diagrams", "pdf", $this->FLOW, 
 			"/portfolio/resources/maytag/docs/myMaytagFlows.pdf", "The section of the site where users maintain a list of their appliances is called 'My Maytag'.  This document is a scan of VISIO flows showing how this section was written");
 		$client->addDocument($this, $client, "registerProductFlows", false, "'Register a Product' Flow Diagrams", "pdf", $this->FLOW, 
-			"/portfolio/resources/maytag/docs/registerProductFlow<?php print($client->description) ?><?php print($client->description) ?>s.pdf", "The ability to register a Maytag product online is one of the most important business functions of Maytag.com.  This document is a scan of VISIO flows showing how the product registration process was coded.");
+			"/portfolio/resources/maytag/docs/registerProductFlows.pdf", "The ability to register a Maytag product online is one of the most important business functions of Maytag.com.  This document is a scan of VISIO flows showing how the product registration process was coded.");
 		$client->addDocument($this, $client, "maytagBuilds", false, "Website Release History", "pdf", $this->BUSINESS, 
 			"/portfolio/resources/maytag/docs/maytagBuilds.pdf", "This document shows the history of website version releases from Oct 2000 to Jan 2001.");
 		$client->addDocument($this, $client, "processUserFlow", false, "User Session Tracking", "pdf", $this->FLOW, 

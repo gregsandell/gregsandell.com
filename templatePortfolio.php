@@ -102,10 +102,6 @@
 									<td align="left">
 										<h1>Client: <?php print($client->client) ?></h1>
 									</td>
-									<td align="right">
-										<!-- <a href="pageClient_<?php print($key) ?>.php"><img src="image/readMore.png" border="0" /></a> -->
-									</td>
-
 								</tr>
 							</table>
 							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
@@ -137,7 +133,6 @@
 	<!-- end div#page -->
 	<div id="footer">
 		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
-		<br/>Page Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
 	</div>
 	<!-- end div#footer -->
 </div>

@@ -77,27 +77,7 @@ class SlideshowManager {
 		$slideshow->add("html5.jpg");
 		$slideshow->add("xslt.jpg");
 		$slideshow->add("testflight.jpg");
-		
-		$slideshow = $this->add("books", new SlideshowObj("books", 180, 240, "books", "Books I'm Reading",3000));
-		$slideshow->add("designingInterfaces.jpg");
-		$slideshow->add("hibernateInAction.jpg");
-		$slideshow->add("ajaxHacks.gif");
-		$slideshow->add("hardcoreJava.gif");
-		$slideshow->add("java-io.gif");
-		$slideshow->add("beatlesGear.jpg");
-		$slideshow->add("domScripting.jpg");
-		$slideshow->add("encyclopediaChicago.jpg");
-		$slideshow->add("geoffEmerick.jpg");
-		$slideshow->add("itextInAction.jpg");
-		$slideshow->add("powerFaithFantasy.jpg");
-		$slideshow->add("springInAction.jpg");
-		$slideshow->add("suDokuExtraHot.jpg");
-		$slideshow->add("thisIsYourBrainOnMusic.jpg");
-                $slideshow->add("prototypeScriptaculous.jpg");
-	        $slideshow->add("donaldHall.jpg");
-                $slideshow->add("childrenOfOdin.jpg");
-                $slideshow->add("managingHumans.jpg");
-	
+
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
 		$slideshow->add("abnThumb.gif");
 		$slideshow->add("billwhitneyThumb.jpg");

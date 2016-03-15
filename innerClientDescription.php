@@ -36,7 +36,7 @@ if (array_key_exists($g_key, $g_resume->positionObjArray)) {
 		<dd>
             <?php print($g_engagementDetails) ?>
 			<a href='#' title='Greg Sandell Client Samples' style='font-size: 13px' 
-				onclick='Modalbox.show($("testContent"), {title: this.title, height: 500 }); return false;'>
+				onclick='Modalbox.show($("testContent"), {title: this.title, height: 500 }); return false;'>More...
 			</a>
 		</dd>
 	</dl> 

@@ -13,8 +13,8 @@ if ($g_slideshowKey != "") {
 	$slideshow = $g_slideshowMan->get($g_slideshowKey);
 	print("<h2>" . $slideshow->title . "</h2><br/>");  ?>
 	<div id="rotatingLogosDiv" style="text-align: center">
-		<img src="image/spacer.gif" alt="" name="slide" border="0" style="filter:blendTrans(duration=2)" width="<?php print($slideshow->width) ?>" height="<?php print($slideshow->height) ?>"/>
-						</div>
+		<img src="/image/logos/spacer.gif" alt="" name="slide" border="0" style="filter:blendTrans(duration=2)" width="<?php print($slideshow->width) ?>" height="<?php print($slideshow->height) ?>"/>
+	</div>
 	<script type="text/javascript" src="numbersWithoutReplacement.js"></script>
 	<script type="text/javascript">
 		//specify interval between slide (in mili seconds)

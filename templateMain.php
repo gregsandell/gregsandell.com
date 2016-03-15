@@ -74,7 +74,6 @@
 	<!-- end div#page -->
 	<div id="footer">
 		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
-		<br/>Page Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
 	</div>
 	<!-- end div#footer -->
 </div>
