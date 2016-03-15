@@ -63,11 +63,11 @@ error_reporting(E_ALL|E_STRICT);
       </p>
       <p>Public APIs used include <a href="http://simplepie.org" rel="external">SimplePie</a> for RSS feed parsing and blog retrieval.</p>
       <p>
-        <a href="http://jquerymobile.com" rel="external"><img src="images/jqueryMobile.jpg" border="0"></a>
-        <a href="http://simplepie.org" rel="external"><img src="images/logo_simplepie_horizontal.png" border="0"></a>
-        <a href="http://www.php.net" rel="external"><img src="images/php.gif" border="0"></a>
-        <a href="http://httpd.apache.org" rel="external"><img src="images/apache.png" border="0"></a>
-        <a href="http://docs.google.com" rel="external"><img src="images/googleDocs.jpeg" border="0"></a>
+        <a href="http://jquerymobile.com" rel="external"><img src="../image/jqueryMobile.jpg" border="0"></a>
+        <a href="http://simplepie.org" rel="external"><img src="../image/logo_simplepie_horizontal.png" border="0"></a>
+        <a href="http://www.php.net" rel="external"><img src="../image/php.gif" border="0"></a>
+        <a href="http://httpd.apache.org" rel="external"><img src="../image/apache.png" border="0"></a>
+        <a href="http://docs.google.com" rel="external"><img src="../image/googleDocs.jpeg" border="0"></a>
       </p>
     </div>
   </div>

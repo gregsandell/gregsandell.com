@@ -26,8 +26,8 @@ class ResumeObj {
 
 		$this->addressLines["4"] = "greg.sandell &lt;at&gt; gmail.com";
 		$this->addressLines["5"] = "More detail: http://www.gregsandell.com";
-		$this->imageJava = "/greg-sandell-resume_files/image002.jpg";
-		$this->imageSCWCD = "/greg-sandell-resume_files/image004.jpg";
+		$this->imageJava = "/image/resume/javaProgrammerCert.jpg";
+		$this->imageSCWCD = "/image/resume/scwcdCert.jpg";
 		//print($this->nname . "," . $this->imageJava . "," . $this->imageSCWCD . "<br/>");
 	}
 	function addPosition($key, $company, $location, $dates, $basis, $title) {
