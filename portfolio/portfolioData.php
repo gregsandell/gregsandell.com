@@ -32,13 +32,13 @@ class Portfolio {
 		$icon = "pdfIcon.gif";
 		switch($type) {
 			case "pdf":
-				$icon = "pdfIcon_trans.gif";
+				$icon = "/image/portfolio/pdfIcon_trans.gif";
 				break;
 			case "doc":
-				$icon = "mswordIcon.gif";
+				$icon = "/image/portfolio/mswordIcon.gif";
 				break;
 			case "slideshow":
-				$icon = "slideshow_icon_trans.gif";
+				$icon = "/image/portfolio/slideshow_icon_trans.gif";
 				break;
 		}
 		return($icon);

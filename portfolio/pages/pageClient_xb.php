@@ -20,9 +20,8 @@
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";
 	}
-	// $inlinePhp = "/innerClientGallery.php";
-	$inlinePhp = "";
-	$inlinePhp2 = $_cpath . "/innerClientDescription.php";
+	$inlinePhp = "";  // No thumbs/gallery
+	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developer for overhaul of company website in PHP.";
 

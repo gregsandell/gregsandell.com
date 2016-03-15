@@ -4,67 +4,7 @@
   $resumeManager = new ResumeManager();
   $resume = $resumeManager->res;
 ?>
-<style type="text/css">
-  table#resHeaderTbl td#nameAddress {
-    font-weight: bold;
-    font-size: 14px;
-    padding-left: 0px;
-    padding-bottom: 5px;
-    text-align: center;
-    /* vertical-align: text-top; */
-  }
-  table#resHeaderTbl td.certificationImg {
-    margin-top: 0px;
-    vertical-align: top;
-  }
-  table#resTbl ul#address {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 1em;
-    text-indent: -1em;
-    text-align: center;
-  }
-  table#resTbl ul#address li {
-    font-size: 10px;
-    line-height: 14px;
-  }
-  table#resTbl ul {
-    margin-left: 0;
-    padding-left: 1em;
-    text-indent: -1em;
-  }
-  table#resTbl li {
-    font-size: 11px;
-  }
-  table#resTbl td.sectHead {
-    font-weight: bold;
-    font-size: 13px;
-  }
-  .company {
-    font-weight: bold;
-    font-size: 12px;
-  }
-  .city {
-    font-size: 11px;
-  }
-  .basisLabel {
-    font-weight: bold;
-    font-size: 11px;
-  }
-  .basis {
-    font-size: 11px;
-  }
-  .timeTitle {
-    font-size: 12px;
-  }
-  .boxme {
-    border: 1px solid black;
-  }
-  p.summary {
-    font-size: 11px; 
-    font-family: Verdana,Arial,Helvetica,sans-serif;
-  }
-</style>
+<link rel="stylesheet" href="resume.css" type="text/css" />
 <table id="resTbl" border="0" width="500" cellspacing="0" callpadding="0">
   <tr>
     <td colspan="2">

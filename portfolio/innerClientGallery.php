@@ -54,9 +54,7 @@
     them in an external CSS-file. See the webpage for documentation.
 -->
 
-<style type="text/css">
-@import '/innerClientGallery.css';
-</style>
+<link rel="stylesheet" href="/portfolio/innerClientGallery.css" type="text/css" />
 
 <div>
 <!-- 

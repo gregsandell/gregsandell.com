@@ -20,8 +20,8 @@
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: American Association of Critical Care Nurses</h1>";
 	}
-	$inlinePhp = $_cpath . "/innerClientGallery.php";
-	$inlinePhp2 = $_cpath . "/innerClientDescription.php";
+	$inlinePhp = $_cpath . "/portfolio/innerClientGallery.php";
+	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Wrote this hybrid iOS/web appstore application for the American Association of Critical Care Nurses (AACN) to replace their print media version of their product (laminated cards) with an iPhone app.  Written using jQuery Mobile, JSON, AngularJS, Trigger.io, and TestFlight";
 

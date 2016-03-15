@@ -20,8 +20,8 @@
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";
 	}
-	$inlinePhp = $_cpath . "/innerClientGallery.php";
-	$inlinePhp2 = $_cpath . "/innerClientDescription.php";
+	$inlinePhp = $_cpath . "/portfolio/innerClientGallery.php";
+	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developed ASP-based E-commerce website for golf retailer Edwin Watts.  The site produced $268k in sales in the first three months.";
 

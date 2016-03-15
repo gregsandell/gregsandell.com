@@ -119,13 +119,13 @@
 	<?php
 				if ($_SESSION["authenticated"] == "true") {  ?>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?slideshow=maytagStyleGuide" TARGET=_BLANK><img src="../slideshow_icon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?slideshow=maytagStyleGuide" TARGET=_BLANK><img src="/image/portfolio/slideshow_icon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?slideshow=maytagStyleGuide" TARGET=_BLANK>Style Guide</a></td>
 							<td><p>Here are design specs for several sections of the site.  Documents by the design team at Giant Step.</p>
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorManagement.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorManagement.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorManagement.pdf" TARGET=_BLANK>Visitor Management</a></td>
 							<td><p>Maytag.com is a member-oriented website.  Users can keep a profile of their owned appliances, making it easy for them
 										to locate manuals, warranty information and service plans.  The site also implements <i>targeted viewing</i>, where the
@@ -134,7 +134,7 @@
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/cookiesFlow.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/cookiesFlow.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/cookiesFlow.pdf" TARGET=_BLANK>Cookie Management</a></td>
 							<td><p>The site was written so user sessions could be maintained even when users had their browsers set to refuse cookies.  It began
 							each user visit with a two-step cookie diagnostic; if cookies were disabled, it tracked session using the querystring.  This document is 
@@ -142,34 +142,34 @@
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorAuthentication.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorAuthentication.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/memoVisitorAuthentication.pdf" TARGET=_BLANK>Visitor Authentication</a></td>
 							<td><p>Users who chose to take advantage of the membership features were assigned user names (their email address) and passwords.  
 							This document shows the process of identifying a user.</p>
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/myMaytagFlows.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/myMaytagFlows.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/myMaytagFlows.pdf" TARGET=_BLANK>"My Maytag" Flow Diagrams</a></td>
 							<td><p>The section of the site where users maintain a list of their appliances is called "My Maytag".  This document is a scan
 							of VISIO flows showing how this section was written.</p>
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/registerProductFlows.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/registerProductFlows.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/registerProductFlows.pdf" TARGET=_BLANK>"Register a Product" Flow Diagrams</a></td>
 							<td><p>The ability to register a Maytag product online is one of the most important business functions of Maytag.com.  This document
 							is a scan of VISIO flows showing how the product registration process was coded.</p>
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/maytagBuilds.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/maytagBuilds.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/maytagBuilds.pdf" TARGET=_BLANK>Website Release History</a></td>
 							<td><p>This document shows the history of website version releases from Oct 2000 to Jan 2001.  </p>
 							</td>
 						</tr>
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/processUserFlow.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/processUserFlow.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/processUserFlow.pdf" TARGET=_BLANK>User Session Tracking</a></td>
 							<td><p>Each page on the site runs code to check the authentication state of the user.  If the requested page is a members-only page, a
 							redirect to a login page occurs.  This document is a scan of VISIO flows showing how this process was coded.</p>
@@ -177,13 +177,13 @@
 						</tr>
 						
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/signinFlow.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/signinFlow.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/signinFlow.pdf" TARGET=_BLANK>Authentication Flows</a></td>
 							<td><p>This document is a scan of VISIO flows showing the process of logging in with a username and password.</p>
 							</td>
 						</tr>  
 						<tr class="docDescription">
-							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/giantStepWshDoc.pdf" TARGET=_BLANK><img src="../pdfIcon.gif" width="32" height="32" border="0"></a></td>
+							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/giantStepWshDoc.pdf" TARGET=_BLANK><img src="/image/portfolio/pdfIcon.gif" width="32" height="32" border="0"></a></td>
 							<td><a href="/portfolio/portfolioPopup.php?pdf=/portfolio/resources/maytag/docs/giantStepWshDoc.pdf" TARGET=_BLANK>Windows Script Host</a></td>
 							<td><p>This document is an introduction to WSH (Windows Script Host) presented to the Application Engineering Team.</p>
 							</td>
