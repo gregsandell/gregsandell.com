@@ -28,10 +28,8 @@ class ResumeObj {
 		$this->addressLines["5"] = "More detail: http://www.gregsandell.com";
 		$this->imageJava = "/image/resume/javaProgrammerCert.jpg";
 		$this->imageSCWCD = "/image/resume/scwcdCert.jpg";
-		//print($this->nname . "," . $this->imageJava . "," . $this->imageSCWCD . "<br/>");
 	}
 	function addPosition($key, $company, $location, $dates, $basis, $title) {
-	//print("adding Position<br/>");
 		$this->positionObjArray[$key] =
 			new PositionObj($key, $company, $location, $dates, $basis, $title);
 		return($this->positionObjArray[$key]);
@@ -40,14 +38,10 @@ class ResumeObj {
 		return($this->positionObjArray[$key]);
 	}
 	function addSkillItem($key, $text) {
-		//print("adding skillset<br/>");
 		$this->skillsetSummary[$key] = $text;
-	//print($this->skillsetSummary[$key]);
 	}
 	function addQualItem($key, $text) {
-	//print("adding qualification<br/>");
 		$this->qualSummary[$key] = $text;
-	//print($this->qualSummary[$key]);
 	}
 	function addTraining($key, $dates, $description) {
 		$this->training[$key] = new TrainingObj($key, $dates, $description);
@@ -75,13 +69,9 @@ class PositionObj {
 		$this->ttitle = $title;
 		$this->basis = $basis;
 		$this->location = $location;
-		//print($this->kkey . "," . $this->dates . "," . $this->company .
-		//			$this->ttitle . "," . $this->basis . "," . $this->location . "<br/>");
 	}
 	function addListItem($key, $text) {
-		//print("adding ListItem<br/>");
 		$this->listTextArray[$key] = $text;
-		//print($this->listTextArray[$key]);
 	}
 }
 class TrainingObj {
@@ -383,12 +373,8 @@ $pos->addListItem("17", "Other technologies not mentioned above: Eclipse, CVS, R
 		$resume->addEducation("nwu", "PhD in Music Theory, Northwestern University - Evanston, IL");
 		$resume->addEducation("esm", "MA in Music Theory, Eastman School of Music - Rochester, NY");
 		$resume->addEducation("csula", "Bachelor of Music, Piano Performance, California State University - Los Angeles, CA");
-		
-		
-
 
 		$this->res = $resume;
-		//print("resumeObj test:  " . $this->res->nname);
 	}
 }
 ?>

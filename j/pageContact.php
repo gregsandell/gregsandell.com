@@ -16,9 +16,9 @@ error_reporting(E_ALL|E_STRICT);
     <h1>About - Greg Sandell</h1>
   </div>
   <div data-role="content"> 
-    <table border="0"><tr><th>Phone:</th><td>773-548-5547</td></tr>
+    <table border="0"><tr><th>Phone:</th><td>626-914-8123</td></tr>
     <tr><th>Email:</th><td>greg &lt;dot&gt; sandell @ gmail.com</td></tr>
-    <tr><th>Current Engagement:</th><td>Contracting at Sears Holding Corporation</td></tr>
+    <tr><th>Current Engagement:</th><td>John Deere</td></tr>
     </table>
     <div data-role="collapsible" data-collapsed="true">
       <h1>Elevator Speech</h1>
