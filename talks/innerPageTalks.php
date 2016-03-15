@@ -1,8 +1,6 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 ?>
-<style type="text/css">
-</style>
 <h1>Talks</h1>
 <p>
   These are talks I have given on various technologies.  They were originally PowerPoint decks, but the items below link to Google Docs versions of them.

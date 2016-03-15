@@ -98,14 +98,14 @@
 				<td><a href="../portfolioPopup.php?site=ies" TARGET=_BLANK><img src="images/iesHomepage500x373.gif" width="500" height="373" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 
 				<td>
-							<ul>
-								<li><b>What:</b> Company website for IES Abroad (Institute for the International Education of Students)</li>
-								<li><b>My Role:</b> In-house lead developer and Architect, working with Marketing Group and digital artist</li>
-								<li><b>Status:</b> I am still on this project</li>
-								<li><b>Technologies:</b> Java Servlets, Struts, Tomcat, Apache, Oracle, mysql, JSP, JSP tags, Tiles, DHTML, CSS, XML, XSL</li>
-								<li><b>Timeframe:</b> Work began August 2003; site launched September 2004; work is ongoing</li>
-								<li><a href="../portfolioPopup.php?site=ies" TARGET=_BLANK>Visit live site</a> (popup window)</li>
-							</ul>
+					<ul>
+						<li><b>What:</b> Company website for IES Abroad (Institute for the International Education of Students)</li>
+						<li><b>My Role:</b> In-house lead developer and Architect, working with Marketing Group and digital artist</li>
+						<li><b>Status:</b> I am still on this project</li>
+						<li><b>Technologies:</b> Java Servlets, Struts, Tomcat, Apache, Oracle, mysql, JSP, JSP tags, Tiles, DHTML, CSS, XML, XSL</li>
+						<li><b>Timeframe:</b> Work began August 2003; site launched September 2004; work is ongoing</li>
+						<li><a href="../portfolioPopup.php?site=ies" TARGET=_BLANK>Visit live site</a> (popup window)</li>
+					</ul>
 				</td>
 			</tr>
 		</table>

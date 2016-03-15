@@ -1,7 +1,6 @@
 <?php
     $_cpath = $_SERVER['DOCUMENT_ROOT'];
     ?>
-<style type="text/css"></style>
 <h1>Code</h1>
 <p>
     Here are some code samples hosted on GitHub.

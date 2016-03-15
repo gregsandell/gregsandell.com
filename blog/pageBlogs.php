@@ -3,9 +3,7 @@
 	$g_section = "blogs";
 	$linksTitle = "Other Site Links";
 	$innerPhp = "";
-	$mainCopy = "<style type='text/css'>
-                 </style>
-              <div>
+	$mainCopy = "<div>
 							<table>
 							<tr>
 							<td><a href='http://gregsandell.blogspot.com'><img src='/image/blogspotIcon.jpg' border='0'/></a></td>

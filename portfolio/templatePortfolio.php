@@ -32,18 +32,18 @@
 		<base url="<?php print($_cpath) ?>" />
 		<script type="text/javascript">
 			var g_projectNames = new Array(
-															"<?php print($g_globals->Key->sears) ?>",
-															"<?php print($g_globals->Key->path) ?>",
-															"<?php print($g_globals->Key->tr) ?>",
-															"<?php print($g_globals->Key->ubs) ?>",
-															"<?php print($g_globals->Key->usaf) ?>",
-															"<?php print($g_globals->Key->abn) ?>",
-															"<?php print($g_globals->Key->ies) ?>",
-															"<?php print($g_globals->Key->xb) ?>",
-															"<?php print($g_globals->Key->maytag) ?>",
-															"<?php print($g_globals->Key->watts) ?>",
-															"<?php print($g_globals->Key->billwhitney) ?>",
-															"<?php print($g_globals->Key->spectrum) ?>");
+				"<?php print($g_globals->Key->sears) ?>",
+				"<?php print($g_globals->Key->path) ?>",
+				"<?php print($g_globals->Key->tr) ?>",
+				"<?php print($g_globals->Key->ubs) ?>",
+				"<?php print($g_globals->Key->usaf) ?>",
+				"<?php print($g_globals->Key->abn) ?>",
+				"<?php print($g_globals->Key->ies) ?>",
+				"<?php print($g_globals->Key->xb) ?>",
+				"<?php print($g_globals->Key->maytag) ?>",
+				"<?php print($g_globals->Key->watts) ?>",
+				"<?php print($g_globals->Key->billwhitney) ?>",
+				"<?php print($g_globals->Key->spectrum) ?>");
 			function hideObj(elementName) {
 				document.getElementById(elementName).style.visibility = 'hidden'
 			}
