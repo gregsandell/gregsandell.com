@@ -36,7 +36,7 @@
     hs.outlineType = 'rounded-white';
 </script>
 
-<link rel="stylesheet" href="/portfolio/innerClientGallery.css" type="text/css" />
+<link rel="stylesheet" href="/lib/highslide/3.2.0/highslide.css" type="text/css" />
 
 <div>
 

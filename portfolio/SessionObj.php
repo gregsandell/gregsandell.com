@@ -62,12 +62,16 @@ class Session {
 		$decoded = $url;
 		$emailMsg = "[" . $this->getUser() . "] viewed page [" . $decoded . "]";
 		$emailSubj = "[" . $this->getUser() . "] viewed [..." . $decoded . "]";
+
+		// Turning off the page view spy
 		// $emailSubj = "[" . $this->getUser() . "] viewed [..." . "some url" . "]";
 		//$this->emailAlert($emailSubj, $emailMsg);
 	}
 	function sendPortfolioPageviewEmail($key) {
 		$emailMsg = "[" . $this->getUser() . "] viewed portfolio page key = [" . $key . "]";
 		$emailSubj = "[" . $this->getUser() . "] viewed portfolio page key = [" . $key . "]";
+
+		// Turning off the pageview spy
 		//$this->emailAlert($emailSubj, $emailMsg);
 	}
 	function sendAuthenticationEmail($member, $reason) {

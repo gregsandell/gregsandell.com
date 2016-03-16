@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(font/lato-light.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(font/lato-regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(font/lato-bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(font/lato-black.woff) format('woff');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(font/lato-italic.woff) format('woff');
+}
+.clearboth {
+    clear: both;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: Lato;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: .8125em;
+    line-height: 1.2em;
+    padding-top: 1.4em;
+    text-align:justify;
+}
+.container {
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 15px;
+    width: 1012px;
+}
+
+.osm-logo {
+    float: left;
+    height: 100px;
+    width: 33.333333%;
+}
+.title {
+    color: #010d7a;
+    float: left;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-size: 4em;
+    height: 100px;
+    width: 66.6666666%;
+}
+.parish-center {
+}
+.church {
+    padding-left: 9px;
+}
+.school {
+    padding-left: 9px;
+    padding-right: 10px;
+}
+.church-image {
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 28px;
+    width: 33.333333%;
+}
+.church-image div {
+    text-align: center;
+}
+.block-center {
+    text-align: center;
+}
+.thermometer {
+    text-align: center;
+}
+.ten-year-anniversary {
+    text-align: center;
+}
+.four-squares{
+    text-align: center;
+}
+
+.block {
+    font-size: 1.2em;
+    margin-bottom: 1.3em;
+    padding-right: 2em;
+    width: 100%;
+}
+
+.block-right {
+    padding-right: 20px;
+}
+
+.give-central {
+    margin-bottom: 17px;
+}
+.col1 {
+    float: left;
+    width: 50%;
+}
+.col2 {
+    float: right;
+    width: 50%;
+}
+
+h3 {
+}
+.video iframe {
+    height: 281px;
+    width: 100%;
+    padding-right: 10px;
+}
+.big-link {
+    text-align: center;
+}
+.big-link a {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.quick-links {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+@media screen and (max-width: 911px) {
+    .title {
+        font-size: 3em;
+    }
+    .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 693px) {
+    .title {
+        font-size: 2em;
+    }
+}
+
+/* iPhone 5 in landscape */
+@media screen and (max-width: 568px) {
+    .container {
+        width: 568px;
+    }
+    .col1 {
+        float: left;
+        width: 100%;
+    }
+    .col2 {
+        float: left;
+        width: 100%;
+    }
+    .block {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .title {
+        font-size: 3.5em;
+        width: 100%;
+    }
+}
+
+/* iPhone 4 in landscape */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 480px;
+    }
+    .col1 {
+        float: left;
+        width: 100%;
+    }
+    .col2 {
+        float: left;
+        width: 100%;
+    }
+    .church-image {
+        margin-bottom: 0px;
+        margin-top: 7px;
+        width: 100%;
+    }
+    .block {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .title {
+        font-size: 2.5em;
+        width: 100%;
+    }
+}
+
+/* iPhone 4/5 portrait */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 320px;
+    }
+    .osm-logo {
+        width: 100%;
+    }
+    .title {
+        font-size: 2.5em;
+        width: 100%;
+    }
+    .col1 {
+        float: left;
+        width: 100%;
+    }
+    .col2 {
+        float: left;
+        width: 100%;
+    }
+    .container {
+        width: 320px;
+    }
+    .block {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .big-link a {
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .quick-links {
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .four-squares{
+    }
+}

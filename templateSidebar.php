@@ -41,13 +41,19 @@ if (sizeof($g_sidebarObj->linksArray) > 0) { ?>
 		<h2><?php print($linksTitle) ?></h2>
 		<ul>  <?php
 		foreach ($g_sidebarObj->linksArray as $linkObj) {  ?>
-			<li>
-				<a href="<?php print($linkObj->url) ?>">
-					<?php print($linkObj->text) ?> <?php
-					if ($linkObj->remote) { ?>
-						<img src='/image/wikipediaExternalPageGold.png' border='0' alt="External Page" /> <?php
-					} ?>
-				</a>
+			<li> <?php
+				if ($linkObj->type == 'pdf') { ?>
+					<a href="/portfolio/portfolioPopup.php?pdf=<?php print($linkObj->url) ?>" TARGET=_BLANK ><?php print($linkObj->text) ?></a></li>  <?php
+				} elseif ($linkObj->type == 'urlpopup') { ?>
+					<a href="/portfolio/portfolioPopup.php?url=<?php print($linkObj->url) ?>" TARGET=_BLANK ><?php print($linkObj->text) ?></a></li>  <?php
+				} else { ?>
+					<a href="<?php print($linkObj->url) ?>">
+						<?php print($linkObj->text) ?> <?php
+						if ($linkObj->remote) { ?>
+							<img src='/image/wikipediaExternalPageGold.png' border='0' alt="External Page" /> <?php
+						} ?>
+					</a> <?php
+				} ?>
 			</li>  <?php
 		}  ?>
 		</ul>
@@ -60,7 +66,7 @@ if (sizeof($g_sidebarObj->blogsArray) > 0) { ?>
 		foreach ($g_sidebarObj->blogsArray as $blogObj) {  ?>
 			<li>
 				<h3><?php print($blogObj->date) ?></h3>
-				<p><a href="<?php print($blogObj->url) ?>"><?php print($blogObj->text) ?>&nbsp;<img src="/image/wikipediaExternalPageGold.png" border="0" alt="External Page" /></a></p>
+				<p><a href="/portfolio/portfolioPopup.php?url=<?php print($blogObj->url) ?>" TARGET=_BLANK><?php print($blogObj->text) ?>&nbsp;<img src="/image/wikipediaExternalPageGold.png" border="0" alt="External Page" /></a></p>
 			</li> <?php
 		}  ?>
 		</ul>

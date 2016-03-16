@@ -5,13 +5,13 @@
 	$site = isset($_REQUEST["site"]) ? $_REQUEST["site"] : "";
 	$pdf = isset($_REQUEST["pdf"]) ? $_REQUEST["pdf"] : "";
 	$doc = isset($_REQUEST["doc"]) ? $_REQUEST["doc"] : "";
+	$url = isset($_REQUEST["url"]) ? $_REQUEST["url"] : "";
 	$slideshow = isset($_REQUEST["slideshow"]) ? $_REQUEST["slideshow"] : "";
 	if ($site == "" && ($pdf != "" || $slideshow != "" || $doc != "")) {
 		if ($g_session->notAuthenticated()) {
 			exit("You have attempted to reach an item in Greg Sandell's private portfolio without logging in.  To request access, please email <a href='mailto:greg.sandell@gmail.com'>Greg Sandell</a>. </br/><br/>Click <a href='http://www.gregsandell.com'>here</a> to go to Greg Sandell's website.");
 		}
 	}
-	$url = "/"; /* Just in case nothing matches */
 	$color = "white";  // default background color
 	if ($site != "") {
 		$key = "site '" . $site . "'";
@@ -88,7 +88,9 @@
 			$color = "black";
 			break;
 	}
-	$g_session->sendPageviewEmail($key);
+	//
+	// Turning off the pageview spy
+	// $g_session->sendPageviewEmail($key);
 
 ?>
 <frameset rows="35,*" frameborder="no" border="0" >

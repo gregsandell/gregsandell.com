@@ -32,8 +32,8 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="greg-sandell-resume.doc">MS-Word Format&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="greg-sandell-resume.pdf">Adobe PDF Format&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/resume/gregsandell-resume.doc">MS-Word Format&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/resume/gregsandell-resume.pdf">Adobe PDF Format&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="/resume/pageResume.php">...More...</a></li>
 					</ul>
 				</div>
@@ -44,10 +44,10 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="/portfolio/publications/1991-10-01_library_ICMC.pdf">SHARC Timbre Database&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="/portfolio/publications/1995-12-01_perceptual_JAES.pdf">Timbre &amp; Principle Components Analysis&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="/portfolio/publications/1996-06-01_auditory_MP.pdf">Auditory Displays&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf">Macro Timbre&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=/portfolio/publications/1991-10-01_library_ICMC.pdf" TARGET=_BLANK>SHARC Timbre Database&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=/portfolio/publications/1995-12-01_perceptual_JAES.pdf" TARGET=_BLANK>Timbre &amp; Principle Components Analysis&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=/portfolio/publications/1996-06-01_auditory_MP.pdf" TARGET=_BLANK>Auditory Displays&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf" TARGET=_BLANK>Macro Timbre&nbsp;<?php print($wikiImg) ?></a></li>
 					<li>&#187;&nbsp;<a href="/portfolio/pages/pagePublications.php">...More...</a></li>
 					</ul>
 				</div>
@@ -76,11 +76,11 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html">Ascii, ISO-8859 &amp; UTF-8&nbsp;<?php print($wikiImg) ?></a></li>
-<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html">Hacking a Linksys NSLU2<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html">S-Corps for Computer Contractors&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html">Getting Started with Maven 2&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="{$_cpath}/pageBlogs.php" >...More...</a></li>
+<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html" TARGET=_BLANK>Ascii, ISO-8859 &amp; UTF-8&nbsp;<?php print($wikiImg) ?></a></li>
+<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html" TARGET=_BLANK>Hacking a Linksys NSLU2<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html" TARGET=_BLANK>S-Corps for Computer Contractors&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html" TARGET=_BLANK>Getting Started with Maven 2&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/blog/pageBlogs.php" >...More...</a></li>
 					</ul>
 				</div>
 			</div>
@@ -91,10 +91,13 @@
 				</div>
 				<div class="portlet_content">
 					<ul>
-					<li>&#187;&nbsp;<a href="/portfolio/publications/1991-10-01_library_ICMC.pdf">Conference Presentation&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://www.timbre.ws/sharc/">SHARC Homepage&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="http://www.timbre.ws/sharc/service/">Web Services&nbsp;<?php print($wikiImg) ?></a></li>
-					<li>&#187;&nbsp;<a href="#" onclick="alert('Under construction...sorry!')">...More...</a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?pdf=/portfolio/publications/1991-10-01_library_ICMC.pdf" TARGET=_BLANK>Conference Presentation&nbsp;<?php print($wikiImg) ?></a></li>
+					<li>&#187;&nbsp;<a href="/portfolio/portfolioPopup.php?url=http://www.timbre.ws/sharc/" TARGET=_BLANK>SHARC Homepage&nbsp;<?php print($wikiImg) ?></a></li>
+					<!--
+					   Web services have been discontinued
+					   <li>&#187;&nbsp;<a href="http://www.timbre.ws/sharc/service/">Web Services&nbsp;<?php print($wikiImg) ?></a></li>
+					   <li>&#187;&nbsp;<a href="#" onclick="alert('Under construction...sorry!')">...More...</a></li>
+					-->
 					</ul>
 					</div>
 			</div>

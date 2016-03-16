@@ -44,7 +44,15 @@
     <dd>This is a jQuery plugin I wrote for a UI element that moves text items from one container to another.</dd>
 
 <br>
+<!--
+    These repos aren't interesting enough or not ready for prime time.
 
+    <dt>
+        <a href="https://github.com/gregsandell/completeTheVision">Complete the Vision&nbsp;<img src="/image/wikipediaExternalPage.png" alt="External Page" border="0"></a>
+    </dt>
+    <dd>
+        Marketing page for Old St. Mary's Church (Chicago) with responsive design.
+    </dd>
     <dt>
         <a href="https://github.com/gregsandell/objResume">Some PHP object oriented data structure code&nbsp;<img src="/image/wikipediaExternalPage.png" alt="External Page" border="0"></a>
     </dt>
@@ -69,4 +77,5 @@
     <dd>
         This is a javascript object that supports flipping x- and y-axes of data, and supports rotating data over a collection of charts. 
     </dd>
+    -->
 </dl>
