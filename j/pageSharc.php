@@ -16,8 +16,8 @@
   </style>
   <?php include("inclHead.php"); ?>
   <!-- Accordeon stuff -->
-  <link href="jquery/samcroft/accordion.css" rel="stylesheet">
-  <script src="jquery/samcroft/jquery.accordion.js"></script>
+  <link href="../lib/samcroft/accordion.css" rel="stylesheet">
+  <script src="../lib/samcroft/jquery.accordion.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
       $('dl').accordion();
