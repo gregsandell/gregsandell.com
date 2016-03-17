@@ -7,7 +7,8 @@ class GlobalsObj {
 	function GlobalsObj() {
 		$this->Key = new KeyObj();
 		$this->allResumeItems = array(
-			$this->Key->gifts,
+			$this->Key->johndeere,
+			$this->Key->cybercoders,
 			$this->Key->sears,
 			$this->Key->path,
 			$this->Key->tr,
@@ -23,7 +24,8 @@ class GlobalsObj {
 	}
 }
 class KeyObj {
-    var $gifts = "gifts";
+    var $cybercoders = "cybercoders";
+    var $johndeere = "johndeere";
 	var $sears = "sears";
 	var $path = "path";
 	var $tr = "tr";

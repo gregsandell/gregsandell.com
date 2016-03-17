@@ -98,18 +98,45 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I am a 14-year Front End Developer of web applications with particular depth in Mobile Web, Javascript, AngularJS, Single Page Web Applications, jQuery, Ajax/JSON, web services, HTML5, CSS3, Responsive Design, Unix, Agile and Open Source. I have worked for Reuters, Chicago Tribune, UBS, Amex, Lockheed-Martin, and Sears in vertical markets including media, travel, finance, defense, healthcare, retail, eCommerce and education.  I hold a PhD degree and am highly effective at communications, writing and presentations.");
-		$resume->addSkillItem("1", "Work in a software delivery role to provide robust mobile web applications emphasizing development of SaaS web services and RIA interfaces. Seeking a position in Los Angeles area.");
+		$resume->addQualItem("1", "I have 18 years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments.  I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well.  I have 13 years experience with Agile methodology, tooling, TDD and test coverage.");
+		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  AngularJS 1.4, Javascript, Git, Mocha/Sinon/Chai, Advanced Rest Client, WebStorm 11.0.3, Rally, Jenkins, LESS, nodeJS, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
         
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// GIFTS.COM
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		/*
 		$pos = $resume->addPosition($globals->Key->gifts, "Gifts.com", "Chicago, IL", "Aug 2014 - Sep 2014",
 					"Contract", "Sr Software Engineer, Front End");  
-    $pos->addListItem("1", "Responsive design (converting old HTML)");
-    $pos->addListItem("2", "Translate Photoshop PSDs to responsive CSS/HTML");
-    $pos->addListItem("3", "Javascript programming for filtering search results");
-        
+		$pos->addListItem("1", "Responsive design (converting old HTML)");
+		$pos->addListItem("2", "Translate Photoshop PSDs to responsive CSS/HTML");
+		$pos->addListItem("3", "Javascript programming for filtering search results");
+		*/
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// JOHN DEERE
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		$pos = $resume->addPosition($globals->Key->johndeere, "John Deere", "Los Angeles, CA", "Oct 2015 - Mar 2016",
+					"Contract", "Front End Developer Consultant");
+		$pos->addListItem("1", "Developer for hosted web application 'Sales Center', a 'build-a-Deere' tool for sales reps.");
+		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS/Javascript");
+		$pos->addListItem("3", "Wrote tests for AngularJS controllers, views, directives and services in Mocha Sinon Chai");
+		$pos->addListItem("4", "Collaborated with Back End team on design and troubleshooting of REST/JSON-based services");
+		$pos->addListItem("5", "API Blueprint to mock REST services for local development");
+		$pos->addListItem("6", "AngularJS libs:  angular-ui-router, angular-translate, angular-bootstrap, ng-infinite-scroll");
+		$pos->addListItem("7", "Tooling & Collaboration:  eslint, Git, SourceTree, Jenkins, WebStorm, Hangouts, Lync, Flowdock");
+		$pos->addListItem("8", "100% remote work (HQ in Moline, IL), some travel");
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// CYBERCODERS
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		$pos = $resume->addPosition($globals->Key->cybercoders, "CyberCoders", "Irvine, CA", "Nov 2014 - Aug 2015",
+					"Direct Hire", "Front End Java Developer");
+		$pos->addListItem("1", "Developer for hosted web application 'Compass', a CRM platform for Recruiters.");
+        $pos->addListItem("2", "Wrote application logic in Javascript, ExtJS, Ajax/JSON programming.");
+        $pos->addListItem("3", "Created forms, panels, grids and other UI widgets from ExtJS components");
+        $pos->addListItem("4", "Stress-tested app with jMeter, 5-250 concurrent users.");
+        $pos->addListItem("5", "Wrote Jasmine unit tests for project’s custom ExtJS components");
+
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// SEARS HOLDING CORPORATION
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////

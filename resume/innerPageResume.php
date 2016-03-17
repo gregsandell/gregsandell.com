@@ -4,7 +4,7 @@
   $resumeManager = new ResumeManager();
   $resume = $resumeManager->res;
 ?>
-<link rel="stylesheet" href="resume.css" type="text/css" />
+<link rel="stylesheet" href="/resume/resume.css" type="text/css" />
 <table id="resTbl" border="0" width="500" cellspacing="0" callpadding="0">
   <tr>
     <td colspan="2">
