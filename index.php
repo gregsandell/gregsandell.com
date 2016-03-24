@@ -7,7 +7,7 @@ if (strpos($_http_user_agent, "obile") !== false) { ?>
     <meta HTTP-EQUIV="REFRESH" content="0; url=/j">
 	  </head><body></body></html>  <?php
 } else { 
-    include("/home/pageHome.php");
+    include($_cpath . "/home/pageHome.php");
 }
 ?>
 
