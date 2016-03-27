@@ -1,0 +1,167 @@
+body {
+	font: normal 12px/150% Arial, Helvetica, sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+label {
+	font-weight: 700;
+	color: #4d4d4d;
+	font-size: 14px;
+	float: left;
+}
+select#dataSelect {
+	float: left;
+}
+
+div.pagecontrols {
+	position: relative;
+	padding: 16px 0 0 0;
+}
+
+.pagecontrols .leftside {
+	float: left;
+}
+
+.pagecontrols a, .pagecontrols select, .customSelect {	
+	font-size: 14px;
+	font-weight: 700;
+	height: 20px;
+	border: 1px solid #ccc;
+	background: url(img/page-button-bg.png);
+	color: #4d4d4d;
+	padding: 6px 16px;
+}
+
+.pagecontrols a {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+}
+
+.pagecontrols .label {
+	float: left;
+	margin-top: 6px;
+	font-weight: 700;
+	color: #4d4d4d;
+	font-size: 14px;
+}
+
+.pagecontrols a.action {
+	width: 48px;
+	margin-left: 16px;
+}
+
+.pagecontrols a.action:before {
+	display: block;
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: 4px;
+}
+
+.pagecontrols .flip:before {
+	background: url(img/page-button-flip.png) no-repeat center center;
+	width: 34px;
+	height: 25px;
+}
+
+.pagecontrols .rotate:before {
+	background: url(img/page-button-rotate.png) no-repeat center center;
+	width: 30px;
+	height: 23px;
+}
+
+a#rotate {
+	z-index: 0;
+}
+
+a#flipxy {
+	z-index: 1;
+}
+
+.source {
+	font-style: italic;
+	clear: both;
+	padding-top: 10px;
+	text-align: center;
+}
+a {
+	color: #174479;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/* datagrid table stylying generated at http://tablestyler.com/  */
+.datagrid {
+	float: left;
+	margin-right: 10px;
+}
+.datagrid table caption {
+	font-size: 15px;
+	font-weight: bold;
+	padding: 7px;
+	background-color: #00AAF5;
+	color: #ffffff;
+}
+.datagrid table {
+	border-collapse: collapse;
+	text-align: left;
+/*	width: 100%; */
+	table-layout: fixed;
+}
+.datagrid {
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid #006699;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+.datagrid table td,
+.datagrid table th {
+	padding: 3px 10px;
+}
+.datagrid table thead th {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), color-stop(1, #00557F));
+	background: -moz-linear-gradient( center top, #006699 5%, #00557F 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#006699', endColorstr='#00557F');
+	background-color: #006699;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	border-left: 1px solid #0070A8;
+}
+.datagrid table thead th:first-child {
+	border: none;
+}
+.datagrid table tbody td {
+	color: #00496B;
+	border-left: 1px solid #E1EEF4;
+	font-size: 12px;
+	font-weight: normal;
+}
+.datagrid table tbody .alt td {
+	background: #E1EEF4;
+	color: #00496B;
+}
+.datagrid table tbody td:first-child {
+	border-left: none;
+}
+.datagrid table tbody tr:last-child td {
+	border-bottom: none;
+}
+div.dhtmlx_window_active,
+div.dhx_modal_cover_dv {
+	position: fixed !important;
+}

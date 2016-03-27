@@ -6,3 +6,5 @@
 *~
 # Ignore auto-generated files
 **/.DS_Store
+# LibreOffice lock files
+**/.~lock.*
