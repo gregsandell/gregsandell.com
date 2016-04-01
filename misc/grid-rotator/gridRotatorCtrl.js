@@ -18,21 +18,24 @@ function GridRotatorCtrl() {
 
     this.makeDatagrid = function(data) {
         var chartSubjectArray,
-            topics = data.maps.topics,
+            topics = data.topics,
             gridOptions,
-            datagrid,
             xParam,
             yParam;
 
         if (this.rotationCount % 3 == 0) {
-            gridOptions = { "topicParam": topics[0].key, "xParam": topics[1].key, "yParam": topics[2].key, "suppressNAs": true};
+            gridOptions = { "topicParam": topics[0].key, "xParam": topics[1].key, "yParam": topics[2].key};
         } else if (this.rotationCount % 3 == 1) {
-            gridOptions = {"topicParam": topics[1].key, "xParam": topics[0].key, "yParam": topics[2].key, "suppressNAs": true};
+            gridOptions = {"topicParam": topics[1].key, "xParam": topics[0].key, "yParam": topics[2].key};
         } else if (this.rotationCount % 3 == 2) {
-            gridOptions = {"topicParam": topics[2].key, "xParam": topics[0].key, "yParam": topics[1].key, "suppressNAs": true};
+            gridOptions = {"topicParam": topics[2].key, "xParam": topics[0].key, "yParam": topics[1].key};
         }
 
-        $("#rotateLabel").html("Topic:<br>" + data.maps.topics[this.rotationCount % 3].title);
+        // Validate the data
+        gridOptions.topicSelected = data.rows[0][gridOptions.topicParam];  // choose one at random
+        gridRotator.validateSuite(data, gridOptions, {noisy: true});
+
+        $("#rotateLabel").html("Topic:<br>" + data.topics[this.rotationCount % 3].title);
         if (this.flipCount % 2 == 1) {
             /* Swap 'em */
             xParam = gridOptions.xParam;
@@ -48,9 +51,8 @@ function GridRotatorCtrl() {
                 tableCaption = record.long;
 
             gridOptions.topicSelected = topicSelected;
-            datagrid = new Datagrid(data, gridOptions);
-            datagrid.init();
-            table = datagrid.generateView(tableCaption);
+            gridRotator.init(data, gridOptions);
+            table = gridRotator.generateView(tableCaption);
 
             $("#datapageView #grids").append(table);
         });
