@@ -22,7 +22,7 @@ class ResumeObj {
 		$this->nname = "Greg Sandell";
 		$this->addressLines = array();
 		$this->addressLines["1"] = "Los Angeles";
-		$this->addressLines["2"] = "773.419.5282";
+		$this->addressLines["2"] = "213.479.0790";
 
 		$this->addressLines["4"] = "greg.sandell &lt;at&gt; gmail.com";
 		$this->addressLines["5"] = "More detail: http://www.gregsandell.com";
