@@ -104,7 +104,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TEN-X
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2017 - present",
+		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - present",
 					"Contract", "Front End Developer Consultant");
 		$pos->addListItem("1", "Developer for hosted web application auction.com, an online tool for Real Estate auctions");
 		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS/React/ES6 Javascript & Python");
