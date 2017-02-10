@@ -127,7 +127,7 @@ class SidebarPageManager {
 		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", 'pdf', "/resume/gregsandell-resume.pdf", true);
 
 		// External Websites
-		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", 'urlpopup', "http://www.linkedin.com/in/gregsandell", true);
+		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", 'urlpopup', "https://www.linkedin.com/in/gregsandell", true);
 		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", 'urlpopup', "http://www.maxtrad.com", true);
 		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", 'urlpopup', "http://www.iesabroad.org", true);
 		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", 'urlpopup', "http://www.maytag.com", true);

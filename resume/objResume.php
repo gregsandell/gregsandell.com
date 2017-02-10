@@ -100,17 +100,21 @@ class ResumeManager {
 		$resume = new ResumeObj();
 		$resume->addQualItem("1", "I have 18 years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments.  I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well.  I have 13 years experience with Agile methodology, tooling, TDD and test coverage.");
 		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  AngularJS 1.4, Javascript, Git, Mocha/Sinon/Chai, Advanced Rest Client, WebStorm 11.0.3, Rally, Jenkins, LESS, nodeJS, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
-        
+ 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		// GIFTS.COM
+		// TEN-X
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		/*
-		$pos = $resume->addPosition($globals->Key->gifts, "Gifts.com", "Chicago, IL", "Aug 2014 - Sep 2014",
-					"Contract", "Sr Software Engineer, Front End");  
-		$pos->addListItem("1", "Responsive design (converting old HTML)");
-		$pos->addListItem("2", "Translate Photoshop PSDs to responsive CSS/HTML");
-		$pos->addListItem("3", "Javascript programming for filtering search results");
-		*/
+		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - present",
+					"Contract", "Front End Developer Consultant");
+		$pos->addListItem("1", "Developer for hosted web application auction.com, an online tool for Real Estate auctions");
+		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS/React/ES6 Javascript & Python");
+		$pos->addListItem("3", "Built apps in using tools:  nodeJS, Webpack, npm, nvm");
+		$pos->addListItem("4", "Virtualization of Windows & Linux on OSX with Vagrant, VirtualBox, and Docker");
+		$pos->addListItem("5", "Wrote selenium tests for AngularJS and React component using Nightwatch library");
+		$pos->addListItem("6", "Added Omniture tracking to applications");
+		$pos->addListItem("7", "Collaborated with Back End team on design and troubleshooting of REST/JSON-based services");
+		$pos->addListItem("8", "Tooling & Collaboration:  eslint, Git, SourceTree, Jenkins, WebStorm, Slack, Jira, Confluence");
+		$pos->addListItem("9", "Frequent travel to Belmont, CA office");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// JOHN DEERE
@@ -136,6 +140,17 @@ class ResumeManager {
         $pos->addListItem("3", "Created forms, panels, grids and other UI widgets from ExtJS components");
         $pos->addListItem("4", "Stress-tested app with jMeter, 5-250 concurrent users.");
         $pos->addListItem("5", "Wrote Jasmine unit tests for project’s custom ExtJS components");
+       
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// GIFTS.COM
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		/*
+		$pos = $resume->addPosition($globals->Key->gifts, "Gifts.com", "Chicago, IL", "Aug 2014 - Sep 2014",
+					"Contract", "Sr Software Engineer, Front End");  
+		$pos->addListItem("1", "Responsive design (converting old HTML)");
+		$pos->addListItem("2", "Translate Photoshop PSDs to responsive CSS/HTML");
+		$pos->addListItem("3", "Javascript programming for filtering search results");
+		*/
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// SEARS HOLDING CORPORATION
