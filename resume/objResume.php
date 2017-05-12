@@ -98,8 +98,8 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I have 18 years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments.  I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well.  I have 13 years experience with Agile methodology, tooling, TDD and test coverage.");
-		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  AngularJS 1.4, Javascript, Git, Mocha/Sinon/Chai, Advanced Rest Client, WebStorm 11.0.3, Rally, Jenkins, LESS, nodeJS, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
+		$resume->addQualItem("1", "I have over ten years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments.  I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well.  I have 13 years experience with Agile methodology, tooling, TDD and automated test coverage.");
+		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  React 15, Redux, AngularJS 1.4S, Node.js, Javascript, Git, Jasmine/Mocha/Sinon/Chai, Selenium/Nightwatch, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Jenkins, LES, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
  
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TEN-X
@@ -107,14 +107,15 @@ class ResumeManager {
 		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - present",
 					"Contract", "Front End Developer Consultant");
 		$pos->addListItem("1", "Developer for hosted web application auction.com, an online tool for Real Estate auctions");
-		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS/React/ES6 Javascript & Python");
-		$pos->addListItem("3", "Built apps in using tools:  nodeJS, Webpack, npm, nvm");
+		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS, React, ES6 Javascript & Python");
+    $pos->addListItem("3", "Built apps in using tools:  nodeJS, Webpack, npm, nvm");
+    $pos->addListItem("4", "Wrote demo with demographic maps for commercial Real Estate using Esri's ArcGIS javascript API");
 		$pos->addListItem("4", "Virtualization of Windows & Linux on OSX with Vagrant, VirtualBox, and Docker");
-		$pos->addListItem("5", "Wrote selenium tests for AngularJS and React component using Nightwatch library");
-		$pos->addListItem("6", "Added Omniture tracking to applications");
-		$pos->addListItem("7", "Collaborated with Back End team on design and troubleshooting of REST/JSON-based services");
+		$pos->addListItem("5", "Wrote QA Automation tests for AngularJS and React components using Selenium/Nightwatch");
+		$pos->addListItem("6", "Added Omniture tracking to and LaunchDarkly feature flags to applications");
+		$pos->addListItem("7", "Collaborated with Back End team on design and troubleshooting of REST and JSON-based services");
 		$pos->addListItem("8", "Tooling & Collaboration:  eslint, Git, SourceTree, Jenkins, WebStorm, Slack, Jira, Confluence");
-		$pos->addListItem("9", "Frequent travel to Belmont, CA office");
+		$pos->addListItem("9", "Frequent travel to San Mateo, CA office");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// JOHN DEERE
@@ -170,14 +171,14 @@ $pos->addListItem("7", "Used git for version control, Jira and Mingle for projec
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software", "Chicago, IL", "Aug 2012 - Aug 2013",
 					"Direct Hire", "Sr. Software Developer");  
-$pos->addListItem("1", "30-person consultancy specializing in mobile medical solutions");
-$pos->addListItem("2", "Integrated jQuery apps with numerous plugins incuding jsViews, headJs, panzoom, fullproof, wysiwyg, moment, showbizPro, bootstrap, colorbox, cookie, easing, dynatree and transit");
-$pos->addListItem("3", "Used cloud-based storage providers Parse and Apigee");
-$pos->addListItem("4", "Practiced Agile principles including scrum, 1-week iterations, Continuous Integration, using Confluence &amp; Pivotal Tracker Git, Github, Jasmine, and Karma");
-$pos->addListItem("5", "Wrote SPA (Single Page Web Applications) using RESTFUL web services plus Ajax and AngularJS");
+$pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients, using hybrid web/iOS, jQuery Mobile, JSON, AngularJS, Trigger.io, TestFlight, and Rails/Heroku");
+$pos->addListItem("2", "Deployed UIs in HTML5/CSS3 from Photoshop PSDs");
+$pos->addListItem("3", "Clients included Kimberly-Clark, Haemonetics, Amer. Assn. of Critical Care Nurses");
+$pos->addListItem("4", "Lead developer on AACN Bedside which converted legacy laminated-card media into iPhone app, including in-app purchasing through Apple AppStore");
+$pos->addListItem("5", "Delivered<i> MetroPulse Chicago</i>, a Rich Media website frontend for census and demographic data (demo: http://bit.ly/1EGoNB2)");
 $pos->addListItem("6", "Delivered a high quality UI for MetroPulse Chicago for exploring a large repository of Chicago civic data; demo video at http://www.youtube.com/watch?v=FfeH4n7k5pA");
-$pos->addListItem("7", "Wrote hybrid iOS/web appstore application for the Amer. Assn. for Critical Care Nurses using jQuery Mobile, JSON, AngularJS, Trigger.io, and TestFlight");
-
+$pos->addListItem("7", "Delivered ContinuCare, an iPad ‘concierge’ app to connect heart patients, their nurses and caregivers, written in AngularJS with backend in Rails/Heroku");
+$pos->addListItem("7", "Delivered Automated Whole Blood Collector, a blood drive simulation sales tool for the iPad, in AngularJS");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// THOMSON-REUTERS	
@@ -185,24 +186,12 @@ $pos->addListItem("7", "Wrote hybrid iOS/web appstore application for the Amer. 
     // 26 months as of june 2012
 		$pos = $resume->addPosition($globals->Key->tr, "Truven Health Analytics", "Chicago, IL", "Apr 2010 - Aug 2012",
 					"Converted to FT/Perm after contract", "Sr. Software Developer");  
-$pos->addListItem("1", "Formerly Thomson-Reuters Healthcare.  Sold in June 2012 for $1.25 bil.");
-$pos->addListItem("2", "Create rich, intuitive, high-touch Ajax user interfaces and reusable widgets for CareDiscovery, a  Business Intelligence tool for the Healthcare Industry.");
-$pos->addListItem("3", "Create servlet- and portal-based enterprise web applications for IBM Websphere Portal 5, Tomcat 6 & Glassfish in mixed JEE 6 and J2EE 1.4 environment.");
-$pos->addListItem("4", "Practice Agile principles including scrum, 3-week iterations, TDD, Continuous Integration");
-$pos->addListItem("5", "Develop SaaS components in Java and Ajax communicating over a JSON-based service bus");
-$pos->addListItem("6", "Write User Interfaces and Ajax in Javascript & jQuery, promoting reusable patterns, functional programming, and closures");
-$pos->addListItem("7", "Develop jQuery plugins for reusable UI widgets");
-$pos->addListItem("8", "Integrate Cognos reports into application using Cognos Javascript API and iFrames");
-$pos->addListItem("9", "Author PL/SQL queries in Toad that work against a 4 TB Oracle OLAP (Data Warehouse) database, for deployment in Web Services");
-$pos->addListItem("10", "Collaborate with the ETL/ Informatica team to determine the necessary data models and UI designs to support Cognos reports.");
-$pos->addListItem("11", "Develop Maven plugins and perl scripts to streamline build process");
-$pos->addListItem("12", "Work within HIPAA regulations to secure applications and databases using RSA,  TAM, and Oracle Proxy Authentication.");
-$pos->addListItem("13", "Break down business requirements into tightly defined software module specifications/estimates &amp; document them on Wiki.");
-$pos->addListItem("14", "Write functional prototypes of web interfaces using JSON to simulate Server layer");
-$pos->addListItem("15", "Develop portal applications for IBM Websphere Portal Server and deploy with WPS Admin");
-$pos->addListItem("16", "Helped transition team from waterfall to agile approach by introducing Maven2, Artifactory Repository Server, Hudson Continuous Integration, Mercurial source control and TDD practices.");
-$pos->addListItem("17", "Other technologies not mentioned above: Eclipse, CVS, Rally, JSP, JSTL, Ant, Firebug, Spring MVC/IOC/JDBC, GWT, Struts 1.2, Tiles");
-		
+$pos->addListItem("1", "Developed hosted web applications CareDiscovery and IntegrationDiscovery, Business Intelligence and data mining tools for the Healthcare Industry.");
+$pos->addListItem("2", "Created servlet- and portal-based enterprise web applications for IBM Websphere Portal 5, Tomcat 6 & Glassfish in mixed JEE 6 and J2EE 1.4 environment.");
+$pos->addListItem("3", "Implemented screens in HTML/CSS from designer specs");
+$pos->addListItem("4", "Wrote User Interfaces and Ajax in Javascript & jQuery, promoting reusable patterns, functional programming, and closures.");
+$pos->addListItem("5", "Authored PL/SQL queries in Toad to work against a 4 TB Oracle OLAP (Data Warehouse) database, for deployment in Web Services.");
+$pos->addListItem("6", "Helped transition team from waterfall to agile approach by introducing Maven2, Artifactory Repository Server, Jenkins/Continuous Integration, Mercurial source control and TDD practices.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	ICROSSING
@@ -210,46 +199,21 @@ $pos->addListItem("17", "Other technologies not mentioned above: Eclipse, CVS, R
     // 17 months
 		$pos = $resume->addPosition($globals->Key->icross, "iCrossing", "Chicago", "Oct 08 - Mar 2010",
 					"W2/Direct Placement", "Sr. Software Engineer");  
-		$pos->addListItem("1", "Developed proprietary online application 'Merchantize' used by iCrossing clients.  The application provides a unified interface for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber).");
-		$pos->addListItem("2", "Utilized Struts2/Webwork to build Business Intelligence tools for reporting, analysis and dashboards against an in-house Data Warehouse on Mysql 5.1 containing click and purchase information from clients' E-commerce sites.");
-		$pos->addListItem("3", "Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes.");
-		$pos->addListItem("4", "Programmed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.  Large product datasets would be sent from clients by ftp, be transformed to a unified data format, and sent out to Google, Yahoo, MSN, etc., through each Search Engine's proprietary API.");
-		$pos->addListItem("5", "Collaborated with account managers to address the reporting needs for clients Sears, The Gap, Hilton, Lands End, LEGO, Williams Sonoma.  Custom reports were created on the Merchantize UI or in Excel using Apache POI.");
-		$pos->addListItem("6", "Provided expertise for resolving UTF-8, Latin1 and WinLatin1 character conversion problems in feeds.");
-		$pos->addListItem("7", "On regular rotation for bi-weekly release of product across 10 different Linux servers.");
-		$pos->addListItem("8", "Created JUnit tests for Test Driven Development.");
-			$pos->addListItem("9", "Collaborated using a Scrum based agile methodology, using tools Bamboo (continuous integration), Crucible (code reviews), Fisheye and Greenhopper.");
-
-/* 
- * Old version of iCrossing...
-
-		$pos->addListItem("1", "Core Java and JEE Developer for Merchantize, a Business Intelligence tool and front end to third party APIs to manage and report on client's Paid Search campaigns for Google, Yahoo, Ask &amp; MSN ");
-		$pos->addListItem("2", "Client list of Merchantize users included Hilton, Sears, Gap, Land's End, Lego, Wms Sonoma");
-		$pos->addListItem("3", "Developed code in Java 1.5 on J2EE platform including Tomcat 5, Mysql, Spring, Struts2/Webwork, JSP, OGNL, Perl, and Quartz. ");
-		$pos->addListItem("4", "Wrote Java modules in Apache POI to generate dynamic Excel documents for custom reports as request by internal or external clients ");
-		$pos->addListItem("5", "Perl scripting an XML processing for daily incoming and outgoing feeds; troubleshooting 3-tier daily feed lifecycle for client Sears");
-		$pos->addListItem("6", "Was local expert for resolving character conversion problems (UTF-8, Latin1 and WinLatin1) ");
-		$pos->addListItem("7", "On regular rotation for bi-weekly release of product across 10 different Linux servers");
-		$pos->addListItem("8", "Developed GUI-based reports in Java, SQL and in-house XML DSL against an 80 gb Data Warehouse; added drills, tabs, formulas, filters");
-		$pos->addListItem("9", "Maintenance of Paid Search backend data:  repairing syncs with Google Adwords, cleaning duplicate entries, bulk keyword deletes, bulk cost-per-click changes");
-		$pos->addListItem("10", "Mysql administration:  exporting &amp; importing DB snapshots, resolving data integrity issues");
-		$pos->addListItem("11", "Agile-based development team, daily scrums, TDD, 2-week iterations and continuous integration. Use tools Intellij, Eclipse, svn, Jira, Confluence, Fisheye, Greenhopper, Campfire, Crucible and Bamboo");
- */
-
+		$pos->addListItem("1", " Developed hosted web application Merchantize, a workflow tool for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber).");
+		$pos->addListItem("2", "Developed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.");
+		$pos->addListItem("3", "Developed custom reports in Apache POI for clients for clients Sears, The Gap, Hilton, Lands End, LEGO, and Williams Sonoma.");
+		$pos->addListItem("4", "Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes.");
+ 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	TRIBUNE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // 9 months
 		$pos = $resume->addPosition($globals->Key->trib, "Tribune Interactive", "Chicago", "Feb 08 - Oct 08",
 					"W2/Direct Placement", "Sr. Internet Software Developer");  
-		$pos->addListItem("1", "Supported central web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye");
+		$pos->addListItem("1", Developed web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye.");
 		$pos->addListItem("2", "Developed code in Java 1.5  on J2EE platform including Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet) and TopLink 9.0. Development tools included Intellij 6.0, svn, Borland Starteam, Toad, SQuirrel SQL Client, Cruise Control, Enterprise Architect 7");
 		$pos->addListItem("3", "Created scheduled jobs for sweeping expired database content");
-		$pos->addListItem("4", "Worked with SEO Manager to optimize sites for favorable Google positioning, created daily, weekly and 30-day sitemaps");
-		$pos->addListItem("5", "Supported web services for user registration and Mobile feeds");
-		$pos->addListItem("6", "Created JMeter test plans and reporting tools to compare performance before and after software changes");
-		$pos->addListItem("7", "Wrote Product Development specs, deployment and QA test plans");
-		$pos->addListItem("8", "Actively deployed apps in server farm environments with separate environments for dev, qa, design, test and prod");
+		$pos->addListItem("4", "Created JMeter test plans and reporting tools to simulate heavy load on high-profile chicagotribune.com website.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	UBS
