@@ -106,7 +106,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - present",
 					"Contract", "Front End Developer Consultant");
-		$pos->addListItem("1", "Developer for hosted web application auction.com, an online tool for Real Estate auctions");
+		$pos->addListItem("1", "Developer for hosted web application <i>auction.com</i>, Real Estate auction transaction platform");
 		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS, React, ES6 Javascript & Python");
     $pos->addListItem("3", "Built apps in using tools:  nodeJS, Webpack, npm, nvm");
     $pos->addListItem("4", "Wrote demo with demographic maps for commercial Real Estate using Esri's ArcGIS javascript API");
@@ -122,7 +122,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->johndeere, "John Deere", "Los Angeles, CA", "Oct 2015 - Mar 2016",
 					"Contract", "Front End Developer Consultant");
-		$pos->addListItem("1", "Developer for hosted web application 'Sales Center', a 'build-a-Deere' tool for sales reps.");
+		$pos->addListItem("1", "Developer for hosted web application <i>Sales Center</i>, a 'build-a-Deere' tool for sales reps.");
 		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS/Javascript");
 		$pos->addListItem("3", "Wrote tests for AngularJS controllers, views, directives and services in Mocha Sinon Chai");
 		$pos->addListItem("4", "Collaborated with Back End team on design and troubleshooting of REST/JSON-based services");
@@ -136,23 +136,12 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->cybercoders, "CyberCoders", "Irvine, CA", "Nov 2014 - Aug 2015",
 					"Direct Hire", "Front End Java Developer");
-		$pos->addListItem("1", "Developer for hosted web application 'Compass', a CRM platform for Recruiters.");
+		$pos->addListItem("1", "Developer for hosted web application <i>Compass</i>, a CRM platform for Recruiters.");
         $pos->addListItem("2", "Wrote application logic in Javascript, ExtJS, Ajax/JSON programming.");
         $pos->addListItem("3", "Created forms, panels, grids and other UI widgets from ExtJS components");
         $pos->addListItem("4", "Stress-tested app with jMeter, 5-250 concurrent users.");
         $pos->addListItem("5", "Wrote Jasmine unit tests for project’s custom ExtJS components");
        
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		// GIFTS.COM
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		/*
-		$pos = $resume->addPosition($globals->Key->gifts, "Gifts.com", "Chicago, IL", "Aug 2014 - Sep 2014",
-					"Contract", "Sr Software Engineer, Front End");  
-		$pos->addListItem("1", "Responsive design (converting old HTML)");
-		$pos->addListItem("2", "Translate Photoshop PSDs to responsive CSS/HTML");
-		$pos->addListItem("3", "Javascript programming for filtering search results");
-		*/
-
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// SEARS HOLDING CORPORATION
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -162,8 +151,8 @@ $pos->addListItem("1", "Member of Core Mobile team supporting mobile version of 
 $pos->addListItem("2", "Wrote AngularJS controllers, views, and services for new website features");
 $pos->addListItem("3", "Ajax calls to REST web services");
 $pos->addListItem("4", "Overhauled site so mobile users with Private Browsing enabled get access to all features");
-$pos->addListItem("5", "Integrated features of the Shop Your Way loyalty card into the mobile experience");
-$pos->addListItem("6", "Implemented Shop You Way Max (Sears' version of Amazon Prime)");
+$pos->addListItem("5", "Integrated features of the <i>Shop Your Way</i> loyalty card into the mobile experience");
+$pos->addListItem("6", "Implemented <i>Shop You Way Max</i> (Sears' version of Amazon Prime)");
 $pos->addListItem("7", "Used git for version control, Jira and Mingle for project management");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -174,11 +163,10 @@ $pos->addListItem("7", "Used git for version control, Jira and Mingle for projec
 $pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients, using hybrid web/iOS, jQuery Mobile, JSON, AngularJS, Trigger.io, TestFlight, and Rails/Heroku");
 $pos->addListItem("2", "Deployed UIs in HTML5/CSS3 from Photoshop PSDs");
 $pos->addListItem("3", "Clients included Kimberly-Clark, Haemonetics, Amer. Assn. of Critical Care Nurses");
-$pos->addListItem("4", "Lead developer on AACN Bedside which converted legacy laminated-card media into iPhone app, including in-app purchasing through Apple AppStore");
-$pos->addListItem("5", "Delivered<i> MetroPulse Chicago</i>, a Rich Media website frontend for census and demographic data (demo: http://bit.ly/1EGoNB2)");
-$pos->addListItem("6", "Delivered a high quality UI for MetroPulse Chicago for exploring a large repository of Chicago civic data; demo video at http://www.youtube.com/watch?v=FfeH4n7k5pA");
-$pos->addListItem("7", "Delivered ContinuCare, an iPad ‘concierge’ app to connect heart patients, their nurses and caregivers, written in AngularJS with backend in Rails/Heroku");
-$pos->addListItem("7", "Delivered Automated Whole Blood Collector, a blood drive simulation sales tool for the iPad, in AngularJS");
+$pos->addListItem("4", "Lead developer on iPhone app <i>AACN Bedside</i> which replaced legacy laminated-card media, including in-app purchasing through Apple AppStore");
+$pos->addListItem("5", "Delivered <i>MetroPulse Chicago</i>, a Rich Media website frontend for census and demographic data (demo: http://bit.ly/1EGoNB2)");
+$pos->addListItem("6", "Delivered <i>ContinuCare</i>, an iPad ‘concierge’ app to connect heart patients, their nurses and caregivers, written in AngularJS with backend in Rails/Heroku");
+$pos->addListItem("7", "Delivered <i>Automated Whole Blood Collector</i>, a blood drive simulation sales tool for the iPad, in AngularJS");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// THOMSON-REUTERS	
