@@ -210,7 +210,7 @@ $pos->addListItem("6", "Helped transition team from waterfall to agile approach 
     // 9 months
 		$pos = $resume->addPosition($globals->Key->trib, "Tribune Interactive", "Chicago", "Feb 08 - Oct 08",
 					"W2/Direct Placement", "Sr. Internet Software Developer");  
-		$pos->addListItem("1", Developed web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye.");
+		$pos->addListItem("1", "Developed web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye.");
 		$pos->addListItem("2", "Developed code in Java 1.5  on J2EE platform including Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet) and TopLink 9.0. Development tools included Intellij 6.0, svn, Borland Starteam, Toad, SQuirrel SQL Client, Cruise Control, Enterprise Architect 7");
 		$pos->addListItem("3", "Created scheduled jobs for sweeping expired database content");
 		$pos->addListItem("4", "Created JMeter test plans and reporting tools to simulate heavy load on high-profile chicagotribune.com website.");
