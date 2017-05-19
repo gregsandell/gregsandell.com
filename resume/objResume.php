@@ -106,7 +106,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - present",
 					"Contract", "Front End Developer Consultant");
-		$pos->addListItem("1", "Developer for hosted web application <i>auction.com</i>, Real Estate auction transaction platform");
+		$pos->addListItem("1", "Responsible for Front End coding of site components:  Search & Discovery, Event Details, Calendar, User prefs and personalization, and Home page");
 		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS, React, ES6 Javascript & Python");
     $pos->addListItem("3", "Built apps in using tools:  nodeJS, Webpack, npm, nvm");
     $pos->addListItem("4", "Wrote demo with demographic maps for commercial Real Estate using Esri's ArcGIS javascript API");
@@ -187,10 +187,11 @@ $pos->addListItem("6", "Helped transition team from waterfall to agile approach 
     // 17 months
 		$pos = $resume->addPosition($globals->Key->icross, "iCrossing", "Chicago", "Oct 08 - Mar 2010",
 					"W2/Direct Placement", "Sr. Software Engineer");  
-		$pos->addListItem("1", " Developed hosted web application Merchantize, a workflow tool for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber).");
-		$pos->addListItem("2", "Developed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.");
-		$pos->addListItem("3", "Developed custom reports in Apache POI for clients for clients Sears, The Gap, Hilton, Lands End, LEGO, and Williams Sonoma.");
-		$pos->addListItem("4", "Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes.");
+		$pos->addListItem("1", "Developer for hosted web application Merchantize, an Ad Technology tool for managing clients' Paid Search campaigns with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber)");
+		$pos->addListItem("2", "Responsible for Front End Development of Java and JSP components");
+		$pos->addListItem("3", "Developed a 3-tier daily product feed lifecycle with Perl, Bash, Java, XML and Unix cron.");
+		$pos->addListItem("4", "Developed custom reports in Apache POI for clients for clients Sears, The Gap, Hilton, Lands End, LEGO, and Williams Sonoma.");
+		$pos->addListItem("5", "Performed regular support of application database including resolving data integrity issues, synchronizing with remote search engine data, bulk keyword deletes and cost-per-click changes.");
  
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	TRIBUNE
