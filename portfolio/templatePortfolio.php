@@ -32,6 +32,7 @@
 		<base url="<?php print($_cpath) ?>" />
 		<script type="text/javascript">
 			var g_projectNames = new Array(
+				"<?php print($g_globals->Key->tenx) ?>",
 				"<?php print($g_globals->Key->sears) ?>",
 				"<?php print($g_globals->Key->path) ?>",
 				"<?php print($g_globals->Key->tr) ?>",

@@ -65,8 +65,29 @@ class Portfolio {
 		return($alt);
 	}
 
+		function addClient($key, $client, $url, $linkText, $description, $role, $technologies,
+    		$timeframe, $image, $width, $height, $iconImage, $iWidth, $iHeight,
+    		$hostedUrl, $hostedState, $lastKey, $nextKey) {
+
+
 	function loadData() {
-		$client = $this->addClient($this->globals->Key->sears, "Sears", "sears", "Sears", 
+		$client = $this->addClient($this->globals->Key->ten-x, "Ten-X/auction.com", "tenx", "Ten-X/auction.com",
+			"", "", "", "",
+			"/portfolio/resources/sears/images/homepage_500x290.png", "500", "290",
+			"", "", "", "", "",
+			$this->globals->Key->tenx, $this->globals->Key->path);
+//		$client->addThumbdoc("1", "/portfolio/resources/sears/images/homepage.png", "/portfolio/resources/sears/images/homepageThumb.png",
+//				"Sears: mobile web home page.");
+//		$client->addThumbdoc("2", "/portfolio/resources/sears/images/rewards.png", "/portfolio/resources/sears/images/rewardsThumb.png",
+//				"Sears:  Rewards page.");
+//		$client->addThumbdoc("3", "/portfolio/resources/sears/images/loadUp.png", "/portfolio/resources/sears/images/loadUpThumb.png",
+//				"Sears:  Currently linked cards.");
+//		$client->addThumbdoc("4", "/portfolio/resources/sears/images/enteringCard.png", "/portfolio/resources/sears/images/enteringCardThumb.png",
+//				"Sears:  entering a new card to be linked.");
+//		$client->addThumbdoc("5", "/portfolio/resources/sears/images/cardAdded.png", "/portfolio/resources/sears/images/cardAddedThumb.png",
+//				"Sears:  card successfully linked.");
+
+		$client = $this->addClient($this->globals->Key->sears, "Sears", "sears", "Sears",
 			"", "", "", "",
 			"/portfolio/resources/sears/images/homepage_500x468.png", "500", "468",
 			"", "", "", "", "",
@@ -81,7 +102,9 @@ class Portfolio {
 				"Sears:  entering a new card to be linked.");
 		$client->addThumbdoc("5", "/portfolio/resources/sears/images/cardAdded.png", "/portfolio/resources/sears/images/cardAddedThumb.png",
 				"Sears:  card successfully linked.");
-		$client = $this->addClient($this->globals->Key->path, "American Association of Critical Care Nurses", "path", "AACN", 
+
+
+				$client = $this->addClient($this->globals->Key->path, "American Association of Critical Care Nurses", "path", "AACN",
 			"", "", "", "",
 			"/portfolio/resources/path/images/dysrhythmiaMonitoring_500x468.png", "500", "468",
 			"", "", "", "", "",

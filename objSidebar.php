@@ -115,7 +115,7 @@ class SidebarPageManager {
 
 		// Internal URLs
 		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'url', "/portfolio/pages/pagePublications.php", false);
-		$g_samplesPageObj = new LinkObj2("samples", "Main Samples Page", 'url', "/portfolio/templatePortfolio.php", false);
+		$g_samplesPageObj = new LinkObj2("samples", "Main Portfolio Page", 'url', "/portfolio/templatePortfolio.php", false);
 		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", 'url', "/portfolio/samples/bwhitney", true);
 		$g_resumeLinkObj = new LinkObj2("resume", "Resume", 'url', "/resume/pageResume.php", false);
 
@@ -296,6 +296,14 @@ class SidebarPageManager {
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
+		$page->addBlogObj($g_scorpBlogObj);
+		//
+		// pageClient_tenx.php
+		//
+		$page = $this->addPage("pageClient_tenx");
+		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_scorpBlogObj);
 	}
 } 
