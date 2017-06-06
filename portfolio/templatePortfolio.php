@@ -103,13 +103,8 @@
 										<h1>Client: <?php print($client->client) ?></h1>
 									</td>
 								</tr>
-								<tr>
-									<td align="left">
-										<h1>Client: <?php print($client->client) ?></h1>
-									</td>
-								</tr>
 							</table>
-							<i>(Click on image for more detail)</i><br/>
+							<div style="text-align: center; font-style: italic">(Click on image for more detail)</div>
 							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
 								<img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
 							</a>
