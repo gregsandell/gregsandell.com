@@ -104,6 +104,7 @@
 									</td>
 								</tr>
 							</table>
+							<p><i>(Click on image below for more detail)</i></p>
 							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
 								<img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
 							</a>
