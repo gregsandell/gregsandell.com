@@ -104,7 +104,7 @@
 									</td>
 								</tr>
 							</table>
-							<div style="text-align: center; font-style: italic">(Click on image for more detail)</div>
+							<p style="text-align: center; font-style: italic">(Click on image for more detail)</p>
 							<a href="/portfolio/pages/pageClient_<?php print($key) ?>.php">
 								<img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php  print($imageBorder) ?>" valign="top"/>
 							</a>
