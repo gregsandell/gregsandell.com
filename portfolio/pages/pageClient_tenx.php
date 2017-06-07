@@ -22,7 +22,7 @@
 	}
 	$inlinePhp = $_cpath . "/portfolio/innerClientGallery.php";
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
-	$mainCopy2 = "<div>";
+	$mainCopy2 = "<div>Here is some friendly mainCopy2";
     $g_engagementDetails = "Front End Developer on the <b>auction.com</b> Real Estate auction platform.  This is an eBay-like hosted web application allowing RE investors to bid for Bank-Owned or Foreclosed properties.";
 
 include($_cpath . "/templateMain.php");
