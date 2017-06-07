@@ -68,7 +68,7 @@ class Portfolio {
 	function loadData() {
 		$client = $this->addClient($this->globals->Key->ten-x, "Ten-X/auction.com", "tenx", "Ten-X/auction.com",
 			"", "", "", "",
-			"/portfolio/resources/sears/images/homepage_500x290.png", "500", "290",
+			"/portfolio/resources/tenx/images/homepage_500x290.png", "500", "290",
 			"", "", "", "", "",
 			$this->globals->Key->tenx, $this->globals->Key->path);
 
