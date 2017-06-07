@@ -71,7 +71,7 @@ class Portfolio {
 			"/portfolio/resources/tenx/images/homepage_500x290.png", "500", "290",
 			"", "", "", "", "",
 			$this->globals->Key->tenx, $this->globals->Key->path);
-		$client->addThumbdoc("1", "homepage_500x290.png", "/portfolio/resources/tenx/images/homepageThumb.png",
+		$client->addThumbdoc("1", "/portfolio/resources/tenx/images/homepage_500x290.png", "/portfolio/resources/tenx/images/homepageThumb.png",
 				"Auction.com: homepage with search.");
 
 		$client = $this->addClient($this->globals->Key->sears, "Sears", "sears", "Sears",
