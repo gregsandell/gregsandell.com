@@ -73,6 +73,14 @@ class Portfolio {
 			$this->globals->Key->tenx, $this->globals->Key->path);
 		$client->addThumbdoc("1", "/portfolio/resources/tenx/images/homepage_500x290.png", "/portfolio/resources/tenx/images/homepageThumb.png",
 				"Auction.com: homepage with search.");
+		$client->addThumbdoc("2", "/portfolio/resources/tenx/images/searchFilterOptions_500x269.png", "/portfolio/resources/tenx/images/searchFilterOptionsThumb.png",
+				"Auction.com: search filter options.");
+		$client->addThumbdoc("3", "/portfolio/resources/tenx/images/SRPtop_500x408.png", "/portfolio/resources/tenx/images/SRPtopThumb.png",
+				"Auction.com: search results (list view).");
+		$client->addThumbdoc("4", "/portfolio/resources/tenx/images/SRPmapView_500x497.png", "/portfolio/resources/tenx/images/SRPmapViewThumb.png",
+				"Auction.com: search results (map view).");
+		$client->addThumbdoc("5", "/portfolio/resources/tenx/images/PDPafterRegistered_500x370.png", "/portfolio/resources/tenx/images/PDPafterRegisteredThumb.png",
+				"Auction.com: Property Display page with active auction.");
 
 		$client = $this->addClient($this->globals->Key->sears, "Sears", "sears", "Sears",
 			"", "", "", "",

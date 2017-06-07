@@ -21,7 +21,7 @@
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
 	</style>
-        <link rel="stylesheet" href="/lib/modalbox/1.5.4/modalbox.css" type="text/css" />
+    <link rel="stylesheet" href="/lib/modalbox/1.5.4/modalbox.css" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
@@ -78,5 +78,6 @@
 	<!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->
+
 </body>
 </html>

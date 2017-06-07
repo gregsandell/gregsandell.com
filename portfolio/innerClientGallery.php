@@ -50,7 +50,7 @@
 				title="Click to enlarge" width="100" height="100"  /></a>
 
 		<div class='highslide-caption' id='caption<?php print($count) ?>'>
-		    <?php print($thumbdoc->description) ?>
+		    <div style="color: red; font-weight: bold"><?php print($thumbdoc->description) ?></div>
 		</div> <?php
 	}    ?>
 <p class="smallComment">(Click on a thumbnail for more detail)</p>
