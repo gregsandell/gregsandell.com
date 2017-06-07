@@ -18,16 +18,16 @@ class GlobalsObj {
 			$this->Key->ubs, $this->Key->usaf, 	$this->Key->amex, $this->Key->abn, 
 			$this->Key->ies, $this->Key->ubsw, 	$this->Key->xb, $this->Key->quebecor, 
 			$this->Key->giantstep, $this->Key->taproot,	$this->Key->loyola, $this->Key->sussex, $this->Key->cnmat, $this->Key->ils);
-		$this->allPortfolioItems = array(
+		$this->allPortfolioItems = array($this->Key->tenx,
 			$this->Key->path, $this->Key->tr, $this->Key->ubs, $this->Key->usaf, 	$this->Key->amex, $this->Key->abn, 
 			$this->Key->ies, $this->Key->ubsw, 	$this->Key->xb, $this->Key->quebecor, 
 			$this->Key->maytag, $this->Key->watts, $this->Key->billwhitney, $this->Key->spectrum);
 	}
 }
 class KeyObj {
-  var $tenx = "tenx";
-  var $johndeere = "johndeere";
-  var $cybercoders = "cybercoders";
+    var $tenx = "tenx";
+    var $johndeere = "johndeere";
+    var $cybercoders = "cybercoders";
 	var $sears = "sears";
 	var $path = "path";
 	var $tr = "tr";
