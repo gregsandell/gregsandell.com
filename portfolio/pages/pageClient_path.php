@@ -23,7 +23,7 @@
 	$inlinePhp = $_cpath . "/portfolio/innerClientGallery.php";
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
-    $g_engagementDetails = "Wrote this hybrid iOS/web appstore application for the American Association of Critical Care Nurses (AACN) to replace their print media version of their product (laminated cards) with an iPhone app.  Written using jQuery Mobile, JSON, AngularJS, Trigger.io, and TestFlight";
+    $g_engagementDetails = "The samples here show work for three clients.  Two of these are mobile applications for medical purposes. <i>AACN Bedside</i> is an iPhone app replacing old laminated card media sold by the American Association of Critical Care Nurses.  This is a hybrid mobile app written with a web stack but wrapped inside a native app so it could be sold on the App Store.  <i>ContinuCare</i> is an iPad ‘digital concierge’ for the iPad for client Kimberly-Clark, to connect heart patients, their nurses and caregivers.  <i>MetroPulse</i> is an interactive web tool for exploring census and demographic data for client <i>Chicago Metropolitan Agency for Planning</i>.";
 
 include($_cpath . "/templateMain.php");
 
