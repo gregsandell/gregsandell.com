@@ -18,7 +18,7 @@
 	$mainCopy = "";
 	if (isset($position)) {
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
-		$mainCopy = "<h1>Client: American Association of Critical Care Nurses</h1>";
+		$mainCopy = "<h1>Client: Pathfinder Software</h1>";
 	}
 	$inlinePhp = $_cpath . "/portfolio/innerClientGallery.php";
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";

@@ -91,7 +91,6 @@ class Portfolio {
 			"/portfolio/resources/sears/images/homepage_500x468.png", "500", "468",
 			"", "", "", "", "",
 			$this->globals->Key->tenx, $this->globals->Key->path);
-	    echo "<script>console.log( 'after sears addClient() call' );</script>";
 		$client->addThumbdoc("1", "/portfolio/resources/sears/images/homepage.png", "/portfolio/resources/sears/images/homepageThumb.png",
 				"Sears: mobile web home page.", 322, 571);
 		$client->addThumbdoc("2", "/portfolio/resources/sears/images/rewards.png", "/portfolio/resources/sears/images/rewardsThumb.png",
@@ -103,8 +102,7 @@ class Portfolio {
 		$client->addThumbdoc("5", "/portfolio/resources/sears/images/cardAdded.png", "/portfolio/resources/sears/images/cardAddedThumb.png",
 				"Sears:  card successfully linked.", 321, 568);
 
-
-		$client = $this->addClient($this->globals->Key->path, "American Association of Critical Care Nurses", "path", "AACN",
+		$client = $this->addClient($this->globals->Key->path, "Pathfinder Software", "path", "Pathfinder",
 			"", "", "", "",
 			"/portfolio/resources/path/images/dysrhythmiaMonitoring_500x468.png", "500", "468",
 			"", "", "", "", "",
