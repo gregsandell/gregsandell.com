@@ -19,25 +19,6 @@
 	
 ?>
 
-<script type="text/javascript" src="/lib/highslide/3.2.0/highslide.js"></script>
-
-<script type="text/javascript">
-
-	hs.registerOverlay(
-    	{
-    		thumbnailId: null,
-    		overlayId: 'controlbar',
-    		position: 'top right',
-    		hideOnMouseOut: true
-		}
-	);
-	
-    hs.graphicsDir = '/lib/highslide/3.2.0/graphics/';
-    hs.outlineType = 'rounded-white';
-</script>
-
-<link rel="stylesheet" href="/lib/highslide/3.2.0/highslide.css" type="text/css" />
-
 <div>
 
 <p class="headerLike">Samples</p> 
@@ -53,10 +34,4 @@
 
 <p class="smallComment">(Click on a thumbnail for more detail)</p>
 
-<div id="controlbar" class="highslide-overlay controlbar">
-	<a href="#" class="previous" onclick="return hs.previous(this)" title="Previous (left arrow key)"></a>
-	<a href="#" class="next" onclick="return hs.next(this)" title="Next (right arrow key)"></a>
-    <a href="#" class="highslide-move" onclick="return false" title="Click and drag to move"></a>
-    <a href="#" class="close" onclick="return hs.close(this)" title="Close"></a>
-</div>
 </div>
