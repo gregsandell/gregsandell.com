@@ -35,16 +35,15 @@ if (array_key_exists($g_key, $g_resume->positionObjArray)) {
 		</dt>
 		<dd>
             <?php print($g_engagementDetails) ?>
-			<a href='#' title='Greg Sandell Client Samples' style='font-size: 13px' 
-				onclick='Modalbox.show($("testContent"), {title: this.title, height: 500 }); return false;'>More...
-			</a>
+			<a href="#testContent"
+				class="html5lightbox" data-width="400" data-height="300">More...</a>
 		</dd>
 	</dl> 
 	<div id='testContent' style='display: none; padding: 5px'>
 		<h1><?php print($g_client->client) ?> Engagement Details</h1>
-		<ul style='padding: 7px'>  <?php
+		<ul style='padding: 7px; list-style-type: disc'>  <?php
 			foreach ($position->listTextArray as $line) { ?>
-				<li style='padding: 0px 0px 5px 0px'><?php print($line) ?></li>  <?php
+				<li style='padding: 0px 0px 5px 0px; text-align: left'><?php print($line) ?></li>  <?php
 			}  ?>
 		</ul>
 	</div>   <?php

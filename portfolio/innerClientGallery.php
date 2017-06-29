@@ -43,16 +43,14 @@
 <p class="headerLike">Samples</p> 
 <?php
 	$count = 0;
-	foreach ($thumbdocs as $thumbdoc) { 
-		$count += 1;  ?>
-		<a id="thumb<?php print($count) ?>" href="<?php print($thumbdoc->image) ?>" class="highslide" onclick="return hs.expand(this, { captionId: 'caption<?php print($count) ?>' } )">
-			<img src="<?php print($thumbdoc->thumbImage) ?>" alt="Highslide JS" 
-				title="Click to enlarge" width="100" height="100"  /></a>
-
-		<div class='highslide-caption' id='caption<?php print($count) ?>'>
-		    <div style="color: red; font-weight: bold"><?php print($thumbdoc->description) ?></div>
-		</div> <?php
+	foreach ($thumbdocs as $thumbdoc) {  ?>
+		<a href="<?php print($thumbdoc->image) ?>" data-thumbnail="<?php print($thumbdoc->thumbImage) ?>"
+        	class="html5lightbox" data-group="set1" data-width="<?php print($thumbdoc->width) ?>"
+        	data-thumbwidth="150" data-thumbheight="150" data-shownavigation="false"
+        	data-height="<?php print($thumbdoc->height) ?>" title="<?php print($thumbdoc->description) ?>">
+        	<img src="<?php print($thumbdoc->thumbImage) ?>" style="margin-right: 10px"/></a> <?php
 	}    ?>
+
 <p class="smallComment">(Click on a thumbnail for more detail)</p>
 
 <div id="controlbar" class="highslide-overlay controlbar">

@@ -10,11 +10,11 @@
 		$g_globals = new GlobalsObj();
 	}
 	$g_slideshowKey = "projects";
-	$g_key = $g_globals->Key->loyola;
+	$g_key = $g_globals->Key->spectrum;
 	$g_sidebarKey = "pageClient_" . $g_key;
 	$g_section = "samples";
 	$linksTitle = "Other Site Links";
-	$position = $g_resume->getPosition($g_key);
+	$position = $g_resume->getPosition($g_globals->Key->loyola);
 	$mainCopy = "";
 	if (isset($position)) {
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */

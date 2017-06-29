@@ -14,9 +14,17 @@
 	<meta name="description" content="" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<script type="text/javascript" src="/lib/prototype/1.5.1/prototype.js"></script>
-	<script type="text/javascript" src="/lib/scriptaculous/1.7.1/scriptaculous.js"></script>
 	<script type="text/javascript" src="/lib/modalbox/1.5.4/modalbox.js"></script>
+	<?php
+	$url = $_SERVER['REQUEST_URI'];
+	if ($url === '/') { ?>
+	  <script type="text/javascript" src="/lib/prototype/1.5.1/prototype.js"></script>
+	  <script type="text/javascript" src="/lib/scriptaculous/1.7.1/scriptaculous.js"></script>  <?php
+	}
+	if (strpos($url, 'portfolio') !== false) { ?>
+	  <script type="text/javascript" src="/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" src="/lib/html5lightbox/7.0/html5lightbox.js"></script> <?php
+	} ?>
 	<style type="text/css">
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
