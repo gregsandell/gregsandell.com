@@ -14,7 +14,6 @@
 	<meta name="description" content="" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<script type="text/javascript" src="/lib/modalbox/1.5.4/modalbox.js"></script>
 	<?php
 	$url = $_SERVER['REQUEST_URI'];
 	if ($url === '/') { ?>
@@ -29,7 +28,6 @@
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
 	</style>
-    <link rel="stylesheet" href="/lib/modalbox/1.5.4/modalbox.css" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
