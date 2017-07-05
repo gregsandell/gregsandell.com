@@ -285,5 +285,8 @@
 		font-weight: bold;
 		margin-top: 7px;
 	}
+	.moreMusic {
+		display: inline;
+	}
 
 

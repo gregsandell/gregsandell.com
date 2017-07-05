@@ -20,7 +20,7 @@
 	  <script type="text/javascript" src="/lib/prototype/1.5.1/prototype.js"></script>
 	  <script type="text/javascript" src="/lib/scriptaculous/1.7.1/scriptaculous.js"></script>  <?php
 	}
-	if (strpos($url, 'portfolio') !== false) { ?>
+	if (strpos($url, 'portfolio') !== false || strpos($url, 'music') !== false) { ?>
 	  <script type="text/javascript" src="/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
 	  <script type="text/javascript" src="/lib/html5lightbox/7.0/html5lightbox.js"></script> <?php
 	} ?>
@@ -43,7 +43,7 @@
 				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
 				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="/portfolio/templatePortfolio.php">Portfolio</a></li>
 				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="/code/pageCode.php">Code</a></li>
-				<li class="<?php print($g_section == 'talks' ? 'active' : '') ?>"><a href="/talks/pageTalks.php">Talks</a></li>
+				<li class="<?php print($g_section == 'music' ? 'active' : '') ?>"><a href="/music/pageMusic.php">Music</a></li>
 				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/blog/pageBlogs.php">Blog</a></li>
 			</ul>
 		</div>
