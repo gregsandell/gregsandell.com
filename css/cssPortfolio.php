@@ -288,5 +288,8 @@
 	.moreMusic {
 		display: inline;
 	}
+	.hiddenSlides {
+		display: none;
+	}
 
 
