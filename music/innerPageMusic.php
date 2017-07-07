@@ -37,6 +37,9 @@
 			<a href="https://youtu.be/DyK3oSXxnSQ"
 				class="html5lightbox" data-group="set1"
 				title="Quartet for Violin, Clarinet, Cello and Piano"></a>
+			<a href="https://youtu.be/oSyXpuarmKU"
+				class="html5lightbox" data-group="set1"
+				title="Pomona College (piano introduction)"></a>
 		</div>
 	</dd>
 	<dt>Danse ce Soir - Book and CD</dt>
