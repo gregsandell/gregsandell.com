@@ -40,9 +40,15 @@
 			<a href="https://youtu.be/oSyXpuarmKU"
 				class="html5lightbox" data-group="set1"
 				title="Pomona College (piano introduction)"></a>
+			<a href="https://youtu.be/t4txAVCQkEQ"
+				class="html5lightbox" data-group="set1"
+				title="Gavotte for Piano"></a>
 		</div>
 	</dd>
-	<dt>Danse ce Soir - Book and CD</dt>
+	<dt>Danse			<a href="https://youtu.be/oSyXpuarmKU"
+             				class="html5lightbox" data-group="set1"
+             				title="Pomona College (piano introduction)"></a>
+ ce Soir - Book and CD</dt>
 	<dd>
 		<a href="http://www.melbay.com/Products/98118/danse-ce-soir--fiddle-and-accordion-music-of-quebec.aspx" data-thumbnail="/music/resources/images/danseCeSoir/bookThumb.png"
 			class="html5lightbox" data-group="set2" data-width="600"
