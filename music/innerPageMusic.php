@@ -138,6 +138,9 @@
 			<a href="https://youtu.be/sPyhMHonEIU"
 				class="html5lightbox" data-group="set3"
 				title="It Must Be a Camel by Frank Zappa, transcribed by Greg Sandell"></a>
+			<a href="https://youtu.be/bQWmV3CKmqs"
+				class="html5lightbox" data-group="set3"
+				title="Twenty Small Cigars by Frank Zappa, transcribed by Greg Sandell"></a>
 		</div>
 	</dd>
 	<dt>Photos</dt> 
