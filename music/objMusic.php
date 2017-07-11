@@ -12,7 +12,7 @@ class Music {
 		$this->photoAlbum->addPhoto("01c_july4EvanstonAccordion.JPG",
 		    "Playing Irish music", 586, 800);
 		$this->photoAlbum->addPhoto("01d_gregTonyFireplaceJan1970.jpg",
-		    "My first bass guitar, a starburst Harmony H-22.  I should have held onto it, it's totally hipster now.", 800, 734);
+		    "My first bass guitar, a starburst Harmony H-22.  I should have held onto it, it's totally hipster and work big bucks now.", 800, 734);
 		$this->photoAlbum->addPhoto("02_tonyGregComposite.PNG",
 		    "My brother and I still play music together today", 800, 734);
 		$this->photoAlbum->addPhoto("03_dulcimerLaguna.JPG",
@@ -70,7 +70,7 @@ class Music {
 		$this->photoAlbum->addPhoto("26_withZosie.png",
 		    "Playing a gig with my daughter Zosie", 800, 531);
 		$this->photoAlbum->addPhoto("28_wineWalk2017_7.JPG",
-		    "Playing a gig band Junction 605", 800, 600);
+		    "Playing a gig with band Junction 605", 800, 600);
 	}
 }
 
