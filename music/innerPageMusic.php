@@ -46,6 +46,10 @@
 			<a href="https://youtu.be/8CYdG9FrzVw"
 				class="html5lightbox" data-group="set1"
 				title="Study in Fifths No. 2 for Piano"></a>
+			<a href="https://youtu.be/QjIfyvMVBAQ"
+				class="html5lightbox" data-group="set1"
+				title="The Guitar for Baritone and Piano"></a>
+
 		</div>
 	</dd>
 	<dt>Danse ce Soir - Book and CD</dt>
@@ -141,6 +145,9 @@
 			<a href="https://youtu.be/bQWmV3CKmqs"
 				class="html5lightbox" data-group="set3"
 				title="Twenty Small Cigars by Frank Zappa, transcribed by Greg Sandell"></a>
+			<a href="https://youtu.be/FNVJwJCilHk"
+				class="html5lightbox" data-group="set3"
+				title="Hope by Mahavishnu Orchestra, transcribed by Greg Sandell"></a>
 		</div>
 	</dd>
 	<dt>Photos</dt> 
