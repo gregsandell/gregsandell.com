@@ -28,11 +28,23 @@ from those days?  (Courtesy of the <a href='/portfolio/portfolioPopup.php?url=ht
 <a href='/portfolio/portfolioPopup.php?url=/portfolio/publications/1994-05-01_effect_JASA.pdf' TARGET=_BLANK>1994</a>
 </dd>
 <dt>Dissertation</dt>
-<dd>Title:  
+<dd>
+PhD Dissertation, Northwestern University, 1991.
+Title:
 'Concurrent Timbres in Orchestration: a Perceptual Study of Factors Determining 'blend'<br/>
-PhD Dissertation, Northwestern University, 1991.  Online abstract 
-<a href='/portfolio/portfolioPopup.php?url=http://adsabs.harvard.edu/abs/1991PhDT.......313S' TARGET=_BLANK>here</a>.
-PDF <a href='/portfolio/portfolioPopup.php?url=/portfolio/publications/1991-12-01_concurrent_diss.pdf' TARGET=_BLANK>here</a>.</dd>
+
+<a href='/portfolio/portfolioPopup.php?url=http://adsabs.harvard.edu/abs/1991PhDT.......313S' TARGET=_BLANK>Online abstract</a>.
+<br/>As a series of PDFs:
+<span style='font-size: 9px'>
+<a href='/portfolio/publications/dissertation/in_parts/01_cover_TOC.pdf'>1 (4.9 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/02_chapter_1.pdf'>2 (23.9 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/03_chapter_2.pdf'>3 (8.6 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/04_chapter_3.pdf'>4 (23.7 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/05_chapter_4.pdf'>5 (36.8 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/06_chapter_5.pdf'>6 (5 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/in_parts/07_references.pdf'>7 (4.3 mb)</a>
+</span>
+<br/><a href='/portfolio/publications/dissertation/gregSandell1991DissertationEntire.pdf' download>One large PDF (107 mb)</a>
 <dt>Links to Articles in Conference Proceedings</dt>
 
 <dd><b>Acoustical Society of America</b>:  
