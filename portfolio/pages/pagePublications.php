@@ -44,7 +44,7 @@ Title:
 &nbsp;<a href='/portfolio/publications/dissertation/in_parts/06_chapter_5.pdf'>6 (5 mb)</a>
 &nbsp;<a href='/portfolio/publications/dissertation/in_parts/07_references.pdf'>7 (4.3 mb)</a>
 </span>
-<br/><a href='/portfolio/publications/dissertation/gregSandell1991DissertationEntire.pdf' download>One large PDF (107 mb)</a>
+<br/><a href='https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0'>One large PDF (107 mb)</a>
 <dt>Links to Articles in Conference Proceedings</dt>
 
 <dd><b>Acoustical Society of America</b>:  
