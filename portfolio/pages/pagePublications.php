@@ -36,13 +36,13 @@ Title:
 <a href='http://adsabs.harvard.edu/abs/1991PhDT.......313S'>Online abstract</a>.
 <br/>As a series of PDFs:
 <span style='font-size: 9px'>
-<a href='/portfolio/publications/dissertation/in_parts/01_cover_TOC.pdf'>1 (4.9 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/02_chapter_1.pdf'>2 (23.9 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/03_chapter_2.pdf'>3 (8.6 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/04_chapter_3.pdf'>4 (23.7 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/05_chapter_4.pdf'>5 (36.8 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/06_chapter_5.pdf'>6 (5 mb)</a>
-&nbsp;<a href='/portfolio/publications/dissertation/in_parts/07_references.pdf'>7 (4.3 mb)</a>
+<a href='/portfolio/publications/dissertation/01_cover_TOC.pdf'>1 (4.9 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/02_chapter_1.pdf'>2 (23.9 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/03_chapter_2.pdf'>3 (8.6 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/04_chapter_3.pdf'>4 (23.7 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/05_chapter_4.pdf'>5 (36.8 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/06_chapter_5.pdf'>6 (5 mb)</a>
+&nbsp;<a href='/portfolio/publications/dissertation/07_references.pdf'>7 (4.3 mb)</a>
 </span>
 <br/><a href='https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0'>One large PDF (107 mb)</a>
 <dt>Links to Articles in Conference Proceedings</dt>
