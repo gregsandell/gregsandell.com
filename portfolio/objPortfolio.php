@@ -117,7 +117,7 @@ class Portfolio {
 				"Kimberly-Clark ContinuCare: Dashboard", 784, 721);
 		$client->addThumbdoc("5", "/portfolio/resources/path/images/continuCare_medications_785x721.png", "/portfolio/resources/path/images/continuCare_medications_thumb.png",
 				"Kimberly-Clark ContinuCare: Medications", 785, 721);
-		$client->addThumbdoc("6", "https://youtu.be/FfeH4n7k5pA", "/portfolio/resources/path/images/metroPulseThumb.png",
+		$client->addThumbdoc("6", "https://youtu.be/GFjvrAIEmCs", "/portfolio/resources/path/images/metroPulseThumb.png",
 				"MetroPulse Research Tool on City Demographics (video demo)", 600, 400);
 
 
