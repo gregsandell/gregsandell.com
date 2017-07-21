@@ -1,5 +1,7 @@
 <?php
     $_cpath = $_SERVER['DOCUMENT_ROOT'];
+    $g_title = 'Greg Sandell - Code Samples';
+
     ?>
 <h1>Code</h1>
 <p>

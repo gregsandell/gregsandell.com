@@ -4,6 +4,7 @@
 	include($_cpath . "/music/objMusic.php");
 	$g_music = new Music();
 	$g_music->loadData();
+	$g_title = 'Greg Sandell - Music';
 
 ?>
 <h1>Music</h1>

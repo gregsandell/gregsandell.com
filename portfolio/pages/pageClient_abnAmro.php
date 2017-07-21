@@ -16,6 +16,7 @@
 	$linksTitle = "Links";
 	$position = $g_resume->getPosition($g_key);
 	$mainCopy = "";
+	$g_title = 'Greg Sandell - Portfolio - Banking';
 	if (isset($position)) {
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";

@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developer for overhaul of company website in PHP.";
+	$g_title = 'Greg Sandell - Portfolio';
 
 include($_cpath . "/templateMain.php");
 

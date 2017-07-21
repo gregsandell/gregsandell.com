@@ -3,12 +3,15 @@
 	if (!isset($g_section)) {
 		die("In file 'templateMain.php', the global var 'g_section' was not set by the including file.  At the very least it must be set to a blank string.");
 	}
+	if (!isset($g_title)) {
+		$g_title = 'Greg Sandell';
+	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Greg Sandell</title>
+	<title><?php print($g_title) ?></title>
 	<LINK REL="SHORTCUT ICON" HREF="/image/favicon.ico" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />

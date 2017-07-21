@@ -25,6 +25,7 @@
 	// $inlinePhp2 = "";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Wrote an audio-based java applet demonstrating the relationship between spectrum and waveform";
+	$g_title = 'Greg Sandell - Portfolio - Education';
 
 include($_cpath . "/templateMain.php");
 

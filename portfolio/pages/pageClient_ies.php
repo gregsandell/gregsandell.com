@@ -15,6 +15,7 @@
 	$g_section = "samples";
 	$linksTitle = "Other Site Links";
 	$position = $g_resume->getPosition($g_key);
+	$g_title = 'Greg Sandell - Portfolio - Education';
 	$mainCopy = "";
 	if (isset($position)) {
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */

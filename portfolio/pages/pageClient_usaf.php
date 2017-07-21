@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Java Developer on projects for Lockheed's GCSS contract (Global Combat Support Systems) with the US Air Force, supporting Data Services and the Air Force Portal.";
+	$g_title = 'Greg Sandell - Portfolio - Government';
 
 include($_cpath . "/templateMain.php");
 

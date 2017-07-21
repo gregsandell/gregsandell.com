@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developer for web tier of Pinpoint, UBS's Level-2 Direct Market Access Electonic Trading platform.";
+	$g_title = 'Greg Sandell - Portfolio - Banking';
 
 include_once($_cpath . "/templateMain.php");
 

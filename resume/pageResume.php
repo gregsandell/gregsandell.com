@@ -6,6 +6,8 @@
 	$inlinePhp = $_cpath . "/resume/innerPageResume.php";
 	$g_sidebarKey = "pageResume";
 	$g_slideshowKey = "";
+	$g_title = 'Greg Sandell - Resume';
+
 
 include($_cpath . "/templateMain.php");
 

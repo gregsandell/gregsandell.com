@@ -15,6 +15,7 @@
 	$g_section = "samples";
 	$linksTitle = "Other Site Links";
 	$position = $g_resume->getPosition($g_key);
+	$g_title = 'Greg Sandell - Portfolio - eCommerce';
 	$mainCopy = "";
 	if (isset($position)) {
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";

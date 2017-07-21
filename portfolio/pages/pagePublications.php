@@ -5,6 +5,8 @@
 	$g_sidebarKey = "pagePublications";
     $g_slideshowKey = "";
 	$innerPhp = "";
+	$g_title = 'Greg Sandell - Publications';
+
 	$mainCopy = "
 				<h1>Publications</h1>
 <p><p>Prior to becoming a professional software developer, I was a graduate student and then 

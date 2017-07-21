@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developed ASP-based E-commerce website for golf retailer Edwin Watts.  The site produced $268k in sales in the first three months.";
+	$g_title = 'Greg Sandell - Portfolio - eCommerce';
 
 include($_cpath . "/templateMain.php");
 

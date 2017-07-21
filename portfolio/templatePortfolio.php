@@ -22,7 +22,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Greg Sandell</title>
+		<title>Greg Sandell - Portfolio</title>
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
 		<style type="text/css">

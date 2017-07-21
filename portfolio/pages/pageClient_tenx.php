@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Front End Developer on the <b>auction.com</b> Real Estate auction platform.  This is an eBay-like hosted web application allowing RE investors to bid for Bank-Owned or Foreclosed properties.";
+	$g_title = 'Greg Sandell - Portfolio - Real Estate';
 
 include($_cpath . "/templateMain.php");
 

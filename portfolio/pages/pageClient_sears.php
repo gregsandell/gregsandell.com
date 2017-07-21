@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Developer on the core mobile team for Sears' mobile presence.  This feature allowed customers to link their credit cards with the Sears loyalty card, Shop Your Way Rewards.";
+	$g_title = 'Greg Sandell - Portfolio - eCommerce';
 
 include($_cpath . "/templateMain.php");
 

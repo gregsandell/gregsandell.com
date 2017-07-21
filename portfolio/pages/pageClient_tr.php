@@ -24,6 +24,7 @@
 	$inlinePhp2 = $_cpath . "/portfolio/innerClientDescription.php";
 	$mainCopy2 = "<div>";
     $g_engagementDetails = "Worked on HIE Advantage Analytics, an SaaS platform that uses Healthcare Information Exchange (HIE) data to answer questions about complex clinical situations.";
+	$g_title = 'Greg Sandell - Portfolio - Healthcare';
 
 include($_cpath . "/templateMain.php");
 
