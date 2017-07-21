@@ -1,8 +1,9 @@
 <?php
-    $_http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+    include('lib/Mobile_Detect.php');
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
+	$detect = new Mobile_Detect;
 
-if (strpos($_http_user_agent, "obile") !== false) { ?>
+if ($detect->isMobile() && !$detect->isTablet()) { ?>
 	  <html><head>
     <meta HTTP-EQUIV="REFRESH" content="0; url=/j">
 	  </head><body></body></html>  <?php
