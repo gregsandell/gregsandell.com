@@ -53,6 +53,7 @@ if ($g_slideshowKey != "") {
 				document.images.slide.filters[0].apply();
 			}
 			document.images.slide.src = imageholder[imageOrder[whichimage]].src;
+			console.log(imageholder[imageOrder[whichimage]].src)
 			if (ie) {
 				document.images.slide.filters[0].play();
 			}

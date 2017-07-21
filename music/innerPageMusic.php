@@ -159,13 +159,13 @@
 			data-height="<?php print($g_music->photoAlbum->photos[0]->height) ?>" 
 			data-titlecss="<?php print($titleCss) ?>"
 			data-thumbwidth="150" data-thumbheight="150"
-			data-showplaybutton="false" data-shownavigation="false"
+			data-autoslide="true" data-shownavigation="false"
 			title="<?php print($g_music->photoAlbum->photos[0]->description) ?>"> 
 			<img src="/music/resources/images/playingMusic/daMuseumThumb.png" style="margin-right: 10px"/></a> 
 		<a href="<?php print($g_music->photoAlbum->photos[1]->image) ?>"
 			data-thumbnail="/music/resources/images/playingMusic/flourocarbonsMoogThumb.png" 
 			class="html5lightbox" data-group="set4" 
-			data-showplaybutton="false" data-shownavigation="false"
+			data-shownavigation="false" data-autoslide="true"
 			data-width="<?php print($g_music->photoAlbum->photos[1]->width) ?>"
 			data-height="<?php print($g_music->photoAlbum->photos[1]->height) ?>" 
 			title="<?php print($g_music->photoAlbum->photos[1]->description) ?>"> 
@@ -173,7 +173,7 @@
 		<a href="<?php print($g_music->photoAlbum->photos[2]->image) ?>"
 			data-thumbnail="/music/resources/images/playingMusic/gregAccordionThumb.png" 
 			class="html5lightbox" data-group="set4" 
-			data-showplaybutton="false" data-shownavigation="false"
+			data-shownavigation="false" data-autoslide="true"
 			data-width="<?php print($g_music->photoAlbum->photos[2]->width) ?>"
 			data-height="<?php print($g_music->photoAlbum->photos[2]->height) ?>" 
 			title="<?php print($g_music->photoAlbum->photos[2]->description) ?>"> 
@@ -182,23 +182,22 @@
 			<a href="<?php print($g_music->photoAlbum->photos[3]->image) ?>"
 				data-width="<?php print($g_music->photoAlbum->photos[3]->width) ?>"
 				data-height="<?php print($g_music->photoAlbum->photos[3]->height) ?>" 
-				data-showplaybutton="false" data-shownavigation="false"
+				data-shownavigation="false" data-autoslide="true"
 				class="html5lightbox" data-group="set4" title="<?php print($g_music->photoAlbum->photos[3]->description) ?>">More...</a>
 		</div>
 		<div class="hiddenSlides">
 			<a href="<?php print($g_music->photoAlbum->photos[4]->image) ?>"
 				data-width="<?php print($g_music->photoAlbum->photos[4]->width) ?>"
 				data-height="<?php print($g_music->photoAlbum->photos[4]->height) ?>" 
-				data-showplaybutton="false" data-shownavigation="false"
+				data-shownavigation="false" data-autoslide="true"
 				class="html5lightbox" data-group="set4" title="<?php print($g_music->photoAlbum->photos[4]->description) ?>">More...</a> <?php
 			for($i = 5; $i < sizeof($g_music->photoAlbum->photos); ++$i) {
                $photo = $g_music->photoAlbum->photos[$i]; ?>
 				<a href="<?php print($photo->image) ?>"
 					data-width="<?php print($photo->width) ?>"
 					data-height="<?php print($photo->height) ?>" 
-					data-showplaybutton="false" data-shownavigation="false"
+					data-shownavigation="false" data-autoslide="true"
 					class="html5lightbox" data-group="set4" title="<?php print($photo->description) ?>"></a> <?php
-
             } ?>
 		</div>
 	</dd> 
