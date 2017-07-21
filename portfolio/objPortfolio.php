@@ -84,7 +84,6 @@ class Portfolio {
 				"Auction.com: Property Display page with active auction.", 500, 370);
 		$client->addThumbdoc("6", "https://youtu.be/bTJhUGtZad0", "/portfolio/resources/tenx/images/seleniumTestsThumb.png",
 				"Auction.com Selenium Tests (video)", 600, 400);
-	    echo "<script>console.log( 'finished last ten-x addThumbdoc() call' );</script>";
 
 		$client = $this->addClient($this->globals->Key->sears, "Sears", "sears", "Sears",
 			"", "", "", "",
