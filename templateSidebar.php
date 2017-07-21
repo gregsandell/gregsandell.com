@@ -75,10 +75,12 @@ if (sizeof($g_sidebarObj->blogsArray) > 0) { ?>
 </ul> <?php
 if ($g_slideshowKey != "") {
 	$slideshow = $g_slideshowMan->get($g_slideshowKey);
-	print("<h2>" . $slideshow->title . "</h2><br/>");  ?>
+	print("<h2>" . $slideshow->title . "</h2><br/>"); ?>
 	<div id="rotatingLogosDiv" style="text-align: center">
+		<a id="slideshow-link" href="#">
 		<img src="/image/logos/spacer.gif" alt="" name="slide" border="0" style="filter:blendTrans(duration=2)" width="<?php print($slideshow->width) ?>" height="<?php print($slideshow->height) ?>"/>
-						</div>
+		</a>
+	</div>
 	<script type="text/javascript" src="/numbersWithoutReplacement.js"></script>
 	<script type="text/javascript">
 		//specify interval between slide (in mili seconds)
@@ -96,13 +98,16 @@ if ($g_slideshowKey != "") {
 		var whichlink = 0;
 		var whichimage = 0;
 		var imageOrder = new Array();
+		var slideObj;
 		function loadImages() {
 			numImages = 0;  <?php
 			$count = 0;
-			foreach ($slideshow->imgsArray as $file) {  ?>
-				imageholder[<?php print($count) ?>] = new Image();
-				imageholder[<?php print($count) ?>].src = "/image/<?php print($slideshow->imgsSubdir) ?>/<?php print($file) ?>";
-				<?php
+			foreach ($slideshow->imgsArray as $imgObj) {  ?>
+			    slideObj = {};
+				slideObj.img = new Image();
+				slideObj.img.src = "/image/<?php print($slideshow->imgsSubdir) ?>/<?php print($imgObj->file) ?>";
+				slideObj.url = "<?php print($imgObj->url) ?>";
+				imageholder[<?php print($count) ?>] = slideObj; <?php
 				$count += 1;  
 			} ?>
 			numImages = <?php print($count) ?>;
@@ -116,7 +121,15 @@ if ($g_slideshowKey != "") {
 			if (ie) {
 				document.images.slide.filters[0].apply();
 			}
-			document.images.slide.src = imageholder[imageOrder[whichimage]].src;
+			var item = imageholder[imageOrder[whichimage]];
+			document.images.slide.src = item.img.src;
+			var linkEl = document.getElementById('slideshow-link');
+			linkEl.href = item.url;
+			if (item.url == '#') {
+				linkEl.onclick = function() { return false; };
+				linkEl.style = "pointer-events: none; cursor: default;";
+			}
+
 			if (ie) {
 				document.images.slide.filters[0].play();
 			}

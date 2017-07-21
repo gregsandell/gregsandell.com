@@ -344,7 +344,7 @@ class Portfolio {
 			"/portfolio/resources/whitney/images/whitneyThumb.jpg", "130", "98", "/portfolio/samples/bwhitney", "Archived Live Site",
 			$this->globals->Key->watts, $this->globals->Key->spectrum);
 		$client->addThumbdoc("1", "/portfolio/resources/whitney/images/whitneyHome500x343.gif", "/portfolio/resources/whitney/images/whitneyThumb.jpg",
-				"Homepage for the Bill Whitney's portfolio pagex", 500, 343);
+				"Homepage for the Bill Whitney's portfolio page", 500, 343);
 
 		$client = $this->addClient($this->globals->Key->spectrum, "Loyola University", "spectrum", "Loyola University",
 			"Interactive demonstration of Musical Acoustics",

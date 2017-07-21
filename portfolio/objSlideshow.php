@@ -79,18 +79,19 @@ class SlideshowManager {
 		$slideshow->add("testflight.jpg");
 
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
-		$slideshow->add("abnThumb.gif");
-		$slideshow->add("billwhitneyThumb.jpg");
-		$slideshow->add("iesThumb.jpg");
-		$slideshow->add("maytagThumb.jpg");
-		$slideshow->add("spectrumThumb.gif");
-		$slideshow->add("ubsThumb.gif");
-		$slideshow->add("usafThumb.jpg");
-		$slideshow->add("wattsThumb.jpg");
-		$slideshow->add("xbThumb.jpg");
-		$slideshow->add("trThumb.png");
-		$slideshow->add("pathThumb.png");
-		$slideshow->add("searsThumb.png");
+		$slideshow->add("tenxThumb.png", "/portfolio/pages/pageClient_tenx.php");
+		$slideshow->add("abnThumb.gif", "/portfolio/pages/pageClient_abnAmro.php");
+		$slideshow->add("billwhitneyThumb.jpg", "/portfolio/pages/pageClient_billwhitney.php");
+		$slideshow->add("iesThumb.jpg", "/portfolio/pages/pageClient_ies.php");
+		$slideshow->add("maytagThumb.jpg", "/portfolio/pages/pageClient_maytag.php");
+		$slideshow->add("spectrumThumb.gif", "/portfolio/pages/pageClient_spectrum.php");
+		$slideshow->add("ubsThumb.gif", "/portfolio/pages/pageClient_ubs.php");
+		$slideshow->add("usafThumb.jpg", "/portfolio/pages/pageClient_jsaf.php");
+		$slideshow->add("wattsThumb.jpg", "/portfolio/pages/pageClient_watts.php");
+		$slideshow->add("xbThumb.jpg", "/portfolio/pages/pageClient_xb.php");
+		$slideshow->add("trThumb.png", "/portfolio/pages/pageClient_tr.php");
+		$slideshow->add("pathThumb.png", "/portfolio/pages/pageClient_path.php");
+		$slideshow->add("searsThumb.png", "/portfolio/pages/pageClient_sears.php");
 	}
 }
 
@@ -113,8 +114,8 @@ class SlideshowObj {
 		$this->imgsSubdir = $imgsSubdir;
 		$this->dur = $dur;
 	}
-	function add($img) {
-		$this->imgsArray[$this->count] = $img;
+	function add($file, $url = "#") {
+		$this->imgsArray[$this->count] = new ImageObj($file, $url);
 		$this->count += 1;
 	}
 	function isLoaded() {
@@ -126,6 +127,16 @@ class SlideshowObj {
 		}
 	}
 }
+
+class ImageObj {
+	var $file;
+	var $url;
+	function ImageObj($file, $url) {
+		$this->file = $file;
+		$this->url = $url;
+	}
+}
+
 $g_slideshowManager = new SlideshowManager();
 ?>
 
