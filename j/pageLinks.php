@@ -21,10 +21,10 @@
     <div data-role="collapsible" data-collapsed="true">
       <h1>My Blog</h1>
       <p>
-        I have a blog called Elevator Music where I write on both technical
+        I have a blog called <i>Sealed Tuna Sandwich</i> where I write on both technical
         and non-technical things.
       </p>
-      <a href="pageBlogList.php" data-role="button" data-inline="true" data-icon="arrow-r" data-transition="slide" data-direction="forward">Elevator Music</a>
+      <a href="pageBlogList.php" data-role="button" data-inline="true" data-icon="arrow-r" data-transition="slide" data-direction="forward">Sealed Tuna Sandwich</a>
     </div>
     <div data-role="collapsible" data-collapsed="true">
       <h1>Code</h1>

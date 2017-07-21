@@ -24,9 +24,9 @@
     <h1>Blogs - Greg Sandell</h1>
   </div>
   <div data-role="content"> 
-    <h1>Elevator Music</h1>
+    <h1>Sealed Tuna Sandwich</h1>
     <p>
-       Elevator Music is my blog where I write on technical stuff, and other things
+       <i>Sealed Tuna Sandwich</i> is my blog where I write on technical stuff, and other things
        that interest me.  I have the topics separated below for your convenience.
     </p>
     <?php

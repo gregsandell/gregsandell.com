@@ -45,8 +45,8 @@ class SidebarObj2 {
 		$this->linksArray = array();
 		$this->blogsArray = array();
 	}
-	function addLink($key, $text, $type, $url, $remote) {
-		$this->linksArray[$key] = new LinkObj2($key, $text, $type, $url, $remote);
+	function addLink($key, $text, $type, $url) {
+		$this->linksArray[$key] = new LinkObj2($key, $text, $type, $url);
 	}
 	function addBlog($key, $text, $url, $date) {
 		$this->blogsArray[$key] = new BlogObj2($key, $text, $url, $date);
@@ -63,14 +63,12 @@ class LinkObj2 {
 	var $key;
 	var $text;
 	var $url;
-	var $remote;
-	
-	function LinkObj2($key, $text, $type, $url, $remote) {
+
+	function LinkObj2($key, $text, $type, $url) {
 		$this->key = $key;
 		$this->text = $text;
 		$this->type = $type;
 		$this->url = $url;
-		$this->remote = $remote;
 	}
 }
 class BlogObj2 {
@@ -102,43 +100,41 @@ class SidebarPageManager {
 	}
 	function load() {
 	    // Blog objects
-		$g_blogspotLinkObj = new LinkObj2("elevatorMusic", "Elevator Music (blog)", 'urlpopup', "http://gregsandell.blogspot.com", true);
-		$g_mavenBlogObj = new BlogObj2("maven", "Maven 2 Tutorial", 'urlpopup',
+		$g_blogspotLinkObj = new LinkObj2("elevatorMusic", "Sealed Tuna Sandwich", 'external', "http://gregsandell.blogspot.com");
+		$g_mavenBlogObj = new BlogObj2("maven", "Maven 2 Tutorial", 'external',
 				"http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html",
 				"2007.07.13");
-		$g_scorpBlogObj = new BlogObj2("scorp", "S-Corps for Software Contracters", 'urlpopup',
+		$g_scorpBlogObj = new BlogObj2("scorp", "S-Corps for Software Contracters", 'external',
 				"http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html",
 				"2006.10.22");
-        $g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 'urlpopup',
+        $g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 'external',
 				"http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html",
 				"2009.05.15");
 
 		// Internal URLs
-		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'url', "/portfolio/pages/pagePublications.php", false);
-		$g_samplesPageObj = new LinkObj2("samples", "Main Portfolio Page", 'url', "/portfolio/templatePortfolio.php", false);
-		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", 'url', "/portfolio/samples/bwhitney", true);
-		$g_resumeLinkObj = new LinkObj2("resume", "Resume", 'url', "/resume/pageResume.php", false);
+		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'internal', "/portfolio/pages/pagePublications.php");
+		$g_samplesPageObj = new LinkObj2("samples", "Main Portfolio Page", 'internal', "/portfolio/templatePortfolio.php");
+		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", 'internal', "/portfolio/samples/bwhitney");
+		$g_resumeLinkObj = new LinkObj2("resume", "Resume", 'internal', "/resume/pageResume.php");
 
 		// PDFs
-		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'SHARC Timbre Database', 'pdf', '/portfolio/publications/1991-10-01_library_ICMC.pdf', false);
-		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', 'pdf', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf', false);
-		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'pdf', '/portfolio/publications/1996-06-01_auditory_MP.pdf', false);
-		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'pdf', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf', false);
-		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", 'pdf', "/resume/gregsandell-resume.pdf", true);
+		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'PhD Dissertation', 'external', 'https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0');
+		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
+		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'external', '/portfolio/publications/1996-06-01_auditory_MP.pdf');
+		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'external', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf');
+		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", 'external', "/resume/gregsandell-resume.pdf");
 
 		// External Websites
-		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", 'urlpopup', "https://www.linkedin.com/in/gregsandell", true);
-		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", 'urlpopup', "http://www.maxtrad.com", true);
-		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", 'urlpopup', "http://www.iesabroad.org", true);
-		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", 'urlpopup', "http://www.maytag.com", true);
-		$g_usafLinkObj = new LinkObj2("usafLive", "Live Air Force Portal", 'urlpopup', "http://www.my.af.mil", true);
-		$g_wattsLinkObj = new LinkObj2("wattsLive", "Visit Live Edwin Watts Site", 'urlpopup', "http://www.edwinwatts.org", true);
-		$g_xbLinkObj = new LinkObj2("xbLive", "Visit Expand Beyond Site", 'urlpopup', "http://www.xb.com", true);
-		$g_trLinkObj = new LinkObj2("trCompanySite", "Visit Truven Company Site", 'urlpopup', "http://www.truvenhealth.com", true);
-		$g_sharcLinkObj = new LinkObj2("sharc", "SHARC Timbre Project", 'urlpopup', "http://www.timbre.ws/sharc/", true);
+		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", 'external', "https://www.linkedin.com/in/gregsandell");
+		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", 'external', "http://www.maxtrad.com");
+		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", 'external', "http://www.iesabroad.org");
+		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", 'external', "http://www.maytag.com");
+		$g_usafLinkObj = new LinkObj2("usafLive", "Live Air Force Portal", 'external', "http://www.my.af.mil");
+		$g_wattsLinkObj = new LinkObj2("wattsLive", "Visit Live Edwin Watts Site", 'external', "http://www.edwinwatts.org");
+		$g_trLinkObj = new LinkObj2("trCompanySite", "Visit Truven Company Site", 'external', "http://www.truvenhealth.com");
 
 		// MS-Word docs
-		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'doc', "/resume/gregsandell-resume.doc", true);
+		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'external', "/resume/gregsandell-resume.doc");
 
 		//
 		// pageHome.php
@@ -146,7 +142,6 @@ class SidebarPageManager {
 		$page = $this->addPage("pageHome");
 		$page->addLinkObj($g_blogspotLinkObj);
 		$page->addLinkObj($g_resumeLinkObj);
-		$page->addLinkObj($g_sharcLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj);  
 		$page->addBlogObj($g_scorpBlogObj);
@@ -156,7 +151,6 @@ class SidebarPageManager {
 		$page = $this->addPage("pagePublications");
 		$page->addLinkObj($g_sharcICMCLinkObj);
 		$page->addLinkObj($g_pcaLinkObj);
-		$page->addLinkObj($g_sharcLinkObj);
 		$page->addLinkObj($g_displayLinkObj);
 		$page->addLinkObj($g_macroLinkObj);
 		//
@@ -180,7 +174,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageSamples");
 		foreach ($this->portfolioObj->clients as $client) {
-			$page->addLink($client->key, $client->client, 'url', $client->url, false);
+			$page->addLink($client->key, $client->client, 'external', $client->url);
 		}
 		// 
 		// pageClient_abnAmro.php
