@@ -41,7 +41,7 @@ class SlideshowManager {
 		$slideshow->add("eclipse.png");
 		// $slideshow->add("filezilla.jpg");
 		$slideshow->add("es6.png");
-		$slideshow->add("eslint.jpg");
+		$slideshow->add("eslint.png");
 		$slideshow->add("express.png");
 		$slideshow->add("fisheye.png");
 		$slideshow->add("flexbox.png");
@@ -61,12 +61,13 @@ class SlideshowManager {
 		$slideshow->add("java2.jpg");
 		$slideshow->add("javascript.jpg");
 //		$slideshow->add("jdom.png");
-		$slideshow->add("jenkins.jpg");
+		$slideshow->add("jenkins.png");
 		$slideshow->add("jfreechart.png");
 		$slideshow->add("jira.png");
 		$slideshow->add("jmeter.png");
 		$slideshow->add("jquery.png");
 		$slideshow->add("jqueryMobile.jpg");
+		$slideshow->add("jsfiddle.png");
 		$slideshow->add("jshint.jpg");
 		$slideshow->add("json.jpg");
 		$slideshow->add("jsp3.jpg");
