@@ -86,7 +86,7 @@ class SlideshowManager {
 		$slideshow->add("maytagThumb.jpg", "/portfolio/pages/pageClient_maytag.php");
 		$slideshow->add("spectrumThumb.gif", "/portfolio/pages/pageClient_spectrum.php");
 		$slideshow->add("ubsThumb.gif", "/portfolio/pages/pageClient_ubs.php");
-		$slideshow->add("usafThumb.jpg", "/portfolio/pages/pageClient_jsaf.php");
+		$slideshow->add("usafThumb.jpg", "/portfolio/pages/pageClient_usaf.php");
 		$slideshow->add("wattsThumb.jpg", "/portfolio/pages/pageClient_watts.php");
 		$slideshow->add("xbThumb.jpg", "/portfolio/pages/pageClient_xb.php");
 		$slideshow->add("trThumb.png", "/portfolio/pages/pageClient_tr.php");
