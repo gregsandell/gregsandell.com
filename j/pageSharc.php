@@ -16,14 +16,9 @@
   </style>
   <?php include("inclHead.php"); ?>
   <!-- Accordeon stuff -->
-  <link href="../lib/samcroft/accordion.css" rel="stylesheet">
-  <script src="../lib/samcroft/jquery.accordion.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('dl').accordion();
-    });
-  </script>
-</head> 
+  <link href="/lib/samcroft/accordion.css" rel="stylesheet">
+  <script src="/lib/samcroft/jquery.accordion.js"></script>
+</head>
 <body> 
 
 <div data-role="page" id="home" data-theme="a">
@@ -35,7 +30,7 @@
     <a href="./popupSharcInfo.php" data-role="button" data-inline="true" data-rel="dialog" data-icon="info" data-transition="pop">What is SHARC?</a> 
     <h2>SHARC data includes:</h2>
     <dl>
-      <dt><a href="#">Woodwinds</a></dt>
+      <dt><a href="#c1">Woodwinds</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Piccolo</td> <td>Flute</td> </tr>
@@ -46,7 +41,7 @@
           <tr> <td>Bassoon</td> <td>Contrabassoon</td> </tr>
         </table>
       </dd>
-      <dt><a href="#">Brass</a></dt>
+      <dt><a href="#c2">Brass</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Bach trumpet</td> <td>C trumpet</td> </tr>
@@ -56,7 +51,7 @@
           <tr> <td>Bass trombone</td> <td>Tuba</td> </tr>
         </table>
       </dd>
-      <dt><a href="#">Strings</a></dt>
+      <dt><a href="#c3">Strings</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Violin bowed vibrato</td> <td>Violin bowed martele</td> </tr>
@@ -76,13 +71,18 @@
       <li><a href="/portfolio/publications/1991-10-01_library_ICMC.pdf" rel="external">Technical Whitepaper</a></li>
       <li><a href="./pageBlog.php#http://gregsandell.blogspot.com/2007/10/sharc-timbre-dataset-v-20-xml-format.html" 
         data-ajax="false" data-transition="slide" data-direction="forward">Blog Article</a></li>
-      <li><a href="http://www.timbre.ws/sharc" rel="external">Official SHARC website</a></li>
-      <li><a href="http://www.timbre.ws/sharc/service" rel="external">SHARC web services</a></li>
     </ul>
   </div>
   <div data-role="footer">
     <h4>Page Footer</h4>
   </div>
 </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('dl').accordion();
+      alert('initiated');
+    });
+  </script>
+
 </body>
 </html>
