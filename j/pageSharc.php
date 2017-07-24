@@ -15,9 +15,6 @@
     }
   </style>
   <?php include("inclHead.php"); ?>
-  <!-- Accordeon stuff -->
-  <link href="/lib/samcroft/accordion.css" rel="stylesheet">
-  <script src="/lib/samcroft/jquery.accordion.js"></script>
 </head>
 <body> 
 
@@ -30,7 +27,7 @@
     <a href="./popupSharcInfo.php" data-role="button" data-inline="true" data-rel="dialog" data-icon="info" data-transition="pop">What is SHARC?</a> 
     <h2>SHARC data includes:</h2>
     <dl>
-      <dt><a href="#c1">Woodwinds</a></dt>
+      <dt><a href="#">Woodwinds</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Piccolo</td> <td>Flute</td> </tr>
@@ -41,7 +38,7 @@
           <tr> <td>Bassoon</td> <td>Contrabassoon</td> </tr>
         </table>
       </dd>
-      <dt><a href="#c2">Brass</a></dt>
+      <dt><a href="#">Brass</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Bach trumpet</td> <td>C trumpet</td> </tr>
@@ -51,7 +48,7 @@
           <tr> <td>Bass trombone</td> <td>Tuba</td> </tr>
         </table>
       </dd>
-      <dt><a href="#c3">Strings</a></dt>
+      <dt><a href="#">Strings</a></dt>
       <dd>
         <table border="0" cellpadding="0" cellspacing="5">
           <tr> <td>Violin bowed vibrato</td> <td>Violin bowed martele</td> </tr>
@@ -77,12 +74,5 @@
     <h4>Page Footer</h4>
   </div>
 </div>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('dl').accordion();
-      alert('initiated');
-    });
-  </script>
-
 </body>
 </html>

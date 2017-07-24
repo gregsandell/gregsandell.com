@@ -1,3 +1,4 @@
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="/lib/jquerymobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+<script src="/lib/jquery/1.6.1/jquery-1.6.1.min.js"></script>
+<script src="/lib/jquerymobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
