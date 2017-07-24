@@ -31,6 +31,7 @@
 	}
 	$sidebarPage = $g_sidebarManager->getSidebar($g_sidebarKey);
 	$g_sidebarObj = $sidebarPage;
+	$wikiGoldImg = "<img src='/image/wikipediaExternalPageGold.png' style='border: 0px' alt='External Page' />";
 
 
 
@@ -50,9 +51,9 @@ if (sizeof($g_sidebarObj->linksArray) > 0) { ?>
 					<a href="<?php print($linkObj->url) ?>"><?php print($linkObj->text) ?></a>  <?php
 				}
 				elseif ($linkObj->type == 'external') { ?>
-					<a href="<?php print($linkObj->url) ?>">
+					<a href="<?php print($linkObj->url) ?>" rel="ext">
 						<?php print($linkObj->text) ?>
-						<img src='/image/wikipediaExternalPageGold.png' border='0' alt="External Page" />
+						<?php print($wikiGoldImg) ?>
 					</a> <?php
 				} ?>
 			</li>  <?php
@@ -67,7 +68,7 @@ if (sizeof($g_sidebarObj->blogsArray) > 0) { ?>
 		foreach ($g_sidebarObj->blogsArray as $blogObj) {  ?>
 			<li>
 				<h3><?php print($blogObj->date) ?></h3>
-				<p><a href="<?php print($blogObj->url) ?>"><?php print($blogObj->text) ?>&nbsp;<img src="/image/wikipediaExternalPageGold.png" border="0" alt="External Page" /></a></p>
+				<p><a href="<?php print($blogObj->url) ?>" rel="ext"><?php print($blogObj->text) ?>&nbsp;<?php print($wikiGoldImg) ?></a></p>
 			</li> <?php
 		}  ?>
 		</ul>

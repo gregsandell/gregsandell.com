@@ -21,6 +21,8 @@
 	$g_portfolio = new Portfolio();
 	$g_portfolio->loadData();
 	$client = $g_portfolio->getClient($key);
+	$wikiImg = "<img src='/image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
+
 
 ?>
 <html>
@@ -50,7 +52,7 @@
 							<img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/> <?php
 					}
 						else { ?>
-							<a href="portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a> <?php
+							<a href="<?php print($client->key) ?>"><img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/>nbsp;<?php print($wikiImg) ?></a> <?php
 						} ?>
 				</td>
 				<td>
@@ -61,7 +63,7 @@
 								<li><b>Technologies:</b> <?php print($client->technologies) ?></li>
 								<li><b>Timeframe:</b> <?php print($client->timeframe) ?></li>  <?php
 								if ($client->hostedState != 'none') { ?>
-									<li><a href="/portfolio/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit <?php print($client->hostedState) ?> site</a> (popup window)</li>  <?php
+									<li><a href="<?php print($client->key) ?>">Visit <?php print($client->hostedState) ?> site&nbsp;<?php print($wikiImg) ?></a></li>  <?php
 								} ?>
 							</ul>
 				</td>

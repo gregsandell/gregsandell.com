@@ -78,7 +78,7 @@
 		<!-- end div#logo -->
 		<div id="menu">
 			<ul>
-				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/noMobileHome.php">Home</a></li>
+				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/home/pageHome.php">Home</a></li>
 				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
 				<li class="<?php print($g_section == 'samples' ? 'active' : '') ?>"><a href="/portfolio/templatePortfolio.php">Portfolio</a></li>
 				<li class="<?php print($g_section == 'code' ? 'active' : '') ?>"><a href="/code/pageCode.php">Code</a></li>

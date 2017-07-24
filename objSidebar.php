@@ -119,7 +119,7 @@ class SidebarPageManager {
 
 		// PDFs
 		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'PhD Dissertation', 'external', 'https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0');
-		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre Analysis with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
+		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
 		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'external', '/portfolio/publications/1996-06-01_auditory_MP.pdf');
 		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'external', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf');
 		$g_pdfObj = new LinkObj2("pdfFormat", "PDF Format", 'external', "/resume/gregsandell-resume.pdf");
@@ -129,9 +129,11 @@ class SidebarPageManager {
 		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", 'external', "http://www.maxtrad.com");
 		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", 'external', "http://www.iesabroad.org");
 		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", 'external', "http://www.maytag.com");
-		$g_usafLinkObj = new LinkObj2("usafLive", "Live Air Force Portal", 'external', "http://www.my.af.mil");
-		$g_wattsLinkObj = new LinkObj2("wattsLive", "Visit Live Edwin Watts Site", 'external', "http://www.edwinwatts.org");
-		$g_trLinkObj = new LinkObj2("trCompanySite", "Visit Truven Company Site", 'external', "http://www.truvenhealth.com");
+		$g_usafLinkObj = new LinkObj2("usafLive", "Visit Live AF Portal", 'external', "http://www.my.af.mil");
+		$g_wattsLinkObj = new LinkObj2("wattsLive", "Visit Live Watts Site", 'external', "http://www.edwinwatts.org");
+		$g_trLinkObj = new LinkObj2("trCompanySite", "Visit Live Truven Site", 'external', "http://www.truvenhealth.com");
+		$g_searsLinkObj = new LinkObj2("searsCompanySite", "Visit Live sears.com", 'external', "http://www.sears.com");
+		$g_tenxLinkObj = new LinkObj2("tenxCompanySite", "Visit Live auction.com", 'external', "http://www.auction.com");
 
 		// MS-Word docs
 		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'external', "/resume/gregsandell-resume.doc");
@@ -286,6 +288,7 @@ class SidebarPageManager {
 		// pageClient_sears.php
 		//
 		$page = $this->addPage("pageClient_sears");
+		$page->addLinkObj($g_searsLinkObj);
 		$page->addLinkObj($g_samplesPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
@@ -295,6 +298,7 @@ class SidebarPageManager {
 		// pageClient_tenx.php
 		//
 		$page = $this->addPage("pageClient_tenx");
+		$page->addLinkObj($g_tenxLinkObj);
 		$page->addLinkObj($g_samplesPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);

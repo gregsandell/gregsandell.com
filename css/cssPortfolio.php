@@ -291,5 +291,8 @@
 	.hiddenSlides {
 		display: none;
 	}
+	.ui-dialog p {
+		font-size: 15px;
+	}
 
 

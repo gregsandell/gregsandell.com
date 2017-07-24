@@ -446,10 +446,10 @@ class Document {
 			$result = "/portfolio/portfolioPopup.php?pdf=" . $this->url;
 		}
 		if ($this->type == 'doc') {
-			$result = "/portfolioportfolioPopup.php?doc=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?doc=" . $this->url;
 		}
 		if ($this->type == 'slideshow') {
-			$result = "/portfolioportfolioPopup.php?slideshow=" . $this->url;
+			$result = "/portfolio/portfolioPopup.php?slideshow=" . $this->url;
 		}
 		return($result);
 	}
