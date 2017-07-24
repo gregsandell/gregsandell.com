@@ -21,3 +21,21 @@ Change it to:
  Change it to:
                      "</div>" + "<div id='html5-image' style='display:none;position:relative;top:0px;left:0px;width:100%;height:100%;" + (inst.options.iequirksmode ? "margin" : "padding") + ":" + inst.options.bordersize + "px;text-align:center;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;'></div>" + "</div>" + "</div>" +"</div>");
  
+
+Problem #3
+==========
+Code tries to load "froogaloop2.min.js"
+
+Line 280 reads as follows:
+                tag.src = inst.options.jsfolder + "froogaloop2.min.js";
+
+Comment it out.
+
+Problem #4
+==========
+Code tries to load "fontello.css"
+
+Lin 291 reads as follows:
+            if (inst.options.initsocial) $("head").append('<link rel="stylesheet" href="' + inst.options.jsfolder + 'icons/css/fontello.css" type="text/css" />');
+
+Comment it out.

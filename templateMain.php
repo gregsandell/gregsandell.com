@@ -18,11 +18,13 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 
-	<link rel="stylesheet" type="text/css" href="/lib/jquery-ui-bootstrap/0.5/css/custom-theme/jquery-ui-1.10.0.custom.css">
+	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
 	<style type="text/css">
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
 	</style>
+	<link rel="stylesheet" href="/lib/avgrund/0.1/demo.css" >
+	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
 </head>
 <body>
 <div id="wrapper">
@@ -78,17 +80,24 @@
 	</div>
 	<!-- end div#footer -->
 </div>
-<div id="dialog-confirm" class="ui-dialog" style="display: none">
-	<p>Tip: links marked with arrow icons
+<div id="dialog-confirm" class="avgrund-popup">
+	<h2 style="color: #AA2808">Tip</h2>
+	<br/>
+	<p>Links marked with arrow icons
 	(<img src="/image/wikipediaExternalPage.png"> or <img src="/image/wikipediaExternalPageGold.png">)
 	will open in a new tab.</p>
 	<p>You will see this message only once.</p>
+	<button onclick="closeDialog();">OK</button>
+	<button onclick="cancelDialog();">Cancel</button>
 </div>
+<div class="avgrund-cover"></div>
+
+
 <!-- end div#wrapper -->
 <script type="text/javascript" src="/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/lib/jquery-ui/1.12.1.custom/jquery-ui.js"></script>
 <script type="text/javascript" src="/lib/html5lightbox/7.0/html5lightbox.js"></script>
 <script type="text/javascript" src="/lib/js-cookie/2.1.4/js.cookie.js"></script>
+<script type="text/javascript" src="/lib/avgrund/0.1/avgrund.js"></script>
 <script type="text/javascript" src="/js/warnExternalLinks.js"></script>
 </body>
 </html>
