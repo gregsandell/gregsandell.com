@@ -23,7 +23,6 @@
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
 	</style>
-	<link rel="stylesheet" href="/lib/avgrund/0.1/demo.css" >
 	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
 </head>
 <body>

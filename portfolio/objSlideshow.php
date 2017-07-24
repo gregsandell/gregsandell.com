@@ -29,6 +29,7 @@ class SlideshowManager {
 		$slideshow->add("bash.png");
 		$slideshow->add("bamboo.jpg");
 		$slideshow->add("bitbucket.png");
+		$slideshow->add("bootstrap.png");
 		$slideshow->add("chai.png");
 		// $slideshow->add("coffeescript.jpg");
 		$slideshow->add("cognos.jpg");
@@ -109,13 +110,13 @@ class SlideshowManager {
 		// $slideshow->add("testflight.jpg");
 		$slideshow->add("toad.jpg");
 		$slideshow->add("tomcat2.jpg");
+		$slideshow->add("travis.png");
 		// $slideshow->add("triggerIO.jpg");
-		$slideshow->add("twitterBootstrap.png");
 		$slideshow->add("vagrant.png");
 		$slideshow->add("vim.png");
 		$slideshow->add("virtualbox.png");
 		$slideshow->add("webpack.jpg");
-		$slideshow->add("websphere.gif");
+		$slideshow->add("websphere.png");
 		$slideshow->add("webstorm.png");
 		$slideshow->add("xmlTypewriter.jpg");
 		$slideshow->add("xslt.jpg");
