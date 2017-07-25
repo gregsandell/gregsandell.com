@@ -92,6 +92,7 @@ class SlideshowManager {
 		// $slideshow->add("parse.jpg");
 		$slideshow->add("perl.png");
 		$slideshow->add("php.png");
+		$slideshow->add("phpldapadmin.png");
 		$slideshow->add("pivotalTracker.jpg");
 		$slideshow->add("poi.jpg");
 		$slideshow->add("postman.png");
