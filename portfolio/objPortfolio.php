@@ -107,11 +107,11 @@ class Portfolio {
 			"", "", "", "", "",
 			$this->globals->Key->sears, $this->globals->Key->tr);
 		$client->addThumbdoc("1", "/portfolio/resources/path/images/login.png", "/portfolio/resources/path/images/loginThumb.png",
-				"AACN Bedside iPhone app: Login screen", 362, 711);
+				"AACN Bedsiden", 362, 711);
 		$client->addThumbdoc("2", "/portfolio/resources/path/images/dysrhythmiaMonitoring.png", "/portfolio/resources/path/images/dysrhythmiaMonitoring_thumb.png",
-				"AACN Bedside iPhone app: Dysrhthmia Monitoring", 365, 709);
+				"AACN Bedside", 363, 709);
 		$client->addThumbdoc("3", "/portfolio/resources/path/images/dysrhytmias.png", "/portfolio/resources/path/images/dysrhytmiasThumb.png",
-				"AACN Bedside iPhone app: Dysrhthmias", 365, 709);
+				"AACN Bedside", 362, 709);
 		$client->addThumbdoc("4", "/portfolio/resources/path/images/continuCare_home_784x721.png", "/portfolio/resources/path/images/continuCare_home_thumb.png",
 				"Kimberly-Clark ContinuCare: Dashboard", 784, 721);
 		$client->addThumbdoc("5", "/portfolio/resources/path/images/continuCare_medications_785x721.png", "/portfolio/resources/path/images/continuCare_medications_thumb.png",

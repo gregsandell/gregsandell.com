@@ -44,6 +44,7 @@ class SlideshowManager {
 		$slideshow->add("es6.png");
 		$slideshow->add("eslint.png");
 		$slideshow->add("express.png");
+		$slideshow->add("extjs.png");
 		$slideshow->add("fisheye.png");
 		$slideshow->add("flexbox.png");
 		$slideshow->add("gimp2.png");

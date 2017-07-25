@@ -8,7 +8,7 @@
 	$mainCopy = "
 		<div>
 		<center>
-			<img src='/image/404ProduceLabel.jpg' border='0' />
+			<img src='/image/404Refrigerator.jpg' border='0' />
 		</center>
 		</div>
 	";
