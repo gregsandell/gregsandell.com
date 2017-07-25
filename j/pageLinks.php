@@ -41,13 +41,6 @@
       <a href="pageTalks.php" data-role="button" data-inline="true" data-icon="arrow-r" data-transition="slide" data-direction="forward">Presentations</a>
     </div>
     <div data-role="collapsible" data-collapsed="true">
-      <h1>Stuff I'm Reading</h1>
-      <p>
-        Recent links I liked and marked as 'Shared' in my Google RSS Reader.
-      </p>
-      <a href="pageRSSSharedList.php" data-role="button" data-inline="true" data-icon="arrow-r" data-transition="slide" data-direction="forward">Shared Links</a>
-    </div>
-    <div data-role="collapsible" data-collapsed="true">
       <h1>SHARC</h1>
       <p>
         A research project in musical acoustics.
