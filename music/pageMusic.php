@@ -7,7 +7,7 @@
 	$mainCopy = "";
 	include($_cpath . "/objSidebar.php");
 	$g_sidebarKey = "pageMusic";
-	$g_slideshowKey = "logos";
+	$g_slideshowKey = "";
 
 	include($_cpath . "/templateMain.php");
 

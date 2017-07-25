@@ -107,18 +107,28 @@ class SidebarPageManager {
 		$g_scorpBlogObj = new BlogObj2("scorp", "S-Corps for Software Contracters", 'external',
 				"http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html",
 				"2006.10.22");
-        $g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 'external',
+		$g_roxyBlogObj = new BlogObj2("roxy", "New Roxy & Elsewhere Vid", 'external',
+				"http://gregsandell.blogspot.com/2017/06/new-roxy-elsewhere-video.html",
+				"2017.06.29");
+		$g_twinpeaksBlogObj = new BlogObj2("roxy", "Twin Peaks Season 3", 'external',
+				"http://gregsandell.blogspot.com/2017/06/dont-die-twin-peaks-s03e06-spoiler.html",
+				"2017.06.26");
+		$g_charsetLinkObj = new BlogObj2("characters", "Solving Character Set Problems", 'external',
 				"http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html",
 				"2009.05.15");
+		$g_washingmachineBlogObj = new BlogObj2("washingMachine", "The Washing Machine", 'external',
+				"http://gregsandell.blogspot.com/2017/02/the-washing-machine.html",
+				"2017.02.23");
 
 		// Internal URLs
 		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'internal', "/portfolio/pages/pagePublications.php");
 		$g_samplesPageObj = new LinkObj2("samples", "Main Portfolio Page", 'internal', "/portfolio/templatePortfolio.php");
 		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", 'internal', "/portfolio/samples/bwhitney");
 		$g_resumeLinkObj = new LinkObj2("resume", "Resume", 'internal', "/resume/pageResume.php");
+		$g_talksLinkObj = new LinkObj2("talks", "Talks", 'internal', "/talks/pageTalks.php");
 
 		// PDFs
-		$g_sharcICMCLinkObj = new LinkObj2('sharcPub', 'PhD Dissertation', 'external', 'https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0');
+		$g_dissertationLinkObj = new LinkObj2('dissertation', 'PhD Dissertation', 'external', 'https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0');
 		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
 		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'external', '/portfolio/publications/1996-06-01_auditory_MP.pdf');
 		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'external', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf');
@@ -145,13 +155,13 @@ class SidebarPageManager {
 		$page->addLinkObj($g_blogspotLinkObj);
 		$page->addLinkObj($g_resumeLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj);  
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addLinkObj($g_talksLinkObj);
+		$page->addBlogObj($g_roxyBlogObj);
 		//
 		// pagePublications.php
 		//
 		$page = $this->addPage("pagePublications");
-		$page->addLinkObj($g_sharcICMCLinkObj);
+		$page->addLinkObj($g_dissertationLinkObj);
 		$page->addLinkObj($g_pcaLinkObj);
 		$page->addLinkObj($g_displayLinkObj);
 		$page->addLinkObj($g_macroLinkObj);
@@ -160,8 +170,8 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageBlogs");
 		$page->addLinkObj($g_blogspotLinkObj);
-		$page->addBlogObj($g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_twinpeaksBlogObj);
+		$page->addBlogObj($g_roxyBlogObj);
 		//
 		// pageResume.php
 		//
@@ -171,6 +181,8 @@ class SidebarPageManager {
 		$page->addLinkObj($g_linkedInObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
 		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_washingmachineBlogObj);
+
 		//
 		// pageSamples.php
 		//
@@ -178,7 +190,20 @@ class SidebarPageManager {
 		foreach ($this->portfolioObj->clients as $client) {
 			$page->addLink($client->key, $client->client, 'external', $client->url);
 		}
-		// 
+
+		//
+		// pageCode.php
+		//
+		$page = $this->addPage("pageCode");
+		$page->addLinkObj($g_talksLinkObj);
+
+		//
+		// pageMusic.php
+		//
+		$page = $this->addPage("pageMusic");
+		$page->addLinkObj($g_publicationsLinkObj);
+		$page->addBlogObj($g_roxyBlogObj);
+		//
 		// pageClient_abnAmro.php
 		//
 		$page = $this->addPage("pageClient_abnAmro");
