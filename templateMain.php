@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
 	<style type="text/css">
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
-	    <?php include("{$_cpath}/css/cssPortfolio.php") ?>
+	    <?php include("{$_cpath}/css/cssGlobal.php") ?>
 	</style>
 	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
 </head>

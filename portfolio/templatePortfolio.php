@@ -27,7 +27,7 @@
 		<meta name="description" content="" />
 		<style type="text/css">
 			<?php include($_cpath . "/lib/funride/cssFunride.php") ?>
-			<?php include($_cpath . "/css/cssPortfolio.php") ?>
+			<?php include($_cpath . "/css/cssGlobal.php") ?>
 		</style>
 		<base url="<?php print($_cpath) ?>" />
 		<script type="text/javascript">
