@@ -20,6 +20,8 @@ class SlideshowManager {
 	function load() {
 		$slideshow = $this->add("logos", new SlideshowObj("logos", 190, 150, "logos", "Supported Technologies",2000));
 		$slideshow->add("advancedRestClient.png");
+		$slideshow->add("ajax.png");
+		$slideshow->add("ampps.png");
 		$slideshow->add("angularJS.jpg");
 		$slideshow->add("apache2.jpg");
 		$slideshow->add("apacheAnt2.jpg");
@@ -78,6 +80,7 @@ class SlideshowManager {
 		$slideshow->add("lodash.png");
 		$slideshow->add("lync.png");
 		$slideshow->add("mamp.jpg");
+		$slideshow->add("markdown.png");
 		$slideshow->add("maven2.jpg");
 		$slideshow->add("mercurial.png");
 		$slideshow->add("mocha.png");
@@ -122,6 +125,7 @@ class SlideshowManager {
 		$slideshow->add("webstorm.png");
 		$slideshow->add("xmlTypewriter.jpg");
 		$slideshow->add("xslt.jpg");
+		$slideshow->add("yarn.png");
 
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
 		$slideshow->add("tenxThumb.png", "/portfolio/pages/pageClient_tenx.php");
