@@ -31,48 +31,27 @@
   <loc>http://gregsandell.com/j/</loc>
 </url>
 <url>
+  <loc>http://gregsandell.com/technologies/javascript.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/react.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/node.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/redux.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/webpack.php</loc>
+</url>
+<url>
   <loc>http://gregsandell.com/resume/gregsandell-resume.doc</loc>
   <lastmod>2017-06-06T21:33:35+00:00</lastmod>
 </url>
 <url>
   <loc>http://gregsandell.com/resume/gregsandell-resume.pdf</loc>
   <lastmod>2017-06-06T21:33:35+00:00</lastmod>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=/portfolio/publications/1991-10-01_library_ICMC.pdf</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=/portfolio/publications/1995-12-01_perceptual_JAES.pdf</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=/portfolio/publications/1996-06-01_auditory_MP.pdf</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/pages/pagePublications.php</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2009/01/solving-character-set-problems-ascii.html</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2008/12/hacking-linksys-nslu2.html</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?pdf=/portfolio/publications/1991-10-01_library_ICMC.pdf</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/portfolioPopup.php?url=http://www.timbre.ws/sharc/</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/noMobileHome.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/talks/pageTalks.php</loc>
@@ -117,7 +96,14 @@
   <loc>http://gregsandell.com/portfolio/pages/pageClient_spectrum.php</loc>
 </url>
 <url>
+  <loc>http://gregsandell.com/portfolio/pages/pagePublications.php</loc>
+</url>
+<url>
   <loc>http://gregsandell.com/j/pageSitemap.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/portfolio/samples/bwhitney/</loc>
+  <lastmod>2016-03-13T20:19:38+00:00</lastmod>
 </url>
 <url>
   <loc>http://gregsandell.com/portfolio/publications/1995-01-01_roles_MP.pdf</loc>
@@ -240,13 +226,6 @@
   <lastmod>2016-03-13T20:19:36+00:00</lastmod>
 </url>
 <url>
-  <loc>http://gregsandell.com/portfolio/closePopup.php?c=white</loc>
-</url>
-<url>
-  <loc>http://gregsandell.com/portfolio/samples/bwhitney/</loc>
-  <lastmod>2016-03-13T20:19:38+00:00</lastmod>
-</url>
-<url>
   <loc>http://gregsandell.com/j/index.php</loc>
 </url>
 <url>
@@ -280,9 +259,6 @@
   <loc>http://gregsandell.com/j/pageTalks.php</loc>
 </url>
 <url>
-  <loc>http://gregsandell.com/j/pageRSSSharedList.php</loc>
-</url>
-<url>
   <loc>http://gregsandell.com/j/pageSharc.php</loc>
 </url>
 <url>
@@ -296,5 +272,8 @@
 </url>
 <url>
   <loc>http://gregsandell.com/j/popupSharcInfo.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/noMobileHome.php</loc>
 </url>
 </urlset>
