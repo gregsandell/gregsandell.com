@@ -148,15 +148,20 @@ class SidebarPageManager {
 		// MS-Word docs
 		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'external', "/resume/gregsandell-resume.doc");
 
+		$g_tech_javascript = new LinkObj2("techJavascript", "Javascript/ES6", 'internal', "/technologies/javascript.php");
+		$g_tech_react = new LinkObj2("techReact", "React", 'internal', "/technologies/react.php");
+		$g_tech_node = new LinkObj2("techNode", "Node.js", 'internal', "/technologies/node.php");
+		$g_tech_redux = new LinkObj2("redux", "Redux", 'internal', "/technologies/redux.php");
+		$g_tech_webpack = new LinkObj2("webpack", "WebPack", 'internal', "/technologies/webpack.php");
 		//
 		// pageHome.php
 		//
 		$page = $this->addPage("pageHome");
-		$page->addLinkObj($g_blogspotLinkObj);
-		$page->addLinkObj($g_resumeLinkObj);
-		$page->addLinkObj($g_publicationsLinkObj);
-		$page->addLinkObj($g_talksLinkObj);
-		$page->addBlogObj($g_roxyBlogObj);
+		$page->addLinkObj($g_tech_javascript);
+		$page->addLinkObj($g_tech_react);
+		$page->addLinkObj($g_tech_node);
+		$page->addLinkObj($g_tech_redux);
+		$page->addLinkObj($g_tech_webpack);
 		//
 		// pagePublications.php
 		//

@@ -343,5 +343,12 @@ TD.displayCell {
 .avgrund-cover {
 	width: 880px;
 }
+.techTitle {
+	color: #AA2808;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px !important;
+}
 
 
