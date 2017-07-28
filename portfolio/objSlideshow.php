@@ -37,6 +37,7 @@ class SlideshowManager {
 		$slideshow->add("cognos.jpg");
 		$slideshow->add("confluence.jpg");
 		$slideshow->add("chromeDevTools.jpg");
+		$slideshow->add("codepen.png");
 		$slideshow->add("crucible.jpg");
 		$slideshow->add("css3.jpg");
 		$slideshow->add("curl.png");
@@ -100,6 +101,7 @@ class SlideshowManager {
 		$slideshow->add("php.png");
 		$slideshow->add("phpldapadmin.png");
 		$slideshow->add("pivotalTracker.jpg");
+		$slideshow->add("plnkr.png");
 		$slideshow->add("poi.jpg");
 		$slideshow->add("postman.png");
 		// $slideshow->add("rails.jpeg");
