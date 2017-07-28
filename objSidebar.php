@@ -137,7 +137,7 @@ class SidebarPageManager {
 
 		// External Websites
 		$g_linkedInObj = new LinkObj2("linkedIn", "Linked In Profile", 'external', "https://www.linkedin.com/in/gregsandell");
-		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Website", 'external', "http://www.maxtrad.com");
+		$g_maxtradObj = new LinkObj2("maxtrad", "Official MaxTrad Site", 'external', "http://www.maxtrad.com");
 		$g_iesLinkObj = new LinkObj2("iesLive", "Visit Live IES Site", 'external', "http://www.iesabroad.org");
 		$g_maytagLinkObj = new LinkObj2("maytagLive", "Visit Live Maytag Site", 'external', "http://www.maytag.com");
 		$g_usafLinkObj = new LinkObj2("usafLive", "Visit Live AF Portal", 'external', "http://www.my.af.mil");

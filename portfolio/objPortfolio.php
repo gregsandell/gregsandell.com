@@ -439,20 +439,6 @@ class Document {
 		$this->url = $url;
 		$this->description = $description;
 	}
-	
-	function getUrl() {
-		$result = "";
-		if ($this->type == 'pdf') {
-			$result = "/portfolio/portfolioPopup.php?pdf=" . $this->url;
-		}
-		if ($this->type == 'doc') {
-			$result = "/portfolio/portfolioPopup.php?doc=" . $this->url;
-		}
-		if ($this->type == 'slideshow') {
-			$result = "/portfolio/portfolioPopup.php?slideshow=" . $this->url;
-		}
-		return($result);
-	}
 }
 class Thumbdoc {
 	var $key;

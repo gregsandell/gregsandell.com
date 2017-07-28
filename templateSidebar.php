@@ -43,11 +43,7 @@ if (sizeof($g_sidebarObj->linksArray) > 0) { ?>
 		<ul>  <?php
 		foreach ($g_sidebarObj->linksArray as $linkObj) {  ?>
 			<li> <?php
-				if ($linkObj->type == 'pdf') { ?>
-					<a href="/portfolio/portfolioPopup.php?pdf=<?php print($linkObj->url) ?>" ><?php print($linkObj->text) ?></a></li>  <?php
-				} elseif ($linkObj->type == 'urlpopup') { ?>
-					<a href="/portfolio/portfolioPopup.php?url=<?php print($linkObj->url) ?>" ><?php print($linkObj->text) ?></a></li>  <?php
-				} elseif ($linkObj->type == 'internal' || $linkObj->type == '') { ?>
+				if ($linkObj->type == 'internal' || $linkObj->type == '') { ?>
 					<a href="<?php print($linkObj->url) ?>"><?php print($linkObj->text) ?></a>  <?php
 				}
 				elseif ($linkObj->type == 'external') { ?>
