@@ -34,9 +34,9 @@ class SlideshowManager {
 		$slideshow->add("bootstrap.png");
 		$slideshow->add("chai.png");
 		// $slideshow->add("coffeescript.jpg");
-		$slideshow->add("cognos.jpg");
+		$slideshow->add("cognos.png");
 		$slideshow->add("confluence.jpg");
-		$slideshow->add("chromeDevTools.jpg");
+		$slideshow->add("chromeDevTools.png");
 		$slideshow->add("codepen.png");
 		$slideshow->add("crucible.jpg");
 		$slideshow->add("css3.jpg");
@@ -102,7 +102,7 @@ class SlideshowManager {
 		$slideshow->add("phpldapadmin.png");
 		$slideshow->add("pivotalTracker.jpg");
 		$slideshow->add("plnkr.png");
-		$slideshow->add("poi.jpg");
+		$slideshow->add("poi.png");
 		$slideshow->add("postman.png");
 		// $slideshow->add("rails.jpeg");
 		$slideshow->add("rally.png");
