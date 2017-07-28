@@ -3,7 +3,7 @@
 	$g_section = "technologies";
 	$linksTitle = "Other Languages";
 	$mainCopy = "";
-	$inlinePhp = $_cpath . "/technologies/innerPageWebpack.php";
+	$inlinePhp = $_cpath . "/technologies/innerPageWebPack.php";
 	$g_sidebarKey = "pageHome";
 	$g_title = "Greg Sandell - WebPack Programming";
 	$g_slideshowKey = "logos";
