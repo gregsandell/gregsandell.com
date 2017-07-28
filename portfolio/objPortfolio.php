@@ -179,10 +179,6 @@ class Portfolio {
 				"The Air Force Portal Home Page", 896, 759);
 		$client->addThumbdoc("3", "/portfolio/resources/usaf/images/AFPortal03of04.gif", "/portfolio/resources/usaf/images/AFPortal03of04Thumb.gif",
 				"A search results screen from the Air Force Portal", 897, 806);
-		$client->addThumbdoc("4", "/portfolio/resources/usaf/images/SSDARsiteMap.gif", "/portfolio/resources/usaf/images/SSDARsiteMapThumb.gif",
-						"Site map showing navigation hierarchy of the Self Service Data Access Request (SSDAR) web application.", 575, 579);
-		$client->addThumbdoc("5", "/portfolio/resources/usaf/images/usafAutonomyInstall.gif", "/portfolio/resources/usaf/images/usafAutonomyInstallThumb.gif",
-						"Instructions (excerpt) for upgrading the Autonomy Search Engine server software from version 4 to version 5.", 612, 786);
 
 		$client = $this->addClient($this->globals->Key->abn, "ABN-AMRO", $this->globals->Key->abn,  "ABN-AMRO",
 			"Workflow Application for International Letters of Credit (ABN-AMRO)",
@@ -243,10 +239,6 @@ class Portfolio {
 				"The IES Abroad Homepage", 500, 373);
 		$client->addThumbdoc("2", "/portfolio/resources/ies/images/IESonlineApp.gif", "/portfolio/resources/ies/images/IESonlineAppthumb.gif",
 				"The IES Abroad Online Application, a 7-step Wizard application", 800, 600);
-		$client->addThumbdoc("3", "/portfolio/resources/ies/images/launchHistory.gif", "/portfolio/resources/ies/images/launchHistoryThumb.gif",
-				"The release history for the IES Abroad company website.  Individual numbers show Jira tasks.", 758, 621);
-		$client->addThumbdoc("4", "/portfolio/resources/ies/images/sculptorArchitecture.gif", "/portfolio/resources/ies/images/sculptorArchitectureThumb.gif",
-				"Architecture of the company website and its content management system", 700, 1006);
 
 		$client = $this->addClient($this->globals->Key->xb, "Expand Beyond", "xb", "Expand Beyond",
 			"Company website redesign for Expand Beyond, maker of wireless handheld applications",
