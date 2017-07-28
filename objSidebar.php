@@ -87,6 +87,7 @@ class BlogObj2 {
 class SidebarPageManager {
 	var $pageManagers;
 	var $portfolioObj;
+	var $techList;
 	function SidebarPageManager($portfolioObj) {
 		$this->pageManagers = array();
 		$this->portfolioObj = $portfolioObj;
@@ -148,11 +149,20 @@ class SidebarPageManager {
 		// MS-Word docs
 		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'external', "/resume/gregsandell-resume.doc");
 
+		// technology pages (for SEO)
+		$this->techList = array();
 		$g_tech_javascript = new LinkObj2("techJavascript", "Javascript/ES6", 'internal', "/technologies/javascript.php");
+		array_push($this->techList, $g_tech_javascript);
 		$g_tech_react = new LinkObj2("techReact", "React", 'internal', "/technologies/react.php");
+		array_push($this->techList, $g_tech_react);
 		$g_tech_node = new LinkObj2("techNode", "Node.js", 'internal', "/technologies/node.php");
+		array_push($this->techList, $g_tech_node);
 		$g_tech_redux = new LinkObj2("redux", "Redux", 'internal', "/technologies/redux.php");
+		array_push($this->techList, $g_tech_redux);
 		$g_tech_webpack = new LinkObj2("webpack", "WebPack", 'internal', "/technologies/webpack.php");
+		array_push($this->techList, $g_tech_webpack);
+		$g_tech_list = new LinkObj2("list", "More...", 'internal', "/technologies/list.php");
+
 		//
 		// pageHome.php
 		//
@@ -162,6 +172,7 @@ class SidebarPageManager {
 		$page->addLinkObj($g_tech_node);
 		$page->addLinkObj($g_tech_redux);
 		$page->addLinkObj($g_tech_webpack);
+		$page->addLinkObj($g_tech_list);
 		//
 		// pagePublications.php
 		//
@@ -189,14 +200,6 @@ class SidebarPageManager {
 		$page->addBlogObj($g_washingmachineBlogObj);
 
 		//
-		// pageSamples.php
-		//
-		$page = $this->addPage("pageSamples");
-		foreach ($this->portfolioObj->clients as $client) {
-			$page->addLink($client->key, $client->client, 'external', $client->url);
-		}
-
-		//
 		// pageCode.php
 		//
 		$page = $this->addPage("pageCode");
@@ -208,6 +211,13 @@ class SidebarPageManager {
 		$page = $this->addPage("pageMusic");
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_roxyBlogObj);
+
+		// potpourri
+		$page = $this->addPage("potpourri");
+		$page->addLinkObj($g_publicationsLinkObj);
+		$page->addLinkObj($g_talksLinkObj);
+		$page->addLinkObj($g_blogspotLinkObj);
+
 		//
 		// pageClient_abnAmro.php
 		//

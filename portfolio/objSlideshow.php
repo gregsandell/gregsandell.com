@@ -53,6 +53,8 @@ class SlideshowManager {
 		$slideshow->add("git.png");
 		$slideshow->add("github.jpg");
 		$slideshow->add("glassfish.png");
+		$slideshow->add("googlehangouts.png");
+		$slideshow->add("gotomeeting.png");
 		// $slideshow->add("grunt.jpg");
 		$slideshow->add("highcharts.png");
 		$slideshow->add("homebrew.png");
@@ -69,6 +71,7 @@ class SlideshowManager {
 		$slideshow->add("jfreechart.png");
 		$slideshow->add("jira.png");
 		$slideshow->add("jmeter.png");
+		$slideshow->add("joinme.png");
 		$slideshow->add("jquery.png");
 		$slideshow->add("jqueryMobile.jpg");
 		$slideshow->add("jsfiddle.png");
@@ -120,12 +123,14 @@ class SlideshowManager {
 		$slideshow->add("vagrant.png");
 		$slideshow->add("vim.png");
 		$slideshow->add("virtualbox.png");
+		$slideshow->add("webex.png");
 		$slideshow->add("webpack.jpg");
 		$slideshow->add("websphere.png");
 		$slideshow->add("webstorm.png");
 		$slideshow->add("xmlTypewriter.jpg");
 		$slideshow->add("xslt.jpg");
 		$slideshow->add("yarn.png");
+		$slideshow->add("zoom.png");
 
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
 		$slideshow->add("tenxThumb.png", "/portfolio/pages/pageClient_tenx.php");
