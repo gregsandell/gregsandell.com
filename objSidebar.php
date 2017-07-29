@@ -172,6 +172,10 @@ class SidebarPageManager {
 		array_push($this->techList, $g_tech_javascript_hoisting);
 		$g_tech_responsive_design = new LinkObj2("responsive-design", "Responsive Design", 'internal', "/technologies/responsiveDesign.php");
 		array_push($this->techList, $g_tech_responsive_design);
+		$g_tech_browser_compatability = new LinkObj2("browser-compatability", "Browser Compatability", 'internal', "/technologies/browserCompatability.php");
+		array_push($this->techList, $g_tech_browser_compatability);
+		$g_tech_sql = new LinkObj2("sql", "SQL", 'internal', "/technologies/sql.php");
+		array_push($this->techList, $g_tech_sql);
 
 		//
 		// pageHome.php
