@@ -104,7 +104,7 @@ if ($g_slideshowKey != "") {
 			    slideObj = {};
 				slideObj.img = new Image();
 				slideObj.img.src = "/image/<?php print($slideshow->imgsSubdir) ?>/<?php print($imgObj->file) ?>";
-				slideObj.url = "<?php print($imgObj->url) ?>";
+				slideObj.url = "<?php print($imgObj->data['url']) ?>";
 				imageholder[<?php print($count) ?>] = slideObj; <?php
 				$count += 1;  
 			} ?>

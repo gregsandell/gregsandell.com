@@ -162,6 +162,16 @@ class SidebarPageManager {
 		$g_tech_webpack = new LinkObj2("webpack", "WebPack", 'internal', "/technologies/webpack.php");
 		array_push($this->techList, $g_tech_webpack);
 		$g_tech_list = new LinkObj2("list", "More...", 'internal', "/technologies/list.php");
+		$g_tech_css = new LinkObj2("css", "CSS", 'internal', "/technologies/css.php");
+		array_push($this->techList, $g_tech_css);
+		$g_tech_html = new LinkObj2("html", "HTML", 'internal', "/technologies/html.php");
+		array_push($this->techList, $g_tech_html);
+		$g_tech_angular = new LinkObj2("angular", "Angular", 'internal', "/technologies/angular.php");
+		array_push($this->techList, $g_tech_angular);
+		$g_tech_javascript_hoisting = new LinkObj2("javascript-hoisting", "Javascript Hoisting", 'internal', "/technologies/javascriptHoisting.php");
+		array_push($this->techList, $g_tech_javascript_hoisting);
+		$g_tech_responsive_design = new LinkObj2("responsive-design", "Responsive Design", 'internal', "/technologies/responsiveDesign.php");
+		array_push($this->techList, $g_tech_responsive_design);
 
 		//
 		// pageHome.php
@@ -169,9 +179,9 @@ class SidebarPageManager {
 		$page = $this->addPage("pageHome");
 		$page->addLinkObj($g_tech_javascript);
 		$page->addLinkObj($g_tech_react);
+		$page->addLinkObj($g_tech_angular);
 		$page->addLinkObj($g_tech_node);
 		$page->addLinkObj($g_tech_redux);
-		$page->addLinkObj($g_tech_webpack);
 		$page->addLinkObj($g_tech_list);
 		//
 		// pagePublications.php
