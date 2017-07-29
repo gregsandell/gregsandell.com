@@ -37,13 +37,16 @@
   <loc>http://gregsandell.com/technologies/react.php</loc>
 </url>
 <url>
+  <loc>http://gregsandell.com/technologies/angular.php</loc>
+</url>
+<url>
   <loc>http://gregsandell.com/technologies/node.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/technologies/redux.php</loc>
 </url>
 <url>
-  <loc>http://gregsandell.com/technologies/webpack.php</loc>
+  <loc>http://gregsandell.com/technologies/list.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/resume/gregsandell-resume.doc</loc>
@@ -52,9 +55,6 @@
 <url>
   <loc>http://gregsandell.com/resume/gregsandell-resume.pdf</loc>
   <lastmod>2017-06-06T21:33:35+00:00</lastmod>
-</url>
-<url>
-  <loc>http://gregsandell.com/talks/pageTalks.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/portfolio/pages/pageClient_tenx.php</loc>
@@ -96,10 +96,28 @@
   <loc>http://gregsandell.com/portfolio/pages/pageClient_spectrum.php</loc>
 </url>
 <url>
+  <loc>http://gregsandell.com/talks/pageTalks.php</loc>
+</url>
+<url>
   <loc>http://gregsandell.com/portfolio/pages/pagePublications.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/j/pageSitemap.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/webpack.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/css.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/html.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/javascriptHoisting.php</loc>
+</url>
+<url>
+  <loc>http://gregsandell.com/technologies/responsiveDesign.php</loc>
 </url>
 <url>
   <loc>http://gregsandell.com/portfolio/samples/bwhitney/</loc>
