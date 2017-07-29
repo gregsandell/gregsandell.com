@@ -8,6 +8,7 @@
 include($_cpath . "/objSidebar.php");
 $g_sidebarKey = "pageTalks";
 $g_slideshowKey = "logos";
+$g_title = "Greg Sandell - Talks";
 
 include($_cpath . "/templateMain.php");
 
