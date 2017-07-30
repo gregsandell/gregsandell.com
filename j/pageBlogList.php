@@ -4,8 +4,8 @@
 
   // CHANGE THE FEED ADDRESS BELOW - THAT'S IT!
   $gregBlogId = "5850363418317194275";
-  $techBlogUrl = "http://www.blogger.com/feeds/" . $gregBlogId . "/posts/default/-/_technical";
-  $personalBlogUrl = "http://www.blogger.com/feeds/" . $gregBlogId . "/posts/default/-/_personal";
+  $techBlogUrl = "http://gregsandell.blogspot.com/feeds/posts/default/-/_technical?alt=rss";
+  $personalBlogUrl = "http://gregsandell.blogspot.com/feeds/posts/default/-/_personal?alt=rss";
   $sampleBlogUrl = 'http://feeds.feedburner.com/CssTricks';
   $total_articles = 100;
 ?>

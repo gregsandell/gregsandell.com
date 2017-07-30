@@ -149,6 +149,9 @@
 			<a href="https://youtu.be/FNVJwJCilHk"
 				class="html5lightbox" data-group="set3"
 				title="Hope by Mahavishnu Orchestra, transcribed by Greg Sandell"></a>
+			<a href="https://youtu.be/c_GB26wd3OI"
+				class="html5lightbox" data-group="set3"
+				title="A Remark You Made, by Joe Zawinul (Weather Report)"></a>
 		</div>
 	</dd>
 	<dt>Photos</dt> 
