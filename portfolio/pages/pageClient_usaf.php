@@ -12,7 +12,7 @@
 	$g_slideshowKey = "projects";
 	$g_key = $g_globals->Key->usaf;
 	$g_sidebarKey = "pageClient_" . $g_key;
-	$g_section = "samples";
+	$g_section = "portfolio";
 	$linksTitle = "Links";
 	$position = $g_resume->getPosition($g_key);
 	$mainCopy = "";

@@ -123,7 +123,7 @@ class SidebarPageManager {
 
 		// Internal URLs
 		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'internal', "/portfolio/pages/pagePublications.php");
-		$g_samplesPageObj = new LinkObj2("samples", "Main Portfolio Page", 'internal', "/portfolio/templatePortfolio.php");
+		$g_portfolioPageObj = new LinkObj2("samples", "Main Portfolio Page", 'internal', "/portfolio/templatePortfolio.php");
 		$g_billwhitneyLinkObj = new LinkObj2("billwhitney", "Archived Live Site (MSIE Only)", 'internal', "/portfolio/samples/bwhitney");
 		$g_resumeLinkObj = new LinkObj2("resume", "Resume", 'internal', "/resume/pageResume.php");
 		$g_talksLinkObj = new LinkObj2("talks", "Talks", 'internal', "/talks/pageTalks.php");
@@ -237,7 +237,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_abnAmro");
 		$page->addLinkObj($g_maxtradObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_mavenBlogObj); 
@@ -246,7 +246,7 @@ class SidebarPageManager {
 		// pageClient_amex.php
 		//
 		$page = $this->addPage("pageClient_amex");
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -256,7 +256,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_billwhitney");
 		$page->addLinkObj($g_billwhitneyLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -266,7 +266,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_ies");
 		$page->addLinkObj($g_iesLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -276,7 +276,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_maytag");
 		$page->addLinkObj($g_maytagLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -285,7 +285,7 @@ class SidebarPageManager {
 		// pageClient_ubs.php
 		//
 		$page = $this->addPage("pageClient_ubs");
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -295,7 +295,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_usaf");
 		$page->addLinkObj($g_usafLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -305,7 +305,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_watts");
 		$page->addLinkObj($g_wattsLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -314,7 +314,7 @@ class SidebarPageManager {
 		// pageClient_xb.php
 		//
 		$page = $this->addPage("pageClient_xb");
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -324,7 +324,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_tr");
 		$page->addLinkObj($g_trLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -333,7 +333,7 @@ class SidebarPageManager {
 		// pageClient_path.php
 		//
 		$page = $this->addPage("pageClient_path");
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -343,7 +343,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_sears");
 		$page->addLinkObj($g_searsLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
@@ -353,7 +353,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_tenx");
 		$page->addLinkObj($g_tenxLinkObj);
-		$page->addLinkObj($g_samplesPageObj);
+		$page->addLinkObj($g_portfolioPageObj);
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_scorpBlogObj);

@@ -12,7 +12,7 @@
 	$g_slideshowKey = "projects";
 	$g_key = $g_globals->Key->ies;
 	$g_sidebarKey = "pageClient_" . $g_key;
-	$g_section = "samples";
+	$g_section = "portfolio";
 	$linksTitle = "Other Site Links";
 	$position = $g_resume->getPosition($g_key);
 	$g_title = 'Greg Sandell - Portfolio - Education';

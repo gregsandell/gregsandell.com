@@ -5,6 +5,7 @@
 	$g_sidebarKey = "pagePublications";
     $g_slideshowKey = "";
 	$innerPhp = "";
+	$g_section = "portfolio";
 	$g_title = 'Greg Sandell - Publications';
 
 	$mainCopy = "

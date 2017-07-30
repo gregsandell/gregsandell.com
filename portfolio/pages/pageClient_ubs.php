@@ -12,10 +12,10 @@
 	$g_slideshowKey = "projects";
 	$g_key = $g_globals->Key->ubs;
 	$g_sidebarKey = "pageClient_" . $g_key;
-	$g_section = "samples";
+	$g_section = "saportfoliomples";
 	$linksTitle = "Other Site Links";
 	$position = $g_resume->getPosition($g_key);
-	$mainCopy = "";
+	$mainCopy = "portfolio";
 	if (isset($position)) {
 		/* 'Maytag' is a client in the portfolio, but not a 'position' in the resume */
 		$mainCopy = "<h1>Client: " . $position->company . "</h1>";
