@@ -111,6 +111,69 @@
 				class="html5lightbox" data-group="set2" title="La grande gigue simple"></a>
 		</div>
 	<dd>
+	<dt>Fool's Gold - Klezmer Band</dt>
+	<dd>
+		<a href="http://gregsandell.blogspot.com/2017/08/remembering-fools-gold.html" data-thumbnail="/music/resources/images/foolsGold/cassetteCoverThumb.png"
+			class="html5lightbox" data-group="set5" data-width="1000"
+			data-showplaybutton="false" data-shownavigation="false"
+			data-titlecss="<?php print($titleCss) ?>"
+			data-thumbwidth="150" data-thumbheight="150"
+			data-height="600" title="Remembering Fool's Gold (blog)">
+			<img src="/music/resources/images/foolsGold/cassetteCoverThumb.png" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/KPOX63F_mF8" data-thumbnail="/music/resources/images/foolsGold/bandNameThumb.png"
+			class="html5lightbox" data-group="set5" data-width="600"
+			data-showplaybutton="false" data-shownavigation="false"
+			data-titlecss="<?php print($titleCss) ?>"
+			data-thumbwidth="150" data-thumbheight="150"
+			data-height="400" title="Di Zilberne Khasene - Fool's Gold">
+			<img src="/music/resources/images/foolsGold/bandNameThumb.png" style="margin-right: 10px"/></a>
+		<a href="https://www.youtube.com/watch?v=aTy5UdAWa4Y" data-thumbnail="/music/resources/images/foolsGold/coupleThumb.png"
+			class="html5lightbox" data-group="set5" data-width="600"
+			data-showplaybutton="false" data-shownavigation="false"
+			data-titlecss="<?php print($titleCss) ?>"
+			data-thumbwidth="150" data-thumbheight="150"
+			data-height="400" title="Moriah & Bishop Street - Fool's Gold">
+			<img src="/music/resources/images/foolsGold/coupleThumb.png" style="margin-right: 10px"/></a>
+		<div class="moreMusic">
+			<a href="https://www.youtube.com/watch?v=adfIXotKEUo"
+			class="html5lightbox" data-group="set5" title="Bird in Hand Jig - Ellis Island - Eddie's Reel - Moishe's Reel"
+			data-showplaybutton="false" data-shownavigation="false">More...</a>
+		</div>
+		<div class="hiddenSlides">
+			<a href="https://www.youtube.com/watch?v=8BDDEXuR8g0"
+				class="html5lightbox" data-group="set5"
+				title="Air for Guitar - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=Cyvz7b8qSlg"
+				class="html5lightbox" data-group="set5"
+				title="Polka Mazurka - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=Cyvz7b8qSlg"
+				class="html5lightbox" data-group="set5"
+				title="Polka Mazurka - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=lv-pbbu3m6I"
+				class="html5lightbox" data-group="set5"
+				title="Old Grey Cat - Sheyn Vi Di l'Vone - Amaranth - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=gUJh6XX7ybY"
+				class="html5lightbox" data-group="set5"
+				title="Korobushka / Skrip, Klezmerl, Skrip  - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=Zcbeb9jFD14"
+				class="html5lightbox" data-group="set5"
+				title="Ukrainer Dance   - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=UWESCer4fa0"
+				class="html5lightbox" data-group="set5"
+				title="Ragtime Annie - Drums & Guns - Dancing Bear - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=N6lFVRgG3Q8"
+				class="html5lightbox" data-group="set5"
+				title="Ukrainer Chosid'l - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=GoVJBl46itg"
+				class="html5lightbox" data-group="set5"
+				title="Merry Blacksmith - Cooley's Reel - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=VHqVxUKnJaU"
+				class="html5lightbox" data-group="set5"
+				title="Morrison's Jig - Spootiskerry - Zog Farvos? - Fool's Gold"></a>
+			<a href="https://www.youtube.com/watch?v=clt153rQq3w"
+				class="html5lightbox" data-group="set5"
+				title="La Despedida - Fool's Gold"></a>
+	</dd>
 	<dt>Transcriptions</dt>
 	<dd>
 		<a href="https://youtu.be/cMLs7Aemmpk" data-thumbnail="/music/resources/images/transcriptions/zappaSofaThumbThumb.png"
@@ -154,6 +217,7 @@
 				title="A Remark You Made, by Joe Zawinul (Weather Report)"></a>
 		</div>
 	</dd>
+
 	<dt>Photos</dt> 
 	<dd>
 		<a href="<?php print($g_music->photoAlbum->photos[0]->image) ?>"
