@@ -217,7 +217,24 @@
 				title="A Remark You Made, by Joe Zawinul (Weather Report)"></a>
 		</div>
 	</dd>
-
+	<dt>Misc Recordings</dt>
+	<dd>
+		<a href="https://youtu.be/O4UUT4yHYyA" data-thumbnail="/music/resources/images/miscRecordings/gravityHill.jpg"
+			class="html5lightbox" data-group="set6" data-width="600"
+			data-showplaybutton="false" data-shownavigation="false"
+			data-titlecss="<?php print($titleCss) ?>"
+			data-thumbwidth="150" data-thumbheight="150"
+			data-height="400" title="Le Bal des Accordéons - Carnaval">
+			<img src="/music/resources/images/miscRecordings/gravityHill.jpg" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/bV_VlF-r66w" data-thumbnail="/music/resources/images/miscRecordings/dancingAndDreaming.jpg"
+			class="html5lightbox" data-group="set6" title="Flowers of Edinburgh - Becky's Breakthrough"
+			data-showplaybutton="false" data-shownavigation="false">
+			<img src="/music/resources/images/miscRecordings/dancingAndDreaming.jpg" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/MSRbNpl3dMY" data-thumbnail="/music/resources/images/miscRecordings/dancingAndDreaming.jpg"
+			class="html5lightbox" data-group="set6" title="Rosie's Waltz"
+			data-showplaybutton="false" data-shownavigation="false">
+			<img src="/music/resources/images/miscRecordings/dancingAndDreaming.jpg" style="margin-right: 10px"/></a>
+	</dd>
 	<dt>Photos</dt> 
 	<dd>
 		<a href="<?php print($g_music->photoAlbum->photos[0]->image) ?>"
