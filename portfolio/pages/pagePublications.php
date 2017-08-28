@@ -35,8 +35,10 @@ from those days?  (Courtesy of the <a href='http://wayback.archive.org/web/'>Int
 PhD Dissertation, Northwestern University, 1991.
 Title:
 <i>Concurrent Timbres in Orchestration: a Perceptual Study of Factors Determining 'blend'</i><br/>
-
-<a href='http://adsabs.harvard.edu/abs/1991PhDT.......313S'>Online abstract</a>.
+<ul>
+<li><a href='http://adsabs.harvard.edu/abs/1991PhDT.......313S'>Online abstract</a></li>
+<li><a href='/portfolio/pageDissertation.php'>Download</a></li>
+</ul>
 <br/>As a series of PDFs:
 <span style='font-size: 9px'>
 <a href='/portfolio/publications/dissertation/01_cover_TOC.pdf'>1 (4.9 mb)</a>
