@@ -365,7 +365,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	EDUCATION
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$resume->addEducation("nwu", "PhD in Music Theory, Northwestern University - Evanston, IL");
+		$resume->addEducation("nwu", "PhD in Music Theory, Northwestern University - Evanston, IL (Dissertation: <a href='http://bit.ly/2wUbFZq'>http://bit.ly/2wUbFZq</a>)");
 		$resume->addEducation("esm", "MA in Music Theory, Eastman School of Music - Rochester, NY");
 		$resume->addEducation("csula", "Bachelor of Music, Piano Performance, California State University - Los Angeles, CA");
 
