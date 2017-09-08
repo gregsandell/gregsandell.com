@@ -102,10 +102,19 @@ class ResumeManager {
 		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  React 15, Redux, AngularJS 1.4S, Node.js, Javascript, Git, Jasmine/Mocha/Sinon/Chai, Selenium/Nightwatch, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Jenkins, LES, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
  
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// TRILOGYED
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		$pos = $resume->addPosition($globals->Key->trilogyed, "UC Irvine / TrilogyEd", "Irvine, CA", "Aug 2017 - Present",
+					"Direct Hire", "Course Instructor");
+		$pos->addListItem("1", "Instructor for 'Fullstack Developer' 24-week coding bootcamp through UC Irvine Extension");
+        $pos->addListItem("2", "Subjects taught:  HTML, CSS, Git, Bootstrap, Javascript, jQuery, Ajax, Firebase, Node.js, mysql, Express, Handlebars, Sequelize, MongoDB, React, React Native");
+        $pos->addListItem("3", "Responsible for:  instruction 3 days/week, office hours & Slack support, grading homework and projects");
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TEN-X
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - May 2017",
-					"Contract", "Sr. Software Engineer");
+					"Direct Hire", "Sr. Software Engineer");
 		$pos->addListItem("1", "Responsible for Front End coding of site components:  Search & Discovery, Event Details, Calendar, User prefs and personalization, and Home page");
 		$pos->addListItem("2", "Wrote presentation layer and application logic in AngularJS 1.4, React/Redux, ES6 Javascript & Python");
     	$pos->addListItem("3", "Build and dependency tools:  Node.js, Webpack, npm, nvm");

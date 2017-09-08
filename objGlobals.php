@@ -7,6 +7,7 @@ class GlobalsObj {
 	function GlobalsObj() {
 		$this->Key = new KeyObj();
 		$this->allResumeItems = array(
+			$this->Key->trilogyed,
 			$this->Key->tenx,
 			$this->Key->johndeere,
 			$this->Key->cybercoders,
