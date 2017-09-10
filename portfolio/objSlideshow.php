@@ -127,18 +127,18 @@ class SlideshowManager {
 
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
 		$slideshow->add("tenxThumb.png", array("url" => "/portfolio/pages/pageClient_tenx.php"));
-		$slideshow->add("abnThumb.gif", array("url" => "/portfolio/pages/pageClient_abnAmro.php"));
-		$slideshow->add("billwhitneyThumb.jpg", array("url" => "/portfolio/pages/pageClient_billwhitney.php"));
-		$slideshow->add("iesThumb.jpg", array("url" => "/portfolio/pages/pageClient_ies.php"));
-		$slideshow->add("maytagThumb.jpg", array("url" => "/portfolio/pages/pageClient_maytag.php"));
-		$slideshow->add("spectrumThumb.gif", array("url" => "/portfolio/pages/pageClient_spectrum.php"));
+		$slideshow->add("searsThumb.png", array("url" => "/portfolio/pages/pageClient_sears.php"));
+		$slideshow->add("pathThumb.png", array("url" => "/portfolio/pages/pageClient_path.php"));
+		$slideshow->add("trThumb.png", array("url" => "/portfolio/pages/pageClient_tr.php"));
 		$slideshow->add("ubsThumb.gif", array("url" => "/portfolio/pages/pageClient_ubs.php"));
 		$slideshow->add("usafThumb.jpg", array("url" => "/portfolio/pages/pageClient_usaf.php"));
-		$slideshow->add("wattsThumb.jpg", array("url" => "/portfolio/pages/pageClient_watts.php"));
+		$slideshow->add("abnThumb.gif", array("url" => "/portfolio/pages/pageClient_abnAmro.php"));
+		$slideshow->add("iesThumb.jpg", array("url" => "/portfolio/pages/pageClient_ies.php"));
 		$slideshow->add("xbThumb.jpg", array("url" => "/portfolio/pages/pageClient_xb.php"));
-		$slideshow->add("trThumb.png", array("url" => "/portfolio/pages/pageClient_tr.php"));
-		$slideshow->add("pathThumb.png", array("url" => "/portfolio/pages/pageClient_path.php"));
-		$slideshow->add("searsThumb.png", array("url" => "/portfolio/pages/pageClient_sears.php"));
+		$slideshow->add("maytagThumb.jpg", array("url" => "/portfolio/pages/pageClient_maytag.php"));
+		$slideshow->add("billwhitneyThumb.jpg", array("url" => "/portfolio/pages/pageClient_billwhitney.php"));
+		$slideshow->add("wattsThumb.jpg", array("url" => "/portfolio/pages/pageClient_watts.php"));
+		$slideshow->add("spectrumThumb.gif", array("url" => "/portfolio/pages/pageClient_spectrum.php"));
 	}
 }
 

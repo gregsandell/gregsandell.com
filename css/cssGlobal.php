@@ -157,6 +157,80 @@ TD.bread {
 	height: 610px;
 	width: 525px;
 }
+.<?php print($g_globals->Key->tenx) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+/* No johndeere or cybercoders porftolio */
+.<?php print($g_globals->Key->sears) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.<?php print($g_globals->Key->path) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.<?php print($g_globals->Key->tr) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+/* no icrossing or tribune portfolio */
+.<?php print($g_globals->Key->ubs) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.<?php print($g_globals->Key->usaf) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.<?php print($g_globals->Key->amex) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
+.<?php print($g_globals->Key->abn) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
 .<?php print($g_globals->Key->ies) ?>Portfolio {
 	position: absolute;
 	left: 0px;
@@ -166,6 +240,15 @@ TD.bread {
 	padding-top: 13px;
 	height: auto;
 	vertical-align: top;
+}
+.<?php print($g_globals->Key->xb) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	padding-left: 13px;
+	padding-top: 13px;
+	height: auto;
 }
 .<?php print($g_globals->Key->maytag) ?>Portfolio {
 	position: absolute;
@@ -185,15 +268,6 @@ TD.bread {
 	padding-top: 13px;
 	height: auto;
 }
-.<?php print($g_globals->Key->xb) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	padding-left: 13px;
-	padding-top: 13px;
-	height: auto;
-}
 .<?php print($g_globals->Key->billwhitney) ?>Portfolio {
 	position: absolute;
 	left: 0px;
@@ -204,60 +278,6 @@ TD.bread {
 	height: auto;
 }
 .<?php print($g_globals->Key->spectrum) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->abn) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->amex) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->usaf) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->ubs) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->tr) ?>Portfolio {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 525px;
-	height: auto;
-	padding-left: 13px;
-	padding-top: 13px;
-}
-.<?php print($g_globals->Key->path) ?>Portfolio {
 	position: absolute;
 	left: 0px;
 	top: 0px;

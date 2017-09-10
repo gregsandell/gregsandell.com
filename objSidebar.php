@@ -233,6 +233,48 @@ class SidebarPageManager {
 		$page->addLinkObj($g_blogspotLinkObj);
 
 		//
+		// pageClient_tenx.php
+		//
+		$page = $this->addPage("pageClient_tenx");
+		$page->addLinkObj($g_tenxLinkObj);
+		$page->addLinkObj($g_portfolioPageObj);
+		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_publicationsLinkObj);
+		$page->addBlogObj($g_scorpBlogObj);
+
+		//
+		// pageClient_sears.php
+		//
+		$page = $this->addPage("pageClient_sears");
+		$page->addLinkObj($g_searsLinkObj);
+		$page->addLinkObj($g_portfolioPageObj);
+		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_publicationsLinkObj);
+		// $page->addBlogObj("maven", $g_mavenBlogObj);
+		$page->addBlogObj($g_scorpBlogObj);
+
+		//
+		// pageClient_path.php
+		//
+		$page = $this->addPage("pageClient_path");
+		$page->addLinkObj($g_portfolioPageObj);
+		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_publicationsLinkObj);
+		// $page->addBlogObj("maven", $g_mavenBlogObj);
+		$page->addBlogObj($g_scorpBlogObj);
+
+		//
+		// pageClient_tr.php
+		//
+		$page = $this->addPage("pageClient_tr");
+		$page->addLinkObj($g_trLinkObj);
+		$page->addLinkObj($g_portfolioPageObj);
+		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_publicationsLinkObj);
+		// $page->addBlogObj("maven", $g_mavenBlogObj);
+		$page->addBlogObj($g_scorpBlogObj);
+
+		//
 		// pageClient_abnAmro.php
 		//
 		$page = $this->addPage("pageClient_abnAmro");
@@ -318,44 +360,6 @@ class SidebarPageManager {
 		$page->addLinkObj($g_charsetLinkObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
-		// 
-		// pageClient_tr.php
-		//
-		$page = $this->addPage("pageClient_tr");
-		$page->addLinkObj($g_trLinkObj);
-		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
-		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
-		// 
-		// pageClient_path.php
-		//
-		$page = $this->addPage("pageClient_path");
-		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
-		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
-		// 
-		// pageClient_sears.php
-		//
-		$page = $this->addPage("pageClient_sears");
-		$page->addLinkObj($g_searsLinkObj);
-		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
-		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
-		//
-		// pageClient_tenx.php
-		//
-		$page = $this->addPage("pageClient_tenx");
-		$page->addLinkObj($g_tenxLinkObj);
-		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
-		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_scorpBlogObj);
 	}
 } 
