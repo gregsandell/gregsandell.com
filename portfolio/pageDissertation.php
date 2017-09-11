@@ -11,5 +11,4 @@
 
 	include($_cpath . "/templateMain.php");
 
-
 ?>

@@ -33,13 +33,13 @@
 </head>
 <body>
 <div id="wrapper">
-	<div id="header">
+	<header id="header">
 		<div id="logo">
 			<h1><a href="/">Greg Sandell</a></h1>
 			<h2>Front End Web Developer</h2>
 		</div>
 		<!-- end div#logo -->
-		<div id="menu">
+		<nav id="menu">
 			<ul>
 				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/home/pageHome.php">Home</a></li>
 				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
@@ -48,11 +48,11 @@
 				<li class="<?php print($g_section == 'music' ? 'active' : '') ?>"><a href="/music/pageMusic.php">Music</a></li>
 				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/blog/pageBlogs.php">Blog</a></li>
 			</ul>
-		</div>
+		</nav>
 		<!-- end div#menu -->
-	</div>
+	</header>
 	<!-- end div#header -->
-	<div id="page">
+	<main id="page">
 		<div id="content">
 			<div id="welcome"> <?php
 				/*
@@ -73,16 +73,16 @@
 			</div>
 		</div>
 		<!-- end div#content -->
-		<div id="sidebar">
+		<aside id="sidebar">
 			<?php	include("{$_cpath}/templateSidebar.php"); ?>
-		</div>
+		</aside>
 		<!-- end div#sidebar -->
 		<div style="clear: both; height: 1px"></div>
-	</div>
+	</main>
 	<!-- end div#page -->
-	<div id="footer">
+	<footer id="footer">
 		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
-	</div>
+	</footer>
 	<!-- end div#footer -->
 </div>
 <div id="dialog-confirm" class="avgrund-popup">

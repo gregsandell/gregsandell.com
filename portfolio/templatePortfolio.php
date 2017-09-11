@@ -77,13 +77,13 @@
 	</head>
 <body>
 <div id="wrapper">
-	<div id="header">
+	<header id="header">
 		<div id="logo">
 			<h1 class="logoH1"><a href="/">Greg Sandell</a></h1>
 			<h2>Samples and Portfolio</h2>
 		</div>
 		<!-- end div#logo -->
-		<div id="menu">
+		<nav id="menu">
 			<ul>
 				<li class="<?php print($g_section == 'home' ? 'active' : '') ?>"><a href="/home/pageHome.php">Home</a></li>
 				<li class="<?php print($g_section == 'resume' ? 'active' : '') ?>"><a href="/resume/pageResume.php">Resume</a></li>
@@ -92,11 +92,11 @@
 				<li class="<?php print($g_section == 'music' ? 'active' : '') ?>"><a href="/music/pageMusic.php">Music</a></li>
 				<li class="<?php print($g_section == 'blogs' ? 'active' : '') ?>"><a href="/blog/pageBlogs.php">Blog</a></li>
 			</ul>
-		</div>
+		</nav>
 		<!-- end div#menu -->
-	</div>
+	</header>
 	<!-- end div#header -->
-	<div id="page">
+	<main id="page">
 		<div id="content">
 			<div id="welcome">
 				<div class="portfolioDisplay">   
@@ -124,7 +124,7 @@
 			</div>
 		</div>
 		<!-- end div#content -->
-		<div id="sidebar">
+		<aside id="sidebar">
 			<ul>
 				<li id="submenu">
 					<h2>Clients</h2>
@@ -135,14 +135,14 @@
 					</ul>
 				</li>
 			</ul>
-		</div>
+		</aside>
 		<!-- end div#sidebar -->
 		<div style="clear: both; height: 1px"></div>
-	</div>
-	<!-- end div#page -->
-	<div id="footer">
+	</main>
+	<!-- end main#page -->
+	<footer id="footer">
 		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
-	</div>
+	</footer>
 	<!-- end div#footer -->
 </div>
 <!-- end div#wrapper -->

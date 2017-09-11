@@ -7,10 +7,12 @@
 	$g_title = 'Greg Sandell - Music';
 
 ?>
-<h1>Music</h1>
-<p>
-  I've been playing music since I was 12.  Here's a sampling of some things I've done over the years.
-<p/>
+<header>
+	<h1>Music</h1>
+	<p>
+	  I've been playing music since I was 12.  Here's a sampling of some things I've done over the years.
+	<p/>
+</header>
 <dl>
 	<dt>Original Compositions</dt>
 	<dd>

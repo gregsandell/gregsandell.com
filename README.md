@@ -28,6 +28,7 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    necessary.  
 1. Do the following if you want rainbird's company site as a link in your rainbird portfolio page's sidebar.  In In */objSidebar.php*, in *SidebarPageManager*'s *load()* function, go to the code block beginning with the comment *// External Websites*, and add an entry equivalent to those for other clients (use tenx as an example).
 1. In */objSidebar.php*, create a section of code in *SidebarPageManager*'s *load()* function that will specify what links show up in the sidebar for rainbird's portfolio page.  You need to add the line:  *$page = $this->addPage("pageClient_rainbird");*, followed by calls to *$page->addLinkObj()* that add preexisting links that are created in this file.  See code for tenx for an example.
+2. In */portfolio/templatePortfolio.php*, see the *&lt;script&gt; block that sets the javascript *g_projectNames* array.  Following the examples for previous clients, add an entry for *$g_globals->Key->rainbird*.
 1. Create a new file in */portfolio/pages*.  Copy one of the other files, such
    as named *pageClient_tenx.php*, and name it  named *pageClient_rainbird.php*.  You only need to modify 
    a few places (usually).  

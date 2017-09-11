@@ -8,7 +8,7 @@
 	$g_section = "portfolio";
 	$g_title = 'Greg Sandell - Publications';
 
-	$mainCopy = "
+	$mainCopy = "<header>
 				<h1>Publications</h1>
 <p><p>Prior to becoming a professional software developer, I was a graduate student and then 
 academic researcher in
@@ -19,6 +19,7 @@ Digital Signal Processing for music synthesis, acoustics of musical instruments,
 <a href='http://classic-web.archive.org/web/19990909140857re_/sparky.parmly.luc.edu/sandell'>1995 Home Page</a>
 from those days?  (Courtesy of the <a href='http://wayback.archive.org/web/'>Internet Archive Wayback Machine</a>)
 </p>
+</header>
 <dl>
 <dt>Links to Peer Review Articles</dt>
 <dd><b>Music Perception</b>: 
