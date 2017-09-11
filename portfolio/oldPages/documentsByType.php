@@ -1,7 +1,7 @@
 <?php
-	include("../SessionObj.php");
+	include("./SessionObj.php");
 	$g_session = new Session();
-	include("../portfolioData.php");
+	include("./portfolioData.php");
 
 	/* turn off authentication */
 	$g_session->setAuthenticated(true);
@@ -21,7 +21,7 @@
 <html>
 	<head>
 		<title>Greg Sandell - Project Documents</title>
-		<?php include("../portfolioCss.php"); ?>
+		<?php include("./portfolioCss.php"); ?>
 		<script type="text/javascript"> <?php
 		if ($g_session->notAuthenticated()) { ?>
 				location.href = "http://www.gregsandell.com";

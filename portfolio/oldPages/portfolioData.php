@@ -301,13 +301,13 @@ class Document {
 	function getUrl() {
 		$result = "";
 		if ($this->type == 'pdf') {
-			$result = "/portfolio/portfolioPopup.php?pdf=" . $this->url;
+			$result = "/portfolio/oldPages/portfolioPopup.php?pdf=" . $this->url;
 		}
 		if ($this->type == 'doc') {
-			$result = "/portfolio/portfolioPopup.php?doc=" . $this->url;
+			$result = "/portfolio/oldPages/portfolioPopup.php?doc=" . $this->url;
 		}
 		if ($this->type == 'slideshow') {
-			$result = "/portfolio/portfolioPopup.php?slideshow=" . $this->url;
+			$result = "/portfolio/oldPages/portfolioPopup.php?slideshow=" . $this->url;
 		}
 		return($result);
 	}

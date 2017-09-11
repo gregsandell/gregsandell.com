@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Greg Sandell - Publications</title>
-		<?php include("portfolioCss.php"); ?>
+		<?php include("./portfolioCss.php"); ?>
 	</head>
 	<body>
 		<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">

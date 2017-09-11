@@ -95,7 +95,7 @@
 								<li><b>Status:</b> Site no longer up.  </li>
 								<li><b>Technologies:</b> DHTML, Javascript, W3C DOM</li>
 								<li><b>Timeframe:</b> Began &#38; launched in 1997</li>
-								<li><a href="/portfolio//portfolioPopup.php?site=whitney" TARGET=_BLANK>Visit site</a> (archived)</li>
+								<li><a href="/portfolio/oldPages/portfolioPopup.php?site=whitney" TARGET=_BLANK>Visit site</a> (archived)</li>
 							</ul>
 				</td>
 			</tr>

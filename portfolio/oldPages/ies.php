@@ -10,7 +10,7 @@
 	$imageBorder = "0";
 		session_name("18thStreet");
 	session_start();
-	include("../portfolioData.php");
+	include("./portfolioData.php");
 	$g_portfolio = new Portfolio();
 	$g_portfolio->loadData();
 	$client = $g_portfolio->getClient('ies');
@@ -104,7 +104,7 @@
 				<td colspan="2" class="portfolioTitle" colspan="3"><?php print($client->linkText) ?></td>
 			</tr>
 			<tr>
-				<td><a href="../portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
+				<td><a href="/portfolio/oldPages/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK><img src="<?php print($client->image) ?>" width="<?php print($client->width) ?>" height="<?php print($client->height) ?>" border="<?php print($imageBorder) ?>" valign="top"/></a></td>
 
 				<td>
 							<ul>
@@ -113,7 +113,7 @@
 								<li><b>Status:</b> I am still on this project</li>
 								<li><b>Technologies:</b> <?php print($client->technologies) ?></li>
 								<li><b>Timeframe:</b> <?php print($client->timeframe) ?></li>
-								<li><a href="/portfolio/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit live site</a> (popup window)</li>
+								<li><a href="/portfolio/oldPages/portfolioPopup.php?site=<?php print($client->key) ?>" TARGET=_BLANK>Visit live site</a> (popup window)</li>
 							</ul>
 				</td>
 			</tr>

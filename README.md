@@ -63,3 +63,33 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    	    4. *$description*: Short descriptive text of the item.  It get sets to the *title* attribute of the thumbnail's &lt;a&gt; tag, so it appears as tip text when you mouse over it.
    	    5. *$width* &amp; *$height*: the width and height of the item (not the thumbnail).  These are entered as integers:  1 and 2 instead of "1" and "2".  If the *$image* arg was set to a YouTube video url, then 600 and 400 are good values.
 
+## Unlinked Parts of Site
+ Some sections of the site I don't use any more; they're still live, but there a no (or few) inbound links to them so noone will see them.
+ 
+### /talks
+*/talks* is still live and there is one (!) inbound link to it from the sidebar of the */code* page.  */talks/* used to have it's own tab in the header; it got replaced by */music*.
+
+### Old Portfolio Pages
+This is a previous iteration of the portfolio section.  It had: 
+
+* A different look (not as polished)
+* Screen shots were presented as slideshows
+* Lots of process docs, in pdf form, from the client were available
+* Breadcrumb links were shown
+* Material was iFramed in a *"portfolioPopup"* which showed the user that they were in a new window, with a close button.  It's a cheesy user experience, so I'm not using this approach anywher in the site any more.
+* Permissioning was set up so the material could be seen only by people invited to see it
+* A 'highlights' page of some of the more interesting of "employment-worthy" documents from various clients
+* A page of documents from all clients, arranged by type.  Very little value, it was more of a programming exercise.
+
+All of the pages described above can stil be reached from */portfolio/oldPages/index.php*.
+
+#### Porfolio Permissioning
+This involved giving out 'secret' urls to employers, e.g. Sears would be given *http://gregsandell.com/sears*, and this would grant them access to portfolio pages.  
+
+This was managed with these files in */portfolio/oldPages*:  DataObj.php, dbTest.php, PortfolioMemberManager.php, DB.php (lost) and SessionObj.php.  Member access would time out eventually, so (for example) the */sears* token would cease to work after a while.  There was a mysql database involved, and an "email spy" which would send me email whenever a portfolio page was accessed.  This functionality is unrecoverable without new code and a mysql database.
+
+### Old Publications Page
+Pretty much the same as current */publications*, but with poorer design, and breadcrumbs.  Still reachable at */portfolio/oldPages/publications.php*.
+ 
+ 
+

@@ -94,7 +94,7 @@
 								<li><b>My Role:</b> Research Associate/Programmer at Loyola University Chicago, Parmly Hearing Institute</li>
 								<li><b>Technologies:</b> Java 1.1 Applet</li>
 								<li><b>Timeframe:</b> Began &#38; launched in 1996</li>
-								<li><a href="/portfolio/portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
+								<li><a href="/portfolio/oldPages/portfolioPopup.php?site=spectrum" TARGET=_BLANK>Visit site</a> (archived)</li>
 							</ul>
 				</td>
 			</tr>
