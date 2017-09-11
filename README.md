@@ -56,4 +56,10 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    	    7. Set *$width* and *$height* accordingly.  Thy must be strings (*"500"* and *"290"*)
    	    8. Four more deprecated args that should all be set to empty strings:  *$iconImage* though *$hostedState*.
    	    9. *$lastKey* and *$nextKey* pertain to the fact that all the portfolio clients are in a large carousel, and you must identify which clients (by their keys) come before and after *rainbird*.  For example, clients Pathfinder, Sears and Ten-X were worked at in that order (earliest to latest).  The settings for the Sears client then, are:  *$lastKey* = *$this->globals->Key->path*, *$nextKey*= *$this->globals->Key->tenx*.  The carousel is in a circle and evntually points back to the first client in time.  Since *rainbird* is the latest client to be added, and *spectrum* is the earliest client in the portfolio, so *$nextKey* would be *$this->globals->Key->spectrum*
+   	1.  Congrats, you finished adding an *addClient()* call!  Now you need to call *addThumbdoc()* for each rainbird portfolio item.  Here is the signature for *addThumbdoc()*:  *addThumbdoc($key, $image, $thumbImage, $description, $width, $height)*.  Here's how to interpret the args:
+   	    1. *$key*: use ordinal numbers 1, 2, 3 etc., as strings.  So your first item should be "1", the second "2", and so on.
+   	    2. *$image*: Similar to *$image* in *addClient*, the full path (from website root) to the portfolio item.  But if the item is a YouTube video instead of a graphic image, this will be the YouTube video's url.
+   	    3. *$thumbImage*: The full path to the item's thumbnail image.
+   	    4. *$description*: Short descriptive text of the item.  It get sets to the *title* attribute of the thumbnail's &lt;a&gt; tag, so it appears as tip text when you mouse over it.
+   	    5. *$width* &amp; *$height*: the width and height of the item (not the thumbnail).  These are entered as integers:  1 and 2 instead of "1" and "2".  If the *$image* arg was set to a YouTube video url, then 600 and 400 are good values.
 
