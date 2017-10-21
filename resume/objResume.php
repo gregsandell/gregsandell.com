@@ -99,7 +99,7 @@ class ResumeManager {
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
 		$resume->addQualItem("1", "I have over ten years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments.  I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well.  I have 13 years experience with Agile methodology, tooling, TDD and automated test coverage.");
-		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  React 15, Redux, AngularJS 1.4S, Node.js, Javascript, Git, Jasmine/Mocha/Sinon/Chai, Selenium/Nightwatch, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Jenkins, LES, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
+		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  React 15, Redux, AngularJS 1.4S, Node.js, Javascript, Sencha ExtJS 4.0.7, Git, Jasmine/Mocha/Sinon/Chai, Selenium/Nightwatch, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Jenkins, LES, API Blueprint, Nexus, Bootstrap, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.");
  
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
@@ -146,7 +146,7 @@ class ResumeManager {
 		$pos = $resume->addPosition($globals->Key->cybercoders, "CyberCoders", "Irvine, CA", "Nov 2014 - Aug 2015",
 					"Direct Hire", "Front End Java Developer");
 		$pos->addListItem("1", "Developer for hosted web application <i>Compass</i>, a CRM platform for Recruiters.");
-        $pos->addListItem("2", "Wrote application logic in Javascript, ExtJS, Ajax/JSON programming.");
+        $pos->addListItem("2", "Wrote application logic in Javascript, Sencha ExtJS 4.0.7, Ajax/JSON programming.");
         $pos->addListItem("3", "Created forms, panels, grids and other UI widgets from ExtJS components");
         $pos->addListItem("4", "Stress-tested app with jMeter, 5-250 concurrent users.");
         $pos->addListItem("5", "Wrote Jasmine unit tests for project’s custom ExtJS components");
