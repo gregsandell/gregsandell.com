@@ -6,11 +6,26 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>    <script>
     $(document).ready(function() {
-        $('#width').text(document.documentElement.clientWidth)
+        $('#dwidth').text(document.documentElement.clientWidth)
+        $('#wwidth').text($(window).width())
+        $('#iwidth').text(window.innerWidth)
+        jQuery.each( jQuery.browser, function( i, val ) {
+            $( "<tr><td>" + i + "</td><td></td>" + val + "</td></tr>" )
+                    .appendTo( $('#browserTable') );
+        });
     })
 </script>
 </head>
 <body>
-<h1>Page width is <span id="width"></span>px</h1>
+<h1>document.documentElement.clientWidth is <span id="dwidth"></span>px</h1>
+<h1>$(window).width() is <span id="wwidth"></span>px</h1>
+<h1>window.innerWidth is <span id="iwidth"></span>px</h1>
+<h1>$.browser properties:</h1>
+<table>
+    <tbody id="browserTable">
+
+    </tbody>
+</table>
+
 </body>
 </html>
