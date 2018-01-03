@@ -18,7 +18,6 @@
             addRow('#theTable', 'navigator.userAgent', navigator.userAgent)
             addRow('#theTable', 'window.innerWidth', window.innerWidth)
             addRow('#theTable', 'window.outerWidth', window.outerWidth)
-            addRow('#theTable', 'window.screen properties', Object.keys(window.screen).join(','))
             addRow('#theTable', 'window.screen.availWidth', window.screen.availWidth)
             addRow('#theTable', 'window.screen.width', window.screen.width)
             addRow('#theTable', 'window.screen.pixelDepth', window.screen.pixelDepth)
@@ -31,11 +30,14 @@
                             $("<td>").text(val)
                         ]))
             });
+            if (parseInt(window.screen.pixelDepth) < 24) {
+                $('td').css('font-size', '32px')
+            }
         })
     </script>
     <style>
         td {
-            font-size: 64px;
+            font-size: 16px;
         }
     </style>
 </head>
