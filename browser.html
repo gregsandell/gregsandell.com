@@ -20,10 +20,10 @@
         function setFontSize() {
             $('td').css('font-size', fontSize + 'px')
         }
+        function is_touch_device() {
+            return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+        }
         $(document).ready(function () {
-            function is_touch_device() {
-                return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
-            }
             var clickEventType = is_touch_device() ? 'touchend' : 'click';
             addRow('#theTable', 'navigator.userAgent', navigator.userAgent)
             addRow('#theTable', 'window.innerWidth', window.innerWidth)
@@ -31,7 +31,9 @@
             addRow('#theTable', 'window.screen.availWidth', window.screen.availWidth)
             addRow('#theTable', 'window.screen.width', window.screen.width)
             addRow('#theTable', 'window.screen.pixelDepth', window.screen.pixelDepth)
-            addRow('#theTable', 'window.screen.orientation.type', window.screen.orientation.type)
+            if (window.screen && window.screen.orientation && window.screen.orientation.type) {
+                addRow('#theTable', 'window.screen.orientation.type', window.screen.orientation.type)
+            }
             addRow('#theTable', '$(window).width()', $(window).width())
             setFontSize()
             $('.resize').on(clickEventType, function() {
