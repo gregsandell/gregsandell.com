@@ -21,6 +21,10 @@
             $('td').css('font-size', fontSize + 'px')
         }
         $(document).ready(function () {
+            function is_touch_device() {
+                return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+            }
+            var clickEventType = is_touch_device() ? 'touchend' : 'click';
             addRow('#theTable', 'navigator.userAgent', navigator.userAgent)
             addRow('#theTable', 'window.innerWidth', window.innerWidth)
             addRow('#theTable', 'window.outerWidth', window.outerWidth)
@@ -30,7 +34,7 @@
             addRow('#theTable', 'window.screen.orientation.type', window.screen.orientation.type)
             addRow('#theTable', '$(window).width()', $(window).width())
             setFontSize()
-            $('.resize').on('click', function() {
+            $('.resize').on(clickEventType, function() {
                 var amount = parseInt($(this).data('incr'))
                 alterFont(amount)
             })
