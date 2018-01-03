@@ -30,7 +30,7 @@
                             $("<td>").text(val)
                         ]))
             });
-            if (parseInt(window.screen.pixelDepth) < 24) {
+            if (parseInt(window.screen.pixelDepth) >= 24) {
                 $('td').css('font-size', '32px')
             }
         })
