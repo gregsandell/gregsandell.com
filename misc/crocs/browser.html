@@ -7,12 +7,23 @@
             crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
     <script>
+        function addRow(selector, key, value) {
+            $(selector).append(
+                    $("<tr>").append([
+                        $("<td>").text(key),
+                        $("<td>").text(value)
+                    ]))
+        }
         $(document).ready(function () {
-            $('#dwidth').text(document.documentElement.clientWidth)
-            $('#wwidth').text($(window).width())
-            $('#iwidth').text(window.innerWidth)
-            $('#owidth').text(window.outerWidth)
-            $('#nwidth').text(navigator.userAgent)
+            addRow('#theTable', 'navigator.userAgent', navigator.userAgent)
+            addRow('#theTable', 'window.innerWidth', window.innerWidth)
+            addRow('#theTable', 'window.outerWidth', window.outerWidth)
+            addRow('#theTable', 'window.screen properties', Object.keys(window.screen).join(','))
+            addRow('#theTable', 'window.screen.availWidth', window.screen.availWidth)
+            addRow('#theTable', 'window.screen.width', window.screen.width)
+            addRow('#theTable', 'window.screen.pixelDepth', window.screen.pixelDepth)
+            addRow('#theTable', 'window.screen.orientation.type', window.screen.orientation.type)
+            addRow('#theTable', '$(window).width()', $(window).width())
             $.each($.browser, function (i, val) {
                 $('#browserTable').append(
                         $("<tr>").append([
@@ -29,20 +40,16 @@
     </style>
 </head>
 <body>
-<h1>document.documentElement.clientWidth is <span id="dwidth"></span>px</h1>
+<table border="1">
+    <tbody id="theTable">
 
-<h1>$(window).width() is <span id="wwidth"></span>px</h1>
-
-<h1>window.innerWidth is <span id="iwidth"></span>px</h1>
-<h1>window.outerWidth is <span id="owidth"></span>px</h1>
-<h1>navigator.userAgent is <span id="nwidth"></span>px</h1>
-
+    </tbody>
+</table>
 <h1>$.browser properties:</h1>
 <table border="1">
     <tbody id="browserTable">
 
     </tbody>
 </table>
-
 </body>
 </html>
