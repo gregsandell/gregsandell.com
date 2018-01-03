@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <script
+            src="https://code.jquery.com/jquery-1.8.3.min.js"
+            integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+            crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dwidth').text(document.documentElement.clientWidth)
+            $('#wwidth').text($(window).width())
+            $('#iwidth').text(window.innerWidth)
+            $('#nwidth').text(navigator.userAgent)
+            $.each($.browser, function (i, val) {
+                $('#browserTable').append(
+                        $("<tr>").append([
+                            $("<td>").text(i),
+                            $("<td>").text(val)
+                        ]))
+            });
+        })
+    </script>
+</head>
+<body>
+<h1>document.documentElement.clientWidth is <span id="dwidth"></span>px</h1>
+
+<h1>$(window).width() is <span id="wwidth"></span>px</h1>
+
+<h1>window.innerWidth is <span id="iwidth"></span>px</h1>
+<h1>navigator.userAgent is <span id="nwidth"></span>px</h1>
+
+<h1>$.browser properties:</h1>
+<table border="1">
+    <tbody id="browserTable">
+
+    </tbody>
+</table>
+
+</body>
+</html>
