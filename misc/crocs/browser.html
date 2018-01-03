@@ -11,6 +11,7 @@
             $('#dwidth').text(document.documentElement.clientWidth)
             $('#wwidth').text($(window).width())
             $('#iwidth').text(window.innerWidth)
+            $('#owidth').text(window.outerWidth)
             $('#nwidth').text(navigator.userAgent)
             $.each($.browser, function (i, val) {
                 $('#browserTable').append(
@@ -33,6 +34,7 @@
 <h1>$(window).width() is <span id="wwidth"></span>px</h1>
 
 <h1>window.innerWidth is <span id="iwidth"></span>px</h1>
+<h1>window.outerWidth is <span id="owidth"></span>px</h1>
 <h1>navigator.userAgent is <span id="nwidth"></span>px</h1>
 
 <h1>$.browser properties:</h1>
