@@ -2,17 +2,23 @@
 <html>
 <head>
     <script
-            src="https://code.jquery.com/jquery-1.8.3.min.js"
-            integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
-            crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.1.1.js"></script>
-    <script>
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>    <script>
+        var fontSize = 16;
         function addRow(selector, key, value) {
             $(selector).append(
                     $("<tr>").append([
                         $("<td>").text(key),
                         $("<td>").text(value)
                     ]))
+        }
+        function alterFont(amount) {
+            fontSize += amount
+            setFontSize()
+        }
+        function setFontSize() {
+            $('td').css('font-size', fontSize + 'px')
         }
         $(document).ready(function () {
             addRow('#theTable', 'navigator.userAgent', navigator.userAgent)
@@ -23,16 +29,11 @@
             addRow('#theTable', 'window.screen.pixelDepth', window.screen.pixelDepth)
             addRow('#theTable', 'window.screen.orientation.type', window.screen.orientation.type)
             addRow('#theTable', '$(window).width()', $(window).width())
-            $.each($.browser, function (i, val) {
-                $('#browserTable').append(
-                        $("<tr>").append([
-                            $("<td>").text(i),
-                            $("<td>").text(val)
-                        ]))
-            });
-            if (parseInt(window.screen.pixelDepth) >= 24) {
-                $('td').css('font-size', '32px')
-            }
+            setFontSize()
+            $('.resize').on('click', function() {
+                var amount = parseInt($(this).data('incr'))
+                alterFont(amount)
+            })
         })
     </script>
     <style>
@@ -47,11 +48,6 @@
 
     </tbody>
 </table>
-<h1>$.browser properties:</h1>
-<table border="1">
-    <tbody id="browserTable">
-
-    </tbody>
-</table>
+<h1>Font size:  <button class="resize" data-incr="1">Bigger</button>&nbsp;&nbsp;<button class="resize" data-incr="-1">Smaller</button></h1>
 </body>
 </html>
