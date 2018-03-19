@@ -5,10 +5,10 @@
 ?>
 <h1>Frontend/Mobile Web Developer</h1>
 <p style='text-align: justify; float: left; padding-right: 0px'>
-	&nbsp;<img alt="Photo of Greg Sandell" style='float: right; padding-left: 5px' src='/image/gregHeadshot-50.jpg' />I have 18 years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in Java/Linux/Open Source environments. I focus on the Front End programming logic for transactional web pages, and can deploy designs in HTML5 and CSS3 as well. I have 13 years experience with Agile methodology, tooling, TDD and test coverage.
+	&nbsp;<img alt="Photo of Greg Sandell" style='float: right; padding-left: 5px' src='/image/gregHeadshot-50.jpg' />I have over ten years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in NodeJs, Java and Open Source environments. I focus on the Front End programming logic for transactional web pages, QA automation tests and deploying designs in HTML5 and CSS3.
 </p>
 <p>
-Technology stack (ordered roughly by recency and strength): AngularJS 1.4, React, Redux, Javascript, Node.js, Webpack, Git, Mocha/Sinon/Chai, Advanced Rest Client, WebStorm 11.0.3, Rally, Jenkins, LESS, API Blueprint, Nexus, Bootstrap, ExtJS 4.0.7, Jasmine 2.3, Fisheye/Crucible, Eclipse 4.4/Luna, jMeter 2.13, Oracle, jQuery, jQuery Mobile, Maven 4, HTML5, CSS3, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Artifactory, mysql, SQL Server.
+Technology stack (ordered roughly by recency and strength): Javascript/ES6/NodeJs, React 15, Redux, Web pack, Git, GitHub, BitBucket, npm, yarn, AWS, AngularJS 1.4, Nightwatch, InternJS, Appium, Dojo, Selenium, BrowserStack, HTML5, CSS3, Bootstrap, SASS, jQuery, Firebase, Jenkins, Nexus, Artifactory, Bugzilla, Jasmine/Mocha/Sinon/Chai, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Sencha ExtJS 4.0.7, Atlassian code tools, Eclipse, Oracle, Stored Procedures, Maven 4, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Mysql, SQL Server.
 </p>
 <h2>Switch to the <a href="/j">Mobile version</a> of the site, written in jQuery Mobile!</h2>
 

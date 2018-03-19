@@ -21,6 +21,9 @@ Instructions:
 4. The purpose of category is for an improved skills page, that will list tech stack according to category, in the future.  Right now the jQuery mobile page has a skills page based on `/objSkills.php` that is older and more primitive.  The desktop site has no skills page at all. 
 5. The url `parameter` will make it possible to set individual links for individual icons, but we aren't doing that yet.  Instead all icons lead to `/technologies/list.php`.  Just copy what the other lines are doing.
 
+## Resume Change:  Top Level Description
+
+Keep in mind that if you change the summary and tech stack paragraphs, you want to change them on the home page too.  TO DO:  have the home page read this directly from objResume.php.
 
 ## Adding new position to resume
 For an example, say you are adding a position for Rainbird Sprinklers.
