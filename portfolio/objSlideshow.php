@@ -38,6 +38,7 @@ class SlideshowManager {
 		$slideshow->add("bitbucket.png", array("category" => "Code Versioning", "url" => $techUrl));
 		$slideshow->add("bootstrap.png", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("browserstack.png", array("category" => "Code Quality", "url" => $techUrl));
+		$slideshow->add("bugzilla.png", array("category" => "Collaboration", "url" => $techUrl));
 		$slideshow->add("chai.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("cognos.png", array("category" => "Library", "url" => $techUrl));
 		$slideshow->add("confluence.jpg", array("category" => "Collaboration", "url" => $techUrl));
