@@ -7,12 +7,27 @@ Website code &amp; resources for http://gregsandell.com
 * Start Mamp Pro
 * View http://localhost:8888
 
+## Adding New Sidebar Tech Logos
+
+It's a little odd, but the sidebar logo code lives in the `portfolio` area.  Perhaps this can be fixed some day.
+
+Instructions:
+
+1. Standard size for logos is 190x150.  Whatever size your logo is, shrink it down and center it within a canvas size of 190x150.
+2. Use simple and straightforward naming.  If the logo is about Java 1.6, then call it `java1.6.png`
+2. Edit the file `/portfolio/objSlideshow.php`.  Add the new file in the `load()` method.  
+4. Retaining alphabetical order according to the file name is desired.
+3. Note that the parameter `category` needs to be set.  Currently the category list encompasses: Networking, Server, Front End Framework, Build, Javascript, Language, Deployment, Code Versioning, Presentation, Library, Collaboration, Code Authoring, Code Quality, Markup, Templating, Database, e-Commerce.  
+4. The purpose of category is for an improved skills page, that will list tech stack according to category, in the future.  Right now the jQuery mobile page has a skills page based on `/objSkills.php` that is older and more primitive.  The desktop site has no skills page at all. 
+5. The url `parameter` will make it possible to set individual links for individual icons, but we aren't doing that yet.  Instead all icons lead to `/technologies/list.php`.  Just copy what the other lines are doing.
+
+
 ## Adding new position to resume
 For an example, say you are adding a position for Rainbird Sprinklers.
 
-1. In */resume/objResume.php*, add a new entry to the *ResumeManager* object
+1. In `/resume/objResume.php`, add a new entry to the *ResumeManager* object
 2. Give the employer a new unique key:  *$pos = $resume->addPosition($globals->Key->rainbird*
-3. In */objGlobals.php*, add that key to the *allResumeItems* array of the *GlobalsObj*:  *$this->Key->rainbird,*
+3. In `/objGlobals.php`, add that key to the *allResumeItems* array of the *GlobalsObj*:  *$this->Key->rainbird,*
 4. In the same file, add an analogous entry to *KeyObj*:  *var $rainbird = "rainbird";*
 
 This will update both desktop and mobile versions.

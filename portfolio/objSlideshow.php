@@ -20,8 +20,13 @@ class SlideshowManager {
 	function load() {
 		$slideshow = $this->add("logos", new SlideshowObj("logos", 190, 150, "logos", "Supported Technologies",2000));
 		$techUrl =  "/technologies/list.php";
+
 		$slideshow->add("advancedRestClient.png", array("category" => "Networking", "url" => $techUrl));
+		$slideshow->add("adyen.png", array("category" => "e-Commerce", "url" => $techUrl));
 		$slideshow->add("ajax.png", array("category" => "Networking", "url" => $techUrl));
+		$slideshow->add("amazonAWS.png", array("category" => "Server", "url" => $techUrl));
+		$slideshow->add("amazonEC2.png", array("category" => "Server", "url" => $techUrl));
+		$slideshow->add("amazonSES.png", array("category" => "Networking", "url" => $techUrl));
 		$slideshow->add("ampps.png", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("angularJS.jpg", array("category" => "Front End Framework", "url" => $techUrl));
 		$slideshow->add("apache2.jpg", array("category" => "Server", "url" => $techUrl));
@@ -32,9 +37,11 @@ class SlideshowManager {
 		$slideshow->add("bamboo.jpg", array("category" => "Deployment", "url" => $techUrl));
 		$slideshow->add("bitbucket.png", array("category" => "Code Versioning", "url" => $techUrl));
 		$slideshow->add("bootstrap.png", array("category" => "Presentation", "url" => $techUrl));
+		$slideshow->add("browserstack.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("chai.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("cognos.png", array("category" => "Library", "url" => $techUrl));
 		$slideshow->add("confluence.jpg", array("category" => "Collaboration", "url" => $techUrl));
+		$slideshow->add("dojo.png", array("category" => "Front End Framework", "url" => $techUrl));
 		$slideshow->add("chromeDevTools.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("codepen.png", array("category" => "Code Authoring", "url" => $techUrl));
 		$slideshow->add("crucible.jpg", array("category" => "Code Quality", "url" => $techUrl));
@@ -46,6 +53,7 @@ class SlideshowManager {
 		$slideshow->add("eslint.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("express.png", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("extjs.png", array("category" => "Front End Framework", "url" => $techUrl));
+		$slideshow->add("firebase.png", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("fisheye.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("flexbox.png", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("gimp2.png", array("category" => "Presentation", "url" => $techUrl));
@@ -58,6 +66,7 @@ class SlideshowManager {
 		$slideshow->add("homebrew.png", array("category" => "Build", "url" => $techUrl));
 		$slideshow->add("html5.jpg", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("html5box.png", array("category" => "Presentation", "url" => $techUrl));
+		$slideshow->add("internJS.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("itext.png", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("intellijidea.png", array("category" => "Code Authoring", "url" => $techUrl));
 		$slideshow->add("jasmine.jpg", array("category" => "Code Quality", "url" => $techUrl));
@@ -75,6 +84,7 @@ class SlideshowManager {
 		$slideshow->add("json.jpg", array("category" => "Markup", "url" => $techUrl));
 		$slideshow->add("jsp3.jpg", array("category" => "Templating", "url" => $techUrl));
 		$slideshow->add("launchdarkly.png", array("category" => "Deployment", "url" => $techUrl));
+		$slideshow->add("leadfoot.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("linux.jpg", array("category" => "Operating System", "url" => $techUrl));
 		$slideshow->add("lodash.png", array("category" => "Javascript", "url" => $techUrl));
 		$slideshow->add("lync.png", array("category" => "Collaboration", "url" => $techUrl));
@@ -91,6 +101,7 @@ class SlideshowManager {
 		$slideshow->add("nightwatch.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("npm.png", array("category" => "Build", "url" => $techUrl));
 		$slideshow->add("oracle2.png", array("category" => "Database", "url" => $techUrl));
+		$slideshow->add("paypal.png", array("category" => "e-Commerce", "url" => $techUrl));
 		$slideshow->add("perl.png", array("category" => "Language", "url" => $techUrl));
 		$slideshow->add("php.png", array("category" => "Templating", "url" => $techUrl));
 		$slideshow->add("phpldapadmin.png", array("category" => "Networking", "url" => $techUrl));
@@ -110,6 +121,7 @@ class SlideshowManager {
 		$slideshow->add("sqlserver.png", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("sourcetree.png", array("category" => "Code Versioning", "url" => $techUrl));
 		$slideshow->add("subversion.png", array("category" => "Code Versioning", "url" => $techUrl));
+		$slideshow->add("svs.png", array("category" => "e-Commerce", "url" => $techUrl));
 		$slideshow->add("toad.jpg", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("tomcat2.jpg", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("travis.png", array("category" => "Build", "url" => $techUrl));
