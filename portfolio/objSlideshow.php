@@ -39,7 +39,7 @@ class SlideshowManager {
 		$slideshow->add("bootstrap.png", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("browserstack.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("bugzilla.png", array("category" => "Collaboration", "url" => $techUrl));
-		$slideshow->add("centos.png", array("category" => "Collaboration", "url" => $techUrl));
+		$slideshow->add("centos.png", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("chai.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("cognos.png", array("category" => "Library", "url" => $techUrl));
 		$slideshow->add("confluence.jpg", array("category" => "Collaboration", "url" => $techUrl));
@@ -100,7 +100,7 @@ class SlideshowManager {
 		$slideshow->add("mysql2.jpg", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("netbeans.png", array("category" => "Code Authoring", "url" => $techUrl));
 		$slideshow->add("nexus.png", array("category" => "Build", "url" => $techUrl));
-		$slideshow->add("nginx.png", array("category" => "Build", "url" => $techUrl));
+		$slideshow->add("nginx.png", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("nightwatch.png", array("category" => "Code Quality", "url" => $techUrl));
 		$slideshow->add("npm.png", array("category" => "Build", "url" => $techUrl));
 		$slideshow->add("oracle2.png", array("category" => "Database", "url" => $techUrl));
@@ -119,8 +119,10 @@ class SlideshowManager {
 		$slideshow->add("ruby.png", array("category" => "Language", "url" => $techUrl));
 		$slideshow->add("sass.png", array("category" => "Presentation", "url" => $techUrl));
 		$slideshow->add("selenium.png", array("category" => "Code Quality", "url" => $techUrl));
+		$slideshow->add("ses.png", array("category" => "Server", "url" => $techUrl));
 		$slideshow->add("skype.png", array("category" => "Collaboration", "url" => $techUrl));
 		$slideshow->add("slack.png", array("category" => "Collaboration", "url" => $techUrl));
+		$slideshow->add("sqlite.png", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("sqlserver.png", array("category" => "Database", "url" => $techUrl));
 		$slideshow->add("sourcetree.png", array("category" => "Code Versioning", "url" => $techUrl));
 		$slideshow->add("subversion.png", array("category" => "Code Versioning", "url" => $techUrl));
