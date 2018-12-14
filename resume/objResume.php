@@ -98,19 +98,20 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I have over ten years experience in Front End Development of web-based applications, playing a delivery role in medium to large enterprise projects in NodeJs, Java and Open Source environments.  I focus on the Front End programming logic for transactional web pages, QA automation tests and deploying designs in HTML5 and CSS3.");
-		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  Javascript/ES6/NodeJs, React 15, Redux, Web pack, Git, GitHub, BitBucket, npm, yarn, AWS, AngularJS 1.4, Nightwatch, InternJS, Appium, Dojo, Selenium, BrowserStack, HTML5, CSS3, Bootstrap, SASS, jQuery, Firebase, Jenkins, Nexus, Artifactory, Bugzilla, Jasmine/Mocha/Sinon/Chai, LaunchDarkly, Advanced Rest Client, WebStorm, Rally, Sencha ExtJS 4.0.7, Atlassian code tools, Eclipse, Oracle, Stored Procedures, Maven 4, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Mysql, SQL Server.");
+		$resume->addQualItem("1", "I have over ten years experience in Full Stack Development of web-based applications, playing a delivery role in medium to large enterprise projects in NodeJs, Java and Open Source environments.  I focus on the Front End programming logic for transactional web pages, Automated UI tests and deploying designs in HTML5 and CSS3.");
+		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  Javascript/ES6/NodeJs, React 15, Redux, Web pack, Git, GitHub, BitBucket, npm, yarn, AWS, Linux, Yum, AngularJS 1.4, Nightwatch, InternJS, Selenium, BrowserStack, HTML5, CSS3, Postman, Advanced Rest Client, nginx, sqlite, Bootstrap, SASS, jQuery, Firebase, Jenkins, Nexus, Artifactory, Bugzilla, Jasmine/Mocha/Sinon/Chai, LaunchDarkly, WebStorm, Rally, Sencha ExtJS 4.0.7, Atlassian code tools, Eclipse, Oracle, Stored Procedures, Maven 4, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Mysql, SQL Server.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->crocs, "Crocs", "Remote", "Oct 2017 - Present",
-					"Contract", "Course Instructor");
-		$pos->addListItem("1", "Create NodeJs QA Automation scripts in InternJS/BrowserStack against the Salesforce-based crocs.com eCommerce workflow, including coverage for major browsers and mobile devices");
-        $pos->addListItem("2", "Write custom QA Automation APIs to make latency, asynchrony & race condition issues transparent to client code");
-        $pos->addListItem("3", "Write web clients in React/Redux for QA team and deploy them on AWS");
-        $pos->addListItem("4", "Add multi-user presence and remote noSQL storage to webapps with Firebase");
-        $pos->addListItem("5", "Interface with eCommerce shopping APIs:  PayPal, SVS Giftcards, Adyen");
+					"Full Time/Perm", "Software Development Engineer in Test");
+		$pos->addListItem("1", "Write web applications in React/Redux to support internal teams at Crocs");
+        $pos->addListItem("2", "Create NodeJs Automatied UI tests in InternJS/BrowserStack against the Salesforce-based crocs.com eCommerce workflow, including coverage for major browsers and mobile devices");
+        $pos->addListItem("3", "Write custom QA Automation APIs to simplify test writing and make latency, asynchrony & race condition issues transparent to client code");
+        $pos->addListItem("4", "Write middleware code and REST services in React, sequelize, sqlite, Firebase");
+        $pos->addListItem("5", "Manage, configure and deploy production apps with AWS, Linux, nginx, bash scripts");
+        $pos->addListItem("6", "Interface with eCommerce shopping APIs:  PayPal, SVS Giftcards, Adyen, CardConnect, Signal, Kount");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
