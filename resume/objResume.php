@@ -98,20 +98,20 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I have over ten years experience in Full Stack Development of web-based applications, playing a delivery role in medium to large enterprise projects in NodeJs, Java and Open Source environments.  I focus on the Front End programming logic for transactional web pages, Automated UI tests and deploying designs in HTML5 and CSS3.");
-		$resume->addQualItem("2", "Technology stack (ordered roughly by recency and strength):  Javascript/ES6/NodeJs, React 15, Redux, Web pack, Git, GitHub, BitBucket, npm, yarn, AWS, Linux, Yum, AngularJS 1.4, Nightwatch, InternJS, Selenium, BrowserStack, HTML5, CSS3, Postman, Advanced Rest Client, nginx, sqlite, Bootstrap, SASS, jQuery, Firebase, Jenkins, Nexus, Artifactory, Bugzilla, Jasmine/Mocha/Sinon/Chai, LaunchDarkly, WebStorm, Rally, Sencha ExtJS 4.0.7, Atlassian code tools, Eclipse, Oracle, Stored Procedures, Maven 4, Tomcat 6, GlassFish 3.1.2, JEE 6, JSP, Mysql, SQL Server.");
+		$resume->addQualItem("1", "I have over ten years experience providing web technology expertise to major corporations and enterprises for the building of web applications of high quality and reliability.  Recent accomplishments include providing clients with solutions using Javascript/Node.js/React Front End Development, Selenium-based Automated UI Testing, Salesforce eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, and integrating third party software.");
+		$resume->addQualItem("2", "I excel at team code development, project lifecycle, cross-functional teamwork, identifying business needs and using collaboration tools because they been a part of my entire career.  A long career in technology encompassing such areas as Java, Maven, Eclipse, Tomcat, C, Struts, and even laserdisk mutlimedia apps, gives me the benefit of applying diverse wisdom, a passion for learning, and an ability to learn quickly.");
+		$resume->addQualItem("3", "I have applied technology and software development across a diverse and eclectic backround including music graduate school, scientific research in human hearing, and Digital Signal Processing.  I am also an accomplished classical pianist, electric bass player, and composer.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->crocs, "Crocs", "Remote", "Oct 2017 - Present",
-					"Full Time/Perm", "Software Development Engineer in Test");
-		$pos->addListItem("1", "Write web applications in React/Redux to support internal teams at Crocs");
-        $pos->addListItem("2", "Create NodeJs Automatied UI tests in InternJS/BrowserStack against the Salesforce-based crocs.com eCommerce workflow, including coverage for major browsers and mobile devices");
-        $pos->addListItem("3", "Write custom QA Automation APIs to simplify test writing and make latency, asynchrony & race condition issues transparent to client code");
-        $pos->addListItem("4", "Write middleware code and REST services in React, sequelize, sqlite, Firebase");
-        $pos->addListItem("5", "Manage, configure and deploy production apps with AWS, Linux, nginx, bash scripts");
-        $pos->addListItem("6", "Interface with eCommerce shopping APIs:  PayPal, SVS Giftcards, Adyen, CardConnect, Signal, Kount");
+		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - Present",
+					"Full Time/Perm", "Senior Front End Engineer");
+		$pos->addListItem("1", "Develop and maintain custom Front End interfaces for the QA team to launch batches of automated UI tests againt the company eCommerce site and view results.  Stack includes:  Node.js, React, Redux, Sqlite, WebSockets, REST-based services, InternJs and Leadfoot.");
+        $pos->addListItem("2", "Develop and deploy eCommerce functionality, including integrating tools from PayPal, SVS Giftcards, Adyen, CardConnect, Signal, Kount tools, Adobe Audience Manager analytics, and Salesforce Business Manager.");
+        $pos->addListItem("3", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across IE, Chrome, Firefox, Android and iOS navigators.");
+        $pos->addListItem("4", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.");
+        $pos->addListItem("5", "Expand company technology knowledge by giving presentations to cross-functional teams on React and recent developments in Javascript and Node.js.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
