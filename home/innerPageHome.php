@@ -3,11 +3,10 @@
 	$wikiImg = "<img src='/image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
 
 ?>
-<h1>Frontend/Mobile Web Developer</h1>
+<h1>Frontend Software Engineer - SDET</h1>
 <p style='text-align: justify; float: left; padding-right: 0px'>
 <!-- TO DO - pull the copy directly from the Resume object -->
 	&nbsp;<img alt="Photo of Greg Sandell" style='float: right; padding-left: 5px' src='/image/gregHeadshot-50.jpg' />
-	<strong>About Me</strong>
 	I have over ten years experience providing web technology expertise to major corporations and enterprises for the building of web applications
 	of high quality and reliability. Recent accomplishments include providing clients with solutions using Javascript/Node.js/React Front End
 	Development, Selenium-based Automated UI Testing, Salesforce eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing,
