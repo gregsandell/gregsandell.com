@@ -29,7 +29,7 @@ from those days?  (Courtesy of the <a href='http://wayback.archive.org/web/'>Int
 <a href='/portfolio/publications/1995-12-01_perceptual_JAES.pdf'>1995</a><br/>
 <b>Journal of the Acoustical Society America</b>:  
 <a href='/portfolio/publications/1995-05-01_absence_JASA.pdf'>1995</a>,
-<a href='/portfolio/publications/1994-05-01_effect_JASA.pdf'K>1994</a>
+<a href='/portfolio/publications/1994-05-01_effect_JASA.pdf'>1994</a>
 </dd>
 <dt>Dissertation</dt>
 <dd>
@@ -40,6 +40,16 @@ Title:
 <li><a href='http://adsabs.harvard.edu/abs/1991PhDT.......313S'>Online abstract</a></li>
 <li><a href='/portfolio/pageDissertation.php'>Download</a></li>
 </ul>
+<dt>Master's Thesis</dt>
+<dd>
+Eastman School of Music, 1983.
+Title:
+<i>Edgard Varese's <i>Ecuatorial</i>; A Pitch-Class Set Analysis</i><br/>
+<ul>
+<li><a href='http://adsabs.harvard.edu/abs/1991PhDT.......313S'>Online abstract</a></li>
+<li><a href='/portfolio/pageThesis.php'>Download</a></li>
+</ul>
+<!--
 <br/>As a series of PDFs:
 <span style='font-size: 9px'>
 <a href='/portfolio/publications/dissertation/01_cover_TOC.pdf'>1 (4.9 mb)</a>
@@ -51,6 +61,7 @@ Title:
 &nbsp;<a href='/portfolio/publications/dissertation/07_references.pdf'>7 (4.3 mb)</a>
 </span>
 <br/><a href='https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0'>One large PDF (107 mb)</a>
+-->
 <dt>Links to Articles in Conference Proceedings</dt>
 
 <dd><b>Edgard Varese Symposium, Columbia University</b>:
