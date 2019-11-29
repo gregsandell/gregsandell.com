@@ -5,7 +5,7 @@
 
 ?>
 <header>
-	<h1>Masters Degree Thesis: <i>Edgard Varese's <u>Ecuatorial</u>; A Pitch-Class Set Analysis</i></h1>
+	<h1>Edgard Varese's <u>Ecuatorial</u>; A Pitch-Class Set Analysis</h1>
 	<p>
 	  Here are links to the Thesis I wrote for my Masters Degree in Music from Eastman School of Music.
 	<p/>

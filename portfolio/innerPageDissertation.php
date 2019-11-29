@@ -5,7 +5,7 @@
 
 ?>
 <header>
-	<h1>PhD Thesis: <i>Concurrent Timbres in Orchestration: a Perceptual Study of Factors Determining 'blend'</i></h1>
+	<h1>Concurrent Timbres in Orchestration: a Perceptual Study of Factors Determining 'blend'</h1>
 	<p>
 	  Here are links to the Dissertation I wrote for my PhD in Music from Northwestern University.
 	<p/>
