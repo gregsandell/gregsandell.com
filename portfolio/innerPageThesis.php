@@ -1,13 +1,13 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
 	$titleCss = "color:#000000; font-size:13px; font-family:Verdana, Arial, Helvetica, sans-serif; overflow:hidden; text-align:left;font-weight: normal;line-height: 19px;";
-	$g_title = 'Greg Sandell - Master\'s Thesis;
+	$g_title = 'Greg Sandell - Masters Thesis;
 
 ?>
 <header>
 	<h1>Music</h1>
 	<p>
-	  Here are links to the Thesis I wrote for my Master Degree in Music from Eastman School of Music.
+	  Here are links to the Thesis I wrote for my Masters Degree in Music from Eastman School of Music.
 	<p/>
 </header>
 <section>
