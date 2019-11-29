@@ -53,7 +53,10 @@ Title:
 <br/><a href='https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0'>One large PDF (107 mb)</a>
 <dt>Links to Articles in Conference Proceedings</dt>
 
-<dd><b>Acoustical Society of America</b>:  
+<dd><b>Edgard Varese Symposium, Columbia University</b>:
+<a href='/portfolio/publications/1984-04-06_ColumbiaVareseSymposium.pdf'>1984</a>
+<br/>
+<b>Acoustical Society of America</b>:
 <a href='/portfolio/publications/1998-06-20_macrotimbre_ASA.pdf'>1998</a>,
 <a href='/portfolio/publications/1996-12-04_recognition_ASA.pdf'>1996a</a>,
 <a href='/portfolio/publications/1996-12-05_identifying_ASA.pdf'>1996b</a>,
