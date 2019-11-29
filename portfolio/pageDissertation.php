@@ -6,7 +6,7 @@
 	
 	$mainCopy = "";
 	include($_cpath . "/objSidebar.php");
-	$g_sidebarKey = "pagePublications2";
+	$g_sidebarKey = "pagePublications";
 	$g_slideshowKey = "";
 
 	include($_cpath . "/templateMain.php");
