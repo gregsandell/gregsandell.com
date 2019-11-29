@@ -129,8 +129,8 @@ class SidebarPageManager {
 		$g_talksLinkObj = new LinkObj2("talks", "Talks", 'internal', "/talks/pageTalks.php");
 
 		// PDFs
-		$g_dissertationLinkObj = new LinkObj2('dissertation', 'PhD Dissertation', 'internal', 'portfolio/pageDissertation.php');
-		$g_mastersThesisLinkObj = new LinkObj2('mastersThesis', 'Masters Thesis', 'internal', 'portfolio/pageThesis.php');
+		$g_dissertationLinkObj = new LinkObj2('dissertation', 'PhD Dissertation', 'internal', '/portfolio/pageDissertation.php');
+		$g_mastersThesisLinkObj = new LinkObj2('mastersThesis', 'Masters Thesis', 'internal', '/portfolio/pageThesis.php');
 		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
 		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'external', '/portfolio/publications/1996-06-01_auditory_MP.pdf');
 		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'external', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf');
