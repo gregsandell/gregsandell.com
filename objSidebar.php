@@ -130,6 +130,7 @@ class SidebarPageManager {
 
 		// PDFs
 		$g_dissertationLinkObj = new LinkObj2('dissertation', 'PhD Dissertation', 'external', 'https://www.dropbox.com/s/cs6c1qslhjd5ww2/gregSandell1991DissertationEntire.pdf?dl=0');
+		$g_mastersThesisLinkObj = new LinkObj2('mastersThesis', 'Masters Thesis', 'internal', 'portfolio/publications/mastersThesis/Sandell_MastersThesis.pdf');
 		$g_pcaLinkObj = new LinkObj2('pca', 'Timbre with PCA', 'external', '/portfolio/publications/1995-12-01_perceptual_JAES.pdf');
 		$g_displayLinkObj = new LinkObj2('display', 'Auditory Displays', 'external', '/portfolio/publications/1996-06-01_auditory_MP.pdf');
 		$g_macroLinkObj = new LinkObj2('macro', 'Macro Timbre', 'external', '/portfolio/publications/1997-06-07_perceptual_ESCOM.pdf');
@@ -191,6 +192,14 @@ class SidebarPageManager {
 		// pagePublications.php
 		//
 		$page = $this->addPage("pagePublications");
+		$page->addLinkObj($g_mastersDegreeLinkObj);
+		$page->addLinkObj($g_pcaLinkObj);
+		$page->addLinkObj($g_displayLinkObj);
+		$page->addLinkObj($g_macroLinkObj);
+		//
+		// pagePublications.php
+		//
+		$page = $this->addPage("pagePublications2");
 		$page->addLinkObj($g_dissertationLinkObj);
 		$page->addLinkObj($g_pcaLinkObj);
 		$page->addLinkObj($g_displayLinkObj);
