@@ -102,6 +102,9 @@ class SidebarPageManager {
 	function load() {
 	    // Blog objects
 		$g_blogspotLinkObj = new LinkObj2("elevatorMusic", "Sealed Tuna Sandwich", 'external', "http://gregsandell.blogspot.com");
+
+		// Wow these are so old...
+		/*
 		$g_mavenBlogObj = new BlogObj2("maven", "Maven 2 Tutorial", 'external',
 				"http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html",
 				"2007.07.13");
@@ -120,6 +123,31 @@ class SidebarPageManager {
 		$g_washingmachineBlogObj = new BlogObj2("washingMachine", "The Washing Machine", 'external',
 				"http://gregsandell.blogspot.com/2017/02/the-washing-machine.html",
 				"2017.02.23");
+        */
+        
+		// Newer blogs
+		$g_elAmorBrujoBlogObj = new BlogObj2("elAmorBrujo", "El Amor Brujo Concert Review", 'external',
+				"http://gregsandell.blogspot.com/2019/11/santa-cecilia-orchestra-el-amor-brujo.html",
+				"2019.11.11");
+		$g_milkyWayBlogObj = new BlogObj2("milkyWay", "My Trip Through the Milky Way", 'external',
+				"http://gregsandell.blogspot.com/2018/11/my-trip-through-milky-way.html",
+				"2018.11.21");
+		$g_zappa1971BlogObj = new BlogObj2("zappa1971", "Frank Zappa Concert, 1971", 'external',
+				"http://gregsandell.blogspot.com/2018/03/remembering-frank-zappa-and-mothers-in.html",
+				"2018.03.03");
+		$g_jellyRollBlogObj = new BlogObj2("jellyRoll", "Jelly Roll Morton", 'external',
+				"http://gregsandell.blogspot.com/2018/02/get-to-know-jelly-roll-morton.html",
+				"2018.02.17");
+		$g_appleHomepodBlogObj = new BlogObj2("appleHomepod", "Apple's HomePod: Review", 'external',
+				"http://gregsandell.blogspot.com/2018/02/review-of-apples-homepod.html",
+				"2018.02.12");
+		$g_cecliaReviewBlogObj = new BlogObj2("ceciliaReview", "Beethoven & Handel Concert Review", 'external',
+				"http://gregsandell.blogspot.com/2018/02/santa-cecilia-orchestra-plays-beethoven.html",
+				"2018.02.12");
+		$g_mahavishnuBlogObj = new BlogObj2("mahavishnuReview", "Mahavishnu Returns Concert Review", 'external',
+				"http://gregsandell.blogspot.com/2017/12/mahavishnu-returns-royce-hall-ucla-2017.html",
+				"2017.12.19");
+
 
 		// Internal URLs
 		$g_publicationsLinkObj = new LinkObj2("publications", "Publications", 'internal', "/portfolio/pages/pagePublications.php");
@@ -209,8 +237,8 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageBlogs");
 		$page->addLinkObj($g_blogspotLinkObj);
-		$page->addBlogObj($g_twinpeaksBlogObj);
-		$page->addBlogObj($g_roxyBlogObj);
+		$page->addBlogObj($g_zappa1971BlogObj);
+		$page->addBlogObj($g_zappa1971BlogObj);
 		//
 		// pageResume.php
 		//
@@ -218,9 +246,8 @@ class SidebarPageManager {
 		$page->addLinkObj($g_mswordObj);
 		$page->addLinkObj($g_pdfObj);
 		$page->addLinkObj($g_linkedInObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
-		$page->addBlogObj($g_washingmachineBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
+		$page->addBlogObj($g_mahavishnuBlogObj);
 
 		//
 		// pageCode.php
@@ -233,7 +260,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageMusic");
 		$page->addLinkObj($g_publicationsLinkObj);
-		$page->addBlogObj($g_roxyBlogObj);
+		$page->addBlogObj($g_zappa1971BlogObj);
 
 		// potpourri
 		$page = $this->addPage("potpourri");
@@ -247,9 +274,9 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_tenx");
 		$page->addLinkObj($g_tenxLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 
 		//
 		// pageClient_sears.php
@@ -257,20 +284,18 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_sears");
 		$page->addLinkObj($g_searsLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj);
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 
 		//
 		// pageClient_path.php
 		//
 		$page = $this->addPage("pageClient_path");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj);
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 
 		//
 		// pageClient_tr.php
@@ -278,10 +303,9 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_tr");
 		$page->addLinkObj($g_trLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj);
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 
 		//
 		// pageClient_abnAmro.php
@@ -289,87 +313,79 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_abnAmro");
 		$page->addLinkObj($g_maxtradObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		$page->addBlogObj($g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_elAmorBrujoBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_amex.php
 		//
 		$page = $this->addPage("pageClient_amex");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_billwhitney.php
 		//
 		$page = $this->addPage("pageClient_billwhitney");
 		$page->addLinkObj($g_billwhitneyLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_ies.php
 		//
 		$page = $this->addPage("pageClient_ies");
 		$page->addLinkObj($g_iesLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_maytag.php
 		//
 		$page = $this->addPage("pageClient_maytag");
 		$page->addLinkObj($g_maytagLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_ubs.php
 		//
 		$page = $this->addPage("pageClient_ubs");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_usaf.php
 		//
 		$page = $this->addPage("pageClient_usaf");
 		$page->addLinkObj($g_usafLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_watts.php
 		//
 		$page = $this->addPage("pageClient_watts");
 		$page->addLinkObj($g_wattsLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
 		// pageClient_xb.php
 		//
 		$page = $this->addPage("pageClient_xb");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_charsetLinkObj);
+		$page->addLinkObj($g_appleHomepodBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
-		// $page->addBlogObj("maven", $g_mavenBlogObj); 
-		$page->addBlogObj($g_scorpBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 	}
 } 
 ?>
