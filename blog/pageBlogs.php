@@ -18,6 +18,7 @@
 							<tr>
 							<td colspan='2'>
 								<ul>
+								<li><a href='http://gregsandell.blogspot.com/2018/02/review-of-apples-homepod.html' rel='ext'>Apple&ast;s HomePod: Review" . $wikiIcon . "</a></li>
 								<li>Maven2 Tutorial: <a href='http://gregsandell.blogspot.com/2007/07/maven2-introduction-part-1-coordinate.html' rel='ext'>Part 1&nbsp;" . $wikiIcon . "</a></li>
 								<li><a href='http://gregsandell.blogspot.com/2006/10/s-corps-for-software-contracters.html' rel='ext'>S-corps for Software Contracters&nbsp;" . $wikiIcon . "</a></li>
 								<li><a href='http://gregsandell.blogspot.com/2007/10/sharc-timbre-dataset-v-20-xml-format.html' rel='ext'>The SHARC Timbre Dataset v. 2.0: XML Format&nbsp;" . $wikiIcon . "</a></li>

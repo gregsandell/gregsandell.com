@@ -124,7 +124,7 @@ class SidebarPageManager {
 				"http://gregsandell.blogspot.com/2017/02/the-washing-machine.html",
 				"2017.02.23");
         */
-        
+
 		// Newer blogs
 		$g_elAmorBrujoBlogObj = new BlogObj2("elAmorBrujo", "El Amor Brujo Concert Review", 'external',
 				"http://gregsandell.blogspot.com/2019/11/santa-cecilia-orchestra-el-amor-brujo.html",
@@ -237,8 +237,8 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageBlogs");
 		$page->addLinkObj($g_blogspotLinkObj);
-		$page->addBlogObj($g_zappa1971BlogObj);
-		$page->addBlogObj($g_zappa1971BlogObj);
+		$page->addBlogObj($g_elAmorBrujoBlogObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
 		//
 		// pageResume.php
 		//
@@ -246,7 +246,12 @@ class SidebarPageManager {
 		$page->addLinkObj($g_mswordObj);
 		$page->addLinkObj($g_pdfObj);
 		$page->addLinkObj($g_linkedInObj);
+		$page->addBlogObj($g_elAmorBrujoBlogObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
+		$page->addBlogObj($g_zappa1971BlogObj);
+		$page->addBlogObj($g_jellyRollBlogObj);
+		$page->addBlogObj($g_appleHomepodBlogObj);
+		$page->addBlogObj($g_cecliaReviewBlogObj);
 		$page->addBlogObj($g_mahavishnuBlogObj);
 
 		//
@@ -260,7 +265,11 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageMusic");
 		$page->addLinkObj($g_publicationsLinkObj);
+		$page->addBlogObj($g_elAmorBrujoBlogObj);
 		$page->addBlogObj($g_zappa1971BlogObj);
+		$page->addBlogObj($g_jellyRollBlogObj);
+		$page->addBlogObj($g_cecliaReviewBlogObj);
+		$page->addBlogObj($g_mahavishnuBlogObj);
 
 		// potpourri
 		$page = $this->addPage("potpourri");
