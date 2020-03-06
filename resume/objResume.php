@@ -107,11 +107,13 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - Present",
 					"Full Time/Perm", "Senior Front End Engineer");
-		$pos->addListItem("1", "Develop and maintain custom Front End interfaces for the QA team to launch batches of automated UI tests againt the company eCommerce site and view results.  Stack includes:  Node.js, React, Redux, Sqlite, WebSockets, REST-based services, InternJs and Leadfoot.");
-        $pos->addListItem("2", "Develop and deploy eCommerce functionality, including integrating tools from PayPal, SVS Giftcards, Adyen, CardConnect, Signal, Kount tools, Adobe Audience Manager analytics, and Salesforce Business Manager.");
-        $pos->addListItem("3", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across IE, Chrome, Firefox, Android and iOS navigators.");
-        $pos->addListItem("4", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.");
-        $pos->addListItem("5", "Expand company technology knowledge by giving presentations to cross-functional teams on React and recent developments in Javascript and Node.js.");
+		$pos->addListItem("1", "Javascript/web programmer in Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales.");
+        $pos->addListItem("2", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
+        $pos->addListItem("3", "Develop custom multi-tiered web applications including SQL, REST services, Ajax, token based authentication, pub/sub messaging, Bash shell scripts, AWS, and BrowserStack cloud components.  Stack includes:  Node.js, React/Redux, Express, Sqlite, WebSockets, Bootstrap, Material-UI.");
+        $pos->addListItem("4", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across major mobile and desktop web browsers navigators.");
+        $pos->addListItem("5", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.  Tech stack:  internJS, leadfoot, eureQa, BrowserStack cloud.");
+        $pos->addListItem("6", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing.");
+        $pos->addListItem("7", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
