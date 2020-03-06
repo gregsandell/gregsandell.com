@@ -103,6 +103,5 @@
 <script type="text/javascript" src="/lib/html5lightbox/7.0/html5lightbox.js"></script>
 <script type="text/javascript" src="/lib/js-cookie/2.1.4/js.cookie.js"></script>
 <script type="text/javascript" src="/lib/avgrund/0.1/avgrund.js"></script>
-<script type="text/javascript" src="/js/warnExternalLinks.js"></script>
 </body>
 </html>
