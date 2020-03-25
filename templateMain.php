@@ -87,7 +87,7 @@
 	<h2 style="color: #AA2808">Tip</h2>
 	<br/>
 	<p>Links marked with arrow icons
-	(<img src="/image/wikipediaExternalPage.png"> or <img src="/image/wikipediaExternalPageGold.png">)
+	(<img src="/image/wikipediaExternalPage.png" alt="External Page"> or <img src="/image/wikipediaExternalPageGold.png" alt="External Page">)
 	will open in a new tab.</p>
 	<p>You will see this message only once.</p>
 	<button onclick="closeDialog();">OK</button>
