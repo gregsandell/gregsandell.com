@@ -98,7 +98,7 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I provide client Web Application solutions of high quality and reliability using Javascript/Node.js/React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.  I have worked for enterprise clients in retail eCommerce, Real Estate, Executive Search, Healthcare, AdTech, Publishing, Finance, Defense, and Travel. I am also an accomplished classical pianist, electric bass player, and composer.");
+		$resume->addQualItem("1", "I provide client Web Application solutions of high quality and reliability using Javascript/ Node.js/ React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.  I have worked for enterprise clients in retail eCommerce, Real Estate, Executive Search, Healthcare, AdTech, Publishing, Finance, Defense, and Travel. I am also an accomplished classical pianist, electric bass player, and composer.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
