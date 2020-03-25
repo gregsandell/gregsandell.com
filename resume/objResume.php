@@ -161,7 +161,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// PATHFINDER SOFTWARE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software (now <a href='http://orthogonal.io>orthogonal.io</a>", "Chicago, IL", "Aug 2012 - Aug 2013",
+		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software (now orthogonal.io)", "Chicago, IL", "Aug 2012 - Aug 2013",
 					"Direct Hire", "Sr. Software Developer");  
 		$pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients Kimberly-Clark, Haemonetics, and Amer. Assn. of Critical Care Nurses in hybrid web/iOS AngularJS and jQuery Mobile, Trigger.io, TestFlight, and Rails/Heroku");
 		$pos->addListItem("2", "Lead developer on iPhone app that was deployed in Apple AppStore (AACN Bedside)");
