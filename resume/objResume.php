@@ -98,8 +98,7 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I have over ten years experience providing web technology expertise to major corporations and enterprises for the building of web applications of high quality and reliability.  Recent accomplishments include providing clients with solutions using Javascript/Node.js/React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.");
-		$resume->addQualItem("2", "I excel at team code development, project lifecycle, cross-functional teamwork, identifying business needs and using collaboration tools.  I have applied technology and software development across diverse and eclectic problem spaces including scientific research in human hearing, cognitive psychology and Digital Signal Processing.  I am also an accomplished classical pianist, electric bass player, and composer.");
+		$resume->addQualItem("1", "I provide client Web Application solutions of high quality and reliability using Javascript/Node.js/React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.  I have worked for enterprise clients in retail eCommerce, Real Estate, Executive Search, Healthcare, AdTech, Publishing, Finance, Defense, and Travel. I am also an accomplished classical pianist, electric bass player, and composer.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
@@ -108,11 +107,12 @@ class ResumeManager {
 					"Full Time/Perm", "Senior Front End Engineer");
 		$pos->addListItem("1", "Javascript/web programmer in Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales.");
         $pos->addListItem("2", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
-        $pos->addListItem("3", "Develop custom multi-tiered web applications including SQL, REST services, Ajax, token based authentication, pub/sub messaging, Bash shell scripts, AWS, and BrowserStack cloud components.  Stack includes:  Node.js, React/Redux, Express, Sqlite, WebSockets, Bootstrap, Material-UI.");
-        $pos->addListItem("4", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across major mobile and desktop web browsers navigators.");
-        $pos->addListItem("5", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.  Tech stack:  internJS, leadfoot, eureQa, BrowserStack cloud.");
-        $pos->addListItem("6", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing.");
-        $pos->addListItem("7", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain.");
+        $pos->addListItem("3", "Support crocs.com sites in 8 different languages, 14 countries/locales, 7 payment processors");
+        $pos->addListItem("4", "Develop custom multi-tiered web applications including SQL, REST services, Ajax, token based authentication, pub/sub messaging, Bash shell scripts, AWS, and BrowserStack cloud components.  Stack includes:  Node.js, React/Redux, Express, Sqlite, WebSockets, Bootstrap, Material-UI.");
+        $pos->addListItem("5", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across major mobile and desktop web browsers navigators.");
+        $pos->addListItem("6", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.  Tech stack:  internJS, leadfoot, eureQa, BrowserStack cloud.");
+        $pos->addListItem("7", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing.");
+        $pos->addListItem("8", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
@@ -161,7 +161,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// PATHFINDER SOFTWARE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software", "Chicago, IL", "Aug 2012 - Aug 2013",
+		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software (now <a href='http://orthogonal.io>orthogonal.io</a>", "Chicago, IL", "Aug 2012 - Aug 2013",
 					"Direct Hire", "Sr. Software Developer");  
 		$pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients Kimberly-Clark, Haemonetics, and Amer. Assn. of Critical Care Nurses in hybrid web/iOS AngularJS and jQuery Mobile, Trigger.io, TestFlight, and Rails/Heroku");
 		$pos->addListItem("2", "Lead developer on iPhone app that was deployed in Apple AppStore (AACN Bedside)");
