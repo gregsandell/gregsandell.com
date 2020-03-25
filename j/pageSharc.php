@@ -3,7 +3,7 @@
   <head> 
   <title>Greg Sandell</title> 
 
-  <style type="text/css" media="screen, projection">
+  <style media="screen, projection">
     dl {
       padding-bottom: 0px; 
       margin-bottom: 0px;

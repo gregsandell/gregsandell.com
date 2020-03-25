@@ -2,7 +2,7 @@
 <html> 
   <head> 
   <title>Greg Sandell</title> 
-  <style type="text/css" media="screen, projection">
+  <style media="screen, projection">
     p.tagline {
       font-size: 16px;
       font-style: italic;

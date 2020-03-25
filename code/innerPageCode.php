@@ -4,7 +4,7 @@
 	include($_cpath . "/code/objGitRepos.php");
 	$code = new Code();
 	$code->loadData();
-	$extArrow = '<img src="/image/wikipediaExternalPage.png" alt="External Page" border="0">';
+	$extArrow = '<img src="/image/wikipediaExternalPage.png" alt="External Page" style="border:0">';
 
     ?>
 <header>

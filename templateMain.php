@@ -8,7 +8,7 @@
 	}
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php print($g_title) ?></title>
@@ -19,13 +19,11 @@
 	<link href="/image/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 	<link href="/image/icons/icon-hires.png" rel="icon" sizes="192x192" />
 	<link href="/image/icons/icon-normal.png" rel="icon" sizes="128x128" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="keywords" content="software development,software developer,software development,software programmer,software programming,software engineer,software engineering,web software development,web software developer,web software engineering,web software engineer,web software programming,web software programmer,web application development,web application developer,web application engineering,web application engineer,web application programming,web application programmer,javascript development,javascript developer,javascript engineering,javascript engineer,javascript programming,javascript programmer,react development,react developer,react engineering,react engineer,react programming,react programmer,node.js development,node.js developer,node.js engineering,node.js engineer,node.js programming,node.js programmer,salesforce development,salesforce developer,salesforce engineering,salesforce engineer,salesforce programming,salesforce programmer,salesforce commerce cloud development,salesforce commerce cloud developer,salesforce commerce cloud engineering,salesforce commerce cloud engineer,salesforce commerce cloud programming,salesforce commerce cloud programmer" />
+	<meta name="description" content="Greg Sandell provides client Web Application solutions of high quality and reliability using Javascript/Node.js/React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.  Greg Sandell has worked for enterprise clients in retail eCommerce, Real Estate, Executive Search, Healthcare, AdTech, Publishing, Finance, Defense, and Travel. Greg Sandell is also an accomplished classical pianist, electric bass player, and composer." />
 
 	<link rel="stylesheet" href="/lib/avgrund/0.1/avgrund.css" >
-	<style type="text/css">
+	<style>
 	    <?php include("{$_cpath}/lib/funride/cssFunride.php") ?>
 	    <?php include("{$_cpath}/css/cssGlobal.php") ?>
 	</style>
@@ -99,9 +97,9 @@
 
 
 <!-- end div#wrapper -->
-<script type="text/javascript" src="/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="/lib/html5lightbox/7.0/html5lightbox.js"></script>
-<script type="text/javascript" src="/lib/js-cookie/2.1.4/js.cookie.js"></script>
-<script type="text/javascript" src="/lib/avgrund/0.1/avgrund.js"></script>
+<script src="/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
+<script src="/lib/html5lightbox/7.0/html5lightbox.js"></script>
+<script src="/lib/js-cookie/2.1.4/js.cookie.js"></script>
+<script src="/lib/avgrund/0.1/avgrund.js"></script>
 </body>
 </html>

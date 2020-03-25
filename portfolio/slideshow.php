@@ -35,7 +35,7 @@
 <html>
 	<head>
 		<title>Greg Sandell's Portfolio - Slideshow</title>
-		<style type="text/css">
+		<style>
 			TR {
 				<?php print($cssBasic) ?>
 				padding: 7px 7px 7px 7px;

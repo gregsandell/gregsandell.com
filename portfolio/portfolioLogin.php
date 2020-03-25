@@ -46,7 +46,7 @@
 ?>
 <html>
 	<head>
-		<script type="text/javascript">
+		<script >
 			location.href = "<?php print($url) ?>";
 		</script>
 	</head>

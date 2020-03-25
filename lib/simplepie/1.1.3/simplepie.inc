@@ -7013,7 +7013,7 @@ class SimplePie_Enclosure
 			static $javascript_outputted = null;
 			if (!$javascript_outputted && $this->javascript)
 			{
-				$embed .= '<script type="text/javascript" src="?' . htmlspecialchars($this->javascript) . '"></script>';
+				$embed .= '<script src="?' . htmlspecialchars($this->javascript) . '"></script>';
 				$javascript_outputted = true;
 			}
 		}
@@ -7027,7 +7027,7 @@ class SimplePie_Enclosure
 			}
 			else
 			{
-				$embed .= '<script type="text/javascript">embed_odeo("' . $this->get_link() . '");</script>';
+				$embed .= '<script >embed_odeo("' . $this->get_link() . '");</script>';
 			}
 		}
 

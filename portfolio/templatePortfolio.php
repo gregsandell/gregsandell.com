@@ -32,12 +32,12 @@
 		<link href="/image/icons/icon-normal.png" rel="icon" sizes="128x128" />
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
-		<style type="text/css">
+		<style>
 			<?php include($_cpath . "/lib/funride/cssFunride.php") ?>
 			<?php include($_cpath . "/css/cssGlobal.php") ?>
 		</style>
 		<base url="<?php print($_cpath) ?>" />
-		<script type="text/javascript">
+		<script >
 			var g_projectNames = new Array(
 				"<?php print($g_globals->Key->tenx) ?>",
 				"<?php print($g_globals->Key->sears) ?>",

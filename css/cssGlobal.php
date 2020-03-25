@@ -37,10 +37,9 @@ DT {
 
 BODY {
   background-color: #CCCCCC;
-  leftmargin: 0px;
-  topmargin: 0px;
-  marginwidth: 0px;
-  marginheight: 0px;
+  margin: 0;
+  margin-left: 0px;
+  margin-top: 0px;
 }
 LI {
 	<?php print($cssBasic) ?>
