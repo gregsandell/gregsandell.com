@@ -1,6 +1,6 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
-	$wikiImg = "<img src='/image/wikipediaExternalPage.png' alt="External Page" style='border: 0px' alt='External Page' />";
+	$wikiImg = "<img src='/image/wikipediaExternalPage.png' style='border: 0px' alt='External Page' />";
 
 ?>
 <h1>Frontend Software Engineer - SDET</h1>
