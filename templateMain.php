@@ -12,7 +12,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php print($g_title) ?></title>
-	<LINK REL="SHORTCUT ICON" HREF="/image/icons/favicon.ico" type="image/x-icon" />
+	<LINK REL="SHORTCUT ICON" HREF="/image/icons/favicon.ico>v=2" type="image/x-icon" />
 	<link href="/image/icons/apple-touch-icon.png" rel="apple-touch-icon" />
 	<link href="/image/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
 	<link href="/image/icons/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" />
