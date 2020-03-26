@@ -360,3 +360,19 @@ h1 a {
 #footer a:hover {
 	text-decoration: none;
 }
+#wrapper {
+position: relative;
+}
+
+#page {
+position: absolute;
+left: 50%;
+transform: translate(-50%);
+}
+
+#footer {
+position: absolute;
+top: 580%;
+left: 50%;
+transform: translate(-50%);
+}
