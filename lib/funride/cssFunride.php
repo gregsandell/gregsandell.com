@@ -115,6 +115,7 @@ a:hover {
 /* Wrapper */
 
 #wrapper {
+    position: relative; /* fix for IE11 */
 }
 
 /* Header */
@@ -209,6 +210,10 @@ h1 a {
 	width: <?php print($basicWidth) ?>px; 
 	margin: 0 auto;
 	background: <?php print($colorMainBodyBg) ?> url(/lib/funride/img/img04<?php print($imgVersion) ?>.gif) repeat-y;
+    /* Next three lines:  fixes IE11 */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 /* Content */
@@ -344,6 +349,11 @@ h1 a {
 	padding: 40px 0 0 0;
 	background: url(/lib/funride/img/img06<?php print($imgVersion) ?>.gif) no-repeat;
 	color: <?php print($colorTextFooter) ?>;
+	/* next four lines:  IE11 fix */
+    position: absolute;
+    top: 580%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #footer p {
@@ -360,19 +370,4 @@ h1 a {
 #footer a:hover {
 	text-decoration: none;
 }
-#wrapper {
-position: relative;
-}
 
-#page {
-position: absolute;
-left: 50%;
-transform: translate(-50%);
-}
-
-#footer {
-position: absolute;
-top: 580%;
-left: 50%;
-transform: translate(-50%);
-}
