@@ -82,6 +82,42 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    	    4. *$description*: Short descriptive text of the item.  It get sets to the *title* attribute of the thumbnail's &lt;a&gt; tag, so it appears as tip text when you mouse over it.
    	    5. *$width* &amp; *$height*: the width and height of the item (not the thumbnail).  These are entered as integers:  1 and 2 instead of "1" and "2".  If the *$image* arg was set to a YouTube video url, then 600 and 400 are good values.
 
+## favicon.ico and other icons
+
+The *favicon* is the image that comes up in the browser address bar for *gregsandell.com*.  This is a file in `.ico` format that is retrieved with this line in *templateMain.php*:
+
+```
+<link rel="SHORTCUT ICON" href="/image/icons/favicon.ico" type="image/x-icon" />
+```
+...so we keep the file in */image/icons*.  Generally the headshot on the home page, in miniature form, is used as the icon.  The image must be 16x16 pixels.  To make it look crisp, it can help to use a Gimp *sharpen* filter on the fullsize pic before bringing it down to 16x16.  Then you can convert it to `.ico` format online with a converter such as [HNET PNG to ICO](https://hnet.com/png-to-ico/).
+
+The browser will be stubborn about updating the icon that it uses for *gregsandell.com*.  To force it to update, add new information to the querystring to the `<link rel` line, for example:
+
+```
+<link rel="SHORTCUT ICON" href="/image/icons/favicon.ico?v=2" type="image/x-icon" />
+```
+...and you would increment the **v** value by one each time you've change the icon.  The browser will start shoding the new icon.
+
+### Apple Touch Icons
+
+These lines also live in *templateMain.php*:
+
+```
+	<link href="/image/icons/apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="/image/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+	<link href="/image/icons/apple-touch-icon-167x167.png" rel="apple-touch-icon" sizes="167x167" />
+	<link href="/image/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+```
+
+The Apple Touch icons are thumbnails used by Apple devices/computers.  For example, when you text someone the *gregsandell.com* URL in iMessage, the nice display you get back includes one of those thumbnails.  A similar thing happens when you post a URL in Facebook.  
+
+The expected names and dimensions are:
+
+* **apple-touch-icon.png**: 120x120 *(that's right, the file name does not show the dimensions for this one)*
+* **apple-touch-icon-152x152.png**: 152x152
+* **apple-touch-icon-167x167.png**: 167x167
+* **apple-touch-icon-180x180.png**: 180x180
+* 
 ## Unlinked Parts of Site
  Some sections of the site I don't use any more; they're still live, but there a no (or few) inbound links to them so noone will see them.
  
