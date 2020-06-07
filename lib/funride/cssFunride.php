@@ -357,7 +357,6 @@ h1 a {
 }
 
 /* The lines below are the IE11 fixes that came from fiverr */
-/*
 #wrapper {
     position: relative;
 }
@@ -372,4 +371,3 @@ h1 a {
     left: 50%;
     transform: translate(-50%);
 }
-*/
