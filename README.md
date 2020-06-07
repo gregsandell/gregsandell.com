@@ -3,7 +3,21 @@ Website code &amp; resources for http://gregsandell.com
 
 ## Development of gregsandell.com
 
+### AMPPS
+These are instructions that work with MacOs, but should be easily adaptable for a Windows platform.
+
+* Install Ampps
+* Next step is to point the Apache server to your site code.  There are supposed to be ways to do this by editing the *httpd.conf* file (see [here](https://www.worldoweb.co.uk/2013/ammps-for-mac-changing-the-apache-document-root-path) for example), but it doesn't work for me.  Instead, solve it with a soft link:
+  * Let's assume your site root is at `/Users/gregsandell/Documents/git/Projects/gregsandell.com`
+  * In terminal, go to `/Applications/Ampps`
+  * Delete the *www* folder/file:  `rm -rf www`
+  * Execute:  `ln -s /Users/gregsandell/Documents/git/Projects/gregsandell.com www`
+* The site should be available at `http://localhost` with the need for an Apache restart
+
+
 ### MAMP
+Most people have stopped using MAMP and switched to Ampps.  But here are the directions I had previously:
+
 * Start Mamp Pro
 * View http://localhost:8888
 
