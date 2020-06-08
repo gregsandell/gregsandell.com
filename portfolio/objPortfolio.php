@@ -66,11 +66,22 @@ class Portfolio {
 	}
 
 	function loadData() {
+		$client = $this->addClient($this->globals->Key->crocs, "Crocs.com", "crocs", "Crocs",
+			"", "", "", "",
+			"/portfolio/resources/crocs/images/homepage_500x290.png", "500", "290",
+			"", "", "", "", "",
+			$this->globals->Key->tenx, $this->globals->Key->spectrum);
+
+		$client->addThumbdoc("1", "https://youtu.be/ygAPkMdHumU", "/portfolio/resources/crocs/images/CQATdemoPart1thumb.png",
+				"Crocs.com Automated UI Testing Platform (part 1)", 500, 290);
+		$client->addThumbdoc("2", "https://youtu.be/aDSRDaO40oM", "/portfolio/resources/crocs/images/CQATdemoPart2thumb.png",
+				"Crocs.com Automated UI Testing Platform (part 2)", 500, 290);
+
 		$client = $this->addClient($this->globals->Key->tenx, "Ten-X/Auction.com", "tenx", "Ten-X",
 			"", "", "", "",
 			"/portfolio/resources/tenx/images/homepage_500x290.png", "500", "290",
 			"", "", "", "", "",
-			$this->globals->Key->spectrum, $this->globals->Key->sears);
+			$this->globals->Key->crocs, $this->globals->Key->sears);
 
 		$client->addThumbdoc("1", "/portfolio/resources/tenx/images/homepage_500x290.png", "/portfolio/resources/tenx/images/homepageThumb.png",
 				"Auction.com: homepage with search.", 500, 290);

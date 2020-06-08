@@ -174,6 +174,7 @@ class SidebarPageManager {
 		$g_trLinkObj = new LinkObj2("trCompanySite", "Visit Live Truven Site", 'external', "http://www.truvenhealth.com");
 		$g_searsLinkObj = new LinkObj2("searsCompanySite", "Visit Live sears.com", 'external', "http://www.sears.com");
 		$g_tenxLinkObj = new LinkObj2("tenxCompanySite", "Visit Live auction.com", 'external', "http://www.auction.com");
+		$g_crocsLinkObj = new LinkObj2("crocsCompanySite", "Visit Live crocs.com", 'external', "https://crocs.com");
 
 		// MS-Word docs
 		$g_mswordObj = new LinkObj2("mswordResume", "MS Word Format", 'external', "/resume/gregsandell-resume.doc");
@@ -280,10 +281,20 @@ class SidebarPageManager {
 		//
 		// pageClient_tenx.php
 		//
+		$page = $this->addPage("pageClient_crocs");
+		$page->addLinkObj($g_crocsLinkObj);
+		$page->addLinkObj($g_portfolioPageObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
+		$page->addLinkObj($g_publicationsLinkObj);
+		$page->addBlogObj($g_milkyWayBlogObj);
+
+		//
+		// pageClient_tenx.php
+		//
 		$page = $this->addPage("pageClient_tenx");
 		$page->addLinkObj($g_tenxLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 
@@ -293,7 +304,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_sears");
 		$page->addLinkObj($g_searsLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 
@@ -302,7 +313,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_path");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 
@@ -312,7 +323,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_tr");
 		$page->addLinkObj($g_trLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 
@@ -322,7 +333,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_abnAmro");
 		$page->addLinkObj($g_maxtradObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_elAmorBrujoBlogObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
@@ -331,7 +342,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_amex");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -340,7 +351,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_billwhitney");
 		$page->addLinkObj($g_billwhitneyLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -349,7 +360,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_ies");
 		$page->addLinkObj($g_iesLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -358,7 +369,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_maytag");
 		$page->addLinkObj($g_maytagLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -366,7 +377,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_ubs");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -375,7 +386,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_usaf");
 		$page->addLinkObj($g_usafLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -384,7 +395,7 @@ class SidebarPageManager {
 		$page = $this->addPage("pageClient_watts");
 		$page->addLinkObj($g_wattsLinkObj);
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 		// 
@@ -392,7 +403,7 @@ class SidebarPageManager {
 		//
 		$page = $this->addPage("pageClient_xb");
 		$page->addLinkObj($g_portfolioPageObj);
-		$page->addLinkObj($g_appleHomepodBlogObj);
+		$page->addLinkObj($g_elAmorBrujoBlogObj);
 		$page->addLinkObj($g_publicationsLinkObj);
 		$page->addBlogObj($g_milkyWayBlogObj);
 	}

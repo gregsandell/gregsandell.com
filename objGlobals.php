@@ -20,7 +20,7 @@ class GlobalsObj {
 			$this->Key->ubs, $this->Key->usaf, 	$this->Key->amex, $this->Key->abn, 
 			$this->Key->ies, $this->Key->ubsw, 	$this->Key->xb, $this->Key->quebecor, 
 			$this->Key->giantstep, $this->Key->taproot,	$this->Key->loyola, $this->Key->sussex, $this->Key->cnmat, $this->Key->ils);
-		$this->allPortfolioItems = array($this->Key->tenx, $this->sears,
+		$this->allPortfolioItems = array($this->Key->crocs, $this->Key->tenx, $this->sears,
 			$this->Key->path, $this->Key->tr, $this->Key->ubs, $this->Key->usaf, 	$this->Key->amex, $this->Key->abn, 
 			$this->Key->ies, $this->Key->xb,
 			$this->Key->maytag, $this->Key->watts, $this->Key->billwhitney, $this->Key->spectrum);

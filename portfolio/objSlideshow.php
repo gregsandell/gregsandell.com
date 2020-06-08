@@ -153,6 +153,7 @@ class SlideshowManager {
 		$slideshow->add("zoom.png", array("category" => "Collaboration", "url" => $techUrl));
 
 		$slideshow = $this->add("projects", new SlideshowObj("projects", 150, 120, "projThumbs", "Other Clients", 2000));
+		$slideshow->add("crocsThumb.png", array("url" => "/portfolio/pages/pageClient_crocs.php"));
 		$slideshow->add("tenxThumb.png", array("url" => "/portfolio/pages/pageClient_tenx.php"));
 		$slideshow->add("searsThumb.png", array("url" => "/portfolio/pages/pageClient_sears.php"));
 		$slideshow->add("pathThumb.png", array("url" => "/portfolio/pages/pageClient_path.php"));

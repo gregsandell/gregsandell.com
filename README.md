@@ -53,11 +53,10 @@ This will update both desktop and mobile versions.
 Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
 
 1. Follow all the steps in the previous section (<i>Adding new position to resume</i>) if you haven't already
-1. In */objGlobals.php*, add that key to the *allPortfolioItems* array of the *GlobalsObj*:  *$this->Key->rainbird,
-1. In */css/cssGlobal.php*, add a class *rainbirdPortolio*, using the pattern used for other clients.  (For example, 
-   see the class for the tenx portfolio, in the line that begins with *.<?php print($g_globals->Key->tenx) ?>Portfolio {*.)
-   Almost all the portfolios are using the same copied class, but the parameters are there to be modified if
-   necessary.  
+1. In */objGlobals.php*, add that key to the *allPortfolioItems* array of the *GlobalsObj*:  *$this->Key->rainbird.  Most likely this is your most recent position, and you want to insert at the front of the list.
+1. In */css/cssGlobal.php*, add a class *rainbirdPortfolio*, using the pattern used for other clients.  (For example, 
+   see the class for the tenx portfolio, in the line that begins with *.<?php print($g_globals->Key->tenx) ?>Portfolio {*)
+   Almost all the portfolios are using the same copied class, but the parameters are there to be modified if necessary.  
 1. Do the following if you want rainbird's company site as a link in your rainbird portfolio page's sidebar.  In In */objSidebar.php*, in *SidebarPageManager*'s *load()* function, go to the code block beginning with the comment *// External Websites*, and add an entry equivalent to those for other clients (use tenx as an example).
 1. In */objSidebar.php*, create a section of code in *SidebarPageManager*'s *load()* function that will specify what links show up in the sidebar for rainbird's portfolio page.  You need to add the line:  *$page = $this->addPage("pageClient_rainbird");*, followed by calls to *$page->addLinkObj()* that add preexisting links that are created in this file.  See code for tenx for an example.
 2. In */portfolio/templatePortfolio.php*, see the *&lt;script&gt; block that sets the javascript *g_projectNames* array.  Following the examples for previous clients, add an entry for *$g_globals->Key->rainbird*.
@@ -71,7 +70,7 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    This image will show up in the 'Projects slideshow' that appears in some pages' sidebar.  If your image
    isn't perfect for 150x120, just make it smaller and pad it with transparant margins.  
 1. In */portfolio/objSlideshow.php*, in the *load()* function, add your thumb with the *$slideshow->add()*
-   function.  It should be somewhere around line 129.
+   function. Look for the line with *tenx* and copy/modify it.
 1. Finally the step with all the real work in it:  creating your rainbird portfolio content.  Summary:  create a splash screen, then for each portfolio item, create the main image and a thumbnail image for it.
    	1. In */portfolio/resources*, create a *rainbird* directory with subdirectory *images*.  Splash screen, portfolio items and their thumbs all go in there.
    	2. All the images you create should have the dimensions in the title, such as *homepage_500x290.png*.  This is more of a convention than a requirement.  It is useful because the php functions you use to add the item to the metadata require the image dimensions, and this will keep you from getting confused.
@@ -86,9 +85,9 @@ Again, we are adding a portfolio for the position held at Rainbird Sprinklers.
    	    4. *$linkText* should be a user-viewable shortened name of the client, e.g. *Rainbird*.  These will be links in the sidebars to each client portfolio page, and must be short enough to fit in the sidebar.
    	    5. The next four variables are deprecated and can be set to empty strings (*$description* through *$timeframe*)
    	    6. *$image* is set to the full pathname (from root) of that splash image.  In our example that would be */portfolio/resources/rainbird/images/homepage_500x290.png*.  
-   	    7. Set *$width* and *$height* accordingly.  Thy must be strings (*"500"* and *"290"*)
+   	    7. Set *$width* and *$height* accordingly.  They must be strings (*"500"* and *"290"*)
    	    8. Four more deprecated args that should all be set to empty strings:  *$iconImage* though *$hostedState*.
-   	    9. *$lastKey* and *$nextKey* pertain to the fact that all the portfolio clients are in a large carousel, and you must identify which clients (by their keys) come before and after *rainbird*.  For example, clients Pathfinder, Sears and Ten-X were worked at in that order (earliest to latest).  The settings for the Sears client then, are:  *$lastKey* = *$this->globals->Key->path*, *$nextKey*= *$this->globals->Key->tenx*.  The carousel is in a circle and evntually points back to the first client in time.  Since *rainbird* is the latest client to be added, and *spectrum* is the earliest client in the portfolio, so *$nextKey* would be *$this->globals->Key->spectrum*
+   	    9. *$lastKey* and *$nextKey* pertain to the fact that all the portfolio clients are in a large carousel (which appears in the right rail, bottom, under *Other Clients*), and you must identify which clients (by their keys) come before and after *rainbird*.  For example, clients Pathfinder, Sears and Ten-X were worked at in that order (earliest to latest).  The settings for the Sears client then, are:  *$lastKey* = *$this->globals->Key->path*, *$nextKey*= *$this->globals->Key->tenx*.  The carousel is in a circle and evntually points back to the first client in time.  Since *rainbird* is the latest client to be added, and *spectrum* is the earliest client in the portfolio, so *$nextKey* would be *$this->globals->Key->spectrum*
    	1.  Congrats, you finished adding an *addClient()* call!  Now you need to call *addThumbdoc()* for each rainbird portfolio item.  Here is the signature for *addThumbdoc()*:  *addThumbdoc($key, $image, $thumbImage, $description, $width, $height)*.  Here's how to interpret the args:
    	    1. *$key*: use ordinal numbers 1, 2, 3 etc., as strings.  So your first item should be "1", the second "2", and so on.
    	    2. *$image*: Similar to *$image* in *addClient*, the full path (from website root) to the portfolio item.  But if the item is a YouTube video instead of a graphic image, this will be the YouTube video's url.

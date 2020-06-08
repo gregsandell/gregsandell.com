@@ -156,6 +156,15 @@ TD.bread {
 	height: 610px;
 	width: 525px;
 }
+.<?php print($g_globals->Key->crocs) ?>Portfolio {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 525px;
+	height: auto;
+	padding-left: 13px;
+	padding-top: 13px;
+}
 .<?php print($g_globals->Key->tenx) ?>Portfolio {
 	position: absolute;
 	left: 0px;
