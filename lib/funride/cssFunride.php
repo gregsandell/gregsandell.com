@@ -18,6 +18,7 @@
 	$colorTextGregLogo = $colorWhite;
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
+	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "MSIE");
 ?>
 /*
 Design by Free CSS Templates
@@ -356,11 +357,14 @@ h1 a {
 	text-decoration: none;
 }
 
+
 /* The lines below are the IE11 fixes that came from fiverr */
-/*
 #wrapper {
-    position: relative;
+    <?php if ($isIE == true) {
+    print('position: relative;');
+    } ?>
 }
+/*
 #page {
     position: absolute;
     left: 50%;
