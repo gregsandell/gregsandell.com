@@ -18,7 +18,7 @@
 	$colorTextGregLogo = $colorWhite;
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
-	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "MSIE");
+	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "Windows");
 	print("The USER AGENT string is " . $_SERVER['HTTP_USER_AGENT']);
 ?>
 /*
