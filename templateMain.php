@@ -50,7 +50,7 @@
 		<!-- end div#menu -->
 	</header>
 	<!-- end div#header -->
-	<main id="page">
+	<main id="page" style="position:unset;transform:unset;">
 		<div id="content">
 			<div id="welcome"> <?php
 				/*
