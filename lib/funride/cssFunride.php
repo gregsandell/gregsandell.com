@@ -18,7 +18,7 @@
 	$colorTextGregLogo = $colorWhite;
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
-	$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'])
+	$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
 	$isIE = strpos($userAgent, 'msie') || strpos($userAgent, 'trident/7');
 ?>
 /*
