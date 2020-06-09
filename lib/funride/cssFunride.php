@@ -19,7 +19,7 @@
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
 	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "MSIE");
-	print("The USER AGENT string is " . strpos($_SERVER['HTTP_USER_AGENT'], "MSIE"));
+	print("The USER AGENT string is " . $_SERVER['HTTP_USER_AGENT']);
 ?>
 /*
 Design by Free CSS Templates
