@@ -357,13 +357,25 @@ h1 a {
 	text-decoration: none;
 }
 
+<?php if ($isIE == true) { ?>
+    #wrapper {
+        position: relative;
+    }
+    #page {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #footer {
+        position: absolute;
+        top: 580%;
+        left: 50%;
+        transform: translate(-50%);
+    } <?php
+}
+?>
 
 /* The lines below are the IE11 fixes that came from fiverr */
-#wrapper {
-    <?php if ($isIE == true) {
-    print('position: relative;');
-    } ?>
-}
 /*
 #page {
     position: absolute;
