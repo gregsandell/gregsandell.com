@@ -19,6 +19,7 @@
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
 	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "MSIE");
+	print("The USER AGENT string is " . strpos($_SERVER['HTTP_USER_AGENT'], "MSIE"));
 ?>
 /*
 Design by Free CSS Templates
@@ -357,7 +358,7 @@ h1 a {
 	text-decoration: none;
 }
 
-<?php if ($isIE == true) { ?>
+<?php if ($isIE) { ?>
     #wrapper {
         position: relative;
     }
