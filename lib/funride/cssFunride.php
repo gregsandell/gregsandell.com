@@ -18,8 +18,8 @@
 	$colorTextGregLogo = $colorWhite;
 	$colorTextSidebar = $colorWhite;
 	$colorTextFooter = $colorWhite;
-	$isIE = strpos($_SERVER['HTTP_USER_AGENT'], "Windows");
-	print("The USER AGENT string is " . $_SERVER['HTTP_USER_AGENT']);
+	$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'])
+	$isIE = strpos($userAgent, 'msie') || strpos($userAgent, 'trident/7');
 ?>
 /*
 Design by Free CSS Templates
@@ -359,6 +359,7 @@ h1 a {
 }
 
 <?php if ($isIE) { ?>
+    /* This CSS gets deployed for IE11 only */
     #wrapper {
         position: relative;
     }
@@ -372,21 +373,9 @@ h1 a {
         top: 580%;
         left: 50%;
         transform: translate(-50%);
-    } <?php
+    }
+    /* end of IE11 only CSS
+    <?php
 }
 ?>
 
-/* The lines below are the IE11 fixes that came from fiverr */
-/*
-#page {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-#footer {
-    position: absolute;
-    top: 580%;
-    left: 50%;
-    transform: translate(-50%);
-}
-*/
