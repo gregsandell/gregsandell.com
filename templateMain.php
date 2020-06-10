@@ -1,5 +1,7 @@
 <?php
 	$_cpath = $_SERVER['DOCUMENT_ROOT'];
+	$userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
+	$isIE = strpos($userAgent, 'msie') || strpos($userAgent, 'trident/7');
 	if (!isset($g_section)) {
 		die("In file 'templateMain.php', the global var 'g_section' was not set by the including file.  At the very least it must be set to a blank string.");
 	}
@@ -78,9 +80,12 @@
 		<div style="clear: both; height: 1px"></div>
 	</main>
 	<!-- end div#page -->
-	<footer id="footer">
-		<p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved. 
-	</footer>
+	<?php if (!$isIE) { ?>
+        <footer id="footer">
+            <p id="legal">Copyright &copy; 2007 Greg Sandell. All Rights Reserved.
+        </footer>
+    <?php }
+    ?>
 	<!-- end div#footer -->
 </div>
 <div id="dialog-confirm" class="avgrund-popup">
