@@ -105,12 +105,12 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - Present",
 					"Full Time/Perm", "Senior Front End Engineer");
-		$pos->addListItem("1", "Javascript/web programmer in Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales.");
-        $pos->addListItem("2", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
-        $pos->addListItem("3", "Support crocs.com sites in 8 different languages, 14 countries/locales, 7 payment processors");
-        $pos->addListItem("4", "Develop custom multi-tiered web applications including SQL, REST services, Ajax, token based authentication, pub/sub messaging, Bash shell scripts, AWS, and BrowserStack cloud components.  Stack includes:  Node.js, React/Redux, Express, Sqlite, WebSockets, Bootstrap, Material-UI.");
-        $pos->addListItem("5", "Develop reusable tools for UI automation and load testing; solve latency, asynchrony, and race condition issues; write CSS queries that work reliably across major mobile and desktop web browsers navigators.");
-        $pos->addListItem("6", "Provide Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.  Tech stack:  internJS, leadfoot, eureQa, BrowserStack cloud.");
+		$pos->addListItem("1", "Javascript/web programmer in Node.js, React and Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales");
+        $pos->addListItem("2", " Develop custom multi-tiered web applications in Node.js/React including SQL, REST services, Ajax, token based authentication, pub/sub messaging with WebSockets, Bash shell scripts, Express, Sqlitd, Bootstrap, Material-UI, AWS, and BrowserStack cloud components.");
+        $pos->addListItem("3", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
+        $pos->addListItem("4", "Support crocs.com sites in 8 different languages, 14 countries/locales, 7 payment processors");
+        $pos->addListItem("5", "Solve latency, asynchrony, and race condition issues on the crocs.com eCommerce platform; write HTML/javascript that works reliably across major mobile and desktop web browsers navigators.");
+        $pos->addListItem("6", "Supported code across all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.");
         $pos->addListItem("7", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing.");
         $pos->addListItem("8", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain.");
 
