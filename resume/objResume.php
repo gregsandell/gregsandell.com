@@ -103,10 +103,10 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - Present",
+		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - May 2020",
 					"Full Time/Perm", "Senior Front End Engineer");
 		$pos->addListItem("1", "Javascript/web programmer in Node.js, React and Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales");
-        $pos->addListItem("2", " Develop custom multi-tiered web applications in Node.js/React including SQL, REST services, Ajax, token based authentication, pub/sub messaging with WebSockets, Bash shell scripts, Express, Sqlitd, Bootstrap, Material-UI, AWS, and BrowserStack cloud components.");
+        $pos->addListItem("2", " Develop custom multi-tiered web applications in Node.js/React including SQL, REST services, Ajax, token based authentication, pub/sub messaging with WebSockets, Bash shell scripts, Express, Sqlite, Bootstrap, Material-UI, AWS, and BrowserStack cloud components.");
         $pos->addListItem("3", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
         $pos->addListItem("4", "Support crocs.com sites in 8 different languages, 14 countries/locales, 7 payment processors");
         $pos->addListItem("5", "Solve latency, asynchrony, and race condition issues on the crocs.com eCommerce platform; write HTML/javascript that works reliably across major mobile and desktop web browsers navigators.");
