@@ -98,75 +98,82 @@ class ResumeManager {
 		//print("making ResumeManager<br/>");
 		$globals = new GlobalsObj();
 		$resume = new ResumeObj();
-		$resume->addQualItem("1", "I provide client Web Application solutions of high quality and reliability using Javascript/ Node.js/ React Front End Development, Selenium-based Automated UI Testing, Salesforce Commerce Cloud eCommerce, load testing, SQL database design, asynchronous/multi-threaded processing, secure authentication, messaging, and integrating third party software.  I have worked for enterprise clients in retail eCommerce, Real Estate, Executive Search, Healthcare, AdTech, Publishing, Finance, Defense, and Travel. I am also an accomplished classical pianist, electric bass player, and composer.");
+		$resume->addQualItem("1", "I am a PhD-educated Fullstack Software Developer who delivers enterprise solutions of high quality and reliability to meet the needs of growing companies.  I integrate customer-facing websites with APIs and third party products, and solve challenges with communication between multiple tiers of distributed systems.  I am also an accomplished classical pianist, electric bass player, and composer.");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CROCS
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->crocs, "Crocs, Inc.", "Remote", "Oct 2017 - May 2020",
-					"Full Time/Perm", "Senior Front End Engineer");
-		$pos->addListItem("1", "Javascript/web programmer in Node.js, React and Salesforce Commerce Cloud (a.k.a. SFCC/DemandWare) for company eCommerce site with $1.2 bil in 2019 sales");
-        $pos->addListItem("2", " Develop custom multi-tiered web applications in Node.js/React including SQL, REST services, Ajax, token based authentication, pub/sub messaging with WebSockets, Bash shell scripts, Express, Sqlite, Bootstrap, Material-UI, AWS, and BrowserStack cloud components.");
-        $pos->addListItem("3", "Integrate SFCC with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
-        $pos->addListItem("4", "Support crocs.com sites in 8 different languages, 14 countries/locales, 7 payment processors");
-        $pos->addListItem("5", "Solve latency, asynchrony, and race condition issues on the crocs.com eCommerce platform; write HTML/javascript that works reliably across major mobile and desktop web browsers navigators.");
-        $pos->addListItem("6", "Supported code across all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection.");
-        $pos->addListItem("7", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing.");
-        $pos->addListItem("8", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain.");
+					"Full Time/Perm", "Senior Software Developer");
+    $pos->addListItem("1", "Web software development for crocs.com eCommerce site operating in 14 countries, 8 languages and 10 payment processors, with $1.2 bil in 2019 sales");
+        $pos->addListItem("2", " Integrated platform with third party eCommerce services: PayPal, Givex giftcards, Adyen, CardConnect, Signal Tag Manager, Kount Fraud Manager, Olapic, Narvar, and Adobe Audience Manager analytics");
+        $pos->addListItem("3", "Developed custom multi-tiered, distribute web applications for the QA team to run scheduled Automated UI Tests in batches and receive reports.  Please see this demo video: <a href='https://bit.ly/2YCvwIJ'>https://bit.ly/2YCvwIJ</a>");
+        $pos->addListItem("4", "Wrote a custom copy of the Firebase pub/sub NoSQL database using WebSockets (employer did not want to buy the product)");
+        $pos->addListItem("5", "Solved latency, asynchrony, and race condition issues");
+        $pos->addListItem("6", "Wrote CSS queries that work reliably across major mobile and desktop web browsers");
+        $pos->addListItem("7", "Provided Automated UI Test coverage for the eCommerce site including all phases of the purchase lifecycle, shopping cart interaction, product returns, payment processing, user profile and fraud detection");
+        $pos->addListItem("8", "Provide training & mentoring to junior develpers on Javascript, Node.js and SFCC; give presentations to to developers and cross-functional teams on React and Automated UI Testing");
+        $pos->addListItem("9", "Work with new fulfillment/distribution centers coming online by creating bulk test orders in the SAP Supply chain");
+        $pos->addListItem("10", "Tools: Salesforce Commerce Cloud controllers, web services and .isml’s; Node.js, React/Redux, ES6 Core Javascript, Git, SourceTree, Express, AWS cloud, Sqlite, REST, Advanced Rest Client,, Ajax, PassportJS  token based authentication, pub/sub messaging with WebSockets, Bash, BrowserStack, Selenium, internJS, leadfoot, eureQa, Bootstrap, Material-UI");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TRILOGYED
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->trilogyed, "UC Irvine / TrilogyEd", "Irvine, CA", "Aug 2017 - Nov 2017",
 					"Direct Hire", "Course Instructor");
-		$pos->addListItem("1", "Instructor for “Fullstack Developer” bootcamp, teaching HTML, CSS, Git, Bootstrap, Javascript, jQuery, Ajax, Firebase, Node.js");
+    $pos->addListItem("1", "Instructor for “Fullstack Developer” bootcamp");
+    $pos->addListItem("2", "I have many presentation stacks on topics taught");
+    $pos->addListItem("3", "Tools taught: HTML5, CSS3, Git, Bootstrap, Javascript, jQuery, Ajax, Firebase, Node.js");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// TEN-X
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->tenx, "Ten-X/auction.com", "Irvine, CA", "Apr 2016 - May 2017",
 					"Direct Hire", "Sr. Software Engineer");
-		$pos->addListItem("1", "Developed presentation layer and application logic for hosted web application <i>auction.com</i>, a Real Estate auction transaction platform");
-		$pos->addListItem("2", "Responsible for features Search & Discovery, Event Details, Calendar, User prefs and personalization, and Home page written in AngularJS 1.4, React/Redux, ES6, ArcGIS, and Python");
-    	$pos->addListItem("3", "Wrote QA Automation tests using Selenium and Nightwatch (demo: <a href='http://bit.ly/2wUjFcS' alt='Auction.com Authomated Tests Youtube video'>http://bit.ly/2wUjFcS</a>)");
-    	$pos->addListItem("4", "Design and troubleshooting of REST and JSON-based backend, services, Omniture tracking to and LaunchDarkly feature flags");
+    $pos->addListItem("1", "Developed presentation layer and application logic for hosted web application auction.com, a Real Estate auction transaction platform");
+		$pos->addListItem("2", "Responsible for auction.com features Search & Discovery, Event Details, Calendar, User prefs and personalization, and Home page");
+    	$pos->addListItem("3", "Provided enginnering help to QA team by writing UI Automation tests (demo: <a href='http://bit.ly/2wUjFcS' alt='Auction.com Authomated Tests Youtube video'>http://bit.ly/2wUjFcS</a>)");
+    	$pos->addListItem("4", "Design and troubleshooting of REST and JSON-based backend, services");
+    	$pos->addListItem("5", "Tools:  Node.js, React, Redux, Angular 1.45ES6 core Javascript, Git, Babel, WebPack, REST, Advanced Rest Client, ArcGIS, Python, Selenium, Nightwartch, Omniture, LaunchDarkly feature flags, HTML5, CSS3");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// JOHN DEERE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->johndeere, "John Deere", "Los Angeles, CA", "Oct 2015 - Mar 2016",
 					"Contract", "Front End Developer Consultant");
-		$pos->addListItem("1", "Developed AngularJS controllers, views, directives and services for  hosted web application <i>Sales Center</i>, a 'build-a-Deere' tool for sales reps");
-		$pos->addListItem("2", "Wrote test coverage in Mocha, Sinon and Chai");
-		$pos->addListItem("3", "Collaborated with Back End team on design and troubleshooting of REST/JSON-based services");
+    $pos->addListItem("1", "Developed Front End, middleware and test coverage for hosted web application 'Sales Center', a 'build-a-Deere' tool for sales reps");
+		$pos->addListItem("2", "Collaborated with Back End team on design and troubleshooting of webservices");
+		$pos->addListItem("3", "Tools:  Angular 1.4 controllers, views, directives and services; ES5 core Javascript, Git, REST, Advanced Rest Client, JSON, Mocha, Sinon and Chai unit testing, HTML5, CSS3");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// CYBERCODERS
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->cybercoders, "CyberCoders", "Irvine, CA", "Nov 2014 - Aug 2015",
 					"Direct Hire", "Front End Java Developer");
-		$pos->addListItem("1", "Developer for hosted web application <i>Compass</i>, a CRM platform for Recruiters.");
-        $pos->addListItem("2", "Created UI widgets and application logic for workflow tools in Sencha ExtJS 4.0.7 Javascript");
-        $pos->addListItem("3", "Wrote backend Ajax/JSON components, test coverage in Jasmine, stress testing with jMeter");
+    $pos->addListItem("1", "Front End Developer for hosted web application 'Compass', a CRM platform for Recruiters");
+        $pos->addListItem("2", "Tools:  Sencha ExtJS 4.0.7, ES5 core Javascript, Ajax, Jasmine unit tests, jMeter stress testing, HTML5, CSS3");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// SEARS HOLDING CORPORATION
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->sears, "Sears Holding Corporation", "Chicago, IL", "Nov 2013 - June 2014",
 					"Contract through Apex Systems", "Developer");  
-		$pos->addListItem("1", "Member of Core Mobile team supporting mobile version of <i>sears.com</i> E-Commerce site");
-		$pos->addListItem("2", "Wrote AngularJS controllers, views, and services, UIs in HTML5/CSS3 from Photoshop PSDs, REST web services in coordination.");
-		$pos->addListItem("3", "Launched mobile version of new fatures Shop Your Way (loyalty card) and Shop Your Way Max (Sears version of Amazon Prime).");
+    $pos->addListItem("1", "Member of Core Mobile Front End development team supporting mobile version of <i>sears.com</i> eCommerce platform");
+		$pos->addListItem("2", "Created presentation layer from wireframes, redlines and Photoshop PSDs provided by designers");
+		$pos->addListItem("3", "Collaborated with Back End team on design and troubleshooting of webservices");
+		$pos->addListItem("4", "Launched mobile version of new features <i>Shop Your Way</i> (loyalty card) and <i>Shop Your Way Max</i> (Sears version of Amazon Prime)");
+		$pos->addListItem("5", "Tools:  Angular 1.4 controllers, views, and services, REST, Advanced Rest Client, Git");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// PATHFINDER SOFTWARE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		$pos = $resume->addPosition($globals->Key->path, "Pathfinder Software (now orthogonal.io)", "Chicago, IL", "Aug 2012 - Aug 2013",
 					"Direct Hire", "Sr. Software Developer");  
-		$pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients Kimberly-Clark, Haemonetics, and Amer. Assn. of Critical Care Nurses in hybrid web/iOS AngularJS and jQuery Mobile, Trigger.io, TestFlight, and Rails/Heroku");
-		$pos->addListItem("2", "Lead developer on iPhone app that was deployed in Apple AppStore (AACN Bedside)");
-		$pos->addListItem("3", "Lead developer for web-based census and demographic data-mining tool (MetroPulse Chicago:  demo: <a href='http://bit.ly/2wU5Yun' alt='MetroPulse Chicago Youtube video'>http://bit.ly/2wU5Yun</a>)");
-		$pos->addListItem("4", "Lead developer on an iPad ‘concierge’ app to connect heart patients, their nurses and caregivers (ContinuCare) and  a blood drive simulation sales tool for the iPad (Automated Whole Blood Collector)");
+    $pos->addListItem("1", "Wrote mobile apps (iPhone, iPad) for medical clients Kimberly-Clark, Haemonetics, and Amer. Assn. of Critical Care Nurses");
+		$pos->addListItem("2", "Lead developer on iPhone app that was deployed in Apple AppStore (<i>AACN Bedside</i>)");
+		$pos->addListItem("3", "Lead developer for web-based census and demographic data-mining tool (MetroPulse Chicago demo: <a href='http://bit.ly/2wU5Yun' alt='MetroPulse Chicago Youtube video'>http://bit.ly/2wU5Yun</a>)");
+		$pos->addListItem("4", "Lead developer on an iPad ‘concierge’ app to connect heart patients, their nurses and caregivers (<i>ContinuCare</i>) and a blood drive simulation sales tool for the iPad (<i>Automated Whole Blood Collector</i>)");
+		$pos->addListItem("5", "Tools:  hybrid web/iOS AngularJS and jQuery Mobile, Trigger.io, TestFlight, Ruby on Rails, Heroku");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// THOMSON-REUTERS	
@@ -174,8 +181,8 @@ class ResumeManager {
     // 26 months as of june 2012
 		$pos = $resume->addPosition($globals->Key->tr, "Truven Health Analytics", "Chicago, IL", "Apr 2010 - Aug 2012",
 					"Converted to FT/Perm after contract", "Sr. Software Developer");  
-		$pos->addListItem("1", "Developed hosted web applications CareDiscovery and IntegrationDiscovery, Business Intelligence and data mining tools for a 4 TB Oracle OLAP Data Warehouse of Hospital Billing data");
-		$pos->addListItem("2", "Created servlet- and portal-based J2EE web applications for IBM Websphere Portal 5, Tomcat 6 & Glassfish in Java 1.4 & 6 Servlets, JSP, jQuery Javascript,  PL/SQL stored procedures");
+    $pos->addListItem("1", "Developed hosted enterprise web applications <i>CareDiscovery</i> and <i>IntegrationDiscovery</i>, Business Intelligence and data mining tools for a 4 TB Oracle OLAP Data Warehouse of Hospital Billing data");
+		$pos->addListItem("2", "Tools: J2EE, Java 1.4 & 6 Servlets, IBM Websphere Portal 5, Tomcat 6, Glassfish, JSP, jQuery and ES5 core Javascript, PL/SQL stored procedures");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	ICROSSING
@@ -183,19 +190,20 @@ class ResumeManager {
     // 17 months
 		$pos = $resume->addPosition($globals->Key->icross, "iCrossing", "Chicago", "Oct 08 - Mar 2010",
 					"W2/Direct Placement", "Sr. Software Engineer");  
-		$pos->addListItem("1", "Front End Developer for hosted web application Merchantize, an Ad Technology tool for managing clients' Paid Search campaigns, keyword purchases and cost-per-click advertising with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber)");
-		$pos->addListItem("2", "Consumed streaming XML-based product feeds for clients Sears, The Gap, Hilton, Lands End, LEGO, and Williams Sonoma with cron-based processes written in Perl, Bash, SMTP & Java.");
-		$pos->addListItem("3", "Wrote PDF reports in Apache POI Java, cleaned product feeds and resolved Mysql data integrity issues");
+    $pos->addListItem("1", "Front End Developer for hosted web application <i>Merchantize</i>, an Ad Technology tool for managing clients' Paid Search campaigns, keyword purchases and cost-per-click advertising with major search and shopping engines (Google, Yahoo, MSN, NexTag, PriceGrabber)");
+		$pos->addListItem("2", "Consumed streaming XML-based product feeds for clients Sears, The Gap, Hilton, Lands End, LEGO, and Williams Sonoma with scheduled processes");
+		$pos->addListItem("3", "Wrote PDF reports, cleaned product feeds and resolved data integrity issues, distinguished between multiple types of character encodings");
+		$pos->addListItem("4", "Tools:  Java, Bash, Perl, Cron, Apache POI, Mysql");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	TRIBUNE
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // 9 months
-		$pos = $resume->addPosition($globals->Key->trib, "Tribune Interactive", "Chicago", "Feb 08 - Oct 08",
+    $pos = $resume->addPosition($globals->Key->trib, "Tribune Interactive", "Chicago", "Feb 08 - Oct 08",
 					"W2/Direct Placement", "Sr. Internet Software Developer");  
-		$pos->addListItem("1", "Developed web software and content management behind all of Tribune Corp's newspaper, radio and television websites, including Chicago Tribune, LA Times, Red Eye.");
-		$pos->addListItem("2", "Developed code in Java 1.5 on J2EE platform including Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet) and TopLink 9.0 for web services.");
-		$pos->addListItem("3", "Created scheduled jobs for sweeping expired database content and JMeter test plans to simulate heavy load on high-profile chicagotribune.com website.");
+		$pos->addListItem("1", "Developed web software and content management behind a nationwide family of Tribune newspaper holdings, radio and television websites in Chicago, Los Angeles, Baltimore and Florida");
+		$pos->addListItem("2", "Created scheduled jobs for sweeping expired database content and JMeter test plans to simulate heavy load on high-profile <strong>chicagotribune.com</strong> website.");
+		$pos->addListItem("3", "Tools:  J2EE, Java 1.5, Java Tag Libraries, Oracle Application Server 10g, Oracle DB 10g, FAST search server, Sun Webserver (iPlanet), TopLink 9.0 web services");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	UBS

@@ -374,7 +374,7 @@ h1 a {
         left: 50%;
         transform: translate(-50%);
     }
-    /* end of IE11 only CSS
+    /* end of IE11 only CSS */
     <?php
 }
 ?>
