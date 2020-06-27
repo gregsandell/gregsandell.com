@@ -219,6 +219,29 @@
 				title="A Remark You Made, by Joe Zawinul (Weather Report)"></a>
 		</div>
 	</dd>
+	<dt>Solo Piano</dt>
+	<dd>
+		<a href="https://youtu.be/F11taBw-cKI" data-thumbnail="/music/resources/images/pianoSolo/totentanzThumb.png"
+			class="html5lightbox" data-group="set7" data-width="600"
+			data-showplaybutton="false" data-shownavigation="false"
+			data-titlecss="<?php print($titleCss) ?>"
+			data-thumbwidth="150" data-thumbheight="150"
+			data-height="400" title="Franz Liszt - Totentanz">
+			<img src="/music/resources/images/pianoSolo/totentanzThumb.png" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/ZadaRN5bcyg" data-thumbnail="/music/resources/images/pianoSolo/prokofievThumb.png"
+			class="html5lightbox" data-group="set7" title="Serge Prokofiev - Piano Sonata No 3"
+			data-showplaybutton="false" data-shownavigation="false">
+			<img src="/music/resources/images/pianoSolo/prokofievThumb.png" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/kf0nULaEHLg" data-thumbnail="/music/resources/images/pianoSolo/bergThumb.png"
+			class="html5lightbox" data-group="set7" title="Alban Berg - Sonata Op 1"
+			data-showplaybutton="false" data-shownavigation="false">
+			<img src="/music/resources/images/pianoSolo/bergThumb.png" style="margin-right: 10px"/></a>
+		<div class="moreMusic">
+			<a href="https://youtu.be/dRTEBsILVOs"
+				class="html5lightbox" data-group="set7"
+				title="J.S. Bach - Prelude & Fugue in F#">More...</a>
+		</div>
+	</dd>
 	<dt>Misc Recordings</dt>
 	<dd>
 		<a href="https://youtu.be/O4UUT4yHYyA" data-thumbnail="/music/resources/images/miscRecordings/gravityHill.jpg"
