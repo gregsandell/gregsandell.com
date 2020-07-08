@@ -237,6 +237,9 @@
 			data-showplaybutton="false" data-shownavigation="false">
 			<img src="/music/resources/images/pianoSolo/bergThumb.png" style="margin-right: 10px"/></a>
 		<div class="moreMusic">
+			<a href="https://youtu.be/VPeczkE75LQ"
+				class="html5lightbox" data-group="set7"
+				title="Chopin - Ballade No 3 in Ab Op 47">More...</a>
 			<a href="https://youtu.be/dRTEBsILVOs"
 				class="html5lightbox" data-group="set7"
 				title="J.S. Bach - Prelude & Fugue in F#">More...</a>
