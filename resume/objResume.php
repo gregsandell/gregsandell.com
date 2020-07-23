@@ -318,6 +318,13 @@ class ResumeManager {
 					"W2 through Taproot Interactive Studio", "Lead Programmer");  
 		$pos->addListItem("1", "Developed ASP-based E-commerce website for golf retailer Edwin Watts (www.EdwinWatts.com) and supported Perl-based E-commerce sites for Successories and Pace Communications.  One site produced $268k in sales in first three months.");
 		$pos->addListItem("2", "Designed MS-Access database to store products, customer data and purchases and ASP/IIS programming for online catalog, shopping cart, product features and third-party online payment software.");     
+	    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// 	BILL WHITNEY
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		$pos = $resume->addPosition($globals->Key->billwhitney, "Bill Whitney Studios", "Chicago, IL", "Sep 97",
+					"W2 through Spellbinders", "Programmer");
+		$pos->addListItem("1", "Created online portfiolio for digital artist Bill Whitney");
+		$pos->addListItem("2", "Written in DHTML and Javascript");
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	LOYOLA
@@ -347,13 +354,6 @@ class ResumeManager {
 					"W2, Direct Hire", "Programmer");  
 		$pos->addListItem("1", "LISP, X-11 and Macintosh Think-C programming for multimedia educational apps.");     
 		$pos->addListItem("2", "Wrote Digital Signal Processing code for interactive voice recording and analysis for client Ameritech.");
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		// 	BILL WHITNEY
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$pos = $resume->addPosition($globals->Key->billwhitney, "Bill Whitney Studios", "Chicago, IL", "Sep 97",
-					"W2 through Spellbinders", "Programmer");  
-		$pos->addListItem("1", "Created online portfiolio for digital artist Bill Whitney");     
-		$pos->addListItem("2", "Written in DHTML and Javascript");		             
                ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	END OF POSITIONS
 		//  
