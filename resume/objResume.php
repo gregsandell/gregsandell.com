@@ -284,7 +284,7 @@ class ResumeManager {
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// 	QUEBECOR
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // 7 months
+    // 7 months  
 		$pos = $resume->addPosition($globals->Key->quebecor, "Quebecor World", "Itasca, IL", "Dec 01 - Jun 02",
 					"W2, recruiter placement", "Web Developer");  
 		$pos->addListItem("1", "Wrote and supported web-based Human Resources self-service applications (employee 401k self-management, personal data)");     
