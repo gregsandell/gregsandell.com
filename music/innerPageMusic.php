@@ -23,20 +23,23 @@
 			data-thumbwidth="150" data-thumbheight="150"
 			data-height="400" title="Variations on 'Easter Thursday' for Piano">
 			<img src="/music/resources/images/compositions/easterThursdayThumb.png" style="margin-right: 10px"/></a>
+		<a href="https://youtu.be/wZWgard4hfw" data-thumbnail="/music/resources/images/compositions/freshJuliepiesThumb.png"
+			class="html5lightbox" data-group="set1" title="Fresh Juliepies for Piano"
+			data-showplaybutton="false" data-shownavigation="false">
+			<img src="/music/resources/images/compositions/freshJuliepiesThumb.png" style="margin-right: 10px"/></a>
 		<a href="https://www.youtube.com/watch?v=jS6V7Cp28xM" data-thumbnail="/music/resources/images/compositions/studyInFifthsthumb.png"
 			class="html5lightbox" data-group="set1" title="Study in Fifths for Piano"
 			data-showplaybutton="false" data-shownavigation="false">
 			<img src="/music/resources/images/compositions/studyInFifthsThumb.png" style="margin-right: 10px"/></a>
-		<a href="https://www.youtube.com/watch?v=lQDWg72tmRc" data-thumbnail="/music/resources/images/compositions/jessesPigThumb.png"
-			class="html5lightbox" data-group="set1" title="Jesse's Pig for Jazz Ensemble "
-			data-showplaybutton="false" data-shownavigation="false">
-			<img src="/music/resources/images/compositions/jessesPigThumb.png" style="margin-right: 10px"/></a>
 		<div class="moreMusic">
-			<a href="https://www.youtube.com/watch?v=j4PQu98ZkA0"
-			class="html5lightbox" data-group="set1" title="Cayman Island Dream"
+			<a href="https://www.youtube.com/watch?v=lQDWg72tmRc"
+			class="html5lightbox" data-group="set1" title="Jesse's Pig for Jazz Ensemble"
 			data-showplaybutton="false" data-shownavigation="false">More...</a>
 		</div>
 		<div class="hiddenSlides">
+			<a href="https://www.youtube.com/watch?v=j4PQu98ZkA0"
+				class="html5lightbox" data-group="set1"
+				title="Cayman Island Dream"></a>
 			<a href="https://youtu.be/DyK3oSXxnSQ"
 				class="html5lightbox" data-group="set1"
 				title="Quartet for Violin, Clarinet, Cello and Piano"></a>
