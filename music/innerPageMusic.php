@@ -37,7 +37,7 @@
 			data-showplaybutton="false" data-shownavigation="false">More...</a>
 		</div>
 		<div class="hiddenSlides">
-			<a href="https://www.youtube.com/watch?v=j4PQu98ZkA0"
+			<a href="https://www.youtube.com/watch?v=AaLeoEUCB1M"
 				class="html5lightbox" data-group="set1"
 				title="Cayman Island Dream"></a>
 			<a href="https://youtu.be/DyK3oSXxnSQ"
